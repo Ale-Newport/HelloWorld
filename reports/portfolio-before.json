@@ -1,0 +1,2864 @@
+{
+  "assets/.DS_Store": {
+    "sha256": "6101c162adb950d727aa2a8d7bb1a809a1072e88d93768d167f009920c639277",
+    "size": 6148,
+    "mtime_ns": 1790423686743996268,
+    "mode": 33188
+  },
+  "assets/world2-source/palette.png": {
+    "sha256": "63780c518061ed026c91615f878741189b4c585651bc875a28577140daad22b9",
+    "size": 362,
+    "mtime_ns": 1789116134464951072,
+    "mode": 33188
+  },
+  "assets/world2-source/LICENSE.md": {
+    "sha256": "fda1c3e29d000f6ab28bf60a438ab759e1bc2efce7642254f7f0dc8b2e0ba5d3",
+    "size": 1067,
+    "mtime_ns": 1789116134484753350,
+    "mode": 33188
+  },
+  "assets/world2-source/dependencies.json": {
+    "sha256": "9d5f95f72315452609c92a42c76e74fe63a9fa7ccbe5bad3b32dc0cf49539587",
+    "size": 7403,
+    "mtime_ns": 1789116134484426808,
+    "mode": 33188
+  },
+  "assets/world2-source/.DS_Store": {
+    "sha256": "ae5560d4c71e55dcd094a921e642d85677415b93c731cfd4b0fcdfe04de7c3ed",
+    "size": 6148,
+    "mtime_ns": 1790423717313517633,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/circuitAirDancerFace.png": {
+    "sha256": "638774155581321a509f9b12668a5075883307ddb23876a15f7f13a2feaf25fd",
+    "size": 2934,
+    "mtime_ns": 1789116134462547985,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/stylized-map.png": {
+    "sha256": "d97c08fe3da158e6183d4588fc6cc7f9cf1e0d91e70893b6d3da3b42c9d889e5",
+    "size": 32849,
+    "mtime_ns": 1789116134466543907,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/.DS_Store": {
+    "sha256": "cee20e8559e2a6b6b378f676759b6c35ab0c992e877075dc43ebcfb907e6904f",
+    "size": 8196,
+    "mtime_ns": 1790423722319643586,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/bowlingLabelStrike.png": {
+    "sha256": "d82bff9c50301f2a9b066a840c4a89423715f8b119b7b56633defd5ceef7a509",
+    "size": 1392,
+    "mtime_ns": 1789116134459877731,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/cookieBanner.png": {
+    "sha256": "6a1b035e283d4cb243bf6d255904db4759a1591900f81c613302833e68325a5e",
+    "size": 90895,
+    "mtime_ns": 1789116134464085946,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/circuitLogoThreejs.png": {
+    "sha256": "4bfabb6039337e02d4f73c9752dea23906ed57363612dc71fb345cf7518756af",
+    "size": 2811,
+    "mtime_ns": 1789116134463102153,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/circuitLogoWebgl.png": {
+    "sha256": "6a0905cd1082c2872a9e5767b99b7e3e28f973c7575c6c306bba84a9a914a0d7",
+    "size": 5295,
+    "mtime_ns": 1789116134463417403,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/terrainFurniture.exr": {
+    "sha256": "1a2ffac37b369aad161735712d274b19f94f1a092bb71cf0ec810118a7f6860b",
+    "size": 2105790,
+    "mtime_ns": 1789116134468577869,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/slabs.png": {
+    "sha256": "ae96f33015f45b7f1414f3c338c006e13263ac9b43ccf6efe58ec46734558126",
+    "size": 56047,
+    "mtime_ns": 1789116134466137032,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/circuitLogoWebgpu.png": {
+    "sha256": "d858a4aa13bee87a8fe13f1a0f9a325bac559df1a144dccf5ccb53742c221e5c",
+    "size": 3501,
+    "mtime_ns": 1789116134463712987,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/projectsLabels.png": {
+    "sha256": "45d71be87fb910d622fa79450e9d6f98c4091cf631b55953bf876b26954e0b41",
+    "size": 3065,
+    "mtime_ns": 1789116134465728490,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/terrainGrass.exr": {
+    "sha256": "3b431b5027fe885ce99ca9c3e796910d3ba5356204082eaaf0be039e9187a9f2",
+    "size": 2105790,
+    "mtime_ns": 1789116134471203456,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/labCarpet.png": {
+    "sha256": "b23b17bc24228a1c75d5f4eb854174d355fe41e2c0a5e429686e876565ff785b",
+    "size": 99080,
+    "mtime_ns": 1789116134464532238,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/projectsCarpet.png": {
+    "sha256": "4104641398b9d169db13ac08f8a8d5d306a20c28ded5082dcba733054eef8579",
+    "size": 99474,
+    "mtime_ns": 1789116134465329698,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/terrainWater.exr": {
+    "sha256": "2f01744227976e7f05a0b3bde62af0c5f5157607b4f059af9031952f9ebf21e8",
+    "size": 2105790,
+    "mtime_ns": 1789116134473809376,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/circuitBrand.png": {
+    "sha256": "c38eb30dfcd8413e0e22bad4905c810db985fa677ea19be275175a5185297fee",
+    "size": 6966,
+    "mtime_ns": 1789116134462841569,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/blackboardLabels.png": {
+    "sha256": "7c22769f964f619f6f67da49503f6d21f4347282fc66277178778e5013cf71f1",
+    "size": 13068,
+    "mtime_ns": 1789116134459152814,
+    "mode": 33188
+  },
+  "assets/world2-source/static/.DS_Store": {
+    "sha256": "151021c67cdbd167c9d3ba7d2d973035bc3915dfcd50795ce5b1c8986bdd468f",
+    "size": 6148,
+    "mtime_ns": 1790423691749272223,
+    "mode": 33188
+  },
+  "assets/world2-source/static/terrain/terrain.png": {
+    "sha256": "ba1e67981d31cceae305940246246a2eb50a6bda94dc58ca0875bbf2434573bc",
+    "size": 334262,
+    "mtime_ns": 1789116134467167783,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/career/careerUzik.png": {
+    "sha256": "ba2116881399e887d4a64d1d88b573af75c3143ceb76e0b991ad760cfd321281",
+    "size": 2597,
+    "mtime_ns": 1789116134462251568,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/career/careerIRLTeacher.png": {
+    "sha256": "e73b69415cea810bf02486b0c685e167796f1cb76eda3e07b585b61c86c12894",
+    "size": 5856,
+    "mtime_ns": 1789116134461575275,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/career/careerFreelancer.png": {
+    "sha256": "0b2c853f8a49a29714eeec8e215b8b8a911b09a09c975918fd1c1cffe97cb7e3",
+    "size": 4069,
+    "mtime_ns": 1789116134460289357,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/career/careerOnlineTeacher.png": {
+    "sha256": "f8b1b49964765ae1b7e7bf84d187c8f8ee64471d4c8cf55feb9e72d6285ed72c",
+    "size": 7313,
+    "mtime_ns": 1789116134461934859,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/career/careerImmersiveGarden.png": {
+    "sha256": "a000f43d438bee23fab25a95d1e191e1977290fa4d17844e26cc5a3e9a9bd6e5",
+    "size": 4667,
+    "mtime_ns": 1789116134461178316,
+    "mode": 33188
+  },
+  "assets/world2-source/textures/career/careerHetic.png": {
+    "sha256": "bc8bbbe96a0e39a17db30f351eedbc8146bfcb019a7df98354b739fa3fbad1b1",
+    "size": 5039,
+    "mtime_ns": 1789116134460727232,
+    "mode": 33188
+  },
+  "public/.DS_Store": {
+    "sha256": "d3590082148d370255bc3888ca554ed94e094e0e84455eda3c9ddd639227396e",
+    "size": 6148,
+    "mtime_ns": 1790423771371187304,
+    "mode": 33188
+  },
+  "public/manifest.webmanifest": {
+    "sha256": "d294587b1f8fc45b502d72e6197584c84ad38b81ede1b7b902c9b1c6804ce00b",
+    "size": 206,
+    "mtime_ns": 1788959098319895013,
+    "mode": 33188
+  },
+  "public/dev/map-plan.webp": {
+    "sha256": "32c8fe224fdd9d40dc507c72f6067e38c849b7aa9a728f0ed1803d071f43fa4f",
+    "size": 90124,
+    "mtime_ns": 1788945254386250808,
+    "mode": 33188
+  },
+  "public/world2/.DS_Store": {
+    "sha256": "1d95202fad76e9b4256d12c453d3ebba0dc3a119689ae13ab98d875fa2e09a05",
+    "size": 6148,
+    "mtime_ns": 1790423776378182858,
+    "mode": 33188
+  },
+  "public/world2/map.svg": {
+    "sha256": "bfcb2bb89985f1bc0a57eea6d4ab5204b0833f295ee231a7621d71886660178d",
+    "size": 2730866,
+    "mtime_ns": 1789117624670528257,
+    "mode": 33188
+  },
+  "public/world2/map.png": {
+    "sha256": "2f2bc123f91b5e0518d8c6e170afc368a90b49e35c4e7d51790f94201b30b591",
+    "size": 1134019,
+    "mtime_ns": 1789117632624851287,
+    "mode": 33188
+  },
+  "public/world2/interactions.json": {
+    "sha256": "6c5ec1f6c2bcddfb6c83fcff73046155a6700714f6b175c5332ec69cd00c1bf5",
+    "size": 9529,
+    "mtime_ns": 1789211833644755947,
+    "mode": 33188
+  },
+  "public/world2/world-manifest.json": {
+    "sha256": "b8161108fc0077a9895d01f03f3f49e187f97ea95fe127aae779521e0e7afe91",
+    "size": 22583,
+    "mtime_ns": 1789117624672040377,
+    "mode": 33188
+  },
+  "public/world2/LICENSE.txt": {
+    "sha256": "fda1c3e29d000f6ab28bf60a438ab759e1bc2efce7642254f7f0dc8b2e0ba5d3",
+    "size": 1067,
+    "mtime_ns": 1789118426685311942,
+    "mode": 33188
+  },
+  "public/world2/textures/terrain-color.png": {
+    "sha256": "97cbdd2d7978538aff7ec9d74bf001f3c4c2f825273b1e76bc300c4e9f008543",
+    "size": 993190,
+    "mtime_ns": 1789117622982007885,
+    "mode": 33188
+  },
+  "public/world2/models/world.glb": {
+    "sha256": "c79b18c37e3d4a39036ee7055a75af0a7f399f3f7654482146145a95690562f1",
+    "size": 5707840,
+    "mtime_ns": 1789117624169953881,
+    "mode": 33188
+  },
+  "public/world2/models/vegetation.glb": {
+    "sha256": "957c3f1ba807d32539d2625d6f85125e64f997002a17417c706d8de2a59396e0",
+    "size": 7405756,
+    "mtime_ns": 1789117624540141919,
+    "mode": 33188
+  },
+  "public/assets/client-work/level-up-canarias-mobile.webp": {
+    "sha256": "3b5cededd5c949f06f791124db2e14fd60353cabf092167d4e1a1a20da3422ef",
+    "size": 17912,
+    "mtime_ns": 1788787457923055691,
+    "mode": 33188
+  },
+  "public/assets/client-work/newport-media-films-desktop.avif": {
+    "sha256": "f45b9f6752d861940d35ee7921606fb5ddae8ef116d153a42b243e41d0f53a55",
+    "size": 474,
+    "mtime_ns": 1788787285380634529,
+    "mode": 33188
+  },
+  "public/assets/client-work/avanza-fp-desktop.avif": {
+    "sha256": "33c81debe36bc2e294c643ffab7f4cbad19661de99c8d5f98491a83f9ca7fdb9",
+    "size": 61721,
+    "mtime_ns": 1788787463482428075,
+    "mode": 33188
+  },
+  "public/assets/client-work/aula-impulsa-mobile.avif": {
+    "sha256": "b7577c2bb58d16d37ee183d6c5d9185148de252fb378894eb593da8d8b2cfcdd",
+    "size": 16886,
+    "mtime_ns": 1788787417501426090,
+    "mode": 33188
+  },
+  "public/assets/client-work/nformar-mobile.avif": {
+    "sha256": "9f0d52da1320f59939180830af2cc3f83cb30fe70e8b0ff601d66aba98e57b14",
+    "size": 10765,
+    "mtime_ns": 1788787402995284202,
+    "mode": 33188
+  },
+  "public/assets/client-work/cht-canarias-mobile.webp": {
+    "sha256": "0676d26a0cba7e42e37285dac2e517d47fdb95ddfee314b58500201a404118df",
+    "size": 8944,
+    "mtime_ns": 1788787229482600815,
+    "mode": 33188
+  },
+  "public/assets/client-work/innova-urbis-desktop.webp": {
+    "sha256": "72f466b612bcb046e41db07e9e6c531aa573708659ec57408e31b17f111d5128",
+    "size": 156276,
+    "mtime_ns": 1788787478681469245,
+    "mode": 33188
+  },
+  "public/assets/client-work/bioever-mobile.webp": {
+    "sha256": "a385f44ba14c730d55d15dda741ea7b1ca122175defc12c634347ef789f76e59",
+    "size": 16848,
+    "mtime_ns": 1788953748231712515,
+    "mode": 33188
+  },
+  "public/assets/client-work/escuela-de-hosteleria-canaria-mobile.avif": {
+    "sha256": "e0c58169407a872a385f8b91513b6846a6fe459e859aaa2d2201ea8a5e2b774f",
+    "size": 17068,
+    "mtime_ns": 1788787338463963394,
+    "mode": 33188
+  },
+  "public/assets/client-work/hotel-escuela-el-mirador-desktop.avif": {
+    "sha256": "f45b9f6752d861940d35ee7921606fb5ddae8ef116d153a42b243e41d0f53a55",
+    "size": 474,
+    "mtime_ns": 1788787236001878804,
+    "mode": 33188
+  },
+  "public/assets/client-work/fuerteventura-2000-desktop.webp": {
+    "sha256": "98a5c6265af9b55f9ab612f06299ec64ad2e90bd7400d47aeab5ecd0758ff999",
+    "size": 76378,
+    "mtime_ns": 1788787194878748464,
+    "mode": 33188
+  },
+  "public/assets/client-work/eduprisma-desktop.avif": {
+    "sha256": "d877c5d17c5cae11cd8c4a66afe8ae5a4e29d07eccb9930286c6f9e2b23bfd68",
+    "size": 46714,
+    "mtime_ns": 1788787434928447779,
+    "mode": 33188
+  },
+  "public/assets/client-work/innova-urbis-mobile.webp": {
+    "sha256": "fb8b913e446a7d543f0e86708a5c736c5a8885ea7682ad8881d9c5dc3d04af58",
+    "size": 20564,
+    "mtime_ns": 1788787513492419311,
+    "mode": 33188
+  },
+  "public/assets/client-work/aula-impulsa-desktop.avif": {
+    "sha256": "56913ede3931ce60c8a4a6355f63704231c84627092dd2dd30a06088588d05fd",
+    "size": 84015,
+    "mtime_ns": 1788787412572070805,
+    "mode": 33188
+  },
+  "public/assets/client-work/pansofia-mobile.webp": {
+    "sha256": "28f2900c6094d09437c165b9f2d924f3e2421e5dc3a458924c5c9019a79ae14f",
+    "size": 18972,
+    "mtime_ns": 1788787216385054721,
+    "mode": 33188
+  },
+  "public/assets/client-work/nformar-desktop.avif": {
+    "sha256": "cbc124f7f60e4e0cfd981c12eeb6082985f8fe3fab1d2777b8f92d64c4b31c8f",
+    "size": 54792,
+    "mtime_ns": 1788787399071378862,
+    "mode": 33188
+  },
+  "public/assets/client-work/level-up-canarias-desktop.avif": {
+    "sha256": "84557b3ece53ff960483cdaadae390d28dc2d9f5aa718a9344408b7ab2d71731",
+    "size": 36930,
+    "mtime_ns": 1788787446694662571,
+    "mode": 33188
+  },
+  "public/assets/client-work/pansofia-desktop.webp": {
+    "sha256": "e7a8775845b39e4b831de7b58e28afb42f35b15b6de72a5c0e2acb40df459ce1",
+    "size": 93454,
+    "mtime_ns": 1788787210719649429,
+    "mode": 33188
+  },
+  "public/assets/client-work/eduprisma-mobile.avif": {
+    "sha256": "dd6cabacdf81278d90b1f9af234fcd00953ae6b24362d963cc6b0f4fa1480afa",
+    "size": 16070,
+    "mtime_ns": 1788787439384095234,
+    "mode": 33188
+  },
+  "public/assets/client-work/fpe-europea-mobile.webp": {
+    "sha256": "ef4cec4fa9d722584168480b80e43cfe00e05e40d7e1f7447c0e2e29a0e02473",
+    "size": 18048,
+    "mtime_ns": 1788787394077849235,
+    "mode": 33188
+  },
+  "public/assets/client-work/hotel-escuela-el-mirador-mobile.webp": {
+    "sha256": "e4f8fe998487fac8bfd9a3ac51bf2b6e72c55cffd2ed31f05796ea45f3074ef7",
+    "size": 540,
+    "mtime_ns": 1788787240946221314,
+    "mode": 33188
+  },
+  "public/assets/client-work/cht-canarias-desktop.webp": {
+    "sha256": "60079f01cbe16fd556608a4ce020e5f9766e0656c8e494a2975cbc7784f3cd59",
+    "size": 77382,
+    "mtime_ns": 1788787223009422997,
+    "mode": 33188
+  },
+  "public/assets/client-work/fuerteventura-2000-mobile.webp": {
+    "sha256": "e4c14654653f8c3cee9bc7343b9f64ed5313be72776b734accd4a11afbdfa84d",
+    "size": 20604,
+    "mtime_ns": 1788787202663919709,
+    "mode": 33188
+  },
+  "public/assets/client-work/esenfuer-desktop.webp": {
+    "sha256": "eca5eee22b6ac05e9653ec4bf6e2ae1c4df303a3f2f7a2c8d3a836a45c2aa811",
+    "size": 70048,
+    "mtime_ns": 1788787344203081445,
+    "mode": 33188
+  },
+  "public/assets/client-work/newport-media-films-mobile.webp": {
+    "sha256": "e4f8fe998487fac8bfd9a3ac51bf2b6e72c55cffd2ed31f05796ea45f3074ef7",
+    "size": 540,
+    "mtime_ns": 1788787327134613343,
+    "mode": 33188
+  },
+  "public/assets/client-work/talento-profesional-mobile.webp": {
+    "sha256": "fcaaa2209c9313be211315500d0a618c9f7c2f5f478d29a9c426fabe452e40e5",
+    "size": 19448,
+    "mtime_ns": 1788787428782061647,
+    "mode": 33188
+  },
+  "public/assets/client-work/talento-profesional-desktop.avif": {
+    "sha256": "7ecf79bc8e52f0cf8a051f09a0463dfaefb6da0948f04594a1bf36cfb6284557",
+    "size": 48797,
+    "mtime_ns": 1788787423713325059,
+    "mode": 33188
+  },
+  "public/assets/client-work/bioever-desktop.avif": {
+    "sha256": "a40da4c6dbc6c280d66379c847cf2ffb27e729120e190ff162269a6de4aa221a",
+    "size": 33616,
+    "mtime_ns": 1788953727404006323,
+    "mode": 33188
+  },
+  "public/assets/client-work/escuela-de-hosteleria-canaria-desktop.webp": {
+    "sha256": "d93d5e72741c533ba8b0878868b90f03213f3948dc2737e7a6ee202710ebcac2",
+    "size": 93708,
+    "mtime_ns": 1788787332751234184,
+    "mode": 33188
+  },
+  "public/assets/client-work/avanza-fp-mobile.webp": {
+    "sha256": "d0b457653d1a040c6d351bd2ce3265ae47612b103b089e7abc800f81b59cd460",
+    "size": 21380,
+    "mtime_ns": 1788787469291100570,
+    "mode": 33188
+  },
+  "public/assets/client-work/fpe-europea-desktop.webp": {
+    "sha256": "4ede3ef7bd03cd8ed960ab6112ee81bd2a124a7cf266ba286862bda4652c0433",
+    "size": 41984,
+    "mtime_ns": 1788787372735173504,
+    "mode": 33188
+  },
+  "public/assets/client-work/esenfuer-mobile.avif": {
+    "sha256": "5ec878f17b50264f20f1eec99732a37c52ff829a8343e7063f256175296d8a9d",
+    "size": 15550,
+    "mtime_ns": 1788787350343775227,
+    "mode": 33188
+  },
+  "public/assets/client-work/hotel-escuela-el-mirador-mobile.avif": {
+    "sha256": "3cc884eaca3e549648bf7578c34ae2aa380ead3d8b8a47cb8ed45bff00f00f01",
+    "size": 383,
+    "mtime_ns": 1788787240967306263,
+    "mode": 33188
+  },
+  "public/assets/client-work/fpe-europea-mobile.avif": {
+    "sha256": "42706de796cd8a5cc69e1280f5e690bb8f266af3f9504483f4391f4ca27ef9b0",
+    "size": 12944,
+    "mtime_ns": 1788787394197890998,
+    "mode": 33188
+  },
+  "public/assets/client-work/cht-canarias-desktop.avif": {
+    "sha256": "e19de8a3d2bc757d77a3e453569a54b4f2e6b4a3ad32b71bc71ccf0ffc2f77d9",
+    "size": 55031,
+    "mtime_ns": 1788787223843047158,
+    "mode": 33188
+  },
+  "public/assets/client-work/eduprisma-mobile.webp": {
+    "sha256": "4147a65fa679a246c2fc1b4efa26456d011c7daecd659fbdfd751adfbe16d468",
+    "size": 22218,
+    "mtime_ns": 1788787439230595827,
+    "mode": 33188
+  },
+  "public/assets/client-work/pansofia-desktop.avif": {
+    "sha256": "48a0d34b8ab46eecd76bcadf829faf12283cf8de680c5673ac9bf379e908b2dc",
+    "size": 72705,
+    "mtime_ns": 1788787211649550499,
+    "mode": 33188
+  },
+  "public/assets/client-work/level-up-canarias-desktop.webp": {
+    "sha256": "dee821552ab630d22ae8bb5f793e4066cd9a152be59014b6a6772237d1bc99d6",
+    "size": 41834,
+    "mtime_ns": 1788787445824113447,
+    "mode": 33188
+  },
+  "public/assets/client-work/esenfuer-desktop.avif": {
+    "sha256": "d0d6655b916539d9380d0d72a50523df41545c85926429e2adb65faabf0bd48e",
+    "size": 48830,
+    "mtime_ns": 1788787344713161281,
+    "mode": 33188
+  },
+  "public/assets/client-work/fuerteventura-2000-mobile.avif": {
+    "sha256": "af9a9969569cc81d2e7f47c8c5ecc146e2f959d4154f26c464044cf18c91accb",
+    "size": 15608,
+    "mtime_ns": 1788787202793123848,
+    "mode": 33188
+  },
+  "public/assets/client-work/talento-profesional-desktop.webp": {
+    "sha256": "eef4cb20728ace76b8676d9d28454d2ff3af887120a6e266d15364de10a4750b",
+    "size": 63882,
+    "mtime_ns": 1788787422911213592,
+    "mode": 33188
+  },
+  "public/assets/client-work/talento-profesional-mobile.avif": {
+    "sha256": "0a8bc04e81bd6bd3e5b5cc7e0d74bf52dc5d159c8698a6db4ad3f2013c3c7969",
+    "size": 14075,
+    "mtime_ns": 1788787428953656307,
+    "mode": 33188
+  },
+  "public/assets/client-work/newport-media-films-mobile.avif": {
+    "sha256": "3cc884eaca3e549648bf7578c34ae2aa380ead3d8b8a47cb8ed45bff00f00f01",
+    "size": 383,
+    "mtime_ns": 1788787327155552793,
+    "mode": 33188
+  },
+  "public/assets/client-work/esenfuer-mobile.webp": {
+    "sha256": "c30a36e4ce8e27215bd4a9c496560f934374512a7f8819b90d3aac1ddf1a26b9",
+    "size": 24586,
+    "mtime_ns": 1788787350152801193,
+    "mode": 33188
+  },
+  "public/assets/client-work/manifest.json": {
+    "sha256": "b17391fd11d8c39c6ee4a96bf0db415e958ec699e90434114fb949bbafc294e6",
+    "size": 9080,
+    "mtime_ns": 1788953748447128669,
+    "mode": 33188
+  },
+  "public/assets/client-work/avanza-fp-mobile.avif": {
+    "sha256": "febb90c68a76d5a2e45508b63ab010a0fc9e3131dc232f91d948434925297a40",
+    "size": 15487,
+    "mtime_ns": 1788787469470569405,
+    "mode": 33188
+  },
+  "public/assets/client-work/escuela-de-hosteleria-canaria-desktop.avif": {
+    "sha256": "d8cdde026d194f541029e453c66c2e81dfda6b6fe65b276d4dc5777f6b058164",
+    "size": 71772,
+    "mtime_ns": 1788787333608104785,
+    "mode": 33188
+  },
+  "public/assets/client-work/bioever-desktop.webp": {
+    "sha256": "3995fe862f9912f0b9fb91afe973b401666a79ae2c0d6c290c5e69bdfedb5658",
+    "size": 43816,
+    "mtime_ns": 1788953726150798849,
+    "mode": 33188
+  },
+  "public/assets/client-work/fpe-europea-desktop.avif": {
+    "sha256": "6d25c7f481b2ead64f0901e78fd8077038c058200a2b628856f11a3f7ef21775",
+    "size": 31349,
+    "mtime_ns": 1788787373471482844,
+    "mode": 33188
+  },
+  "public/assets/client-work/nformar-mobile.webp": {
+    "sha256": "d312e73ba4fa84f592747a3fefc998b1e15cfe557254272ca20427d1bd80633b",
+    "size": 16320,
+    "mtime_ns": 1788787402890893662,
+    "mode": 33188
+  },
+  "public/assets/client-work/aula-impulsa-mobile.webp": {
+    "sha256": "a17fba674f1c5d3ac1cb09f382d902c2b87dc52936257d61d76646465cf8cd4d",
+    "size": 23000,
+    "mtime_ns": 1788787417316595654,
+    "mode": 33188
+  },
+  "public/assets/client-work/avanza-fp-desktop.webp": {
+    "sha256": "f8ada5d390180a5a80a2b7e78b570bfe9759e0bf1a21a7b370e69b23d2cc95d9",
+    "size": 84606,
+    "mtime_ns": 1788787462632616152,
+    "mode": 33188
+  },
+  "public/assets/client-work/newport-media-films-desktop.webp": {
+    "sha256": "ff5b2d9af05231fb56e54f47b904a1b3855e46bc5037e1a785e8b51e75fa01ae",
+    "size": 3986,
+    "mtime_ns": 1788787285300625090,
+    "mode": 33188
+  },
+  "public/assets/client-work/level-up-canarias-mobile.avif": {
+    "sha256": "903c09260f2b35e1cccb3988f641ac8a8c0766a286ad53ec8ad5be64fd2567de",
+    "size": 13575,
+    "mtime_ns": 1788787458099172873,
+    "mode": 33188
+  },
+  "public/assets/client-work/escuela-de-hosteleria-canaria-mobile.webp": {
+    "sha256": "670e743703143a1218c363fe602612aa86c95c48dd6343a687fccc80bd3c1c05",
+    "size": 24894,
+    "mtime_ns": 1788787338286010927,
+    "mode": 33188
+  },
+  "public/assets/client-work/hotel-escuela-el-mirador-desktop.webp": {
+    "sha256": "ff5b2d9af05231fb56e54f47b904a1b3855e46bc5037e1a785e8b51e75fa01ae",
+    "size": 3986,
+    "mtime_ns": 1788787235927405757,
+    "mode": 33188
+  },
+  "public/assets/client-work/bioever-mobile.avif": {
+    "sha256": "a7e8c2af8705af6d55f0b7ee44d3d1791c6bc5b9bf31fc054f0415e8da3257d4",
+    "size": 13912,
+    "mtime_ns": 1788953748403050045,
+    "mode": 33188
+  },
+  "public/assets/client-work/cht-canarias-mobile.avif": {
+    "sha256": "0ec8e01c4e38046c3bd9ef552e5456ad5e9553dd82b0ca94c50c02f2464ed406",
+    "size": 7005,
+    "mtime_ns": 1788787229624293732,
+    "mode": 33188
+  },
+  "public/assets/client-work/innova-urbis-desktop.avif": {
+    "sha256": "7d1bc13bf072a2570583499da64fe27b1f08ce554e89e2d1de34ba4abfd35cbf",
+    "size": 109332,
+    "mtime_ns": 1788787479834393208,
+    "mode": 33188
+  },
+  "public/assets/client-work/innova-urbis-mobile.avif": {
+    "sha256": "9f4cc38c9ad4a80e17060ac350d1f04ddfbc044d63cee02ac533fe16d734aaaf",
+    "size": 15185,
+    "mtime_ns": 1788787513669089616,
+    "mode": 33188
+  },
+  "public/assets/client-work/eduprisma-desktop.webp": {
+    "sha256": "decac10352fd3aa4cedd1640f6346470ec05faf12f8b6dc4704bf2a924cd4a92",
+    "size": 64560,
+    "mtime_ns": 1788787434188805745,
+    "mode": 33188
+  },
+  "public/assets/client-work/fuerteventura-2000-desktop.avif": {
+    "sha256": "eb27820bfa251ae4cf361b3e0a392316a9ee3a5d6866dd6aa52e9a427df81a08",
+    "size": 56287,
+    "mtime_ns": 1788787195699206599,
+    "mode": 33188
+  },
+  "public/assets/client-work/nformar-desktop.webp": {
+    "sha256": "e189cd939a8a48725636e59e048866a00bcf8fadeec4980c317d0849003ec47b",
+    "size": 75796,
+    "mtime_ns": 1788787398562664937,
+    "mode": 33188
+  },
+  "public/assets/client-work/pansofia-mobile.avif": {
+    "sha256": "70ef756628f7e99ff7c6b0dda40e81635f441943ba5f4ab091cdc006a26c62af",
+    "size": 13148,
+    "mtime_ns": 1788787216549251748,
+    "mode": 33188
+  },
+  "public/assets/client-work/aula-impulsa-desktop.webp": {
+    "sha256": "9864839056bc1b279f4b8ab3095a572202480b9d35e31a67f51b9fcc060ebf59",
+    "size": 104558,
+    "mtime_ns": 1788787411524565503,
+    "mode": 33188
+  },
+  "src/.DS_Store": {
+    "sha256": "2522a4339c8f5dd88639d88888c02ae027ecc45be9cf70b06fe8bb57f24a56ec",
+    "size": 6148,
+    "mtime_ns": 1790423751548368813,
+    "mode": 33188
+  },
+  "src/app/robots.ts": {
+    "sha256": "4ad0cffa9b8628ccc579af0f8505eebf1c0a3725bec81c142c4add0b0a33c04a",
+    "size": 253,
+    "mtime_ns": 1788788807752145664,
+    "mode": 33188
+  },
+  "src/app/not-found.module.css": {
+    "sha256": "a2d0bf5322e71d05ab5386a146b467ec28a333ad59a60d2385e3804d0fe7d16a",
+    "size": 1265,
+    "mtime_ns": 1788849671870660115,
+    "mode": 33188
+  },
+  "src/app/sitemap.ts": {
+    "sha256": "b8337aa82b661e11bf2f27c41f328700ed337e9077a99f678fe51dcafe2cc4bc",
+    "size": 927,
+    "mtime_ns": 1789054604725177391,
+    "mode": 33188
+  },
+  "src/app/layout.tsx": {
+    "sha256": "c7cf67f3610adefcafcbce7c57cff46a02169f2779514cc8a5457dd6660d00e5",
+    "size": 2604,
+    "mtime_ns": 1788955249316002596,
+    "mode": 33188
+  },
+  "src/app/page.tsx": {
+    "sha256": "836fb4de196ff68214239c7708b574d4b743f2791f14f0ab5ed7e0f801b3ab72",
+    "size": 384,
+    "mtime_ns": 1789054575642863299,
+    "mode": 33188
+  },
+  "src/app/not-found.tsx": {
+    "sha256": "a208388a141868c0e0bd109a871790045b1ae0c8d41a7076138e2082c13e956e",
+    "size": 3177,
+    "mtime_ns": 1788956129419681090,
+    "mode": 33188
+  },
+  "src/world/.DS_Store": {
+    "sha256": "c6f73993fd0f31e9273ab66efa3720c404b2a06442c4ced1a3284cc4267f84fa",
+    "size": 8196,
+    "mtime_ns": 1789115276717989459,
+    "mode": 33188
+  },
+  "src/world/Game.ts": {
+    "sha256": "69eae3201241ffbe805062e3060b80990835812a16bbf288cd729973f50d628a",
+    "size": 38550,
+    "mtime_ns": 1788974159013029130,
+    "mode": 33188
+  },
+  "src/content/attractions.ts": {
+    "sha256": "0986cdfb29beb88c36ad37c68350502bf47399c020288109ddc90f94753e76da",
+    "size": 29145,
+    "mtime_ns": 1789043127863092517,
+    "mode": 33188
+  },
+  "src/content/achievements.ts": {
+    "sha256": "c25823b73b31c11069c71bcfa1f1662740b09749a9f738df70895b8d9b840629",
+    "size": 11109,
+    "mtime_ns": 1788971281518761441,
+    "mode": 33188
+  },
+  "src/content/tech-logos.ts": {
+    "sha256": "ced04f38d2d1eddc323c5fd99fa07c196075e58c2aab77794e272097fe30663d",
+    "size": 62767,
+    "mtime_ns": 1789054511024901590,
+    "mode": 33188
+  },
+  "src/content/world-layout.ts": {
+    "sha256": "0d3a3020f8cc7d2276c35407c3a3a849123f0ec3d80e8902fdb67f1b3c9aea16",
+    "size": 36355,
+    "mtime_ns": 1789044177783434693,
+    "mode": 33188
+  },
+  "src/content/types.ts": {
+    "sha256": "30c46aa5761caf8186cd30be272fb28300c675fcd3fe53cf4abdf688509f9d90",
+    "size": 5181,
+    "mtime_ns": 1789054498469851417,
+    "mode": 33188
+  },
+  "src/content/education.ts": {
+    "sha256": "4313cee44b102f06bbc0d55c47eb0a45896a91b26284904a195935fada6df170",
+    "size": 3107,
+    "mtime_ns": 1788786689600786904,
+    "mode": 33188
+  },
+  "src/content/world-environment.ts": {
+    "sha256": "4e5ea8dcfa28c0b626c2fdeeeb1f79acecc6751cda1866027bc865a83585ee1d",
+    "size": 34035,
+    "mtime_ns": 1789043335049167771,
+    "mode": 33188
+  },
+  "src/content/experience.ts": {
+    "sha256": "304cf82539c2d25b5c0fb5c89a12ce2527e9d8dc591782adba0823cbcc572753",
+    "size": 5359,
+    "mtime_ns": 1788786689603719577,
+    "mode": 33188
+  },
+  "src/content/world-map.ts": {
+    "sha256": "d89305450e6ad2d0c64f57aedf1a22bce5ee4c0c4eef30db4c1b43f691f18142",
+    "size": 10197,
+    "mtime_ns": 1789042917404432006,
+    "mode": 33188
+  },
+  "src/content/profile.ts": {
+    "sha256": "069cb03fa2b3a86a3b39d23f1b7540d4273cc337c1bf393b5a6a40ebfd7898ac",
+    "size": 2918,
+    "mtime_ns": 1788786626544219259,
+    "mode": 33188
+  },
+  "src/content/skills.ts": {
+    "sha256": "292a4dfc1cadea523a703f030484a7eaf1b907d37a265f22779c70de5ff5ecdb",
+    "size": 9360,
+    "mtime_ns": 1789054495538505734,
+    "mode": 33188
+  },
+  "src/content/world-decor.ts": {
+    "sha256": "68dbedc33fc34eb2e0c20af4093ff92ff00b1a3144003b4f89867d80a0b12f39",
+    "size": 52400,
+    "mtime_ns": 1788974331087175318,
+    "mode": 33188
+  },
+  "src/content/world.ts": {
+    "sha256": "25d536b24066a29a6dc95d8754ad7e6a6e12495fd3f20a9badeecb43edcb629a",
+    "size": 38277,
+    "mtime_ns": 1789043174628985285,
+    "mode": 33188
+  },
+  "src/content/chapters.ts": {
+    "sha256": "109f9196e1f9ccb90fc011f530f502b0109147d434e2de817ef70ec62f4a63d1",
+    "size": 7756,
+    "mtime_ns": 1789059139420698239,
+    "mode": 33188
+  },
+  "src/state/journey.ts": {
+    "sha256": "0fd500c12a63d27b1c0786795b920039680e6f8d3e349b3c4f0efec36b241da5",
+    "size": 6263,
+    "mtime_ns": 1789059475768768420,
+    "mode": 33188
+  },
+  "src/styles/tokens.css": {
+    "sha256": "44b275c7cc830b2909dcd9a75582d55aa2cd6190915bc500a95bb7865556afa8",
+    "size": 12229,
+    "mtime_ns": 1789947595810459886,
+    "mode": 33188
+  },
+  "src/styles/globals.css": {
+    "sha256": "8825c3adff4a1b392d7d8a20be93104cdde4fcfbf13672fa8621c970af40cb03",
+    "size": 5095,
+    "mtime_ns": 1788955244664972804,
+    "mode": 33188
+  },
+  "src/hooks/useEasterEggs.ts": {
+    "sha256": "e371815686e0285502d8a870c0d71deb761db01c944a065c14392bdfec8ab58c",
+    "size": 2236,
+    "mtime_ns": 1788789374508710382,
+    "mode": 33188
+  },
+  "src/hooks/useChapterProgress.ts": {
+    "sha256": "a5ebf8fe096e34c83c02de3e5c26c37608f3df1e4306ece768c2958bf11c2109",
+    "size": 1905,
+    "mtime_ns": 1788789365821177036,
+    "mode": 33188
+  },
+  "src/hooks/useCanvas2D.ts": {
+    "sha256": "8dcb813fb5f0b2ae12ad3156f5f92159be1132e69d07bbcf25618eeb7eb67468",
+    "size": 3049,
+    "mtime_ns": 1788789365820724491,
+    "mode": 33188
+  },
+  "src/hooks/useLenisScroll.ts": {
+    "sha256": "db1bff2a9c7db52a056ce5dfb6a7e6db47ff1a31a1353a71c6188122d7202709",
+    "size": 3009,
+    "mtime_ns": 1788786768720290136,
+    "mode": 33188
+  },
+  "src/hooks/useSound.ts": {
+    "sha256": "cfa110e3420c1ebcf3c485dea76342404deb9680318a43ae46ab3c3ae449f873",
+    "size": 3723,
+    "mtime_ns": 1788788734922229013,
+    "mode": 33188
+  },
+  "src/lib/ticker.ts": {
+    "sha256": "d583fbc9c9e40eacefbcb21255f71ae0d0b8be387575d36eff90c424beb8426a",
+    "size": 1196,
+    "mtime_ns": 1788789139765792997,
+    "mode": 33188
+  },
+  "src/lib/math.ts": {
+    "sha256": "68929fdbdf16a4b7f549940bfdaa7f5801041c015aabebf4daa98afe85fe97b8",
+    "size": 1999,
+    "mtime_ns": 1788786740143625405,
+    "mode": 33188
+  },
+  "src/lib/perf.ts": {
+    "sha256": "aae5aee9d83da8aa19e9c2bfb7fa0d5f1ba3a5c070df324cafaa34001a727289",
+    "size": 3076,
+    "mtime_ns": 1788786740141202483,
+    "mode": 33188
+  },
+  "src/world2/World2Game.ts": {
+    "sha256": "69b82fdfba25ab934d34ac8b9eb1b142016008bf21d11218ec8928dc4f70d4ef",
+    "size": 27804,
+    "mtime_ns": 1789324918450333446,
+    "mode": 33188
+  },
+  "src/world2/.DS_Store": {
+    "sha256": "643721f504fed300414473183afb36bbc0df3389640e7884158cc9e5ab723a7c",
+    "size": 8196,
+    "mtime_ns": 1790423756557369322,
+    "mode": 33188
+  },
+  "src/world2/World2Route.tsx": {
+    "sha256": "110cf715fe58c39a1a8c3d7bf20c8cde8b57116933bc7e168f5cb5b0c4a43a4a",
+    "size": 347,
+    "mtime_ns": 1789116937205734863,
+    "mode": 33188
+  },
+  "src/world2/types.ts": {
+    "sha256": "c30050d44c97478af5f14529829761adacf52644d2cf9d38bdc5089e7301b1c9",
+    "size": 2304,
+    "mtime_ns": 1789213339087386224,
+    "mode": 33188
+  },
+  "src/world2/World2Experience.tsx": {
+    "sha256": "cbf6d362b681a8857a87663db19a86ab2fcf0c89be48d61a7160ffdd2d1dadf3",
+    "size": 16225,
+    "mtime_ns": 1789947283886216269,
+    "mode": 33188
+  },
+  "src/world2/world2.module.css": {
+    "sha256": "9697620d26b6e603cf448715d21e12e6b1c65a07bf2fab4c04d9d5c70070d01f",
+    "size": 11577,
+    "mtime_ns": 1789221013632664099,
+    "mode": 33188
+  },
+  "src/world2/World2Grass.ts": {
+    "sha256": "a6d493a171b470eb159a1ffa97fbc94303042b1a02e849fc10d4d52076839332",
+    "size": 4893,
+    "mtime_ns": 1789220847426342425,
+    "mode": 33188
+  },
+  "src/world2/World2Environment.ts": {
+    "sha256": "7ba6a7f7ad0fec6ffd985681ab0c4cd810ce1a1029b3e8e7baf2744d6b29a9a2",
+    "size": 28206,
+    "mtime_ns": 1789323507311089731,
+    "mode": 33188
+  },
+  "src/world2/interactions/Title.ts": {
+    "sha256": "592d1101c09dbde379495f74c41da26fe66c944d4eac53cb5552a53c2b264a59",
+    "size": 9465,
+    "mtime_ns": 1789302329429975889,
+    "mode": 33188
+  },
+  "src/world2/interactions/Career.ts": {
+    "sha256": "b789653f8f30109caf09fd3521c9f7f2f609586c4aaf6ea9f912f39f827dfb01",
+    "size": 26230,
+    "mtime_ns": 1789305539785661203,
+    "mode": 33188
+  },
+  "src/world2/interactions/Projects.ts": {
+    "sha256": "66ce942b0a4dbeaf52f3776b5815e9e84a98bd6323af5176ae1952227ac7ade9",
+    "size": 16829,
+    "mtime_ns": 1789220906219882038,
+    "mode": 33188
+  },
+  "src/world2/interactions/glyphs.ts": {
+    "sha256": "8235446481fc9fcce1198d9b788f27e21da63879a21faf8123c339989fa52331",
+    "size": 4257,
+    "mtime_ns": 1789301904930266986,
+    "mode": 33188
+  },
+  "src/world2/interactions/Achievements.ts": {
+    "sha256": "5ebf4c4cef1d6064bb939ac171465fa5b4fbc2f1228247aa070046267ec46063",
+    "size": 9701,
+    "mtime_ns": 1789221513609227992,
+    "mode": 33188
+  },
+  "src/world2/interactions/Interactions.ts": {
+    "sha256": "6f77e6da9ce2a02b85fbcc441eef75e25e348afe289dbd735523b3982f262e8d",
+    "size": 11733,
+    "mtime_ns": 1789302384944945923,
+    "mode": 33188
+  },
+  "src/world2/interactions/bindCanvas.ts": {
+    "sha256": "65cc0643baa16fb8fce6dd45d1363e479eb8e2582dddde9c79724f02b6bb1dfd",
+    "size": 5734,
+    "mtime_ns": 1789253107983599079,
+    "mode": 33188
+  },
+  "src/world2/interactions/Explosions.ts": {
+    "sha256": "3dd32b42b38b73f67bb4d74233f16e6a0358ac9d5df99aa760d2f64292f733e7",
+    "size": 15665,
+    "mtime_ns": 1789221513608655772,
+    "mode": 33188
+  },
+  "src/world2/interactions/Blackboards.ts": {
+    "sha256": "ed49363e0cf1fc44f73f56c2b88dc71e09d058b75b5f102675d0dd7d7234f999",
+    "size": 4192,
+    "mtime_ns": 1789302345808526244,
+    "mode": 33188
+  },
+  "src/world2/interactions/ExplosiveCrates.ts": {
+    "sha256": "771de8a6a7f3fbc633d52ce4b1ec8f676903fb4ad308a97157da9519481b5531",
+    "size": 6373,
+    "mtime_ns": 1789209193696676100,
+    "mode": 33188
+  },
+  "src/world2/interactions/Prompts.ts": {
+    "sha256": "5c570dc35989455ec3233fe4410ec1628e1e76c32fbc666bda38dc98d734f569",
+    "size": 16539,
+    "mtime_ns": 1789220410565897241,
+    "mode": 33188
+  },
+  "src/world2/interactions/screenMotion.ts": {
+    "sha256": "82f678151fd46c5689d78736232b774e548daa6e1039b3ac43987dfd9e7c809e",
+    "size": 14045,
+    "mtime_ns": 1789214801313840428,
+    "mode": 33188
+  },
+  "src/world2/interactions/Places.ts": {
+    "sha256": "5ac20d951c599689ba4fc1b54d81482f89f2ab09b63d3d846e8167f9f62cf2b3",
+    "size": 27614,
+    "mtime_ns": 1789304903150817469,
+    "mode": 33188
+  },
+  "src/world2/interactions/references.ts": {
+    "sha256": "08f6c97a8f3893d8cd919a2e39340670a092b58f807d0508042bd3cdb9af51e3",
+    "size": 6091,
+    "mtime_ns": 1789302319590048609,
+    "mode": 33188
+  },
+  "src/world2/interactions/Bowling.ts": {
+    "sha256": "17127fb4008537c1cdcab62325c7446c47e352124310851212b4fa211dfc18b9",
+    "size": 15818,
+    "mtime_ns": 1789302329430292180,
+    "mode": 33188
+  },
+  "src/world2/interactions/Circuit.ts": {
+    "sha256": "e79c9b5e6948978fbdd5b09a821e6e57209db93861d2f5fd412eab0d5d019227",
+    "size": 24449,
+    "mtime_ns": 1789252993503377140,
+    "mode": 33188
+  },
+  "src/world2/interactions/Social.ts": {
+    "sha256": "4968ba03b23473325fcb1d7a949d91276cdca3ba494fe29f00dc659eef52cfec",
+    "size": 15028,
+    "mtime_ns": 1789323507298794291,
+    "mode": 33188
+  },
+  "src/world2/interactions/Screen.ts": {
+    "sha256": "bf1ae90ac9d7d9155a2086e8cfb4500e5646c3405f6648a94dacd14d89b7f150",
+    "size": 3773,
+    "mtime_ns": 1789214801312588756,
+    "mode": 33188
+  },
+  "src/world2/content/career.ts": {
+    "sha256": "4b570809a3d508a98de1066cee95c2fb0b6f6a903ca47541efb8f5712f8f566e",
+    "size": 6648,
+    "mtime_ns": 1789304094557268267,
+    "mode": 33188
+  },
+  "src/world2/content/projects.ts": {
+    "sha256": "fb1c671dfdaf44865d20e10fd6c534abef2cad056af6996f4897e33dff4036d7",
+    "size": 2588,
+    "mtime_ns": 1789213640084963114,
+    "mode": 33188
+  },
+  "src/world2/content/achievements.ts": {
+    "sha256": "bc29f93d26263aae481b9fe4628f37f561301ed1410e39eccd0bd5058c0ce95a",
+    "size": 4469,
+    "mtime_ns": 1789302915587151980,
+    "mode": 33188
+  },
+  "src/world2/content/glyphs.json": {
+    "sha256": "c79fca6bf9be0cf010e68dd9f91c94213a22ea16d350aa6757b2f4a1be5094c8",
+    "size": 14860,
+    "mtime_ns": 1789208558257603809,
+    "mode": 33188
+  },
+  "src/components/ui/Cursor.tsx": {
+    "sha256": "3d4ac5530af9ee3f4e461295efb8e58f4d975acf9ffb2a03e67030e28811d6b4",
+    "size": 3818,
+    "mtime_ns": 1788789168952575695,
+    "mode": 33188
+  },
+  "src/components/ui/ProjectOverlay.module.css": {
+    "sha256": "596cbaf6c3ad8021dda95084f77858232c9afe904713c99554efb9fd36d5005b",
+    "size": 4898,
+    "mtime_ns": 1788804819913340422,
+    "mode": 33188
+  },
+  "src/components/ui/Cursor.module.css": {
+    "sha256": "8d86e4c9b9d666ac2e479afb8f191f86db641ab726a20cb493b96517893d62b1",
+    "size": 1416,
+    "mtime_ns": 1788787959932544125,
+    "mode": 33188
+  },
+  "src/components/ui/ProjectOverlay.tsx": {
+    "sha256": "38024837fbe0e82f2be6bcf964418d072aa9548e404d8e26f4af1b7578a4a5c2",
+    "size": 7337,
+    "mtime_ns": 1788789205157438030,
+    "mode": 33188
+  },
+  "src/components/project-visuals/ProjectVisual.tsx": {
+    "sha256": "64f765f675144d5bbed395a25c634c6e74bfc766607ae55c4e043f5e12ac7592",
+    "size": 2887,
+    "mtime_ns": 1788804948285082063,
+    "mode": 33188
+  },
+  "src/components/project-visuals/LibraryMotion.tsx": {
+    "sha256": "14394e8a58d495c671dae7724eb5fc1600eefc836ee290a6c968a8c617135d65",
+    "size": 34021,
+    "mtime_ns": 1788805342058153926,
+    "mode": 33188
+  },
+  "src/components/project-visuals/GenericProjectMotion.tsx": {
+    "sha256": "26ddced8f0ab659a15ac22f485ec8e310b2b28b4e16cbca2b08e841f737924b5",
+    "size": 34504,
+    "mtime_ns": 1788804992384520094,
+    "mode": 33188
+  },
+  "src/components/project-visuals/VpnMotion.tsx": {
+    "sha256": "5632f20081142274e7ba4895450a05a2c09ced23f1b6d4b71b3be37215edc192",
+    "size": 24707,
+    "mtime_ns": 1788789215536046459,
+    "mode": 33188
+  },
+  "src/components/project-visuals/LabyrinthMotion.tsx": {
+    "sha256": "7070654106f1e4baa339c82499012ec4c549ffe4cf436f060dcb9a30fc1e7f48",
+    "size": 35628,
+    "mtime_ns": 1788789304603392402,
+    "mode": 33188
+  },
+  "src/components/project-visuals/JobBoardMotion.tsx": {
+    "sha256": "cc3084bf9c01e446d0109d62865b5e2a4117ac3cde29c7f2049a97accae2a503",
+    "size": 28796,
+    "mtime_ns": 1788789007396697180,
+    "mode": 33188
+  },
+  "src/components/project-visuals/StockMotion.tsx": {
+    "sha256": "a6e682c8fe49c3879249e06ec42b5c3e8bdc371cd7f5c8b401d347f1b5fba9af",
+    "size": 31716,
+    "mtime_ns": 1788789449632364634,
+    "mode": 33188
+  },
+  "src/components/project-visuals/visual.module.css": {
+    "sha256": "2ac737ad0995ba3b4fa49ee21110e30df9d0562921874cf70090367c4088979e",
+    "size": 1156,
+    "mtime_ns": 1788787500884663268,
+    "mode": 33188
+  },
+  "src/components/project-visuals/CardsMotion.tsx": {
+    "sha256": "041c2675386eec112fd17635060a601b26a32046a6fcde655959caf0f3c49763",
+    "size": 35526,
+    "mtime_ns": 1788789414367451578,
+    "mode": 33188
+  },
+  "src/components/project-visuals/VoxelMotion.tsx": {
+    "sha256": "00932ab7290ec351cb6b769ee8aa0d174e96c2c01f37e8a9942e9e823e447f1c",
+    "size": 36218,
+    "mtime_ns": 1788805791544490538,
+    "mode": 33188
+  },
+  "src/components/project-visuals/DotsBoxesMotion.tsx": {
+    "sha256": "262bc795c1c3741194b05a6f52cb2efeb4d6e93b1060fa46ff4f29ca48358dab",
+    "size": 33061,
+    "mtime_ns": 1788789739233999292,
+    "mode": 33188
+  },
+  "src/components/project-visuals/types.ts": {
+    "sha256": "ab163689c80a6a98617f8eb532c67e0a9b1f7ad9c208ed5e785166b07422ece0",
+    "size": 1840,
+    "mtime_ns": 1788787500881768323,
+    "mode": 33188
+  },
+  "src/components/project-visuals/FocusMotion.tsx": {
+    "sha256": "33a8758900fb6c379e2de8e32a7d30e0a5e12253d878e3fb88d67cb539957ceb",
+    "size": 36564,
+    "mtime_ns": 1788804127850733825,
+    "mode": 33188
+  },
+  "src/components/project-visuals/KeyframesMotion.tsx": {
+    "sha256": "f3bdaabeea7cf2b2c45d6023ef9c60a539914dd28562ca6f13f8f9d9da21395a",
+    "size": 26351,
+    "mtime_ns": 1788789277353325031,
+    "mode": 33188
+  },
+  "src/components/project-visuals/GymMotion.tsx": {
+    "sha256": "382e6c26718a5c6395f8ae64eeee17ab2532a7f9e0014f313b839d8fc97b0131",
+    "size": 37368,
+    "mtime_ns": 1788804190790772386,
+    "mode": 33188
+  },
+  "src/components/project-visuals/PrimesMotion.tsx": {
+    "sha256": "6d216e3de30f0192464752ee7ad069e13c0449c5556eabce3f2a475ef7fc8b03",
+    "size": 28811,
+    "mtime_ns": 1788789939796907938,
+    "mode": 33188
+  },
+  "src/components/project-visuals/VideoPlayerMotion.tsx": {
+    "sha256": "b87c1b97512575dc7186b9c2fdb5ee2e1a6483d2927509b59cc6f4318ebd8cde",
+    "size": 30881,
+    "mtime_ns": 1788804976804309385,
+    "mode": 33188
+  },
+  "src/components/project-visuals/WebsiteMotion.tsx": {
+    "sha256": "66ebb0f85ed4606535c50b556ed4748e2a8b390ca9ca4149bc1bfc6d8de4558d",
+    "size": 44383,
+    "mtime_ns": 1788806251179717288,
+    "mode": 33188
+  },
+  "src/components/project-visuals/ThreeBodyMotion.tsx": {
+    "sha256": "d0e7ff5bd3a9f8c0ada950368745ad4c7e0d6b9bd89ebbc03fdf5d7d2ca969ac",
+    "size": 28714,
+    "mtime_ns": 1788789433113156623,
+    "mode": 33188
+  },
+  "src/components/project-visuals/CatanMotion.tsx": {
+    "sha256": "72ad8548e69d71d0ddb2844b69514d697db981205cdea1b24eaec967ae151666",
+    "size": 36570,
+    "mtime_ns": 1788805043225519593,
+    "mode": 33188
+  },
+  "src/components/project-visuals/ChessMotion.tsx": {
+    "sha256": "73b4ac1b2dd3cbceed97a365da292a75753d7b30f7b901baa84e268b878215d6",
+    "size": 33434,
+    "mtime_ns": 1788788763817913047,
+    "mode": 33188
+  },
+  "src/components/project-visuals/TrainingMotion.tsx": {
+    "sha256": "ac6dd71e659aa54921003dd6a9a132bc679953008a798e4734d48467992c25a3",
+    "size": 27520,
+    "mtime_ns": 1788804793848476131,
+    "mode": 33188
+  },
+  "src/components/navigation/Hud.tsx": {
+    "sha256": "ef58c5b8cab212739c843088c57e80989b02cd244ede7f3bb880bb187583a12d",
+    "size": 7876,
+    "mtime_ns": 1789059037272364297,
+    "mode": 33188
+  },
+  "src/components/navigation/Hud.module.css": {
+    "sha256": "b97eec0914c5937abc98c5e754373d8eab556feac23440059f59dadb204ad352",
+    "size": 6100,
+    "mtime_ns": 1789054505064721681,
+    "mode": 33188
+  },
+  "src/components/navigation/IndexOverlay.tsx": {
+    "sha256": "e967728f6c621ac924837a383e343517250a1ad4871e89571767623c97f34371",
+    "size": 10936,
+    "mtime_ns": 1789949472582316617,
+    "mode": 33188
+  },
+  "src/components/navigation/IndexOverlay.module.css": {
+    "sha256": "8335ca6f8176ac2e99990fab8dcfae09e9c9962d3fb90ecade370aeb6eb893ec",
+    "size": 9601,
+    "mtime_ns": 1789059446661792571,
+    "mode": 33188
+  },
+  "src/components/world/WorldLoader.tsx": {
+    "sha256": "9d6b8a6cbea3ad26f803bbfe73fc9cc654e63f6808280ab653792e3e18e1ee1d",
+    "size": 11031,
+    "mtime_ns": 1789056299684437094,
+    "mode": 33188
+  },
+  "src/components/world/WorldExperience.tsx": {
+    "sha256": "009d0fe0fa3db63f66d3f8966a38d4d07e4d839fc7329d72a308f9a061319ec7",
+    "size": 4257,
+    "mtime_ns": 1788849671873527287,
+    "mode": 33188
+  },
+  "src/components/world/WorldFallback.tsx": {
+    "sha256": "16bfe54acb9d847b813575ecb10e6549759c8d9299ba0c3ae66efdff7032952e",
+    "size": 3325,
+    "mtime_ns": 1788849671873760163,
+    "mode": 33188
+  },
+  "src/components/world/WorldControls.tsx": {
+    "sha256": "837179d68711ecb5689a7d6918b5f79818040c112a977bff01011ece7f8313c3",
+    "size": 5988,
+    "mtime_ns": 1788849671873295370,
+    "mode": 33188
+  },
+  "src/components/world/touch.module.css": {
+    "sha256": "f56869d37091759563be977f195e5d8fb3ab5dc732f62cd90e2bba4b34c54422",
+    "size": 2642,
+    "mtime_ns": 1788849671878853924,
+    "mode": 33188
+  },
+  "src/components/world/WorldTouchControls.tsx": {
+    "sha256": "b069aa9a9926348ce2e7b94ef40eb89d8d713e81d4d99c044e5f8d2426cb293f",
+    "size": 5538,
+    "mtime_ns": 1788968408964120452,
+    "mode": 33188
+  },
+  "src/components/world/WorldHud.tsx": {
+    "sha256": "3d09b17b2c7f0351e87eac2252b39d06840182f484ea27055ed87b440aedc29f",
+    "size": 9031,
+    "mtime_ns": 1788968754830950083,
+    "mode": 33188
+  },
+  "src/components/world/interaction.module.css": {
+    "sha256": "9724da19bac3827f2a1633966d83326b259873b7c1fc19afdf317c504cb4a2cd",
+    "size": 5794,
+    "mtime_ns": 1788915853702670665,
+    "mode": 33188
+  },
+  "src/components/world/WorldRoute.tsx": {
+    "sha256": "cca460552eee1760480f5787790f0bd3ec70fd2794e98e72a25844069141a6f4",
+    "size": 1929,
+    "mtime_ns": 1788849671877296337,
+    "mode": 33188
+  },
+  "src/components/world/WorldOverlays.tsx": {
+    "sha256": "0874e530ae2cfdb1d8a18d2babc1dd3006af897cce133623c6082a11f15dca3b",
+    "size": 13697,
+    "mtime_ns": 1788947602296702235,
+    "mode": 33188
+  },
+  "src/components/world/WorldMap.tsx": {
+    "sha256": "90fe76e38db71adf7dc1581a4ed814f0d6a45c28c383d08ee880956ede797dad",
+    "size": 20723,
+    "mtime_ns": 1788950715504644663,
+    "mode": 33188
+  },
+  "src/components/world/world.module.css": {
+    "sha256": "a3c8b7e122dafcdff7d53e83e1dcc4e7d61b59a0cd07a2f25e87eba0c3b296d4",
+    "size": 23642,
+    "mtime_ns": 1789054830961387544,
+    "mode": 33188
+  },
+  "src/components/world/map.module.css": {
+    "sha256": "675a469b1488e54bfeb79c5d2c8aab3d7da54da559be90605c87265ea6d440fe",
+    "size": 2098,
+    "mtime_ns": 1788950715459364945,
+    "mode": 33188
+  },
+  "src/components/world/fallback.module.css": {
+    "sha256": "9c599b272b7348556911b7acc3057394cb2aaff86d1edf7643adbef37d7a5cbc",
+    "size": 1782,
+    "mtime_ns": 1788849671878086630,
+    "mode": 33188
+  },
+  "src/components/motion/ModuleGlyph.tsx": {
+    "sha256": "807147664cbec1864876c9c24c937734bc03df7194827d51d5bf9782d7c156e9",
+    "size": 5467,
+    "mtime_ns": 1788788231764782843,
+    "mode": 33188
+  },
+  "src/components/journey/StaticProfile.module.css": {
+    "sha256": "a736fb191b1254bf13d12e19d452e8507f3c20fbef0389154a565e5329046202",
+    "size": 728,
+    "mtime_ns": 1788788771471998383,
+    "mode": 33188
+  },
+  "src/components/journey/Journey.tsx": {
+    "sha256": "ee95fa6f40e62aa9769ffa69a691e9e9398c0e028b86beb8dedaf1212ca1d340",
+    "size": 8064,
+    "mtime_ns": 1789935925132890270,
+    "mode": 33188
+  },
+  "src/components/journey/StaticProfile.tsx": {
+    "sha256": "824d0f4c9ae4a86b651309aa4f106d764238751f8010b9817968cf85af61dd5f",
+    "size": 4044,
+    "mtime_ns": 1789059630200853129,
+    "mode": 33188
+  },
+  "src/components/journey/Chapter.module.css": {
+    "sha256": "00a3c7767f6d1c711fe980a6cba8ff78b65c8bd0801783ff42bcc69f39cf3e1b",
+    "size": 210,
+    "mtime_ns": 1788786807271587786,
+    "mode": 33188
+  },
+  "src/components/journey/Chapter.tsx": {
+    "sha256": "c03e925c5507ae716b27d884ab080c2d328bca9b4b08e4b2b49553a79d260fe0",
+    "size": 1763,
+    "mtime_ns": 1789059080488185047,
+    "mode": 33188
+  },
+  "src/components/journey/parts.tsx": {
+    "sha256": "d5ac0b5acbc5bf3251475280430143945dc1a7d859eef403a40dc82bb7a9320d",
+    "size": 2330,
+    "mtime_ns": 1788788121240352062,
+    "mode": 33188
+  },
+  "src/components/journey/WorldPortal.tsx": {
+    "sha256": "dc5a4d76328d40ad2be849313311fcc27d1b904307806b7d9a17bc26259ea3bc",
+    "size": 71058,
+    "mtime_ns": 1789953775826511895,
+    "mode": 33188
+  },
+  "src/components/journey/WorldPortal.module.css": {
+    "sha256": "aa8e52c2b01c9bc32817b6a8265cab156abe379e210544ee881047cea3a6c28e",
+    "size": 20014,
+    "mtime_ns": 1789948762470819733,
+    "mode": 33188
+  },
+  "src/components/journey/parts.module.css": {
+    "sha256": "6389609e8f4c7085f4123108758e42accef0c0e405521fdc4f8d4b5930e849f9",
+    "size": 2581,
+    "mtime_ns": 1788788121244115030,
+    "mode": 33188
+  },
+  "src/components/journey/StaticProjects.tsx": {
+    "sha256": "8a282f01e87a791240818b304a3a3eb0305eba652cc5ed17f705b9cbc63c9529",
+    "size": 3542,
+    "mtime_ns": 1789059790011627358,
+    "mode": 33188
+  },
+  "src/components/journey/JourneyProvider.tsx": {
+    "sha256": "6a10f77f82f788aaabc8e02bc131d6b64a4e90646b703b4fa8959420064d232d",
+    "size": 8539,
+    "mtime_ns": 1789960931088734000,
+    "mode": 33188
+  },
+  "src/components/vegetation/canopy.module.css": {
+    "sha256": "4a398426e8b31d17248d7199155f52687446c4f3bf480deffc9d91ddde9ba9c5",
+    "size": 5400,
+    "mtime_ns": 1789940318062266518,
+    "mode": 33188
+  },
+  "src/components/vegetation/Vegetation.tsx": {
+    "sha256": "7003c02837e79dd5fcdfd2b6bd26ae1b8a7adb95b4a71641a239fbd22913f097",
+    "size": 28971,
+    "mtime_ns": 1789960852243490996,
+    "mode": 33188
+  },
+  "src/components/vegetation/flora.ts": {
+    "sha256": "d956f9d3a170d4ab2720faec6414ec25220d7b4c5c4ca81f494b21965b85667e",
+    "size": 9047,
+    "mtime_ns": 1789053899999439620,
+    "mode": 33188
+  },
+  "src/components/vegetation/canopy.ts": {
+    "sha256": "dccc113fee615067b5a3ee95c029f9b67dc4cbe8b03aa96a9ce401ced3a6cb24",
+    "size": 50954,
+    "mtime_ns": 1789953351171587017,
+    "mode": 33188
+  },
+  "src/components/vegetation/vegetation.module.css": {
+    "sha256": "2ac0ce366ce2a70d7a6e184f0c654bf933590e4ccbd1f7e893e8c5f92e0793a1",
+    "size": 4537,
+    "mtime_ns": 1789059032874786012,
+    "mode": 33188
+  },
+  "src/components/typography/Counter.tsx": {
+    "sha256": "ce00a0417bfcf2502735ea01531606dedca651112a668cb6cf4e1bb3a4b473cd",
+    "size": 1943,
+    "mtime_ns": 1788787928860508295,
+    "mode": 33188
+  },
+  "src/components/typography/typography.module.css": {
+    "sha256": "dded4a6aad1a709824d37a02033f8555ae4e6e582e44ff66c4ff089c7c641530",
+    "size": 2980,
+    "mtime_ns": 1788787928857241070,
+    "mode": 33188
+  },
+  "src/components/typography/Reveal.tsx": {
+    "sha256": "81eb02eaf3f4ca5bd689c6a80ea8eef1e0ba30256cd53a34a8aa58cad778af5b",
+    "size": 3471,
+    "mtime_ns": 1788787928853598037,
+    "mode": 33188
+  },
+  "src/components/tech/TechTile.tsx": {
+    "sha256": "7d3aa5e7df092a40b083cc7be0713840b89a31e47c6e9412dd52de1f0073f7bd",
+    "size": 11858,
+    "mtime_ns": 1788959084992535026,
+    "mode": 33188
+  },
+  "src/components/tech/tech-tile.module.css": {
+    "sha256": "c7c1b44b7815eea6d110fc9a60a777334acb2966363e189a716f011cf9677c1e",
+    "size": 6040,
+    "mtime_ns": 1789058806795588429,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Chess.module.css": {
+    "sha256": "041688702a7d48d512f2558ad659ddeac051bd6b673dfe3882ad2db05270fbb2",
+    "size": 4999,
+    "mtime_ns": 1788977343685972803,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Stock.module.css": {
+    "sha256": "0361ccf7a7254c02cb03e883007cd6829fa4e93d208297232376f1510ed62e92",
+    "size": 9163,
+    "mtime_ns": 1789953231046383400,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Pansofia.module.css": {
+    "sha256": "2cca29c45415a6dc69795f71d2bcf5e207f22cd98307b2828779877b01f1b661",
+    "size": 9055,
+    "mtime_ns": 1788980011102091453,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Focus.tsx": {
+    "sha256": "6a79924b4d656f959a634399bdf53aabc3678d9fdd1f7aff1a1eff84a9779d67",
+    "size": 4949,
+    "mtime_ns": 1789056954237153214,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Teaching.module.css": {
+    "sha256": "9a573137a63ccfc189dfba02e71f39cb64d24318032d3207400037ab89670e3f",
+    "size": 3448,
+    "mtime_ns": 1788788380123942924,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Ucl.tsx": {
+    "sha256": "0946ebaa2b87148e8f3739b24c559def017c0681a1f5b497d8d4e65661dab140",
+    "size": 5716,
+    "mtime_ns": 1789947606176121629,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Focus.module.css": {
+    "sha256": "2ecf8b5598ac8eb23e268f2846c0610e89dbe42d23238af2b83140fef511124e",
+    "size": 2456,
+    "mtime_ns": 1788806492586777677,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/About.module.css": {
+    "sha256": "4d7b5f1d22970ae4c1ea1e71c758a0a2960715c8512b741770d5293e4096ecf2",
+    "size": 2476,
+    "mtime_ns": 1788976844154254068,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Metaview.tsx": {
+    "sha256": "9f48f728bd9f3ec0ae6791d998a9087bce832f2de9f942567f58d99dd73794a1",
+    "size": 5655,
+    "mtime_ns": 1789056954246768654,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Universe.tsx": {
+    "sha256": "4e907c7139d842903895165c784dd862b5b7709b234a39c6ff741a7ae54ff022",
+    "size": 6883,
+    "mtime_ns": 1789947707143050297,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Toolbox.tsx": {
+    "sha256": "5c201c746027023b33b4282b52ee1273cb2f7598def7c260b84ae41f74310148",
+    "size": 5550,
+    "mtime_ns": 1789947379447121465,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Gym.tsx": {
+    "sha256": "e8236b2d9b102754333d4378c21d8dd200c414f0ee886b7d121c7a6e91a7becf",
+    "size": 3675,
+    "mtime_ns": 1789056954241955413,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Ucl.module.css": {
+    "sha256": "e054448cfc03b83481bb3c2a4b5cc96c2a94ab9efb2c193c4f42f70e879482fd",
+    "size": 2250,
+    "mtime_ns": 1789059134532973463,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Pansofia.tsx": {
+    "sha256": "96f0e61ccec2d16c14df1ecef36c4cb446991ce43acdeeab535ca1d9ed08fd6f",
+    "size": 10039,
+    "mtime_ns": 1789059067217631232,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Contact.tsx": {
+    "sha256": "09e61695eb6ce5f0dc5d213dd1f4a33e20f011e66a7a40964125d9043ded448c",
+    "size": 6155,
+    "mtime_ns": 1789056954226079721,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Kcl.tsx": {
+    "sha256": "1074cb475056b24bb449563bb83296f2482f83b09252961f063f33905f265115",
+    "size": 5293,
+    "mtime_ns": 1789947536236492837,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Stock.tsx": {
+    "sha256": "9405fe80b672b3a66f099b8a459ba2d0aeb190374e4ebb2c7507dcec98a41e0f",
+    "size": 5401,
+    "mtime_ns": 1789953201593221221,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Chess.tsx": {
+    "sha256": "088801cce5c845a330ccd9a108c1383b018559354221889c9f37dede2f8fc030",
+    "size": 4270,
+    "mtime_ns": 1789056954254659583,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Toolbox.module.css": {
+    "sha256": "af2753ea2e1578deb23b20d6bebafd16db8307c137cb8f2f2e6f89732227d4e7",
+    "size": 12383,
+    "mtime_ns": 1789947364597457903,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Kcl.module.css": {
+    "sha256": "0690f6ac55f31227bc2801803d58f67339adb8116e1267d14dfe818e08a1974e",
+    "size": 3688,
+    "mtime_ns": 1789947546685347034,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Teaching.tsx": {
+    "sha256": "3bcdaf615c908f4eca4319a23a7dfcedec3687555cadae5e41222d608945314c",
+    "size": 5161,
+    "mtime_ns": 1789056954232852059,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Prelude.tsx": {
+    "sha256": "1439f547ab01b928908ed72d6745accfe88329c016c4af435340a06f1f18c523",
+    "size": 5684,
+    "mtime_ns": 1789059056706974721,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/chapters.module.css": {
+    "sha256": "1f37cf78499bceeae90b4dd4be9fc3b2e7598b5a93d3759068e376497d408ad7",
+    "size": 2615,
+    "mtime_ns": 1788788121248021041,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Contact.module.css": {
+    "sha256": "ba012ecea00b5c181a96415a564a85dcd726a612a986426f07a284354a82735b",
+    "size": 4634,
+    "mtime_ns": 1789054777197571519,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Prelude.module.css": {
+    "sha256": "88731019019472bcfc9c4e906d7ff08b598173132a3f442baaa78c4513e34758",
+    "size": 2732,
+    "mtime_ns": 1788976738103300198,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Gym.module.css": {
+    "sha256": "5d654c63469acaa6986d6222137fe842f530c5720102001f368480c70c24072f",
+    "size": 3699,
+    "mtime_ns": 1788977213420912237,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Metaview.module.css": {
+    "sha256": "05bdbab9e92163e7987d98fa4c3430f918b736a89f8a90d73347ecd78d5cc23f",
+    "size": 7312,
+    "mtime_ns": 1788977295810993346,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/Universe.module.css": {
+    "sha256": "cbbf377e42bc4151a0206df192ee2ddd8514a82c28ee2a43d9bed2302b5b3de9",
+    "size": 7218,
+    "mtime_ns": 1789940726630684579,
+    "mode": 33188
+  },
+  "src/components/journey/chapters/About.tsx": {
+    "sha256": "82a9f7be69cc94edc40bf06514fcaf5fbf64049ea5a50ae860b72fdd0207f478",
+    "size": 4206,
+    "mtime_ns": 1789947762962963482,
+    "mode": 33188
+  },
+  "src/components/home/nature/placements.ts": {
+    "sha256": "7b058e9e85e564bf7bb9f48fd190edd60224b63c591601bdd832f8aaf8d9daa1",
+    "size": 83895,
+    "mtime_ns": 1789955301813346143,
+    "mode": 33188
+  },
+  "src/components/home/nature/NatureLayer.tsx": {
+    "sha256": "95715eb019ef034c8f9b870f50cbd9311aed6484783bf9e8b7474a06912831a5",
+    "size": 13895,
+    "mtime_ns": 1789954376612351907,
+    "mode": 33188
+  },
+  "src/components/home/nature/NatureController.tsx": {
+    "sha256": "2f09e27efa5627c51b195eed0dddb3304ea9f3aade2fdddccf0b583064e498f6",
+    "size": 43602,
+    "mtime_ns": 1789960931088685000,
+    "mode": 33188
+  },
+  "src/components/home/nature/nature.module.css": {
+    "sha256": "17b455eeeb2aa426ed448d2fd2c7fe785a781d68fb3b1842aba62a9249529d33",
+    "size": 10793,
+    "mtime_ns": 1789953920276919715,
+    "mode": 33188
+  },
+  "src/components/home/nature/index.ts": {
+    "sha256": "484fb35481a0dc3dc35442e067534a233dfb5740cf03d8c4cbac52e718127f76",
+    "size": 1650,
+    "mtime_ns": 1789935799636365711,
+    "mode": 33188
+  },
+  "src/components/home/nature/NatureDebug.tsx": {
+    "sha256": "d4bbf5fb09d4fa19df51e32c11c962083a99d6416185abf51d87807011521c6c",
+    "size": 8990,
+    "mtime_ns": 1789936934381279586,
+    "mode": 33188
+  },
+  "src/components/home/nature/plants/FernCluster.tsx": {
+    "sha256": "ee190d778b061c3a6141c92bccbd204ecdb675d0587a7ff1f1d23400e8853d59",
+    "size": 18230,
+    "mtime_ns": 1789945842374019353,
+    "mode": 33188
+  },
+  "src/components/home/nature/plants/Monstera.tsx": {
+    "sha256": "bdd0332fba15cc2961dbe079c304e03d7c2fd80a7d9f112f57a99880eb83b5a3",
+    "size": 25401,
+    "mtime_ns": 1789940911564205553,
+    "mode": 33188
+  },
+  "src/components/home/nature/plants/Palm.tsx": {
+    "sha256": "14f419df31e1fbcfded35c988d55b61d3a825f2f575593d490accc1d358a12a6",
+    "size": 14902,
+    "mtime_ns": 1789940504601358041,
+    "mode": 33188
+  },
+  "src/components/home/nature/plants/Ivy.tsx": {
+    "sha256": "84273739a4c16b2e804e3f3557faf4aea1a7bcaff87d366c11fe1dcda5aac0dc",
+    "size": 16957,
+    "mtime_ns": 1789940538537179356,
+    "mode": 33188
+  },
+  "src/components/home/nature/plants/Philodendron.tsx": {
+    "sha256": "4a821b72d93a40ae21e0d3139883e5c386aa7c24356b1c28a67e2278ab52fb0f",
+    "size": 12961,
+    "mtime_ns": 1789940925524773268,
+    "mode": 33188
+  },
+  "src/components/home/nature/plants/Vine.tsx": {
+    "sha256": "7981acb3919f76b1f568319d7c3c1aa1c9b49f05e35085b19beb28c8c5093248",
+    "size": 27567,
+    "mtime_ns": 1789940938223544172,
+    "mode": 33188
+  },
+  "src/components/home/nature/plants/Banana.tsx": {
+    "sha256": "a77d739a5e79199820a31d73f3e7ae0e19a3e81152aff794983c0ee99c0bf935",
+    "size": 15116,
+    "mtime_ns": 1789945842373648352,
+    "mode": 33188
+  },
+  "src/components/home/nature/chapters/ToolboxGridVine.module.css": {
+    "sha256": "55f075b6d5f77f35d66e6277776a3582534fe2de57fcdd5c3da6199071d2c3d6",
+    "size": 3348,
+    "mtime_ns": 1789948517069471215,
+    "mode": 33188
+  },
+  "src/components/home/nature/chapters/flora.module.css": {
+    "sha256": "e35664efb8889723a1c8fe3bfeb27bdde6da2e3bd43180525320a1cde9a34a2f",
+    "size": 7092,
+    "mtime_ns": 1789948077077646404,
+    "mode": 33188
+  },
+  "src/components/home/nature/chapters/AboutRiser.tsx": {
+    "sha256": "751b274e7d4df78c186cd591536356970870a65607aae22b34745a8fbe664c4a",
+    "size": 5867,
+    "mtime_ns": 1789954440317843662,
+    "mode": 33188
+  },
+  "src/components/home/nature/chapters/UniverseAnnotations.tsx": {
+    "sha256": "e9c1e2969a2485e8204858dd98f5127340a58c7379ae7641667944391657f147",
+    "size": 9201,
+    "mtime_ns": 1789954462225551376,
+    "mode": 33188
+  },
+  "src/components/home/nature/chapters/UclModuleSprouts.tsx": {
+    "sha256": "fc6561081ace3d1926259ada95631598f098468e5e0707dd5348a01e44ac1518",
+    "size": 5653,
+    "mtime_ns": 1789948491434265407,
+    "mode": 33188
+  },
+  "src/components/home/nature/chapters/ToolboxGridVine.tsx": {
+    "sha256": "0620773189813a4bef3b91d1eb57c1071742cbbd7a747a790e60b17769f4c1a9",
+    "size": 17113,
+    "mtime_ns": 1789954440318360256,
+    "mode": 33188
+  },
+  "src/components/home/nature/chapters/ChapterFlora.tsx": {
+    "sha256": "6f8588acdfc2c39eb6bbb6f8444ec29106b8836ca5d6a8e06ff02cfd005a5b49",
+    "size": 11945,
+    "mtime_ns": 1789949428731225345,
+    "mode": 33188
+  },
+  "src/components/home/nature/chapters/KclRuleVines.tsx": {
+    "sha256": "a0feef0d3b0b57c37a5187d52cd25dae6d13a34a47ffa1ccb6c11de37f169944",
+    "size": 11247,
+    "mtime_ns": 1789948147127456621,
+    "mode": 33188
+  },
+  "src/components/home/nature/chapters/UniverseAnnotations.module.css": {
+    "sha256": "b9fe5d3eca22c02d5fc29cc82d5ef7e66461c6a44bf16f2b46688abdda42c547",
+    "size": 989,
+    "mtime_ns": 1789947640302594986,
+    "mode": 33188
+  },
+  "src/content/projects/personal.ts": {
+    "sha256": "590e35ec01ab0a0b57968c51b17c95ef41a376e4f19cf6b8c49da4979cff4312",
+    "size": 55328,
+    "mtime_ns": 1788955005172722948,
+    "mode": 33188
+  },
+  "src/content/projects/client.ts": {
+    "sha256": "41a387acbfecf45798a0d69ebf3b091c86ad80854ec089165a25d3010781583f",
+    "size": 9279,
+    "mtime_ns": 1788956927795736045,
+    "mode": 33188
+  },
+  "src/content/projects/index.ts": {
+    "sha256": "68bc084f71d1e486e52a793bf28605791c4384556693f976833d4ede7f7454ed",
+    "size": 2810,
+    "mtime_ns": 1788804745944173162,
+    "mode": 33188
+  },
+  "src/world/core/Quality.ts": {
+    "sha256": "730a28c7863a0b4bada339a0a2c98a4ccc5a80067f3a6bd423189545885ad224",
+    "size": 7650,
+    "mtime_ns": 1788849671882832391,
+    "mode": 33188
+  },
+  "src/world/core/Ticker.ts": {
+    "sha256": "a3d0bfc515997acc592afab178c6b09a9c4429f7c37927b324fee086799567b1",
+    "size": 6355,
+    "mtime_ns": 1788849671883352684,
+    "mode": 33188
+  },
+  "src/world/core/Disposal.ts": {
+    "sha256": "1106be95c80dea880e4cb1f357aa4dd2eb9353ef61d069d6e20ecdf84bd74882",
+    "size": 4430,
+    "mtime_ns": 1788849671881764930,
+    "mode": 33188
+  },
+  "src/world/core/maths.ts": {
+    "sha256": "6f55f52e31c39403f4c9dfe44c9aa4e766386d0538399931a2394d9ac4436639",
+    "size": 4224,
+    "mtime_ns": 1788849671885021479,
+    "mode": 33188
+  },
+  "src/world/core/Tween.ts": {
+    "sha256": "65e04d62677edf8bf032681650cf65c4e50f9ae8126177620d0a49d6b9e00879",
+    "size": 5818,
+    "mtime_ns": 1788849671883824768,
+    "mode": 33188
+  },
+  "src/world/core/Viewport.ts": {
+    "sha256": "3c1cef6d40850db02f25182ca281085f9dcfa790a783c35c3b88c6b5db3018d2",
+    "size": 2641,
+    "mtime_ns": 1788849671884534311,
+    "mode": 33188
+  },
+  "src/world/core/palette.ts": {
+    "sha256": "e4563f2ecff1caa55d26faba3c3d4a337ad16e95c3524cff289a448cff52c8e0",
+    "size": 3549,
+    "mtime_ns": 1788948891117585762,
+    "mode": 33188
+  },
+  "src/world/core/Events.ts": {
+    "sha256": "3b188ca3334528972c40ef15b7dcfad778fe1db6e6cb7acf5b0cc087fcc79fea",
+    "size": 3086,
+    "mtime_ns": 1788849671882468848,
+    "mode": 33188
+  },
+  "src/world/minigames/TntDomino.ts": {
+    "sha256": "7e6e6fccfad4817363e9bf85c880163b62f289b95d1c2dd0b60ab0e6892ae0d1",
+    "size": 4432,
+    "mtime_ns": 1788968322034648810,
+    "mode": 33188
+  },
+  "src/world/minigames/Labyrinth.ts": {
+    "sha256": "b182a900684872805edf7de96f966c37d8fbea4f71653af25108ca8f42f08e9e",
+    "size": 58469,
+    "mtime_ns": 1788971403051226307,
+    "mode": 33188
+  },
+  "src/world/minigames/CircuitRace.ts": {
+    "sha256": "ce689330b5a595fbe798eefe210b7c3f56a6e7a556b74ced7df990ed8f2aaa41",
+    "size": 62049,
+    "mtime_ns": 1788976102552269252,
+    "mode": 33188
+  },
+  "src/world/minigames/Minigame.ts": {
+    "sha256": "261bffc89a9d9e4072efb369edf1be471a762be4944b21845e45ed0ee809d274",
+    "size": 15622,
+    "mtime_ns": 1788905409711917551,
+    "mode": 33188
+  },
+  "src/world/minigames/Bowling.ts": {
+    "sha256": "f02a1c394c5b174aaa32abc3a9aadc4ce2e99cec7951fe86222c298029529a34",
+    "size": 69373,
+    "mtime_ns": 1788988916334357538,
+    "mode": 33188
+  },
+  "src/world/input/Keyboard.ts": {
+    "sha256": "da60ab103cc5f40ed3b736e595a5911244f969c159798cd9a05e25e452c0485e",
+    "size": 3176,
+    "mtime_ns": 1788849671886766816,
+    "mode": 33188
+  },
+  "src/world/input/Wheel.ts": {
+    "sha256": "17fece501948f586329796998c9ef28c52de404e1f8f858ff3d22f7d245e757d",
+    "size": 1633,
+    "mtime_ns": 1788849671887906235,
+    "mode": 33188
+  },
+  "src/world/input/Nipple.ts": {
+    "sha256": "b9130f574336dea07d31fc64c330a8aa12d46eb77272bf21d1428567d951e69a",
+    "size": 10839,
+    "mtime_ns": 1788849671887123733,
+    "mode": 33188
+  },
+  "src/world/input/Gamepad.ts": {
+    "sha256": "3cd1b1e5e0d46ef7aebfbfe7b6f9884dc1a4b8c50e29e27946ab6008f082f0f8",
+    "size": 11574,
+    "mtime_ns": 1788849671886058356,
+    "mode": 33188
+  },
+  "src/world/input/Pointer.ts": {
+    "sha256": "5c149fc2218e6eeb7dc0c9e616c671b3e5630701957e42ed9bd3abc0820563ba",
+    "size": 7379,
+    "mtime_ns": 1788849671887568026,
+    "mode": 33188
+  },
+  "src/world/input/Inputs.ts": {
+    "sha256": "6b01c68dda2b8e20fac342bdcc128d06d501676b3f6deddabca92c88b104b7a0",
+    "size": 13171,
+    "mtime_ns": 1788849671886347982,
+    "mode": 33188
+  },
+  "src/world/render/Renderer.ts": {
+    "sha256": "92d50e4f815f3d9d9ab25a42c0ca876cee4499fb0fc38d57e8085db3bf3dbe32",
+    "size": 10287,
+    "mtime_ns": 1788902732176879852,
+    "mode": 33188
+  },
+  "src/world/world/Type3D.ts": {
+    "sha256": "b26f86dd80162f3f2aeefd3b2b2a07d0c6b8ca2367d4fcbcd7f0d7b2fbbbb61e",
+    "size": 9036,
+    "mtime_ns": 1788849671906453858,
+    "mode": 33188
+  },
+  "src/world/world/Ecology.ts": {
+    "sha256": "606a51e4a10864c93d50b060d61d0983b8dc927df27f9a94c1bdd03ad093c3be",
+    "size": 33582,
+    "mtime_ns": 1788970273987359080,
+    "mode": 33188
+  },
+  "src/world/world/VisualVehicle.ts": {
+    "sha256": "d7d46792744314d4949abb0dadf5257fec2828b4b331c2b5066dcb3342d519e9",
+    "size": 17137,
+    "mtime_ns": 1788849671906744317,
+    "mode": 33188
+  },
+  "src/world/world/SceneryDetails.ts": {
+    "sha256": "696db18c007745bf2bd8944ce2baa2f50c3a59476d492441a7649ae0351e793f",
+    "size": 23695,
+    "mtime_ns": 1788970701377144366,
+    "mode": 33188
+  },
+  "src/world/world/alphabet.ts": {
+    "sha256": "c0db35f20abc061678074e636b6a33138cb3e5296b3265dead6acd11616712da",
+    "size": 7192,
+    "mtime_ns": 1788849671907914278,
+    "mode": 33188
+  },
+  "src/world/world/Decor.ts": {
+    "sha256": "d6b7aa06d6e7ab5735644250636d7fcebb9e0d07e613a9ce2b77c2dece570452",
+    "size": 5254,
+    "mtime_ns": 1788969971772415217,
+    "mode": 33188
+  },
+  "src/world/world/.DS_Store": {
+    "sha256": "4bd9a90aa973341d8fb1d56a623ddcacfd3c5e7fd7ce8802a55f174f8352480c",
+    "size": 8196,
+    "mtime_ns": 1789115245512703359,
+    "mode": 33188
+  },
+  "src/world/world/Attractions.ts": {
+    "sha256": "2712abcdf55fa110d9bed87ea0c0e22eaa4da897e651797c8bcf8e9c4ae26d3d",
+    "size": 56929,
+    "mtime_ns": 1788970990442673448,
+    "mode": 33188
+  },
+  "src/world/world/Props.ts": {
+    "sha256": "bfe5d8818a14af8074ed97bcc2f76a20f5226aa7d4b611af8672b41b301798ef",
+    "size": 22003,
+    "mtime_ns": 1788970439231603375,
+    "mode": 33188
+  },
+  "src/world/world/LayoutDebug.ts": {
+    "sha256": "a159d4928808751f26ba3da574da65d6a5a87f1c6495af97200f45db43728304",
+    "size": 6648,
+    "mtime_ns": 1788948015496565603,
+    "mode": 33188
+  },
+  "src/world/world/geometry.ts": {
+    "sha256": "5fbde9392e757d7f92cf0854a646624212ea15188dea29e96b2046cb6c1a8640",
+    "size": 9321,
+    "mtime_ns": 1788849671910560742,
+    "mode": 33188
+  },
+  "src/world/world/Grass.ts": {
+    "sha256": "bc6be6c3eadc0519cba79ed13f4d450e435b44ca74a892605bbc4dc445101786",
+    "size": 14455,
+    "mtime_ns": 1788902263182835096,
+    "mode": 33188
+  },
+  "src/world/world/Particles.ts": {
+    "sha256": "b08857f37498c5061f4dc6275ff47f4df0ac60c426a39d8e6ff23b497443297a",
+    "size": 11883,
+    "mtime_ns": 1788858321587866636,
+    "mode": 33188
+  },
+  "src/world/world/Lighting.ts": {
+    "sha256": "8cdd04584bea2650ca37464d9e98b031236dd9a04949d4f57fba7820bf70a488",
+    "size": 12771,
+    "mtime_ns": 1788902718318012412,
+    "mode": 33188
+  },
+  "src/world/world/Terrain.ts": {
+    "sha256": "87d2cbd759a693390e52595598ecb73c1b1e0cde19f04545f2f42ced36b5bfca",
+    "size": 88023,
+    "mtime_ns": 1789042917325935255,
+    "mode": 33188
+  },
+  "src/world/world/materials.ts": {
+    "sha256": "c45de0312d63e468184876d382eada659da81e5e4639e6e730ca9e7a3e4bb55f",
+    "size": 12707,
+    "mtime_ns": 1788968703308601026,
+    "mode": 33188
+  },
+  "src/world/world/Landmarks.ts": {
+    "sha256": "d0b5ae94632cf2418fcbf83d5480ca25167dc7140cfb0fa7caae7de97263526c",
+    "size": 27787,
+    "mtime_ns": 1788971032191531987,
+    "mode": 33188
+  },
+  "src/world/world/MapCalibration.ts": {
+    "sha256": "9a534fc703ee0b4a2683860d1a03da0a55cfa8b2b9b4da690ea0fb7ea4b13eb0",
+    "size": 7618,
+    "mtime_ns": 1788968363014924510,
+    "mode": 33188
+  },
+  "src/world/world/Water.ts": {
+    "sha256": "989615f1345bab4725eb90a31922264ce7648e96007078fff5c98c95a91db39a",
+    "size": 12282,
+    "mtime_ns": 1788946573989168065,
+    "mode": 33188
+  },
+  "src/world/world/Tracks.ts": {
+    "sha256": "73b6ca02cd6b508571ddaa48fde2abaf6990b1102e946ffe9c23ca073ce7e8fb",
+    "size": 10784,
+    "mtime_ns": 1788849671906202608,
+    "mode": 33188
+  },
+  "src/world/world/Playground.ts": {
+    "sha256": "46f565e9779b38b93d84a320f2d5409cf79e094ab593c819627a934bbb35eaa1",
+    "size": 19017,
+    "mtime_ns": 1788960282504500082,
+    "mode": 33188
+  },
+  "src/world/world/Roads.ts": {
+    "sha256": "866cde05dce1fb196e88d45e808bc64d0e2ebfce508d6fc0810ca9d44dad1e86",
+    "size": 29906,
+    "mtime_ns": 1788971032577698886,
+    "mode": 33188
+  },
+  "src/world/world/World.ts": {
+    "sha256": "585ab7995c3ee615bcabc8cf571d4c55757315844e4dc10e0524c82f85d87555",
+    "size": 23945,
+    "mtime_ns": 1788973947562086895,
+    "mode": 33188
+  },
+  "src/world/world/kit.ts": {
+    "sha256": "4a292687f932e20b20ea5d7f78068fafb0da2844028c524ee9b96b1f814612e8",
+    "size": 6203,
+    "mtime_ns": 1788974131327775970,
+    "mode": 33188
+  },
+  "src/world/world/decorGeometry.ts": {
+    "sha256": "044b56f1692326536d73a65793b16b9edd48b6fcb31244d717048ea7e622a55c",
+    "size": 13164,
+    "mtime_ns": 1788970393242983489,
+    "mode": 33188
+  },
+  "src/world/state/store.ts": {
+    "sha256": "646d4f017117c0d0d7874c039a66ba93515504dd81e7bb9cea7dbaf7611ce863",
+    "size": 7946,
+    "mtime_ns": 1788947576176704142,
+    "mode": 33188
+  },
+  "src/world/view/View.ts": {
+    "sha256": "d343d53eb3c8ff55cda91bf305776337d2ff28517d3cae2b1463898e14837d49",
+    "size": 18426,
+    "mtime_ns": 1788849671903420477,
+    "mode": 33188
+  },
+  "src/world/physics/Physics.ts": {
+    "sha256": "75c33302940e584ad10b6bb6e51c20cb05a0bd4bcede960bb0a9d7ca53c556c7",
+    "size": 19655,
+    "mtime_ns": 1788968384390498508,
+    "mode": 33188
+  },
+  "src/world/physics/PhysicsVehicle.ts": {
+    "sha256": "ef94d280fe2009e2fc888597381b1f8f0de03a07abe8e66befabc07dd55967a8",
+    "size": 21897,
+    "mtime_ns": 1789324326438600806,
+    "mode": 33188
+  },
+  "src/world/systems/Audio.ts": {
+    "sha256": "f5055fdccc98b6d4d1bf0695fef0d5fe3b05732ea45af0b7874506ad895e7c61",
+    "size": 21148,
+    "mtime_ns": 1788879726855828590,
+    "mode": 33188
+  },
+  "src/world/systems/Achievements.ts": {
+    "sha256": "3f66866203d926f2dfbf2e2ea7d4b0b5386e8c703a659976a63506fe922d3285",
+    "size": 6206,
+    "mtime_ns": 1788947295269081728,
+    "mode": 33188
+  },
+  "src/world/systems/InteractivePoints.ts": {
+    "sha256": "b4fc4c95ad885538bd1877f8f571e7f22790ab9539181c8a0a1c76d44b1c96be",
+    "size": 8677,
+    "mtime_ns": 1788968398682450317,
+    "mode": 33188
+  },
+  "src/world/systems/Zones.ts": {
+    "sha256": "0993b8d2b19447bfb022b609f7574ec9732a83bbc443eea5d7a957de77b567eb",
+    "size": 3731,
+    "mtime_ns": 1788905682338358873,
+    "mode": 33188
+  },
+  "src/world/systems/Secrets.ts": {
+    "sha256": "107a29d4c2db677b5a650ef4e2b55c8b3078ba9f306bd6edeb96dbc9347f56a6",
+    "size": 11590,
+    "mtime_ns": 1788947739368663943,
+    "mode": 33188
+  },
+  "src/world/systems/Weather.ts": {
+    "sha256": "347f3cbe70fbdd4fbf4d5cb78ac233877435c70d2cc1f0299fcdc4d3c1b70ce6",
+    "size": 13698,
+    "mtime_ns": 1788849671902123182,
+    "mode": 33188
+  },
+  "src/world/systems/Respawns.ts": {
+    "sha256": "86580a56598d1da35bf8577c439408114ebcb55bee1ea28397ba266d07730954",
+    "size": 6180,
+    "mtime_ns": 1788952075632503699,
+    "mode": 33188
+  },
+  "src/world/systems/Save.ts": {
+    "sha256": "0ff0ef79bc6053b2e1d1790136967f9842a92e5de0ae71f0482acf6bce7bc0b3",
+    "size": 14677,
+    "mtime_ns": 1788947642680445328,
+    "mode": 33188
+  },
+  "src/world/vendor/LICENSE-folio-2025.md": {
+    "sha256": "95c0ad730893e004f9800a038104b15a3478cb545a241820e117df7cc21dcb62",
+    "size": 1068,
+    "mtime_ns": 1788849671902978851,
+    "mode": 33188
+  },
+  "src/world/player/Player.ts": {
+    "sha256": "97b3ef14360e41ea57d94406435d8b8fa07708ce743a648a45b0344c7b63c9d8",
+    "size": 17075,
+    "mtime_ns": 1788961140925556951,
+    "mode": 33188
+  },
+  "src/world/world/dressing/blackHole.ts": {
+    "sha256": "a426133dc10bcee8a9b5cc0a5db2f7af9db80d078701d94ab7d586e3c47fbcae",
+    "size": 17732,
+    "mtime_ns": 1789026444282417900,
+    "mode": 33188
+  },
+  "src/world/world/dressing/projects.ts": {
+    "sha256": "4df4221af2cd868ff804937fbc14c626632bf2d3cf3439a84b91d48a0cda1aea",
+    "size": 24711,
+    "mtime_ns": 1788973054582809848,
+    "mode": 33188
+  },
+  "src/world/world/dressing/achievements.ts": {
+    "sha256": "162692c32e66fc874f7fcf7244b496bcd46b5550ab001c895c8ee978e509bd09",
+    "size": 20730,
+    "mtime_ns": 1788973064827229985,
+    "mode": 33188
+  },
+  "src/world/world/dressing/timeMachine.ts": {
+    "sha256": "6449888da2edaa7697aba4536eca4c27715bb5579d2743d02056a6ab3c937c24",
+    "size": 20768,
+    "mtime_ns": 1788980401106152605,
+    "mode": 33188
+  },
+  "src/world/world/dressing/tnt.ts": {
+    "sha256": "87846d25a6a1e8730b357e3a8dc591fdc72be68a61e13bb09e9ec7a9ed2392aa",
+    "size": 19193,
+    "mtime_ns": 1788973182766471982,
+    "mode": 33188
+  },
+  "src/world/world/dressing/landing.ts": {
+    "sha256": "91b6595ccc9887b39ea553cc766a27decd768abc66ccc2e4919addb25e816e05",
+    "size": 18181,
+    "mtime_ns": 1788973379424150640,
+    "mode": 33188
+  },
+  "src/world/world/dressing/index.ts": {
+    "sha256": "4168dd32a99f85b7ac88ceb60084fdd6a5b88bc06c48b92c1ef0daa6c08a1934",
+    "size": 2163,
+    "mtime_ns": 1788974145268109517,
+    "mode": 33188
+  },
+  "src/world/world/dressing/social.ts": {
+    "sha256": "f1d7410736f25fc26fea47c3edb205daecd38f5582aba7176ef5017de0acd4ec",
+    "size": 18250,
+    "mtime_ns": 1788973318672171897,
+    "mode": 33188
+  },
+  "src/world/world/dressing/kit.ts": {
+    "sha256": "b997612ab6d60e26e5b687c93066db4ab1a8224be98068d5816cc928be8717b2",
+    "size": 463,
+    "mtime_ns": 1788972773463243347,
+    "mode": 33188
+  },
+  "src/app/projects/page.tsx": {
+    "sha256": "6fb62775835717de44db3b681d27d55a3d623d6b698f48646cb0c9f2bf6aefd8",
+    "size": 1701,
+    "mtime_ns": 1789054599351293051,
+    "mode": 33188
+  },
+  "src/app/world/page.tsx": {
+    "sha256": "c2d9ef6dc7dbbe980529fe30085a715a01e68d1115eadd9a939966e76a744b37",
+    "size": 1324,
+    "mtime_ns": 1788954182927883254,
+    "mode": 33188
+  },
+  "src/app/world2/page.tsx": {
+    "sha256": "830b3f41baa49db310a9ff97143f3d2dcd9c55eee00505987c08327a0380b809",
+    "size": 1308,
+    "mtime_ns": 1789947276268146145,
+    "mode": 33188
+  },
+  "src/experience/scenes/UniverseScene.tsx": {
+    "sha256": "9281817ef71685aeb0d7ea220c1082ad25474357354a15a0bb8e0b0967d16b52",
+    "size": 9298,
+    "mtime_ns": 1788955891400828966,
+    "mode": 33188
+  },
+  "src/experience/scenes/StockScene.tsx": {
+    "sha256": "5f46b9e536bebb716c2d3d91fa3b829824471c3675db13286fa772f538785310",
+    "size": 5392,
+    "mtime_ns": 1788955867568531460,
+    "mode": 33188
+  },
+  "src/experience/scenes/ContactScene.tsx": {
+    "sha256": "3d3c1cf845de8328d415521be9a84065e306972d67ef7b7931362873189e4d4a",
+    "size": 9626,
+    "mtime_ns": 1789947249335869176,
+    "mode": 33188
+  },
+  "src/experience/scenes/ChessScene.tsx": {
+    "sha256": "161fb3416a7f04d4164dcb54cee02a2b26b1de3e2a0b3f0a2158d50acbfbefbc",
+    "size": 7326,
+    "mtime_ns": 1788955848689643882,
+    "mode": 33188
+  },
+  "src/experience/scenes/MetaviewScene.tsx": {
+    "sha256": "364c90d794b58025d6ac8280f86d3e800349fbbf072b8508b6d3831879765127",
+    "size": 9213,
+    "mtime_ns": 1788955835021152187,
+    "mode": 33188
+  },
+  "src/experience/scenes/SceneManager.tsx": {
+    "sha256": "6c55ec3ac8fcae3fb296e1250f3a98283aa4193ec49ff9b2f6bcc3b46e3a7d6f",
+    "size": 3815,
+    "mtime_ns": 1789059075029791448,
+    "mode": 33188
+  },
+  "src/experience/scenes/ToolboxScene.tsx": {
+    "sha256": "21d0cccd474191044d91ed75109513c7d095130a6c9b30dd8c0db5ab93d94c7b",
+    "size": 8771,
+    "mtime_ns": 1789947392214588488,
+    "mode": 33188
+  },
+  "src/experience/scenes/FieldScene.tsx": {
+    "sha256": "6fe49b73468e0f4607d3f53b10e035c968c412ea58687236adf223e03e4aa199",
+    "size": 3896,
+    "mtime_ns": 1788955816526785436,
+    "mode": 33188
+  },
+  "src/experience/camera/JourneyCamera.tsx": {
+    "sha256": "61d5b9277ce7672c6cd43f60c6985a1201fc8ab30c6da11c767d0a26e63d2ff2",
+    "size": 4692,
+    "mtime_ns": 1788954973019102205,
+    "mode": 33188
+  },
+  "src/experience/canvas/GlobalCanvas.tsx": {
+    "sha256": "7e14f92b22094280a002719c8c0164f7b978f22b6e36b61672fb419d07d23a36",
+    "size": 3021,
+    "mtime_ns": 1788955318885946422,
+    "mode": 33188
+  },
+  "src/experience/canvas/GlobalCanvas.module.css": {
+    "sha256": "50fd9226982198457d1abf9800dc856e7ad05e47de810b17b6c5cd4ab8ec9f81",
+    "size": 194,
+    "mtime_ns": 1788959098319563807,
+    "mode": 33188
+  },
+  "src/experience/shaders/field.ts": {
+    "sha256": "06d0f326bbf9dfafb0854a0dffd145a55245fe3f32f77c77e712c65ecb0be13f",
+    "size": 2157,
+    "mtime_ns": 1788955788160788273,
+    "mode": 33188
+  },
+  "scripts/world-layout-check.mjs": {
+    "sha256": "0cd6a8e5f19b90db0d30a0810332b13cc959dc5096e3bdce0efe224442c4f45c",
+    "size": 1146,
+    "mtime_ns": 1788902978917811720,
+    "mode": 33188
+  },
+  "scripts/world-minigame-qa.mjs": {
+    "sha256": "85e8bea41a003bbe5cdb56aafb47f56b4948301c83986736a2e4f6cb6c20d16f",
+    "size": 7387,
+    "mtime_ns": 1788950020248426722,
+    "mode": 33188
+  },
+  "scripts/world-browsers.mjs": {
+    "sha256": "59962c4fa146cccf84be2e2b1524c7ad411b1c7cbdde4a12a6caa330dc100f13",
+    "size": 4140,
+    "mtime_ns": 1788849671868732527,
+    "mode": 33188
+  },
+  "scripts/reduced-motion-qa.mjs": {
+    "sha256": "f21c496d92adc07d3d38b0227541fa709e30161cf2c150c41d77bd8f0dab0d76",
+    "size": 14790,
+    "mtime_ns": 1789940222982169531,
+    "mode": 33188
+  },
+  "scripts/_ts-loader.mjs": {
+    "sha256": "197da0e0d38a40df4f5ba40ce3b245d52c398c7a94e254d20de503f3ab6bce73",
+    "size": 1411,
+    "mtime_ns": 1788902988046670663,
+    "mode": 33188
+  },
+  "scripts/world-attractions-checks.mjs": {
+    "sha256": "0dbdb7eaaf1dd1395f493e89d4ccf34febee43f01930672e59120c3cbfd216d8",
+    "size": 17046,
+    "mtime_ns": 1788954332700318221,
+    "mode": 33188
+  },
+  "scripts/world-runtime-checks.mjs": {
+    "sha256": "ca94e82dacf24c86c9e786a4e097478068a4a5b9f77eb677d4b5f33fd176aaa0",
+    "size": 14675,
+    "mtime_ns": 1788980886707946861,
+    "mode": 33188
+  },
+  "scripts/world-water-drive.mjs": {
+    "sha256": "63cf50375f52fcb80ec6fbda2e74cf0ded682533f10a06380192490bd0e228e7",
+    "size": 27076,
+    "mtime_ns": 1788953805888114294,
+    "mode": 33188
+  },
+  "scripts/world2-production-qa.mjs": {
+    "sha256": "7b101c897e8609ffe01a789890f285c839cee9b789b72ab342a2a3d50d00b472",
+    "size": 2203,
+    "mtime_ns": 1789118531787336221,
+    "mode": 33188
+  },
+  "scripts/gen-world2-interactions.mjs": {
+    "sha256": "29aa1d86a0158762cdd39f5e7eaacf2013212ebec984849a9e05bd5f1ca57d8d",
+    "size": 4775,
+    "mtime_ns": 1789211833561956805,
+    "mode": 33188
+  },
+  "scripts/world-grass-check.mjs": {
+    "sha256": "58892e48ff4e7f3cfcd63acd6e6a32243a6d8ba5ae15b4be3393976fcfbe2068",
+    "size": 9216,
+    "mtime_ns": 1788916278237927240,
+    "mode": 33188
+  },
+  "scripts/world-surface-audit.mjs": {
+    "sha256": "aa8b7c896b9eef95c47995a1d238717d7a9d76e6f9cb58eebf0e6cc6024d98ce",
+    "size": 27478,
+    "mtime_ns": 1789038971678846335,
+    "mode": 33188
+  },
+  "scripts/world-topdown.mjs": {
+    "sha256": "7cd926409cd103825de926bca2108adaf7b0920686c2df9973e374d07c940197",
+    "size": 3782,
+    "mtime_ns": 1788968338637953385,
+    "mode": 33188
+  },
+  "scripts/world2-grip-qa.mjs": {
+    "sha256": "dacdb38c0b537716942f8d5aaebd132e7ceee68d4535bd5935a7772c412064e3",
+    "size": 5083,
+    "mtime_ns": 1789303814329365149,
+    "mode": 33188
+  },
+  "scripts/world2-interaction-qa.mjs": {
+    "sha256": "9eca7d76ee3cca1b3b6067fe0e0ce5bdbb8cfeb586a8752720cc09ee21fc66bd",
+    "size": 68096,
+    "mtime_ns": 1789325027448647685,
+    "mode": 33188
+  },
+  "scripts/_extra.mjs": {
+    "sha256": "1b673c8ff43e251bf57ce52e13a2bf7931dc7039fa9433f25615ba36cdf1ff89",
+    "size": 2792,
+    "mtime_ns": 1788971654774678923,
+    "mode": 33188
+  },
+  "scripts/perf-check.mjs": {
+    "sha256": "29be95f184369bcef9cd62ab1da2ed2777f936afb68fc6df37eca915bb047075",
+    "size": 3267,
+    "mtime_ns": 1788805460052873561,
+    "mode": 33188
+  },
+  "scripts/visual-qa.mjs": {
+    "sha256": "3c08dcfaa84aff0a0eba73038eb645767e833486fe39d2beecea73d3f21ab37e",
+    "size": 6378,
+    "mtime_ns": 1789939762850784232,
+    "mode": 33188
+  },
+  "scripts/gen-title-glyphs.mjs": {
+    "sha256": "e745ae54a2272cb694a2a6ee67965354e2e598e10276bf76425e43de197266af",
+    "size": 8880,
+    "mtime_ns": 1789208545547336996,
+    "mode": 33188
+  },
+  "scripts/world-survey.mjs": {
+    "sha256": "86324321880a765f7aebee415cf0e9e73e6399258d9bf5139d7e7bdf861da25c",
+    "size": 4052,
+    "mtime_ns": 1788902781708530107,
+    "mode": 33188
+  },
+  "scripts/world-decor-check.mjs": {
+    "sha256": "abfdafac2f0ccbdda153e6f56427eca14d4038ca392f40e913b7db109886bcfe",
+    "size": 6275,
+    "mtime_ns": 1788970354152367563,
+    "mode": 33188
+  },
+  "scripts/world2-smoke.mjs": {
+    "sha256": "7102f1534d69a706752c5f260c512799c9d6e978be1dee448b9135be3c64733c",
+    "size": 1901,
+    "mtime_ns": 1789117019873882014,
+    "mode": 33188
+  },
+  "scripts/_venues.mjs": {
+    "sha256": "d74c75de6e1058423bbb96fc2cc8d65b681291fd12e868cb7ab32ac49111a48e",
+    "size": 2187,
+    "mtime_ns": 1788954340876210410,
+    "mode": 33188
+  },
+  "scripts/_relayout.mjs": {
+    "sha256": "6514ea4a11d655954ef8e63622ee5067c5a46fb14be688ec23cce0b18007c036",
+    "size": 2746,
+    "mtime_ns": 1788948036909404944,
+    "mode": 33188
+  },
+  "scripts/world-bowling-qa.mjs": {
+    "sha256": "1b0d00ced833c792775f1820fbe8d23dfe37c4c8d459a361b6b23ce1f9dcb214",
+    "size": 20171,
+    "mtime_ns": 1788988402722912426,
+    "mode": 33188
+  },
+  "scripts/capture-clients.mjs": {
+    "sha256": "644e61c1a1dc7c561be95cdccc5b312dc6a45b3140e8c1a542bbb3647018acb9",
+    "size": 4816,
+    "mtime_ns": 1788954374709215849,
+    "mode": 33188
+  },
+  "scripts/export-world2-blender.py": {
+    "sha256": "568abc956202c6e484f0289aea19d1b83c8261df15130baab40953fb7a529957",
+    "size": 19581,
+    "mtime_ns": 1789117543945815150,
+    "mode": 33188
+  },
+  "scripts/world2-platform-qa.mjs": {
+    "sha256": "b1434aa298b276d5c1d791e86b8170b1ab682d8f4a968027e728c2bb0617e7b1",
+    "size": 6810,
+    "mtime_ns": 1789118481305412292,
+    "mode": 33188
+  },
+  "scripts/world-tour.mjs": {
+    "sha256": "c0b6a675c3a25ebe218083ca444a50f0f8cf05da4ba48a8313badf270c1b2a47",
+    "size": 31100,
+    "mtime_ns": 1788978993584239988,
+    "mode": 33188
+  },
+  "scripts/world-gameplay.mjs": {
+    "sha256": "4fcc2936451e96bf526e4208fecf91375637dba7f85cc091b05e4bd9628556cc",
+    "size": 8883,
+    "mtime_ns": 1788969799981421480,
+    "mode": 33188
+  },
+  "scripts/gen-tech-logos.mjs": {
+    "sha256": "cc191253b5a617a174c1e3f12b0858de4ff4ce97096534669a537b17070e8045",
+    "size": 5013,
+    "mtime_ns": 1789054507025564268,
+    "mode": 33188
+  },
+  "scripts/world-interactions.mjs": {
+    "sha256": "af95fcd69fced7e83861ca74b866f31c0b32f8a395271b03509eeb72e8434537",
+    "size": 6400,
+    "mtime_ns": 1788952077861395791,
+    "mode": 33188
+  },
+  "scripts/.tb-narrow.mjs": {
+    "sha256": "a7b5cbe90cd2b4d39f1811077e7f7584c216e062a11eacc809d59fddb13ac8d5",
+    "size": 819,
+    "mtime_ns": 1788789073566767275,
+    "mode": 33188
+  },
+  "scripts/world2_blender_audit.py": {
+    "sha256": "6302837a0f98785ed4b506a2699f2ca669488ec90de95e34465c538cf6b1f3af",
+    "size": 2500,
+    "mtime_ns": 1789116346081052559,
+    "mode": 33188
+  },
+  "scripts/world-shore-check.mjs": {
+    "sha256": "e2c47ddadc6371392965b53914828423c46c7870e5e3b7037dff0c4f1e8160af",
+    "size": 7072,
+    "mtime_ns": 1788949304754270611,
+    "mode": 33188
+  },
+  "scripts/world-polish-qa.mjs": {
+    "sha256": "b5ef1f9c969d514fd9ade5eea76a2f025f28846812aa2de06c889e460703c3d0",
+    "size": 22381,
+    "mtime_ns": 1788972821195029962,
+    "mode": 33188
+  },
+  "scripts/world-race-drive.mjs": {
+    "sha256": "0b52132ade99f5d97993336380f416d18d35b8b50801028a93eb818b1a941eb9",
+    "size": 5856,
+    "mtime_ns": 1788968363034249157,
+    "mode": 33188
+  },
+  "scripts/.tb-dark.mjs": {
+    "sha256": "62f3c9794d70def0deabdd264db0ecbdff718e09ea699b205b55afbe8904c756",
+    "size": 1037,
+    "mtime_ns": 1788789042518878072,
+    "mode": 33188
+  },
+  "scripts/world-road-clearance.mjs": {
+    "sha256": "3390d8ed45aeae38053a356e40b83918eac4a3b31503fe870c02f963796237d8",
+    "size": 9741,
+    "mtime_ns": 1788959394138016976,
+    "mode": 33188
+  },
+  "scripts/world-viewpoints.mjs": {
+    "sha256": "bd1fd14aeb9c72e404882db990be2f3d96f01809eb59377eb6a376a7e4739fce",
+    "size": 6496,
+    "mtime_ns": 1789036246867583794,
+    "mode": 33188
+  },
+  "scripts/_fit-circuit.mjs": {
+    "sha256": "687bf820c2870887339077c8413d48cf0b76b108f8e305244ade22b04b1bde06",
+    "size": 1501,
+    "mtime_ns": 1788913016423290257,
+    "mode": 33188
+  },
+  "scripts/export-world2.mjs": {
+    "sha256": "3b57f4241800b6aee6b47187cf9808fc7d827349384f8f9b3c9ccad8405c1de6",
+    "size": 942,
+    "mtime_ns": 1789117543946243857,
+    "mode": 33188
+  },
+  "scripts/world-qa.mjs": {
+    "sha256": "7783abc941ce10aabfd12695644559dc4a8a77b9ac78229287a4bb3e8d9be24a",
+    "size": 48174,
+    "mtime_ns": 1789044192533883971,
+    "mode": 33188
+  },
+  "scripts/world-loop-drive.mjs": {
+    "sha256": "da12272590170ef878156661c4eb033129e17b3f8165dad6f0a736d1c29a4573",
+    "size": 13296,
+    "mtime_ns": 1788950742137258913,
+    "mode": 33188
+  },
+  "scripts/world-density.mjs": {
+    "sha256": "e3d00115d892ece1ea1d93ae6ffe47e7b0917dbb0483c70d2088d64b143313a0",
+    "size": 4267,
+    "mtime_ns": 1788863441780248394,
+    "mode": 33188
+  },
+  "scripts/.tb-shot.mjs": {
+    "sha256": "fd879601703ec4308c6f9551b8aa6308e8862443d84f1d31fa65f9c3310284b8",
+    "size": 1790,
+    "mtime_ns": 1788788959406640160,
+    "mode": 33188
+  },
+  "scripts/_stage-blame.mjs": {
+    "sha256": "0e1633e70961f028927630d556fa73411af694705e96d966153ee2281589bee2",
+    "size": 3205,
+    "mtime_ns": 1789041814388576556,
+    "mode": 33188
+  },
+  "scripts/_roads.mjs": {
+    "sha256": "59ff418eaf136879ae925e0b042e251913ec4617e02b3b4622df89c3a7368982",
+    "size": 1138,
+    "mtime_ns": 1788950101118369499,
+    "mode": 33188
+  },
+  "scripts/world2-map.mjs": {
+    "sha256": "0188b7706d6174549c9a288e7dc56e1faf234245741c71e784d2c42773328d37",
+    "size": 459,
+    "mtime_ns": 1789117543951257175,
+    "mode": 33188
+  },
+  "scripts/_circuit-coast.mjs": {
+    "sha256": "67c9b9f1ac3cb004df4eeb3daadda639b6534fa60f322abc7bb056b42e2aa872",
+    "size": 2774,
+    "mtime_ns": 1789036409959974023,
+    "mode": 33188
+  },
+  "scripts/content-status.mjs": {
+    "sha256": "39a1ecf363673515a542feac4381a9b5a1e1112f3ed2eb3b392354e55fbc3d2e",
+    "size": 6300,
+    "mtime_ns": 1788959117797069530,
+    "mode": 33188
+  },
+  "scripts/world2-routes-qa.mjs": {
+    "sha256": "3b1d3d971cd3d1a56e7f24106b55f37d8cc7856c28801152701a0f3c03b593db",
+    "size": 2378,
+    "mtime_ns": 1789213714785361212,
+    "mode": 33188
+  },
+  "scripts/world2-qa.mjs": {
+    "sha256": "619771938527b26a2dafdcf3771aae2b7344ec8b6d033e7a65abbc1ff2ed1d8c",
+    "size": 16784,
+    "mtime_ns": 1789118408289029565,
+    "mode": 33188
+  },
+  "scripts/world-achievement-checks.mjs": {
+    "sha256": "2e6a48a85336c7a0068fe1d095879bc8026d035942f9336a7d0117b81b1d7a5e",
+    "size": 10235,
+    "mtime_ns": 1788951823820493365,
+    "mode": 33188
+  },
+  "scripts/_probe.mjs": {
+    "sha256": "2205ccd6f2d33aebab1430fc8490c20421e78c25a74345fdd8c7459fe8c62e3e",
+    "size": 6983,
+    "mtime_ns": 1789325626396166448,
+    "mode": 33188
+  },
+  "scripts/.tb-dbg.mjs": {
+    "sha256": "198d27026d283d190d3fd4d81142b08f2cd336ce608ae8c29115fc095b071ec1",
+    "size": 1087,
+    "mtime_ns": 1788789310892414947,
+    "mode": 33188
+  },
+  "scripts/mapcal/nudge-coast.mjs": {
+    "sha256": "101ea00a453178571d56ea522608d2e9e732ab00e4c7231f1731611e6787848c",
+    "size": 5798,
+    "mtime_ns": 1789041693833500556,
+    "mode": 33188
+  },
+  "scripts/mapcal/plan.json": {
+    "sha256": "9c2a8ba64e0e5adac1a93d2714c6ebbe0f4e0274e806c9e827c3c3dddfa85681",
+    "size": 15661,
+    "mtime_ns": 1789042279494629180,
+    "mode": 33188
+  },
+  "scripts/mapcal/ascii.mjs": {
+    "sha256": "0d55da4b47e05fbb2beb5676e1708f385dd200fc8ea11b6e06b154797e8fd83f",
+    "size": 2389,
+    "mtime_ns": 1788945213549700760,
+    "mode": 33188
+  },
+  "scripts/mapcal/overlay.mjs": {
+    "sha256": "d7f6fa8a85f5d6293551e245c40f3cc99e23012f725c2e8502dec5065055c471",
+    "size": 5278,
+    "mtime_ns": 1788944836292146769,
+    "mode": 33188
+  },
+  "scripts/mapcal/compare.mjs": {
+    "sha256": "d8941ff4e35f2d76a9816ade437cdc01dd8ac1eae890b7473c56a599147ab446",
+    "size": 3302,
+    "mtime_ns": 1788968338619403677,
+    "mode": 33188
+  },
+  "scripts/mapcal/world-units.json": {
+    "sha256": "c425d46806a81d66ef0fe3cc241a5e34d759742cf859b988df120034bd465c93",
+    "size": 12278,
+    "mtime_ns": 1788945397470287559,
+    "mode": 33188
+  },
+  "scripts/mapcal/emit.mjs": {
+    "sha256": "f60f0161565f1966c7cf4f312352c32966cf7b2f5486aea5e1d5e75864228516",
+    "size": 2304,
+    "mtime_ns": 1788945315631475092,
+    "mode": 33188
+  },
+  "scripts/mapcal/emit-ts.mjs": {
+    "sha256": "644e3f48d78c7d87ba8dc6c46d16ad92904b89dcc7e4592c4713dfbaf13b363c",
+    "size": 19209,
+    "mtime_ns": 1789042917327242094,
+    "mode": 33188
+  },
+  "scripts/mapcal/ascii.txt": {
+    "sha256": "1b4aa1c04180d33e6c2dfc483d3dc44899d50421591c14b0ad846f9979a7a04a",
+    "size": 2519,
+    "mtime_ns": 1788953374582314825,
+    "mode": 33188
+  },
+  "WORLD2_INTERACTION_QA.md": {
+    "sha256": "c1832d5b1005f2eea711299d8d5d72d67155b6d451a38bd874f906f187a0f600",
+    "size": 21832,
+    "mtime_ns": 1789325507254550525,
+    "mode": 33188
+  },
+  "MINIGAME_QA.md": {
+    "sha256": "471cda0517300a5123e662b0353b21c10500fdd20b7d0028407df000a767c664",
+    "size": 8751,
+    "mtime_ns": 1788950941603571923,
+    "mode": 33188
+  },
+  "MAP_RECONSTRUCTION_PLAN.md": {
+    "sha256": "57cfe28e76a0938eb53c34ded7d64e50790eb8d00a32b4786d4fb0db2338810d",
+    "size": 25339,
+    "mtime_ns": 1788978432782567829,
+    "mode": 33188
+  },
+  ".DS_Store": {
+    "sha256": "fd70192e9f1f492dcd199008330729f70e57d09e02297cd7d3e34f674ae8d5e3",
+    "size": 10244,
+    "mtime_ns": 1790423771371966552,
+    "mode": 33188
+  },
+  "world2-blender-audit.json": {
+    "sha256": "383d768b5fea28aef1f56244f12b80da0e4788faa190cfc5061d87afaaac8ac5",
+    "size": 2924766,
+    "mtime_ns": 1789117624884654164,
+    "mode": 33188
+  },
+  "HOME_NATURE_REDESIGN_AUDIT.md": {
+    "sha256": "a8717859aaa15a15c09c2db722968ffa7cb1530e19a15b32a94dd30fe321d107",
+    "size": 75480,
+    "mtime_ns": 1789959305241884102,
+    "mode": 33188
+  },
+  "HOME_NATURE_WORLD2_HANDOFF.md": {
+    "sha256": "8ae2cfe6485b4ea698674762986540432f21882552cc046ebda171e02b90b455",
+    "size": 37633,
+    "mtime_ns": 1789932692954672802,
+    "mode": 33188
+  },
+  "WORLD2_BLENDER_WORKFLOW.md": {
+    "sha256": "a29ab4cf2d54260abdaa892973ba119620ccea6fc197d0c5ffb126b5f9c82875",
+    "size": 10603,
+    "mtime_ns": 1789118662871794729,
+    "mode": 33188
+  },
+  "CONTENT_STATUS.md": {
+    "sha256": "ca6e8178f82b7c9fb26967894dd75b1e990586f96164c1f6c40e586da59e966a",
+    "size": 8626,
+    "mtime_ns": 1788959121886177168,
+    "mode": 33188
+  },
+  "WORLD_LEVEL_DESIGN_AUDIT.md": {
+    "sha256": "4a2642353bb2e18ef5751a042ae19d5a2b4fe1555822ad68a4f28cf4fed8dcb7",
+    "size": 16205,
+    "mtime_ns": 1788950939908255585,
+    "mode": 33188
+  },
+  "tsconfig.tsbuildinfo": {
+    "sha256": "e1336f5c643662587e3d8005505702d296528010f599066cb22391776171d6b9",
+    "size": 295549,
+    "mtime_ns": 1789961477633032633,
+    "mode": 33188
+  },
+  "WORLD_DENSITY_PASS.md": {
+    "sha256": "9ac156e48f050d39759a1f851edf5c0e450bd9070c31e005b37a4dc76f0e8013",
+    "size": 23858,
+    "mtime_ns": 1789029162699467943,
+    "mode": 33188
+  },
+  "THIRD_PARTY_NOTICES.md": {
+    "sha256": "4a572ed6b2ff9cc97e2ae592cdb86285a6a5b889edb5c5acf3212cc145db6ae2",
+    "size": 11952,
+    "mtime_ns": 1789055823671032871,
+    "mode": 33188
+  },
+  "BRUNO_PARITY_AUDIT.md": {
+    "sha256": "c03ea9cef12d46c7d26a0fda78ed85802444fc04564c508c8a2e3173db1e53dc",
+    "size": 324084,
+    "mtime_ns": 1788893001139594938,
+    "mode": 33188
+  },
+  "next-env.d.ts": {
+    "sha256": "0f70629890b72a0a82e91972cc032c04b658b26c265373cb711cf576bfbf8fcc",
+    "size": 296,
+    "mtime_ns": 1790155084202740977,
+    "mode": 33188
+  },
+  "WORLD2_INTERACTION_AUDIT.md": {
+    "sha256": "0712203697c87d5360784a6b6a33d7016f1de3743328d1346cddfbc90459b9e0",
+    "size": 13496,
+    "mtime_ns": 1789218447119390184,
+    "mode": 33188
+  },
+  "README.md": {
+    "sha256": "8344eea1a586d9ea56ae210b1395616ec07e1afefac99f19d7b65bfe7f072d9a",
+    "size": 32619,
+    "mtime_ns": 1788978441714997533,
+    "mode": 33188
+  },
+  "WORLD_CLEANUP_AUDIT.md": {
+    "sha256": "3acaf0c163635092c7bfeb8b84995ddf7abcd81019f243a5978eb0a4aa2ddc3b",
+    "size": 125349,
+    "mtime_ns": 1789041442827399001,
+    "mode": 33188
+  },
+  "WORLD2_VALIDATION.md": {
+    "sha256": "07132a96c6b4e35642fbce6f884c31484ec6a9b8d0f085bec85475b810fa94f2",
+    "size": 8547,
+    "mtime_ns": 1789118993114971778,
+    "mode": 33188
+  },
+  "folio-2025.blend": {
+    "sha256": "df5286df6141a6bece01abbd873d87a7f3d915cb685c6c989883cb7457474080",
+    "size": 16074344,
+    "mtime_ns": 1789113727006444997,
+    "mode": 33188
+  },
+  "WORLD_POLISH_PASS.md": {
+    "sha256": "30306bbe8f598e823d1447524e402df782007ad520aed232fe3d3781bf4bb4bc",
+    "size": 20086,
+    "mtime_ns": 1788950940974499740,
+    "mode": 33188
+  },
+  ".gitignore": {
+    "sha256": "c20e5ec9fff8bfeb30f72b8780a79524df2dff4930b986af3735799d30810b5e",
+    "size": 170,
+    "mtime_ns": 1788976442383110851,
+    "mode": 33188
+  },
+  "package-lock.json": {
+    "sha256": "57c45c4edaa8e86eab62db852218cb23c0da11b5cb6d50bb89af0810fe7f1696",
+    "size": 243125,
+    "mtime_ns": 1788953763482114740,
+    "mode": 33188
+  },
+  "package.json": {
+    "sha256": "62a164a7535b8031081cbc779b3298b65d08460ba933daa1215e87e48bdb173c",
+    "size": 2366,
+    "mtime_ns": 1789213949366616367,
+    "mode": 33188
+  },
+  "WORLD2_IMPLEMENTATION_PLAN.md": {
+    "sha256": "e68ebfc45f7ef37ba3ff321539a254dd74797e88b66b1eb0923faadd7a716510",
+    "size": 8901,
+    "mtime_ns": 1789116030667436283,
+    "mode": 33188
+  },
+  "WORLD_POLISH.md": {
+    "sha256": "9ce7235b0fe55be633dcec84f55b26ac88401b6c9853180c0043b35e21bcbda8",
+    "size": 17054,
+    "mtime_ns": 1788950940502433434,
+    "mode": 33188
+  },
+  "tsconfig.json": {
+    "sha256": "f2133cfd5b15814eec32ac6fc8f4530e3733cbffb0b3100caa243a01579867e7",
+    "size": 788,
+    "mtime_ns": 1789961473700143604,
+    "mode": 33188
+  },
+  "DRAWING_MAP_IMPLEMENTATION.md": {
+    "sha256": "eb3520459288b31ad0fe2406f902f142cfe1eeafcf441b4b28f55f261efa65ba",
+    "size": 30340,
+    "mtime_ns": 1788978432782108997,
+    "mode": 33188
+  },
+  "HOME_NATURE_SYSTEMS_BRIEF.md": {
+    "sha256": "3a3a14122b43e0049e42a30588c4f1fd03073435fb1484b3c63cd37bebffd136",
+    "size": 59585,
+    "mtime_ns": 1789932714981427165,
+    "mode": 33188
+  },
+  ".env.example": {
+    "sha256": "0b67774606db81bf7d55efdcc53910cc9fcb9dc23cc8b8384a17a94d210cc495",
+    "size": 492,
+    "mtime_ns": 1788805514788726209,
+    "mode": 33188
+  },
+  "HOME_NATURE_REDESIGN.md": {
+    "sha256": "034f01a4fe10812bf93dd318b2f3b9b9fe310f2f05f38e89035da5a353d6d3de",
+    "size": 52404,
+    "mtime_ns": 1789959276054453627,
+    "mode": 33188
+  },
+  "AGENTS.md": {
+    "sha256": "63f2c50380ed6303237cce215ce27af1d620d094c215e28d1b1538a3c070e3bb",
+    "size": 678,
+    "mtime_ns": 1788788408472426995,
+    "mode": 33188
+  },
+  "WORLD2_ASSET_NOTICES.md": {
+    "sha256": "657be7700409479e2f3c8132b882c96af3a66d56fe10f65d311ed2e22878bcba",
+    "size": 2527,
+    "mtime_ns": 1789214310306471576,
+    "mode": 33188
+  },
+  "HOME_NATURE_SYSTEM.md": {
+    "sha256": "13a4849958169ccfd2f2acbf7822849d52fa11db5ff6bcbcb98faf3dd7f67273",
+    "size": 68368,
+    "mtime_ns": 1789959294785072918,
+    "mode": 33188
+  },
+  "eslint.config.mjs": {
+    "sha256": "4def4b842f8d03645e4b74c54fd484f8824f44558d4565207e19a182c61ee9a1",
+    "size": 2457,
+    "mtime_ns": 1789961554430446885,
+    "mode": 33188
+  },
+  "CLAUDE.md": {
+    "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+    "size": 11,
+    "mtime_ns": 1788788408472567912,
+    "mode": 33188
+  },
+  "next.config.ts": {
+    "sha256": "4efd1fe9789aa1501ed9d0fa97a0de161f0d2531a4ebb50ca4fc383e824f50de",
+    "size": 693,
+    "mtime_ns": 1788952539833119960,
+    "mode": 33188
+  },
+  "WORLD2_INTERACTIONS_IMPLEMENTED.md": {
+    "sha256": "9f8886a29865fcb79b8ff9bf2200d1b28242e77b908ab6c1f9084e596de210e0",
+    "size": 36530,
+    "mtime_ns": 1789325484614111532,
+    "mode": 33188
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "actions": [],
+  "curves": [
+    {
+      "name": "bumpersRefrenceMesh.001",
+      "splines": 5,
+      "bevel": 0.0
+    },
+    {
+      "name": "bumpersRefrenceMesh.002",
+      "splines": 2,
+      "bevel": 0.0
+    },
+    {
+      "name": "B\u00e9zierCircle.001",
+      "splines": 1,
+      "bevel": 0.0
+    },
+    {
+      "name": "B\u00e9zierCurve",
+      "splines": 1,
+      "bevel": 0.0
+    },
+    {
+      "name": "Plane.003",
+      "splines": 1,
+      "bevel": 0.019999999552965164
+    },
+    {
+      "name": "Plane.004",
+      "splines": 7,
+      "bevel": 0.17999999225139618
+    },
+    {
+      "name": "Plane.005",
+      "splines": 3,
+      "bevel": 0.17999999225139618
+    },
+    {
+      "name": "Plane.007",
+      "splines": 2,
+      "bevel": 0.17999999225139618
+    },
+    {
+      "name": "Plane.010",
+      "splines": 10,
+      "bevel": 0.17999999225139618
+    },
+    {
+      "name": "Plane.011",
+      "splines": 9,
+      "bevel": 0.17999999225139618
+    },
+    {
+      "name": "refBowlingPin.001",
+      "splines": 6,
+      "bevel": 0.0
+    },
+    {
+      "name": "Text.001",
+      "splines": 0,
+      "bevel": 0.0
+    },
+    {
+      "name": "Text.005",
+      "splines": 0,
+      "bevel": 0.0
+    }
+  ],
+  "physics": [],
+  "constraints": [],
+  "texts": [
+    {
+      "name": "Text.003",
+      "text": "BRUNO SIMON"
+    },
+    {
+      "name": "archiveReset",
+      "text": "RESET"
+    }
+  ]
+}

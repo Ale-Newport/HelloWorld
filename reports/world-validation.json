@@ -1,0 +1,322 @@
+[
+  {
+    "level": "SUGGESTION",
+    "object": "jump",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refBanners.001",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "PlasticPenguin_01",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "PlasticPenguin_02",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "PlasticPenguin_03",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "PlasticPenguin_04",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "PlasticPenguin_05",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "PlasticPenguin_06",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "PlasticPenguin_07",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "PlasticPenguin_napping",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Winter pine.001",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Winter pine.002",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Winter pine.003",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Winter pine.004",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Winter pine.005",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Cube.157",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "slabes",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "base.015",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "physicalFixed.003",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Plane.002",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Plane.004",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "digit0",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "digit0.004",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "digit0.005",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "digit0.006",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "sudoMesh.003",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "wings",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refBlackboardLabelsGamepadPlaystation",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refBlackboardLabelsGamepadXbox",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refBlackboardLabelsMouseKeyboard.001",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Cube.121",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "cube.024",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Cube.094",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refBlade",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refHammer",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refArrowNextImage",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refArrowPreviousImage",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "cube.033",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "cube.021",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "cube.026",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Cube.092",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Cube.101",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refCharcoal",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "cube.023",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refBlackboardLabelsGamepadPlaystation.001",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refBlackboardLabelsGamepadXbox.001",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refBlackboardLabelsMouseKeyboard",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "body.001",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refHeat.001",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refLiquid",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "intersect",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "text.008",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Cube.054",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Cube.002",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Cube.135",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "lava",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refOvenHeat",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Cube.173",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "rocks.001",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refObjectsPhysicalDynamic.011",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refObjectsPhysicalDynamic.012",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "refObjectsPhysicalDynamic.013",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Cube.006",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  },
+  {
+    "level": "SUGGESTION",
+    "object": "Cylinder",
+    "message": "Unapplied scale; keep linked instances or apply before collider authoring"
+  }
+]

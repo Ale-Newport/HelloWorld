@@ -1,0 +1,98 @@
+[
+  {
+    "name": "World structure, identity and ice metadata",
+    "passed": true,
+    "detail": {
+      "objects": 2514,
+      "ice_friction": 0.02500000037252903
+    }
+  },
+  {
+    "name": "Ferris wheel vertical, 12 upright cabins and seamless cycle",
+    "passed": true,
+    "detail": {
+      "cabins": 12,
+      "max_tilt_error": 5.960464477539063e-08,
+      "loop_matrix_error": 1.9073486328125e-06,
+      "rotor_world_dimensions": [
+        18.396011352539062,
+        4.892467498779297,
+        18.39600372314453
+      ]
+    }
+  },
+  {
+    "name": "Road mesh follows authored Bezier curves and continuous loop",
+    "passed": true,
+    "detail": {
+      "editable_roads": 8,
+      "centerline_error_m": 7.688768146799611e-06,
+      "loop_segment_max_m": 0.26776628612992515,
+      "loop_width": 5.8
+    }
+  },
+  {
+    "name": "Portable world validation",
+    "passed": true,
+    "detail": {
+      "errors": 0
+    }
+  },
+  {
+    "name": "Snap and align on tilted ground with transformed bounds",
+    "passed": true,
+    "detail": {
+      "normal_alignment": 1.0000002011656761,
+      "support_clearance_m": 0.019994791597127914,
+      "scaled_location": [
+        2.0,
+        1.0,
+        0.36788755655288696
+      ]
+    }
+  },
+  {
+    "name": "Road regeneration idempotency, width and extend operator",
+    "passed": true,
+    "detail": {
+      "generated_objects": 3,
+      "new_width": 8,
+      "points": 4,
+      "unique_owner_ids": true
+    }
+  },
+  {
+    "name": "Portable GLB import operator",
+    "passed": true,
+    "detail": "GLB copied, imported and collider created"
+  },
+  {
+    "name": "Material and UV tools",
+    "passed": true,
+    "detail": "Principled material, tiling and metre UVs created"
+  },
+  {
+    "name": "Compound asset library preserves hierarchy",
+    "passed": true,
+    "detail": "Two child meshes retained and shared in a compound library asset"
+  },
+  {
+    "name": "Vegetation scatter spacing, shared meshes and reproducible seed",
+    "passed": true,
+    "detail": {
+      "instances": 7,
+      "shared_meshes": 1,
+      "min_distance": 2.3996944426694324,
+      "repeatable_seed": true
+    }
+  },
+  {
+    "name": "Native Blender rigid-body collision",
+    "passed": true,
+    "detail": {
+      "settled_height_m": 0.4999999403953552,
+      "frames": 90,
+      "native_axis_constraint": true
+    }
+  }
+]

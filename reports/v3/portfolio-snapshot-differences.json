@@ -1,0 +1,26 @@
+[
+  {
+    "path": "src/components/journey/Journey.tsx",
+    "content_changed": true,
+    "mtime_ns": 1790440882709171095,
+    "old_mtime_ns": 1789935925132890270
+  },
+  {
+    "path": "src/experience/canvas/GlobalCanvas.tsx",
+    "content_changed": true,
+    "mtime_ns": 1790440935669749618,
+    "old_mtime_ns": 1788955318885946422
+  },
+  {
+    "path": ".DS_Store",
+    "content_changed": true,
+    "mtime_ns": 1790440521841385679,
+    "old_mtime_ns": 1790423771371966552
+  },
+  {
+    "path": "tsconfig.tsbuildinfo",
+    "content_changed": true,
+    "mtime_ns": 1790441089946937388,
+    "old_mtime_ns": 1789961477633032633
+  }
+]

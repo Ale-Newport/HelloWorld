@@ -1,0 +1,42 @@
+[
+  {
+    "name": "One compact authored island",
+    "passed": true,
+    "data": {
+      "objects": 1370,
+      "version": "2.0.0"
+    }
+  },
+  {
+    "name": "Self-contained textures and fonts",
+    "passed": true,
+    "data": {
+      "packed_images": 8,
+      "fonts": 1
+    }
+  },
+  {
+    "name": "Native static surfaces and dynamic props",
+    "passed": true,
+    "data": {
+      "dynamic_props": 24,
+      "static_bodies": 170
+    }
+  },
+  {
+    "name": "Wheel cabins remain upright throughout animation",
+    "passed": true,
+    "data": {
+      "cabins": 12,
+      "seconds": 30
+    }
+  },
+  {
+    "name": "Native penguins stand before impact",
+    "passed": true,
+    "data": {
+      "upright": 8,
+      "seconds": 5
+    }
+  }
+]

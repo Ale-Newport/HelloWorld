@@ -1,0 +1,20 @@
+(node:69182) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./tests/local-loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+using deprecated parameters for the initialization function; pass a single object instead
+{
+  passed: true,
+  editedIslandRespawn: true,
+  method: 'Two independent Rapier worlds: original Portfolio Physics+PhysicsVehicle+Player versus HelloWorld adapter, identical World2 tuning and action sequence.',
+  frames: 345,
+  maxPositionError: 0,
+  maxRotationError: 5.960464477539063e-8,
+  bindings: {
+    Space: 'jump',
+    B: 'brake',
+    ControlLeft: 'brake',
+    Shift: 'boost',
+    E: 'interact'
+  },
+  changesOutsideSource: 'Ice braking surface hook; editable-road respawn and local loop assistance.'
+}

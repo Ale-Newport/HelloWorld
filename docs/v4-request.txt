@@ -1,0 +1,2596 @@
+Continúa trabajando sobre el proyecto `HelloWorld`.
+
+Esta tarea es una ITERACIÓN sobre el mundo y editor que ya has mejorado considerablemente. NO quiero reconstruir desde cero lo que ya funciona.
+
+Te proporcionaré también una nueva imagen:
+
+`ALEJANDRO WORLD MAP`
+
+Esta imagen es ahora el BLUEPRINT PRINCIPAL de distribución del mundo.
+
+Quiero que la utilices activamente mientras trabajas y que la vista aérea final del mundo se acerque todo lo posible a esa distribución.
+
+======================================================================
+0. REGLAS ABSOLUTAS
+======================================================================
+
+WORKSPACE MODIFICABLE:
+
+`HelloWorld`
+
+REFERENCIA READ-ONLY:
+
+`Portfolio`
+
+Puedes:
+
+- inspeccionar Portfolio;
+- ejecutar Portfolio;
+- estudiar código;
+- copiar código;
+- copiar assets;
+- copiar materiales;
+- copiar shaders;
+- copiar configuración;
+- copiar physics;
+- copiar estructuras.
+
+PERO:
+
+NO MODIFIQUES NADA DENTRO DE `Portfolio`.
+
+No escribas:
+- archivos;
+- logs;
+- caches;
+- temporales;
+- commits;
+- assets procesados;
+- cambios de código;
+
+dentro de Portfolio.
+
+Si necesitas cualquier cosa:
+
+Portfolio
+    ↓ COPY
+HelloWorld
+
+Todo el resultado final debe quedar autosuficiente en HelloWorld.
+
+======================================================================
+1. PRIMERA TAREA: BACKUP
+======================================================================
+
+Antes de tocar el estado actual:
+
+crea un backup completo y claramente identificado.
+
+Ejemplo:
+
+backups/
+    world_before_map_and_editor_upgrade_YYYYMMDD/
+
+y si hay `.blend`:
+
+AlejandroWorld_before_upgrade.blend
+
+NO sobrescribas el único estado bueno actual.
+
+======================================================================
+2. EL NUEVO MAPA ES EL BLUEPRINT
+======================================================================
+
+Quiero que estudies cuidadosamente la imagen de referencia.
+
+NO la interpretes simplemente como concept art.
+
+Quiero que funcione como:
+
+MASTER LEVEL PLAN.
+
+Debes intentar reproducir:
+
+- posición relativa de las zonas;
+- proximidad;
+- jerarquía;
+- dirección de carreteras;
+- uso de costa;
+- distribución del circuito;
+- canales;
+- playas;
+- puentes;
+- plazas;
+- grandes landmarks.
+
+No hace falta una coincidencia geométrica pixel-perfect, pero la vista aérea final debería hacer evidente que ambos representan el MISMO MAPA.
+
+======================================================================
+3. DISTRIBUCIÓN EXACTA DEL MUNDO
+======================================================================
+
+Utiliza estas posiciones.
+
+Considera:
+
+NORTH = parte superior del mapa de referencia
+SOUTH = parte inferior
+WEST = izquierda
+EAST = derecha
+
+--------------------------------------------------
+#1 CENTRAL PLAZA — CENTRO
+--------------------------------------------------
+
+Debe ser el centro visual y espacial.
+
+Contiene:
+
+- ALEJANDRO NEWPORT;
+- fuente / landmark;
+- plaza circular;
+- palmeras;
+- pequeños jardines;
+- bancos;
+- caminos peatonales;
+- decoración;
+- pequeños water features.
+
+Debe actuar como hub.
+
+Varias carreteras rodean la zona.
+
+PERO:
+
+NO atraviesan la plaza.
+
+--------------------------------------------------
+#2 ABOUT ME — NORTE/NORESTE DEL CENTRO
+--------------------------------------------------
+
+Inmediatamente encima/derecha de Central Plaza.
+
+Pequeño edificio/pabellón moderno.
+
+Debe poder accederse desde camino peatonal.
+
+No necesita una isla independiente.
+
+--------------------------------------------------
+#3 PROJECTS DISTRICT — ESTE/NORESTE DEL CENTRO
+--------------------------------------------------
+
+Debe ser una zona tecnológica densa.
+
+Incluye:
+
+- pantallas;
+- cámaras;
+- laptops;
+- robots;
+- equipos tecnológicos;
+- pequeños escenarios relacionados con proyectos;
+- edificios pequeños;
+- props tecnológicos;
+- iluminación;
+- señales visuales.
+
+Debe tener identidad propia.
+
+--------------------------------------------------
+#4 ACHIEVEMENTS — ESTE/SURESTE
+--------------------------------------------------
+
+Trophy plaza / hall of achievements.
+
+Incluye:
+
+- trophy landmark;
+- podium;
+- pedestals;
+- pequeñas estructuras;
+- landscaping.
+
+Debe quedar rodeada parcialmente por carretera.
+
+La carretera NO atraviesa la plaza.
+
+--------------------------------------------------
+#5 CAREER — SUR/SURESTE DEL CENTRO
+--------------------------------------------------
+
+Zona moderna.
+
+Arquitectura:
+
+- pequeña;
+- limpia;
+- tecnológica/profesional.
+
+Debe conectar visualmente Central Plaza con:
+
+- puerto;
+- achievements;
+- contact.
+
+--------------------------------------------------
+#6 CONTACT — COSTA SURESTE
+--------------------------------------------------
+
+Pequeña zona cerca del agua.
+
+Puede contener:
+
+- envelope/mail landmark;
+- pequeño edificio;
+- pequeño mirador;
+- coastal path.
+
+--------------------------------------------------
+#7 BOWLING — OESTE/NOROESTE
+--------------------------------------------------
+
+Integrado en el mundo.
+
+Incluye:
+
+- bowling building;
+- giant ball;
+- pins;
+- parking pequeño;
+- decoración.
+
+No crear una enorme extensión.
+
+--------------------------------------------------
+#8 COOKIES — OESTE/SUROESTE
+--------------------------------------------------
+
+Roadside cookie café / attraction.
+
+Incluye:
+
+- cookie landmark;
+- café;
+- awning;
+- pequeños props;
+- parking reducido.
+
+--------------------------------------------------
+#9 F1 CIRCUIT — SUROESTE
+--------------------------------------------------
+
+Debe ocupar principalmente el cuadrante SOUTH-WEST.
+
+Separado claramente de la red normal.
+
+Inspiración:
+
+Circuit de Barcelona-Catalunya.
+
+Conservar:
+
+- red/white curbs;
+- pit lane;
+- grid;
+- grandstand;
+- barriers;
+- race props;
+- cameras;
+- signs.
+
+Debe ser compacto.
+
+NO hacer una pista gigantesca.
+
+--------------------------------------------------
+#10 ICE LAKE — NORTE/NOROESTE
+--------------------------------------------------
+
+Muy importante:
+
+AHORA DEBE ESTAR CASI AL NIVEL GENERAL DEL TERRENO.
+
+NO quiero tener que cruzar un enorme puente para entrar.
+
+Debe ser:
+
+- lake / ice rink embebido naturalmente;
+- entrada sencilla desde carretera/camino;
+- pinos;
+- nieve;
+- rocas;
+- conos;
+- pingüinos de plástico;
+- pequeños bancos;
+- iluminación.
+
+El coche debe poder entrar directamente al hielo.
+
+--------------------------------------------------
+#11 FERRIS WHEEL — NORTE/NORESTE
+--------------------------------------------------
+
+Noria como gran landmark.
+
+Pequeña plaza de feria.
+
+Incluye:
+
+- ferris wheel;
+- booths;
+- lights;
+- benches;
+- vegetation;
+- 1-2 small fairground props.
+
+--------------------------------------------------
+#12 LOOP-THE-LOOP — EXTREMO ESTE/NORESTE
+--------------------------------------------------
+
+Integrado en la carretera normal.
+
+NO isla separada.
+
+La carretera:
+
+normal road
+→ aproximación
+→ loop
+→ salida
+→ continúa por el mapa.
+
+--------------------------------------------------
+#13 PORT / HARBOR — COSTA SUR
+--------------------------------------------------
+
+Quiero un PUERTO real mucho más elaborado.
+
+Incluye:
+
+- piers;
+- docks;
+- marina;
+- mooring points;
+- small boats;
+- yachts;
+- buoys;
+- ropes;
+- harbor lights;
+- crates;
+- benches;
+- safety props;
+- ladders;
+- small harbor building;
+- fuel dock if appropriate.
+
+Debe sentirse funcional.
+
+--------------------------------------------------
+#14 BEACH — SUR/SUROESTE
+--------------------------------------------------
+
+Muy importante para la física.
+
+Debe existir una transición suave:
+
+terrain
+→ sand
+→ wet sand
+→ shallow water
+→ sea
+
+EL COCHE DEBE PODER:
+
+conducir a la playa
+→ entrar al agua
+→ volver a tierra
+
+sin:
+
+- precipicio;
+- escalón;
+- collider imposible;
+- quedarse atrapado.
+
+--------------------------------------------------
+#15 LIGHTHOUSE — COSTA OESTE/SUROESTE
+--------------------------------------------------
+
+Reemplaza/mejora el faro.
+
+Quiero un asset realmente elaborado:
+
+- lighthouse tower;
+- door;
+- windows;
+- balcony;
+- rotating light;
+- rocks;
+- path;
+- small keeper hut si encaja;
+- railing;
+- nighttime-ready light.
+
+Debe ser funcional.
+
+--------------------------------------------------
+#16 CASTLE — NOROESTE
+--------------------------------------------------
+
+Añade un castillo.
+
+No un cubo con torres.
+
+Debe ser un asset trabajado.
+
+Incluye:
+
+- main keep;
+- towers;
+- walls;
+- entrance;
+- flags;
+- courtyard;
+- path;
+- rocks/vegetation.
+
+Mantener estilo visual del mundo.
+
+--------------------------------------------------
+#17 SUSPENSION BRIDGE — NOROESTE/CENTRO-OESTE
+--------------------------------------------------
+
+Añade un puente inspirado en:
+
+Golden Gate Bridge.
+
+NO copies marca/logos.
+
+Debe ser:
+
+- rojo;
+- suspension bridge;
+- towers;
+- cables;
+- deck;
+- railings;
+- correct driving width;
+- collision.
+
+Debe poder atravesarse perfectamente en coche.
+
+--------------------------------------------------
+#18 WOODEN BRIDGE — CENTRO-OESTE
+--------------------------------------------------
+
+Otro bridge asset.
+
+Estilo:
+
+detailed wooden bridge.
+
+Incluye:
+
+- timber beams;
+- supports;
+- railings;
+- planks;
+- correct colliders.
+
+Debe poder colocarse sobre canales pequeños.
+
+--------------------------------------------------
+#19 LAKES / CANALS
+--------------------------------------------------
+
+Añade varios lagos y water features por todo el mundo.
+
+PERO:
+
+deben pertenecer al asset system.
+
+Quiero poder añadir nuevos posteriormente.
+
+--------------------------------------------------
+#20 HOT AIR BALLOON — NORTE/EXTREMO NORESTE
+--------------------------------------------------
+
+Añade:
+
+HOT AIR BALLOON.
+
+Asset detallado:
+
+- balloon;
+- basket;
+- ropes;
+- burner area;
+- optional idle floating animation.
+
+Puede estar anclado a una pequeña zona verde.
+
+--------------------------------------------------
+#21 EXTRA DETAIL ZONES
+--------------------------------------------------
+
+Utiliza espacios restantes para:
+
+- pocket parks;
+- viewpoints;
+- small plazas;
+- beaches;
+- gardens;
+- trees;
+- rocks;
+- props;
+- benches;
+- easter eggs.
+
+--------------------------------------------------
+#22 DRIVE SPAWN
+--------------------------------------------------
+
+Cerca del centro / projects / main road.
+
+Debe existir un spawn claro y seguro.
+
+--------------------------------------------------
+#23 AIR MODE
+--------------------------------------------------
+
+No necesita necesariamente ser una pista.
+
+El avión surge mediante transformación del vehículo.
+
+Pero puedes mantener una pequeña:
+
+aviation easter egg / landing pad / viewpoint
+
+en el mundo si queda bien.
+
+======================================================================
+4. TERRENO DEMASIADO ALTO — CORREGIR
+======================================================================
+
+Este problema actual es MUY IMPORTANTE.
+
+El terreno se encuentra demasiado elevado respecto al mar.
+
+Quiero que inspecciones:
+
+`Portfolio`
+
+especialmente:
+
+`/world2`
+
+y estudies exactamente cómo resuelve:
+
+- sea level;
+- terrain height;
+- beach;
+- coast;
+- shallow water;
+- vehicle-water transition.
+
+Quiero una filosofía muy similar.
+
+NO copies simplemente una cifra.
+
+Compara escala real.
+
+Objetivo:
+
+la mayor parte del terreno principal debe encontrarse SOLO LIGERAMENTE por encima del nivel del agua.
+
+Ejemplo conceptual:
+
+sea = 0
+
+main terrain ≈ pequeño offset positivo
+
+beach → transición suave hacia 0
+
+No quiero:
+
+isla elevada varios metros
++
+pared vertical
++
+agua.
+
+======================================================================
+5. COSTAS
+======================================================================
+
+Rediseña las costas.
+
+Añade:
+
+- sandy slopes;
+- shallow areas;
+- small rocks;
+- small cliffs solo donde tengan sentido.
+
+Pero permite muchas zonas accesibles.
+
+Especialmente:
+
+BEACH AREA.
+
+El coche debe poder meterse al agua.
+
+======================================================================
+6. WATER DRIVING
+======================================================================
+
+Replica el comportamiento apropiado de `/world2` si existe.
+
+Cuando el coche entra en shallow water:
+
+- debe seguir moviéndose;
+- aumentar drag;
+- reducir velocidad;
+- generar feedback visual si ya existe sistema compatible;
+- poder regresar a tierra.
+
+En agua profunda:
+
+puedes limitar conducción.
+
+Si el coche termina demasiado profundo:
+
+respawn.
+
+======================================================================
+7. ASSET LIBRARY — GRAN CAMBIO DE ARQUITECTURA
+======================================================================
+
+Actualmente puedo colocar assets.
+
+Ahora quiero que CADA ASSET SEA EDITABLE DE FORMA AISLADA.
+
+Quiero conceptualmente:
+
+ASSET LIBRARY
+    ↓
+select asset
+    ↓
+EDIT ASSET
+    ↓
+isolated asset editor
+    ↓
+SAVE ASSET
+    ↓
+ADD TO WORLD
+
+======================================================================
+8. EDIT ASSET MODE
+======================================================================
+
+Al abrir un asset:
+
+NO lo edites dentro del mundo principal.
+
+Abre un workspace/contexto aislado.
+
+Por ejemplo:
+
+Asset Studio.
+
+Debe contener:
+
+- neutral ground plane;
+- neutral lighting;
+- grid;
+- orbit camera;
+- transform gizmo.
+
+Solo quiero ver el asset.
+
+======================================================================
+9. ASSET STUDIO UI
+======================================================================
+
+Layout:
+
+LEFT:
+asset hierarchy
+
+CENTER:
+3D viewport
+
+RIGHT:
+properties
+
+TOP:
+Save Asset
+Save As New
+Reset
+Add To World
+Back To World
+
+======================================================================
+10. EDITAR PARTES INTERNAS DEL ASSET
+======================================================================
+
+Quiero poder seleccionar INDIVIDUALMENTE:
+
+- child meshes;
+- wheels;
+- doors;
+- lights;
+- roof;
+- materials;
+- props;
+- submeshes.
+
+Ejemplo:
+
+Bridge
+├── Deck
+├── Tower_L
+├── Tower_R
+├── Cables
+├── Rails
+└── Supports
+
+Puedo seleccionar:
+
+Tower_L
+
+y editarlo independientemente.
+
+======================================================================
+11. ASSET HIERARCHY
+======================================================================
+
+Añade panel tipo Outliner simplificado.
+
+Mostrar:
+
+Asset Root
+├── Objects
+├── Lights
+├── Animations
+├── Colliders
+└── Helpers
+
+Permitir:
+
+- rename;
+- hide;
+- lock;
+- duplicate;
+- delete;
+- parent;
+- unparent.
+
+======================================================================
+12. ASSET EDITABLE PROPERTIES
+======================================================================
+
+Por cada elemento:
+
+Transform
+Material
+Texture
+Physics
+Collision
+Visibility
+Animation
+Metadata
+
+======================================================================
+13. SAVE ASSET
+======================================================================
+
+Cuando pulse:
+
+SAVE ASSET
+
+los cambios pasan a la definición del asset.
+
+Las nuevas instancias deben usar la versión actualizada.
+
+MUY IMPORTANTE:
+
+no quiero que editar el asset destruya las transformaciones de las instancias ya colocadas.
+
+Separar:
+
+ASSET DEFINITION
+
+de:
+
+WORLD INSTANCE.
+
+======================================================================
+14. SAVE AS NEW
+======================================================================
+
+Permite:
+
+Save As New Asset.
+
+Ejemplo:
+
+Tree_Pine
+
+editar
+
+Save As:
+
+Tree_Pine_Snow
+
+Esto crea un nuevo asset independiente.
+
+======================================================================
+15. EDIT EXISTING WORLD INSTANCE
+======================================================================
+
+Si selecciono una instancia dentro del mundo:
+
+quiero:
+
+Edit Instance
+
+o:
+
+Edit Source Asset.
+
+Edit Instance:
+solo modifica esa copia.
+
+Edit Source Asset:
+abre Asset Studio y modifica la definición.
+
+======================================================================
+16. ASSET THUMBNAILS
+======================================================================
+
+Después de guardar asset:
+
+genera automáticamente thumbnail.
+
+Idealmente:
+
+- fixed camera;
+- transparent/neutral background;
+- consistent lighting.
+
+Actualiza Asset Browser.
+
+======================================================================
+17. NUEVOS ASSETS: PRIORIDAD CALIDAD
+======================================================================
+
+Amplía enormemente Asset Library.
+
+Esta vez:
+
+NO quiero placeholders.
+
+NO quiero:
+
+cube + material = "building".
+
+Quiero assets visualmente currados.
+
+Prioridad:
+
+DETAIL > SPEED.
+
+======================================================================
+18. NUEVA CATEGORÍA: WATER
+======================================================================
+
+Añade:
+
+Water
+├── Pond Small
+├── Pond Medium
+├── Natural Lake
+├── Decorative Lake
+├── Frozen Lake
+├── Canal Straight
+├── Canal Curved
+├── Fountain
+├── Stream
+└── Waterfall
+
+======================================================================
+19. LAGOS
+======================================================================
+
+Los lagos deben poder editarse.
+
+Idealmente:
+
+curve / shape based.
+
+Parámetros:
+
+size
+depth visual
+shore material
+water material
+vegetation
+rocks
+collision
+ice mode
+
+======================================================================
+20. NUEVO FROZEN LAKE ASSET
+======================================================================
+
+Reemplaza/mejora el actual.
+
+Debe:
+
+estar al nivel del terreno.
+
+NO necesitar bridge.
+
+Características:
+
+- irregular organic shape;
+- ice material;
+- subtle snow edge;
+- pines;
+- optional rocks;
+- optional lights;
+- optional penguins/cones.
+
+Debe ser modular.
+
+======================================================================
+21. CATEGORY: BRIDGES
+======================================================================
+
+Añade:
+
+Bridges
+├── Wooden Bridge Small
+├── Wooden Bridge Medium
+├── Stone Bridge
+├── Modern Bridge
+└── Red Suspension Bridge
+
+Todos:
+
+- drivable where appropriate;
+- editable;
+- proper colliders;
+- detailed railings;
+- correct road width.
+
+======================================================================
+22. CATEGORY: HARBOR
+======================================================================
+
+Añade muchos assets:
+
+Pier
+Dock
+Marina Dock
+Mooring Post
+Buoy
+Rope Coil
+Harbor Light
+Crate
+Fishing Crate
+Dock Ladder
+Boat Ramp
+Small Boat
+Sailboat
+Motorboat
+Yacht
+Harbor Building
+Fuel Pump
+Life Ring
+Boat Trailer
+
+etc.
+
+======================================================================
+23. CATEGORY: BEACH
+======================================================================
+
+Añade:
+
+Beach Umbrella
+Sunbed
+Deck Chair
+Beach Towel
+Surfboard
+Paddleboard
+Beach Ball
+Sandcastle
+Cooler
+Beach Bag
+Lifeguard Tower
+Beach Shower
+Beach Sign
+Beach Hut
+Volleyball Net
+Kayak
+Small Boat
+Palm Cluster
+Rock Cluster
+Driftwood
+
+etc.
+
+======================================================================
+24. CATEGORY: LANDMARKS
+======================================================================
+
+Castle
+Detailed Lighthouse
+Hot Air Balloon
+Ferris Wheel
+Fountain
+Clock Tower
+Observation Tower
+Windmill
+
+y otros si aportan calidad.
+
+======================================================================
+25. CATEGORY: CITY / STREET
+======================================================================
+
+Añade:
+
+Bench variants
+Street lights
+Trash bins
+Bollards
+Bus stop
+Bike rack
+Fire hydrant
+Planters
+Phone booth
+Mail box
+Vending machine
+Traffic lights
+Street signs
+Construction barriers
+
+etc.
+
+======================================================================
+26. CATEGORY: NATURE
+======================================================================
+
+Mejora mucho:
+
+trees
+bushes
+flowers
+grass clusters
+rocks
+fallen logs
+mushrooms
+reeds
+cactus
+palms
+pine
+snow pine
+cherry blossom
+
+Variantes.
+
+======================================================================
+27. ASSETS DEBEN ESTAR CURADOS
+======================================================================
+
+Antes de añadir cada asset:
+
+verifica:
+
+- scale;
+- pivot;
+- materials;
+- normals;
+- UV;
+- collider;
+- naming;
+- hierarchy.
+
+No llenes Asset Library de objetos malos.
+
+======================================================================
+28. ROAD SYSTEM — GRAN BUG ACTUAL
+======================================================================
+
+Actualmente al editar carretera:
+
+las líneas blancas pueden no moverse correctamente.
+
+Y en race track:
+
+los bordes rojo/blanco pueden quedar independientes.
+
+ESTO ESTÁ MAL.
+
+Quiero que ROAD sea una ENTIDAD PROCEDURAL ÚNICA.
+
+======================================================================
+29. ROAD MASTER CURVE
+======================================================================
+
+Cada carretera debe tener UNA master curve.
+
+A partir de esa misma curve genera:
+
+ROAD SURFACE
+LANE MARKINGS
+EDGE MARKINGS
+CURBS
+GUARDRAILS
+COLLIDERS
+
+Nunca mantenerlos como geometría manual independiente.
+
+======================================================================
+30. NORMAL ROAD
+======================================================================
+
+RoadCurve
+    ↓
+RoadSurface
+    ↓
+CenterLine
+    ↓
+EdgeLines
+    ↓
+Collision
+
+Si muevo un control point:
+
+TODO se actualiza.
+
+======================================================================
+31. RACE TRACK
+======================================================================
+
+TrackCurve
+    ↓
+Asphalt
+    ↓
+LeftCurb
+    ↓
+RightCurb
+    ↓
+TrackLimits
+    ↓
+BarrierPlacement
+    ↓
+Collision
+
+Cuando edito la pista:
+
+red-white curb SIEMPRE sigue la geometría.
+
+======================================================================
+32. CURBS
+======================================================================
+
+No generar curb como piezas rectas independientes.
+
+Debe ser:
+
+curve-following geometry.
+
+Red / white pattern debe seguir longitud real.
+
+Preferiblemente:
+
+distance-based alternating material/UV
+
+para evitar deformación.
+
+======================================================================
+33. ROAD TEXTURE PROBLEM EN CURVAS CERRADAS
+======================================================================
+
+Hay otro problema visible:
+
+cuando una curva es muy cerrada:
+
+dos partes de carretera pueden terminar ocupando casi el mismo plano.
+
+Esto genera:
+
+- overlap;
+- z-fighting;
+- strange textures;
+- doubled asphalt;
+- visual artifacts.
+
+DEBES SOLUCIONARLO DE RAÍZ.
+
+======================================================================
+34. NO USAR ROAD RIBBON INGENUO
+======================================================================
+
+No basta con generar:
+
+center curve
++
+constant flat bevel
+
+si provoca self-intersections.
+
+Implementa detección de:
+
+self intersection.
+
+======================================================================
+35. ROAD SELF-INTERSECTION VALIDATION
+======================================================================
+
+Cada vez que cambie:
+
+road width
+o
+curve control point
+
+comprueba si:
+
+curve radius < safe radius for width
+
+o si:
+
+road polygons intersect themselves.
+
+Mostrar visualmente:
+
+WARNING:
+Road self intersection.
+
+======================================================================
+36. AUTO FIX
+======================================================================
+
+Cuando sea viable:
+
+Auto Smooth Curve
+
+o
+
+Auto Resolve Overlap.
+
+Puede:
+
+- reducir width localmente;
+- suavizar control points;
+- modificar handles;
+- aumentar curve radius.
+
+NO generar dos capas en mismo sitio.
+
+======================================================================
+37. ROAD MESH GENERATION
+======================================================================
+
+Genera el road mesh siguiendo:
+
+local tangent
++
+local perpendicular
+
+con sampling adecuado.
+
+Evita:
+
+- twisted normals;
+- uneven segment sizes;
+- UV stretching.
+
+======================================================================
+38. ROAD UV
+======================================================================
+
+La textura debe seguir LONGITUD REAL de carretera.
+
+U/V basado en distancia recorrida.
+
+No basado solamente en bounding box.
+
+Así:
+
+una curva cerrada no deforma la textura absurdamente.
+
+======================================================================
+39. ROAD HEIGHT
+======================================================================
+
+Evita road/road z-fighting.
+
+Cuando haya una intersección legítima:
+
+crea un JUNCTION.
+
+No simplemente superponer dos road strips.
+
+======================================================================
+40. JUNCTION SYSTEM
+======================================================================
+
+Añade:
+
+T Junction
+Crossroad
+Roundabout
+Merge
+Split
+
+Idealmente generados limpiamente.
+
+======================================================================
+41. TERRAIN + ROAD
+======================================================================
+
+Road debe adaptarse suavemente al terrain.
+
+No flotante.
+
+No enterrado.
+
+Añade opción:
+
+Conform To Terrain.
+
+======================================================================
+42. ROAD CLEARANCE VALIDATION
+======================================================================
+
+Sigue manteniendo:
+
+no road through attraction.
+
+Validation:
+
+ROAD vs BUILDING
+ROAD vs LANDMARK
+ROAD vs TRACK
+ROAD vs WATER
+ROAD vs ROAD
+
+excepto intencionado.
+
+======================================================================
+43. MODO DRIVE — COCHE SE MUEVE SOLO
+======================================================================
+
+Actualmente existe un bug:
+
+sin pulsar ningún control,
+
+EL COCHE TIENDE A MOVERSE LIGERAMENTE.
+
+Corrígelo.
+
+======================================================================
+44. INVESTIGAR CAUSA REAL
+======================================================================
+
+NO hagas simplemente:
+
+if speed < 0.1 => speed = 0
+
+sin entender la causa.
+
+Busca:
+
+- tiny throttle;
+- physics impulse;
+- slope gravity;
+- wheel friction;
+- velocity integration;
+- controller input noise;
+- damping;
+- collider resting instability;
+- chassis COM;
+- suspension;
+- ground normal.
+
+======================================================================
+45. INPUT DEAD ZONE
+======================================================================
+
+Keyboard:
+
+si no hay input:
+
+throttle = EXACTLY 0.
+
+steering debe volver suavemente a 0.
+
+Si hay gamepad support:
+
+añade deadzone.
+
+======================================================================
+46. PARKED STATE
+======================================================================
+
+Cuando:
+
+no throttle
+AND
+low speed
+AND
+grounded
+
+debe entrar en stable idle state.
+
+Puede aplicar:
+
+rolling resistance
+
+y brake damping ligero.
+
+Pero sin sentirse pegado al suelo.
+
+======================================================================
+47. SLOPES
+======================================================================
+
+En pendientes fuertes:
+
+es aceptable que gravedad actúe.
+
+En prácticamente plano:
+
+NO debe desplazarse solo.
+
+======================================================================
+48. MEJORAR MODELO DEL COCHE
+======================================================================
+
+El modelo actual debe mejorar visualmente.
+
+Quiero:
+
+- más detalle;
+- buen material;
+- color visible;
+- ventanas;
+- wheels;
+- lights;
+- bumpers;
+- clean proportions.
+
+Mantener estilo general:
+
+stylized / polished.
+
+NO quiero hiperrealismo que no combine.
+
+======================================================================
+49. CAR COLOR
+======================================================================
+
+Por defecto:
+
+elige un color atractivo y reconocible.
+
+Puede ser rojo, naranja, azul o similar.
+
+Pero crea propiedad:
+
+Vehicle Color
+
+para cambiarlo.
+
+======================================================================
+50. COCHE — NO ROMPER FÍSICA
+======================================================================
+
+MUY IMPORTANTE:
+
+puedes cambiar VISUAL MESH
+
+sin cambiar innecesariamente:
+
+- physics body;
+- wheel positions;
+- center of mass;
+- collision;
+- driving scale.
+
+Mantén la física buena que ya copiaste desde Portfolio.
+
+======================================================================
+51. DOBLE SPACE = CAR / PLANE
+======================================================================
+
+Nueva función importante.
+
+En DRIVE MODE:
+
+double tap SPACE
+
+debe alternar:
+
+CAR
+↕
+PLANE
+
+======================================================================
+52. DETECCIÓN DOBLE SPACE
+======================================================================
+
+Implementa correctamente.
+
+Ejemplo:
+
+SPACE
+within ~250-350 ms
+SPACE
+
+= transform vehicle mode.
+
+Un solo SPACE continúa siendo:
+
+HANDBRAKE / DRIFT.
+
+MUY IMPORTANTE:
+
+un double-space NO debe activar el handbrake de forma problemática antes de transformar.
+
+Implementa input buffering.
+
+======================================================================
+53. AVIÓN
+======================================================================
+
+Hay un modelo de avión disponible en:
+
+ROOT de HelloWorld.
+
+Localízalo automáticamente.
+
+Inspecciónalo.
+
+Cópialo/organízalo si es necesario dentro del sistema de assets.
+
+NO dependas de una ruta externa.
+
+======================================================================
+54. CAR → PLANE
+======================================================================
+
+Cuando haga:
+
+SPACE SPACE
+
+mientras soy coche:
+
+1. guarda:
+   - position;
+   - orientation;
+   - velocity.
+
+2. desactiva car visual.
+
+3. activa airplane visual.
+
+4. cambia controller.
+
+5. coloca el avión ligeramente por encima si hace falta.
+
+6. conserva movimiento de forma razonable.
+
+Puede haber:
+
+very short transformation animation
+
+si queda bien.
+
+======================================================================
+55. PLANE MODE CONTROLS
+======================================================================
+
+Quiero controles fáciles.
+
+Algo equivalente:
+
+W = throttle / accelerate
+
+S = reduce throttle / brake
+
+A = yaw/turn left
+
+D = yaw/turn right
+
+Mouse / arrows / Q/E según sistema actual para:
+
+pitch / roll
+
+Pero prioriza SIMPLEZA.
+
+Quiero explorar el mapa.
+
+NO quiero Microsoft Flight Simulator.
+
+======================================================================
+56. RECOMENDACIÓN DE CONTROL
+======================================================================
+
+Ideal:
+
+W/S
+speed
+
+A/D
+turn/yaw
+
+Mouse vertical
+pitch
+
+Mouse horizontal
+gentle roll/yaw assist
+
+o equivalente que funcione bien.
+
+Añade información UI mientras estoy en Plane Mode.
+
+======================================================================
+57. FLIGHT ASSIST
+======================================================================
+
+Quiero arcade flight.
+
+Añade:
+
+- auto-leveling;
+- stable roll;
+- limited pitch;
+- minimum flight speed;
+- smooth steering;
+- altitude-friendly controls.
+
+Debe ser divertido inmediatamente.
+
+======================================================================
+58. TAKEOFF
+======================================================================
+
+NO necesito pista.
+
+Al hacer double space:
+
+car → plane.
+
+El avión puede:
+
+ganar un pequeño impulso vertical
+
+y entrar inmediatamente en vuelo.
+
+======================================================================
+59. PLANE CAMERA
+======================================================================
+
+Chase camera más alejada.
+
+Debe permitir ver:
+
+- avión;
+- mundo;
+- horizonte.
+
+Smooth follow.
+
+Look-ahead.
+
+======================================================================
+60. PLANE ALTITUDE
+======================================================================
+
+Evita:
+
+volar infinitamente lejos.
+
+Define un soft ceiling.
+
+No una pared invisible brusca.
+
+Si se acerca:
+
+reduce climb.
+
+======================================================================
+61. PLANE COLLISIONS
+======================================================================
+
+El avión puede chocar.
+
+Pero quiero exploración divertida.
+
+Evita colliders absurdamente estrictos con ramas pequeñas.
+
+Collision principal con:
+
+terrain
+major buildings
+castle
+ferris wheel
+bridges
+large landmarks
+
+======================================================================
+62. PLANE → CAR
+======================================================================
+
+Al hacer:
+
+SPACE SPACE
+
+otra vez:
+
+plane
+→ car.
+
+MUY IMPORTANTE:
+
+NO TELETRANSPORTES EL COCHE AL ROAD.
+
+Quiero:
+
+el coche aparece en la posición del avión
+
+Y CAE AL SUELO.
+
+======================================================================
+63. DROP TO CAR
+======================================================================
+
+Proceso:
+
+1. guardar plane position/velocity.
+2. replace visual/controller.
+3. car appears at plane position.
+4. orient upright reasonably.
+5. enable gravity.
+6. fall toward terrain.
+
+Debe sentirse divertido.
+
+======================================================================
+64. SAFE FALL
+======================================================================
+
+Para evitar destruir physics:
+
+limita vertical velocity si avión está extremadamente alto.
+
+Pero quiero que realmente caiga.
+
+NO haga instant snap.
+
+======================================================================
+65. LANDING FEEDBACK
+======================================================================
+
+Cuando toca tierra:
+
+puede usar:
+
+- suspension compression;
+- small camera shake;
+- dust;
+- sound hook;
+
+si ya existe sistema.
+
+No es obligatorio sonido.
+
+======================================================================
+66. WATER DROP
+======================================================================
+
+Si cambio a coche encima del agua:
+
+el coche cae al agua.
+
+Debe seguir reglas de water system.
+
+Si es demasiado profundo:
+
+eventual respawn.
+
+======================================================================
+67. VEHICLE MODE UI
+======================================================================
+
+Drive HUD:
+
+MODE: CAR
+
+o:
+
+MODE: PLANE
+
+Muestra brevemente:
+
+Double SPACE — Switch Vehicle
+
+En Car:
+
+SPACE — Handbrake
+
+En Plane:
+
+muestra sus controles.
+
+======================================================================
+68. ASSET LIBRARY — AÑADIR VEHÍCULOS
+======================================================================
+
+Añade:
+
+Vehicles
+├── Player Car
+├── Plane
+├── Parked Cars
+├── Small Boats
+├── Sailboat
+└── etc.
+
+Pero Player Vehicle puede tener metadata especial.
+
+======================================================================
+69. ASSET METADATA
+======================================================================
+
+Cada asset debe guardar:
+
+id
+name
+category
+version
+source
+dimensions
+pivot
+default material
+physics preset
+collision preset
+tags
+thumbnail
+editableChildren
+
+Opcional:
+
+lod info.
+
+======================================================================
+70. ASSET PRESETS
+======================================================================
+
+Añade physics presets:
+
+Static Decoration
+Heavy Static
+Light Dynamic
+Medium Dynamic
+Vehicle Prop
+Water Object
+No Collision
+
+Material presets:
+
+Grass
+Wood
+Stone
+Metal
+Plastic
+Glass
+Asphalt
+Sand
+Ice
+Water
+
+======================================================================
+71. NUEVA ASSET LIBRARY DE ALTA CALIDAD
+======================================================================
+
+Además de todo lo especificado:
+
+amplíala agresivamente.
+
+Si detectas que una zona necesita props:
+
+créalo como reusable asset.
+
+Ejemplos:
+
+Fairground:
+- ticket booth
+- popcorn stand
+- carnival light
+- fence
+
+Castle:
+- banner
+- barrel
+- crate
+- torch
+- stone bench
+
+Race:
+- tire stack
+- marshal booth
+- camera
+- timing screen
+- pit equipment
+
+Park:
+- bench
+- fountain
+- planter
+- sign
+- lamp
+
+Tech:
+- robot
+- laptop
+- monitor
+- server rack
+- drone
+- camera
+
+======================================================================
+72. EVITAR DUPLICACIÓN
+======================================================================
+
+Los assets repetidos deben utilizar:
+
+shared mesh / instance
+
+cuando sea posible.
+
+Editar Source Asset debe propagar visualmente a instancias.
+
+Pero:
+
+NO cambiar instance transforms.
+
+======================================================================
+73. WORLD MAP VIEW
+======================================================================
+
+Añade/actualiza la vista:
+
+WORLD MAP / TOP VIEW.
+
+Debe ayudarme a comparar:
+
+mundo real
+vs
+mapa de referencia.
+
+Quiero poder pulsar algo como:
+
+Top View
+
+y tener:
+
+orthographic camera
+north aligned
+whole world visible.
+
+======================================================================
+74. REPRODUCIR MAPA
+======================================================================
+
+Al finalizar el layout:
+
+captura/renderiza vista aérea.
+
+Compara con referencia.
+
+La relación aproximada debe ser:
+
+NW:
+Castle + Ice
+
+W:
+Bowling + Cookies + Lighthouse
+
+SW:
+F1 + Beach
+
+CENTER:
+Alejandro Newport
+
+N/NE:
+Ferris Wheel
+
+E:
+Loop
+
+E/CENTER:
+Projects
+
+SE:
+Achievements + Contact
+
+S:
+Career + Harbor
+
+Y bridges/water features entre zonas según el mapa.
+
+======================================================================
+75. NO NECESITO EXACTITUD MILIMÉTRICA
+======================================================================
+
+Pero:
+
+NO quiero que vuelvas a decidir aleatoriamente dónde va cada cosa.
+
+La imagen de referencia es la distribución elegida.
+
+Adáptala técnicamente.
+
+No la rediseñes de nuevo salvo problema grave.
+
+======================================================================
+76. WORLD VALIDATION
+======================================================================
+
+Amplía Validate World.
+
+Debe detectar:
+
+MISSING TEXTURES
+ABSOLUTE PATHS
+INVALID ASSETS
+BROKEN ASSET REFERENCES
+ROAD SELF INTERSECTION
+TRACK SELF INTERSECTION
+ROAD / ATTRACTION COLLISION
+ROAD / BUILDING COLLISION
+ROAD Z-FIGHTING
+CURB MISALIGNMENT
+LANE MARKING MISALIGNMENT
+FLOATING OBJECTS
+UNDERGROUND OBJECTS
+WATER LEVEL ISSUES
+BEACH CLIFF ISSUES
+INVALID PHYSICS
+CAR SPAWN ISSUES
+
+======================================================================
+77. ROAD DEBUG VIEW
+======================================================================
+
+Añade toggle:
+
+Road Debug.
+
+Mostrar:
+
+centerline
+road boundaries
+clearance
+curve points
+collision
+detected overlaps
+
+en colores visuales diferenciados.
+
+======================================================================
+78. WATER DEBUG
+======================================================================
+
+Mostrar:
+
+sea level plane
+shallow water
+deep water
+driveable beach slopes
+
+para detectar problemas.
+
+======================================================================
+79. PERFORMANCE
+======================================================================
+
+Aunque añada MUCHOS detalles:
+
+usa:
+
+instancing;
+shared materials;
+LOD where sensible;
+texture atlases where sensible;
+culling;
+simplified colliders.
+
+No recortes detalle visual prematuramente.
+
+======================================================================
+80. ASSET QUALITY VS WORLD PERFORMANCE
+======================================================================
+
+Asset puede ser detallado.
+
+Pero una instancia lejana puede utilizar LOD.
+
+Especialmente:
+
+Castle
+Lighthouse
+Ferris Wheel
+Bridges
+Harbor
+Trees.
+
+======================================================================
+81. EXPORT
+======================================================================
+
+Toda esta arquitectura debe seguir siendo compatible con export final a web.
+
+GLB debe mantener cuando corresponda:
+
+- animations;
+- hierarchy;
+- custom metadata;
+- transforms;
+- materials.
+
+Editor-only helpers:
+
+NO exportarlos.
+
+======================================================================
+82. DOCUMENTACIÓN
+======================================================================
+
+Actualiza README con:
+
+ASSET STUDIO
+
+Edit Asset
+Save Asset
+Save As New
+Edit Instance
+Edit Source Asset
+
+ROAD EDITING
+
+CURVE system
+curbs
+markings
+self-intersection warnings
+
+WATER / BEACH
+
+CAR MODE
+
+PLANE MODE
+
+DOUBLE SPACE
+
+======================================================================
+83. TESTS QUE DEBES HACER
+======================================================================
+
+No des por terminado simplemente porque compile.
+
+TEST 1:
+Select tree in Asset Library.
+Open Asset Studio.
+Edit child.
+Change material.
+Save.
+Add to world.
+Verify.
+
+TEST 2:
+Save As New.
+Verify both assets exist.
+
+TEST 3:
+Edit road curve.
+Verify white lines move with it.
+
+TEST 4:
+Edit race track curve.
+Verify red-white curbs move with it.
+
+TEST 5:
+Create very sharp road turn.
+Verify no z-fighting/self-overlap.
+Show warning or fix.
+
+TEST 6:
+Drive onto beach.
+Enter water.
+Exit water.
+
+TEST 7:
+Drive without keyboard input.
+Car remains stationary on flat ground.
+
+TEST 8:
+Drive normally.
+SPACE once = handbrake.
+
+TEST 9:
+SPACE SPACE.
+Car → plane.
+
+TEST 10:
+Fly around entire island.
+
+TEST 11:
+SPACE SPACE.
+Plane → car in mid-air.
+Car falls.
+Lands.
+
+TEST 12:
+Repeat transformation multiple times.
+No duplicated vehicles.
+No broken controller.
+No camera bugs.
+
+TEST 13:
+Bridge driving.
+
+TEST 14:
+Frozen lake entry without bridge.
+
+TEST 15:
+World overview matches reference map.
+
+======================================================================
+84. NO DUPLICAR CONTROLADORES
+======================================================================
+
+Al cambiar vehicle:
+
+solo un active controller.
+
+solo una active chase camera.
+
+solo un active physics root.
+
+Evita:
+
+car invisible todavía simulando
+
+o
+
+plane physics + car physics simultáneamente.
+
+======================================================================
+85. VEHICLE STATE MACHINE
+======================================================================
+
+Implementa algo limpio conceptualmente:
+
+VehicleMode
+    CAR
+    PLANE
+    TRANSITION_TO_CAR
+    TRANSITION_TO_PLANE
+
+Centraliza input.
+
+No repartas double-space por varios scripts.
+
+======================================================================
+86. INPUT MANAGER
+======================================================================
+
+Idealmente centraliza:
+
+keyboard
+mouse
+double tap detection
+mode switching
+
+para evitar conflictos entre:
+
+SPACE handbrake
+
+y
+
+SPACE SPACE vehicle switch.
+
+======================================================================
+87. ASSET STUDIO ARCHITECTURE
+======================================================================
+
+También debe ser limpia.
+
+No cargues una segunda copia permanentemente en el mundo.
+
+Usa:
+
+asset definition
+temporary edit scene/context
+save
+dispose temporary editor state
+
+según arquitectura actual.
+
+======================================================================
+88. PRESERVAR TODO LO QUE YA FUNCIONA
+======================================================================
+
+Esta es una ITERACIÓN.
+
+No rompas:
+
+- world editor;
+- placement;
+- ground snap;
+- materials;
+- physics;
+- driving;
+- track;
+- ferris wheel;
+- projects;
+- existing good assets.
+
+Refactoriza donde sea necesario.
+
+No reemplaces sistemas funcionales por versiones inferiores.
+
+======================================================================
+89. GIT
+======================================================================
+
+Si HelloWorld usa Git:
+
+trabaja en branch nueva.
+
+Ejemplo:
+
+feature/world-map-assets-flight
+
+Haz commits lógicos.
+
+NO uses:
+
+Co-authored-by
+
+para atribuirte como coautor.
+
+NO commits en Portfolio.
+
+======================================================================
+90. ORDEN DE EJECUCIÓN
+======================================================================
+
+Trabaja en este orden:
+
+PHASE 1
+Inspect current HelloWorld.
+
+PHASE 2
+Inspect Portfolio `/world2` read-only:
+- terrain height
+- sea level
+- car
+- beaches
+- water
+- controls
+
+PHASE 3
+Backup.
+
+PHASE 4
+Fix terrain/sea relationship.
+
+PHASE 5
+Align world layout to supplied map.
+
+PHASE 6
+Refactor road generator.
+
+PHASE 7
+Fix markings and race curbs.
+
+PHASE 8
+Solve sharp-turn self intersections.
+
+PHASE 9
+Implement Asset Definition architecture.
+
+PHASE 10
+Implement Asset Studio.
+
+PHASE 11
+Implement Save / Save As / instance/source editing.
+
+PHASE 12
+Expand high-quality Asset Library.
+
+PHASE 13
+Build:
+- lakes
+- bridges
+- harbor
+- beach
+- castle
+- lighthouse
+- balloon
+- frozen lake.
+
+PHASE 14
+Fix vehicle creeping.
+
+PHASE 15
+Improve car visual model.
+
+PHASE 16
+Integrate root airplane.
+
+PHASE 17
+Implement vehicle state machine.
+
+PHASE 18
+Implement double-space transformation.
+
+PHASE 19
+Implement arcade flight.
+
+PHASE 20
+Test plane → car falling.
+
+PHASE 21
+Validation/debug tools.
+
+PHASE 22
+Performance optimization.
+
+PHASE 23
+Final top-down world comparison.
+
+PHASE 24
+Documentation.
+
+======================================================================
+91. CRITERIOS DE ACEPTACIÓN
+======================================================================
+
+No considero esta iteración terminada hasta que:
+
+WORLD
+[ ] world layout closely follows supplied reference map
+[ ] Central Plaza is central
+[ ] Castle is NW
+[ ] Ice is north/NW
+[ ] Ferris wheel is north/NE
+[ ] Loop is east
+[ ] Projects is east-center
+[ ] Achievements is southeast
+[ ] Career is south-center
+[ ] Harbor is south
+[ ] Contact is southeast coast
+[ ] F1 circuit is southwest
+[ ] Beach is south/southwest
+[ ] Bowling/Cookies are west
+[ ] Lighthouse is west/southwest
+
+TERRAIN
+[ ] main terrain is only slightly above sea level
+[ ] beaches transition smoothly into water
+[ ] car can enter and leave shallow water
+[ ] ice lake doesn't require a big bridge
+
+ASSET EDITOR
+[ ] every asset can open in Asset Studio
+[ ] child elements can be edited independently
+[ ] assets can be saved
+[ ] Save As New works
+[ ] thumbnails regenerate
+[ ] Edit Instance works
+[ ] Edit Source Asset works
+
+ROAD
+[ ] white lines are bound to road curve
+[ ] red-white race curbs are bound to track curve
+[ ] moving road moves all decorations dependent on it
+[ ] sharp curves don't create overlapping asphalt
+[ ] UVs don't become absurd on tight bends
+[ ] self-intersection detection exists
+[ ] road debug exists
+
+ASSETS
+[ ] detailed lakes
+[ ] detailed frozen lake
+[ ] detailed wooden bridge
+[ ] detailed red suspension bridge
+[ ] harbor asset collection
+[ ] beach asset collection
+[ ] castle
+[ ] improved functional lighthouse
+[ ] hot air balloon
+[ ] expanded detailed asset library
+
+CAR
+[ ] no unwanted movement with zero input on flat terrain
+[ ] improved visual model
+[ ] visible customizable color
+[ ] Portfolio-derived physics remain good
+
+PLANE
+[ ] root airplane model is integrated
+[ ] double-space switches car → plane
+[ ] single space still performs handbrake
+[ ] plane has simple arcade controls
+[ ] plane flies smoothly
+[ ] plane camera works
+[ ] double-space switches plane → car
+[ ] car falls from plane position
+[ ] transformation can repeat indefinitely without bugs
+
+QUALITY
+[ ] Portfolio untouched
+[ ] HelloWorld self-contained
+[ ] no absolute Portfolio dependencies
+[ ] project remains performant
+[ ] final world opens and runs without errors.
+
+======================================================================
+92. FINAL PHILOSOPHY
+======================================================================
+
+Esta fase no consiste solamente en "añadir más cosas".
+
+Quiero convertir HelloWorld en una pequeña herramienta real de WORLD BUILDING.
+
+Debo poder:
+
+OPEN ASSET LIBRARY
+→ EDIT A DETAILED ASSET
+→ SAVE IT
+→ DROP IT INTO WORLD
+→ MOVE IT
+→ SNAP IT
+→ EDIT ROADS
+→ EDIT TERRAIN
+→ SAVE WORLD
+→ PRESS DRIVE
+→ DRIVE THROUGH IT
+→ DOUBLE SPACE
+→ BECOME A PLANE
+→ FLY OVER THE WORLD
+→ DOUBLE SPACE
+→ TURN BACK INTO THE CAR
+→ FALL INTO THE WORLD
+→ CONTINUE DRIVING.
+
+Todo debe sentirse como UN SOLO PRODUCTO.
+
+No quiero hacks desconectados.
+
+Usa sistemas reutilizables, estados claros y arquitectura profesional.
+
+Empieza ahora.
+
+No te limites a devolver un plan.
+
+INSPECT.
+BACKUP.
+IMPLEMENT.
+TEST.
+ITERATE.
+COMPARE WITH THE PROVIDED MAP.
+FIX.
+VALIDATE.
+
+No marques la tarea como finalizada hasta haber realizado y comprobado los tests anteriores.

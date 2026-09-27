@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "editedIslandRespawn": true,
+  "method": "Two independent Rapier worlds: original Portfolio Physics+PhysicsVehicle+Player versus HelloWorld adapter, identical World2 tuning and action sequence.",
+  "frames": 345,
+  "maxPositionError": 0,
+  "maxRotationError": 5.960464477539063e-8,
+  "bindings": {
+    "Space": "jump",
+    "B": "brake",
+    "ControlLeft": "brake",
+    "Shift": "boost",
+    "E": "interact"
+  },
+  "changesOutsideSource": "Ice braking surface hook; editable-road respawn and local loop assistance."
+}

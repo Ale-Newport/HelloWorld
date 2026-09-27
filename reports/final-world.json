@@ -1,0 +1,22 @@
+{
+  "objects": 2514,
+  "unique_meshes": 814,
+  "visible_triangles": 483766,
+  "materials": 45,
+  "library_assets": 18,
+  "dynamic_props": 45,
+  "extent_m": [
+    427.5498504638672,
+    322.5916290283203,
+    6.0
+  ],
+  "original_extent_m": [
+    192,
+    192
+  ],
+  "validation": {
+    "ERROR": 0,
+    "WARNING": 0,
+    "SUGGESTION": 64
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "source": "https://github.com/brunosimon/folio-2025",
+  "source_blend_sha256": "df5286df6141a6bece01abbd873d87a7f3d915cb685c6c989883cb7457474080",
+  "note": "Exact dependencies recovered from a local source checkout whose Blender file is byte-identical to the project master.",
+  "images": [
+    {
+      "image": "blackboardLabels.png",
+      "original": "//textures/blackboardLabels.png",
+      "file": "textures/blackboardLabels.png",
+      "sha256": "7c22769f964f619f6f67da49503f6d21f4347282fc66277178778e5013cf71f1",
+      "upstream_path": "resources/textures/blackboardLabels.png"
+    },
+    {
+      "image": "bowlingLabelStrike.png",
+      "original": "//textures/bowlingLabelStrike.png",
+      "file": "textures/bowlingLabelStrike.png",
+      "sha256": "d82bff9c50301f2a9b066a840c4a89423715f8b119b7b56633defd5ceef7a509",
+      "upstream_path": "resources/textures/bowlingLabelStrike.png"
+    },
+    {
+      "image": "careerFreelancer.png",
+      "original": "//textures/career/careerFreelancer.png",
+      "file": "textures/career/careerFreelancer.png",
+      "sha256": "0b2c853f8a49a29714eeec8e215b8b8a911b09a09c975918fd1c1cffe97cb7e3",
+      "upstream_path": "resources/textures/career/careerFreelancer.png"
+    },
+    {
+      "image": "careerHetic.png",
+      "original": "//textures/career/careerHetic.png",
+      "file": "textures/career/careerHetic.png",
+      "sha256": "bc8bbbe96a0e39a17db30f351eedbc8146bfcb019a7df98354b739fa3fbad1b1",
+      "upstream_path": "resources/textures/career/careerHetic.png"
+    },
+    {
+      "image": "careerImmersiveGarden.png",
+      "original": "//textures/career/careerImmersiveGarden.png",
+      "file": "textures/career/careerImmersiveGarden.png",
+      "sha256": "a000f43d438bee23fab25a95d1e191e1977290fa4d17844e26cc5a3e9a9bd6e5",
+      "upstream_path": "resources/textures/career/careerImmersiveGarden.png"
+    },
+    {
+      "image": "careerIRLTeacher.png",
+      "original": "//textures/career/careerIRLTeacher.png",
+      "file": "textures/career/careerIRLTeacher.png",
+      "sha256": "e73b69415cea810bf02486b0c685e167796f1cb76eda3e07b585b61c86c12894",
+      "upstream_path": "resources/textures/career/careerIRLTeacher.png"
+    },
+    {
+      "image": "careerOnlineTeacher.png",
+      "original": "//textures/career/careerOnlineTeacher.png",
+      "file": "textures/career/careerOnlineTeacher.png",
+      "sha256": "f8b1b49964765ae1b7e7bf84d187c8f8ee64471d4c8cf55feb9e72d6285ed72c",
+      "upstream_path": "resources/textures/career/careerOnlineTeacher.png"
+    },
+    {
+      "image": "careerUzik.png",
+      "original": "//textures/career/careerUzik.png",
+      "file": "textures/career/careerUzik.png",
+      "sha256": "ba2116881399e887d4a64d1d88b573af75c3143ceb76e0b991ad760cfd321281",
+      "upstream_path": "resources/textures/career/careerUzik.png"
+    },
+    {
+      "image": "circuitAirDancerFace.png",
+      "original": "//textures/circuitAirDancerFace.png",
+      "file": "textures/circuitAirDancerFace.png",
+      "sha256": "638774155581321a509f9b12668a5075883307ddb23876a15f7f13a2feaf25fd",
+      "upstream_path": "resources/textures/circuitAirDancerFace.png"
+    },
+    {
+      "image": "circuitBrand.png",
+      "original": "//textures/circuitBrand.png",
+      "file": "textures/circuitBrand.png",
+      "sha256": "c38eb30dfcd8413e0e22bad4905c810db985fa677ea19be275175a5185297fee",
+      "upstream_path": "resources/textures/circuitBrand.png"
+    },
+    {
+      "image": "circuitLogoThreejs.png",
+      "original": "//textures/circuitLogoThreejs.png",
+      "file": "textures/circuitLogoThreejs.png",
+      "sha256": "4bfabb6039337e02d4f73c9752dea23906ed57363612dc71fb345cf7518756af",
+      "upstream_path": "resources/textures/circuitLogoThreejs.png"
+    },
+    {
+      "image": "circuitLogoWebgl.png",
+      "original": "//textures/circuitLogoWebgl.png",
+      "file": "textures/circuitLogoWebgl.png",
+      "sha256": "6a0905cd1082c2872a9e5767b99b7e3e28f973c7575c6c306bba84a9a914a0d7",
+      "upstream_path": "resources/textures/circuitLogoWebgl.png"
+    },
+    {
+      "image": "circuitLogoWebgpu.png",
+      "original": "//textures/circuitLogoWebgpu.png",
+      "file": "textures/circuitLogoWebgpu.png",
+      "sha256": "d858a4aa13bee87a8fe13f1a0f9a325bac559df1a144dccf5ccb53742c221e5c",
+      "upstream_path": "resources/textures/circuitLogoWebgpu.png"
+    },
+    {
+      "image": "cookieBanner.png",
+      "original": "//textures/cookieBanner.png",
+      "file": "textures/cookieBanner.png",
+      "sha256": "6a1b035e283d4cb243bf6d255904db4759a1591900f81c613302833e68325a5e",
+      "upstream_path": "resources/textures/cookieBanner.png"
+    },
+    {
+      "image": "labCarpet.png",
+      "original": "//textures/labCarpet.png",
+      "file": "textures/labCarpet.png",
+      "sha256": "b23b17bc24228a1c75d5f4eb854174d355fe41e2c0a5e429686e876565ff785b",
+      "upstream_path": "resources/textures/labCarpet.png"
+    },
+    {
+      "image": "palette",
+      "original": "//palette.png",
+      "file": "palette.png",
+      "sha256": "63780c518061ed026c91615f878741189b4c585651bc875a28577140daad22b9",
+      "upstream_path": "resources/palette.png"
+    },
+    {
+      "image": "projectsCarpet.png",
+      "original": "//textures/projectsCarpet.png",
+      "file": "textures/projectsCarpet.png",
+      "sha256": "4104641398b9d169db13ac08f8a8d5d306a20c28ded5082dcba733054eef8579",
+      "upstream_path": "resources/textures/projectsCarpet.png"
+    },
+    {
+      "image": "projectsLabels.png",
+      "original": "//textures/projectsLabels.png",
+      "file": "textures/projectsLabels.png",
+      "sha256": "45d71be87fb910d622fa79450e9d6f98c4091cf631b55953bf876b26954e0b41",
+      "upstream_path": "resources/textures/projectsLabels.png"
+    },
+    {
+      "image": "slabs.png",
+      "original": "//textures/slabs.png",
+      "file": "textures/slabs.png",
+      "sha256": "ae96f33015f45b7f1414f3c338c006e13263ac9b43ccf6efe58ec46734558126",
+      "upstream_path": "resources/textures/slabs.png"
+    },
+    {
+      "image": "stylized-map.png",
+      "original": "//textures/stylized-map.png",
+      "file": "textures/stylized-map.png",
+      "sha256": "d97c08fe3da158e6183d4588fc6cc7f9cf1e0d91e70893b6d3da3b42c9d889e5",
+      "upstream_path": "resources/textures/stylized-map.png"
+    },
+    {
+      "image": "terrain.png",
+      "original": "//../static/terrain/terrain.png",
+      "file": "static/terrain/terrain.png",
+      "sha256": "ba1e67981d31cceae305940246246a2eb50a6bda94dc58ca0875bbf2434573bc",
+      "upstream_path": "static/terrain/terrain.png"
+    },
+    {
+      "image": "terrainFurnitures",
+      "original": "//textures/terrainFurniture.exr",
+      "file": "textures/terrainFurniture.exr",
+      "sha256": "1a2ffac37b369aad161735712d274b19f94f1a092bb71cf0ec810118a7f6860b",
+      "upstream_path": "resources/textures/terrainFurniture.exr"
+    },
+    {
+      "image": "terrainGrass",
+      "original": "//textures/terrainGrass.exr",
+      "file": "textures/terrainGrass.exr",
+      "sha256": "3b431b5027fe885ce99ca9c3e796910d3ba5356204082eaaf0be039e9187a9f2",
+      "upstream_path": "resources/textures/terrainGrass.exr"
+    },
+    {
+      "image": "terrainWater",
+      "original": "//textures/terrainWater.exr",
+      "file": "textures/terrainWater.exr",
+      "sha256": "2f01744227976e7f05a0b3bde62af0c5f5157607b4f059af9031952f9ebf21e8",
+      "upstream_path": "resources/textures/terrainWater.exr"
+    }
+  ]
+}

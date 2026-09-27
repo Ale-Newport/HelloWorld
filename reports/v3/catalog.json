@@ -1,0 +1,1971 @@
+[
+  {
+    "id": "bowling",
+    "label": "Bolos · pista completa",
+    "category": "World2 · actividades",
+    "feature": "Bowling",
+    "size": [
+      42.976999156217474,
+      7.986824810504913,
+      25.540881115460515
+    ]
+  },
+  {
+    "id": "circuit",
+    "label": "Carreras · circuito World2",
+    "category": "World2 · actividades",
+    "feature": "Racing",
+    "size": [
+      151.77382278442383,
+      26.080011549037195,
+      167.87615203857422
+    ]
+  },
+  {
+    "id": "projects",
+    "label": "Proyectos · panel interactivo",
+    "category": "World2 · actividades",
+    "feature": "Projects",
+    "size": [
+      10.492632884387671,
+      4.514798060188707,
+      9.531417924719602
+    ]
+  },
+  {
+    "id": "toilet",
+    "label": "Baño · cabina física",
+    "category": "World2 · actividades",
+    "feature": "Places",
+    "size": [
+      5.3437909714691045,
+      6.200312835013506,
+      6.2340211190985215
+    ]
+  },
+  {
+    "id": "achievements",
+    "label": "Achievements · edificio y cascada",
+    "category": "World2 · actividades",
+    "feature": "Achievements",
+    "size": [
+      10.718639850616455,
+      7.254456639289856,
+      13.013757705688477
+    ]
+  },
+  {
+    "id": "behindTheScene",
+    "label": "Behind the scenes · hoyo",
+    "category": "World2 · actividades",
+    "feature": "Places",
+    "size": [
+      18.00000762939453,
+      4.833902359008789,
+      19.500003814697266
+    ]
+  },
+  {
+    "id": "social",
+    "label": "Social · plaza y estatuas",
+    "category": "World2 · actividades",
+    "feature": "Social",
+    "size": [
+      24.740911185741425,
+      5.333362579345703,
+      17.483582854270935
+    ]
+  },
+  {
+    "id": "career",
+    "label": "Estudios y experiencia · cronología",
+    "category": "World2 · actividades",
+    "feature": "Career",
+    "size": [
+      7.429201364517212,
+      0.8747167214751244,
+      17.868146300315857
+    ]
+  },
+  {
+    "id": "landing",
+    "label": "Alejandro Newport · letras 3D",
+    "category": "World2 · actividades",
+    "feature": "Title",
+    "size": [
+      12.625866079878385,
+      1.512145757675171,
+      6.213787251919129
+    ]
+  },
+  {
+    "id": "cookie",
+    "label": "Cookies · horno y dispensador",
+    "category": "World2 · actividades",
+    "feature": "Places",
+    "size": [
+      11.90650050514968,
+      4.5964056475047474,
+      9.7381388937806
+    ]
+  },
+  {
+    "id": "lab",
+    "label": "Laboratorio · proyectos",
+    "category": "World2 · actividades",
+    "feature": "Places",
+    "size": [
+      8.840814608486149,
+      6.065222203766576,
+      8.691560993105888
+    ]
+  },
+  {
+    "id": "altar",
+    "label": "Altar · cuenta atrás",
+    "category": "World2 · actividades",
+    "feature": "Places",
+    "size": [
+      18.21090793124381,
+      6.222779535080832,
+      23.31364340986088
+    ]
+  },
+  {
+    "id": "timeMachine",
+    "label": "Máquina del tiempo",
+    "category": "World2 · actividades",
+    "feature": "Places",
+    "size": [
+      4.3501632362550495,
+      2.7009230792073757,
+      6.237027238709544
+    ]
+  },
+  {
+    "id": "controls",
+    "label": "Controles · mandos",
+    "category": "World2 · actividades",
+    "feature": "Places",
+    "size": [
+      7.172898964323309,
+      3.175342779511247,
+      5.892676577951498
+    ]
+  },
+  {
+    "id": "bonfire",
+    "label": "Hoguera · restaurar objetos",
+    "category": "World2 · actividades",
+    "feature": "Places",
+    "size": [
+      5.691365767764594,
+      6.053960101974306,
+      5.868029810275793
+    ]
+  },
+  {
+    "id": "collection:bricks",
+    "label": "World2 · bricks",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      77.6721548899347,
+      2.2725954815421234,
+      91.5031319240232
+    ]
+  },
+  {
+    "id": "collection:explosiveCrates",
+    "label": "World2 · explosiveCrates",
+    "category": "World2 · conjuntos",
+    "feature": "Crates",
+    "size": [
+      150.741537963756,
+      2.3150033132919825,
+      138.08136483344242
+    ]
+  },
+  {
+    "id": "collection:poleLights",
+    "label": "World2 · poleLights",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      80.26151434855328,
+      3.5637526512145996,
+      85.5621013516281
+    ]
+  },
+  {
+    "id": "collection:lanterns",
+    "label": "World2 · lanterns",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      139.80737267842198,
+      2.8209783136844635,
+      131.1974678217304
+    ]
+  },
+  {
+    "id": "collection:benches",
+    "label": "World2 · benches",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      45.87567313133894,
+      1.5599822552561378,
+      88.71316114836006
+    ]
+  },
+  {
+    "id": "collection:fences",
+    "label": "World2 · fences",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      68.48843936178915,
+      1.3334129601716995,
+      91.25521973675626
+    ]
+  },
+  {
+    "id": "collection:bridges",
+    "label": "World2 · bridges",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      29.31046335805736,
+      3.2463415265083313,
+      28.697976603453895
+    ]
+  },
+  {
+    "id": "collection:rocks",
+    "label": "World2 · rocks",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      45.762049531675736,
+      44.150383260172376,
+      44.13183677865016
+    ]
+  },
+  {
+    "id": "collection:basaltRocks",
+    "label": "World2 · basaltRocks",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      69.29499816894531,
+      5.47108268737793,
+      57.53271961212158
+    ]
+  },
+  {
+    "id": "collection:slabs",
+    "label": "World2 · slabs",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      35.40733530633119,
+      0.15796236513163386,
+      24.53286486064949
+    ]
+  },
+  {
+    "id": "collection:road.001",
+    "label": "World2 · road.001",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      150.37042236328125,
+      0.010004777461062986,
+      166.61215209960938
+    ]
+  },
+  {
+    "id": "collection:default",
+    "label": "World2 · default",
+    "category": "World2 · conjuntos",
+    "feature": "Social",
+    "size": [
+      3.011820428542176,
+      4.5192766189575195,
+      2.770632958505413
+    ]
+  },
+  {
+    "id": "collection:icons",
+    "label": "World2 · icons",
+    "category": "World2 · conjuntos",
+    "feature": "Social",
+    "size": [
+      24.707877218723297,
+      2.4530813097953796,
+      15.875346632407854
+    ]
+  },
+  {
+    "id": "collection:blackBoard.002",
+    "label": "World2 · blackBoard.002",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      1.6294642748039259,
+      2.1146087443901913,
+      1.4640867114067078
+    ]
+  },
+  {
+    "id": "collection:oven",
+    "label": "World2 · oven",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      2.7388429004297663,
+      1.128413918039258,
+      2.333399822682061
+    ]
+  },
+  {
+    "id": "collection:mainTable.001",
+    "label": "World2 · mainTable.001",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      3.3225710534460973,
+      1.2242949903011322,
+      4.594732346666049
+    ]
+  },
+  {
+    "id": "collection:distinctions",
+    "label": "World2 · distinctions",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      2.5267678610210567,
+      1.5376914739608765,
+      1.579995230875154
+    ]
+  },
+  {
+    "id": "collection:grinder",
+    "label": "World2 · grinder",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      2.1149306330045334,
+      1.5663404686921436,
+      2.023620326965162
+    ]
+  },
+  {
+    "id": "collection:quench",
+    "label": "World2 · quench",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      0.7487930357456207,
+      1.4682339429855347,
+      0.9204975366592407
+    ]
+  },
+  {
+    "id": "collection:anvil",
+    "label": "World2 · anvil",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      1.4112534063064928,
+      1.9940945512463522,
+      2.3310688347982467
+    ]
+  },
+  {
+    "id": "collection:board",
+    "label": "World2 · board",
+    "category": "World2 · conjuntos",
+    "feature": "Projects",
+    "size": [
+      5.8016764544779384,
+      3.22861995630095,
+      4.916595562849862
+    ]
+  },
+  {
+    "id": "collection:pole",
+    "label": "World2 · pole",
+    "category": "World2 · conjuntos",
+    "feature": "Projects",
+    "size": [
+      1.4756773268106471,
+      2.1928414539475605,
+      0.9331761702066936
+    ]
+  },
+  {
+    "id": "collection:blackBoard.001",
+    "label": "World2 · blackBoard.001",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      1.629465067678873,
+      2.114609162480299,
+      1.4640867114067078
+    ]
+  },
+  {
+    "id": "collection:cauldron",
+    "label": "World2 · cauldron",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      1.808098739847992,
+      1.1208731285259432,
+      1.5278964842124765
+    ]
+  },
+  {
+    "id": "collection:scroller",
+    "label": "World2 · scroller",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      2.091902285549258,
+      5.035371333360672,
+      1.6003786003357323
+    ]
+  },
+  {
+    "id": "collection:mainTable",
+    "label": "World2 · mainTable",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      2.712250544551946,
+      1.5465846210718155,
+      1.839255051167692
+    ]
+  },
+  {
+    "id": "collection:board.001",
+    "label": "World2 · board.001",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      3.644923454979663,
+      3.032980422750136,
+      3.076671129774276
+    ]
+  },
+  {
+    "id": "collection:sideTable",
+    "label": "World2 · sideTable",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      2.4518355207507874,
+      1.6924840211868286,
+      2.7027304913727725
+    ]
+  },
+  {
+    "id": "collection:stool",
+    "label": "World2 · stool",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      3.2466911610326434,
+      1.8743235617876053,
+      1.7723867990470978
+    ]
+  },
+  {
+    "id": "collection:cabin",
+    "label": "World2 · cabin",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      3.45884576427175,
+      4.083404779434204,
+      3.452628603566673
+    ]
+  },
+  {
+    "id": "collection:furnitures",
+    "label": "World2 · furnitures",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      15.057853981626623,
+      2.343583583831787,
+      20.423585261135322
+    ]
+  },
+  {
+    "id": "collection:bumpers",
+    "label": "World2 · bumpers",
+    "category": "World2 · conjuntos",
+    "feature": "Bowling",
+    "size": [
+      29.577338218688965,
+      1.579432189464569,
+      6.865305095911026
+    ]
+  },
+  {
+    "id": "collection:jukebox",
+    "label": "World2 · jukebox",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      3.1402407173789975,
+      3.5145926475524902,
+      2.4363887345066715
+    ]
+  },
+  {
+    "id": "collection:pins",
+    "label": "World2 · pins",
+    "category": "World2 · conjuntos",
+    "feature": "Bowling",
+    "size": [
+      1.0223300457000732,
+      2.9669227600097656,
+      1.022329866886139
+    ]
+  },
+  {
+    "id": "collection:screen",
+    "label": "World2 · screen",
+    "category": "World2 · conjuntos",
+    "feature": "Bowling",
+    "size": [
+      5.414785385131836,
+      4.057005941867828,
+      1.221526876091957
+    ]
+  },
+  {
+    "id": "collection:zigzag",
+    "label": "World2 · zigzag",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      14.29053930823656,
+      1.4619249633806035,
+      23.391256706089507
+    ]
+  },
+  {
+    "id": "collection:scenery",
+    "label": "World2 · scenery",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      29.21090548219898,
+      7.1817426681518555,
+      40.756248903023305
+    ]
+  },
+  {
+    "id": "collection:jump",
+    "label": "World2 · jump",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      13.066774010658264,
+      12.105857992628808,
+      18.410145758717597
+    ]
+  },
+  {
+    "id": "collection:airDancers",
+    "label": "World2 · airDancers",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      28.836710286092547,
+      4.59184455871582,
+      17.4999944710947
+    ]
+  },
+  {
+    "id": "collection:banners",
+    "label": "World2 · banners",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      1.522959931372263,
+      4.640122789531951,
+      11.69382544714895
+    ]
+  },
+  {
+    "id": "collection:leaderboard",
+    "label": "World2 · leaderboard",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      0.185398488392142,
+      6.3056265115738475,
+      5.924695730209422
+    ]
+  },
+  {
+    "id": "collection:leaderboardReset",
+    "label": "World2 · leaderboardReset",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      0,
+      0.5,
+      2.5
+    ]
+  },
+  {
+    "id": "collection:barrels",
+    "label": "World2 · barrels",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      17.063815116882324,
+      1.6655398607254028,
+      25.62959098815918
+    ]
+  },
+  {
+    "id": "collection:cones",
+    "label": "World2 · cones",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      11.74848175479356,
+      1.0881242156028748,
+      42.507156559322894
+    ]
+  },
+  {
+    "id": "collection:obstacles",
+    "label": "World2 · obstacles",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      33.140873074531555,
+      2,
+      14.085042953491211
+    ]
+  },
+  {
+    "id": "collection:podium",
+    "label": "World2 · podium",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      8.250998675473713,
+      4.534371376037598,
+      6.5400697223402435
+    ]
+  },
+  {
+    "id": "collection:rails",
+    "label": "World2 · rails",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      151.77382278442383,
+      20.000011626582562,
+      167.87615203857422
+    ]
+  },
+  {
+    "id": "collection:startingLights",
+    "label": "World2 · startingLights",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      3.37843918800354,
+      0.9494171738624573,
+      0.019999980926513672
+    ]
+  },
+  {
+    "id": "collection:timer",
+    "label": "World2 · timer",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      3.0724236965179443,
+      0.8560194969177246,
+      0.26344961673021317
+    ]
+  },
+  {
+    "id": "collection:lightGenerators",
+    "label": "World2 · lightGenerators",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      8.897130325191739,
+      3.7486768066883087,
+      9.22494438000541
+    ]
+  },
+  {
+    "id": "collection:scenery.001",
+    "label": "World2 · scenery.001",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      4.966358876753333,
+      1.1987118845844318,
+      11.23580603509438
+    ]
+  },
+  {
+    "id": "collection:building",
+    "label": "World2 · building",
+    "category": "World2 · conjuntos",
+    "feature": "Achievements",
+    "size": [
+      10.718639850616455,
+      7.254456639289856,
+      13.013757705688477
+    ]
+  },
+  {
+    "id": "collection:playstation",
+    "label": "World2 · playstation",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      2.6669619787816146,
+      0.7600807824799352,
+      1.9332122802734375
+    ]
+  },
+  {
+    "id": "collection:cups",
+    "label": "World2 · cups",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      1.6956029798639065,
+      2.675495854119055,
+      0.7874827524745314
+    ]
+  },
+  {
+    "id": "collection:tv",
+    "label": "World2 · tv",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      2,
+      2,
+      1.9308833479881287
+    ]
+  },
+  {
+    "id": "collection:stool.001",
+    "label": "World2 · stool.001",
+    "category": "World2 · conjuntos",
+    "feature": null,
+    "size": [
+      2.3409364930379795,
+      1.4934171892556232,
+      2.3901312871043956
+    ]
+  },
+  {
+    "id": "object:benchPhysicalDynamic",
+    "label": "bench · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      2.5964793558260872,
+      1.5599793942331885,
+      1.7840894860006529
+    ]
+  },
+  {
+    "id": "object:fencePhysicalDynamic.001",
+    "label": "fence.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      2.1759795133340845,
+      1.2523238211870193,
+      0.7655591913141819
+    ]
+  },
+  {
+    "id": "object:bridgePhysicalFixed.001",
+    "label": "bridge.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      11.704828652364174,
+      3.2463414669036865,
+      9.360836931663805
+    ]
+  },
+  {
+    "id": "object:bridgePhysicalFixed",
+    "label": "bridge · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      12.051917100776599,
+      3.2463414669036865,
+      10.546946532734214
+    ]
+  },
+  {
+    "id": "object:basaltRocksPhysicalStatic.002",
+    "label": "basaltRocks.002 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      5.761035919189453,
+      3.032416343688965,
+      11.075116157531738
+    ]
+  },
+  {
+    "id": "object:basaltRocksPhysicalStatic.001",
+    "label": "basaltRocks.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      5.419146537780762,
+      4.31722104549408,
+      7.460213661193848
+    ]
+  },
+  {
+    "id": "object:basaltRocksPhysicalStatic",
+    "label": "basaltRocks · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      8.965106964111328,
+      3.4994882345199585,
+      5.3769683837890625
+    ]
+  },
+  {
+    "id": "object:basaltRocksPhysicalStatic.003",
+    "label": "basaltRocks.003 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      3.7629027366638184,
+      3.222165584564209,
+      4.600337028503418
+    ]
+  },
+  {
+    "id": "object:basaltRocksPhysicalStatic.004",
+    "label": "basaltRocks.004 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      3.92974853515625,
+      2.490685224533081,
+      3.79483699798584
+    ]
+  },
+  {
+    "id": "object:gamepadPhysicalDynamic.001",
+    "label": "gamepad.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      4.126246103018417,
+      2.3296837724829165,
+      3.6951233949805626
+    ]
+  },
+  {
+    "id": "object:gizmoPhysicalDynamic",
+    "label": "gizmo · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.941854373658451,
+      1.9418533971135645,
+      1.9418538143460893
+    ]
+  },
+  {
+    "id": "object:phonePhysicalDynamic.001",
+    "label": "phone.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      3.760934773098178,
+      2.2642716798845863,
+      3.696768961348017
+    ]
+  },
+  {
+    "id": "object:phonePhysicalDynamic",
+    "label": "phone · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      3.760934773098178,
+      1.7850192539811665,
+      3.6967689613480132
+    ]
+  },
+  {
+    "id": "object:phonePhysicalDynamic.002",
+    "label": "phone.002 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.2145543984486693,
+      0.9253550083043698,
+      1.209566460522261
+    ]
+  },
+  {
+    "id": "object:physicalFixed.003",
+    "label": "physicalFixed.003 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.7265512060771258,
+      2.2280390489480224,
+      2.3929476826339773
+    ]
+  },
+  {
+    "id": "object:physicalFixed.009",
+    "label": "physicalFixed.009 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      4.973901954370682,
+      5.620277874652679,
+      6.458893080724888
+    ]
+  },
+  {
+    "id": "object:blueskyPhysicalDynamic.001",
+    "label": "bluesky.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      2.095428705215454,
+      1.852819929691833,
+      0.4673035602176583
+    ]
+  },
+  {
+    "id": "object:discordPhysicalDynamic",
+    "label": "discord · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.6912429332733154,
+      1.2843795418739319,
+      0.19889450073242188
+    ]
+  },
+  {
+    "id": "object:gitHubPhysicalDynamic",
+    "label": "gitHub · World2",
+    "category": "World2 · objetos",
+    "feature": "Social",
+    "size": [
+      1.5527468919754028,
+      1.7944809794425964,
+      0.9566492736339569
+    ]
+  },
+  {
+    "id": "object:linkedInPhysicalDynamic",
+    "label": "linkedIn · World2",
+    "category": "World2 · objetos",
+    "feature": "Social",
+    "size": [
+      1.3250176906585693,
+      1.3247379660606384,
+      0.2009519636631012
+    ]
+  },
+  {
+    "id": "object:mailPhysicalDynamic",
+    "label": "mail · World2",
+    "category": "World2 · objetos",
+    "feature": "Social",
+    "size": [
+      1.2359094619750977,
+      1.862114667892456,
+      2.6449837684631348
+    ]
+  },
+  {
+    "id": "object:onlyfansPhysicalDynamic",
+    "label": "onlyfans · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      2.2461840646609232,
+      1.5511598587036133,
+      1.3181052686904877
+    ]
+  },
+  {
+    "id": "object:refStatuePhysicalDynamic",
+    "label": "Statue · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.7429013848304749,
+      4.5192766189575195,
+      1.7797638773918152
+    ]
+  },
+  {
+    "id": "object:twitchPhysicalDynamic",
+    "label": "twitch · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.5018858313560486,
+      1.7551026940345764,
+      0.19834210723638535
+    ]
+  },
+  {
+    "id": "object:xPhysicalDynamic",
+    "label": "x · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.557849943637848,
+      1.3876556754112244,
+      0.1990748718380928
+    ]
+  },
+  {
+    "id": "object:youtubePhysicalDynamic",
+    "label": "youtube · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.6884397268295288,
+      1.1803197860717773,
+      0.19798164069652557
+    ]
+  },
+  {
+    "id": "object:blackBoardPhysicalDynamic",
+    "label": "blackBoard · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.6294642748039259,
+      2.1146087443901913,
+      1.4640867114067078
+    ]
+  },
+  {
+    "id": "object:blowerPhysicalDynamic",
+    "label": "blower · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      2.0151695244432375,
+      1.0849890606948298,
+      1.83516205528327
+    ]
+  },
+  {
+    "id": "object:grinderPhysicalDynamic",
+    "label": "grinder · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      2.1149306330045334,
+      1.5663404686921436,
+      2.023620326965162
+    ]
+  },
+  {
+    "id": "object:mainTablePhysicalDynamic",
+    "label": "mainTable · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      2.688036497861731,
+      1.2242949903011322,
+      1.8237254591713334
+    ]
+  },
+  {
+    "id": "object:quenchPhysicalDynamic.001",
+    "label": "quench.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      0.7487930357456207,
+      1.4682339429855347,
+      0.9204975366592407
+    ]
+  },
+  {
+    "id": "object:refAnvilPhysicalDynamic",
+    "label": "Anvil · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.4112534063064928,
+      1.9940945512463522,
+      2.3310688347982467
+    ]
+  },
+  {
+    "id": "object:refOvenPhysicalDynamic",
+    "label": "Oven · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.4172418407623866,
+      1.128413918039258,
+      1.614784092360578
+    ]
+  },
+  {
+    "id": "object:blackBoardPhysicalDynamic.001",
+    "label": "blackBoard.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.629465067678873,
+      2.114609162480299,
+      1.4640867114067078
+    ]
+  },
+  {
+    "id": "object:cauldronPhysicalDynamic",
+    "label": "cauldron · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.808098739847992,
+      1.1208731285259432,
+      1.5278964842124765
+    ]
+  },
+  {
+    "id": "object:mainTablePhysicalDynamic.001",
+    "label": "mainTable.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      2.712250544551946,
+      1.5465846210718155,
+      1.839255051167692
+    ]
+  },
+  {
+    "id": "object:sideTablePhysicalDynamic",
+    "label": "sideTable · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      2.4518355207507874,
+      1.6924840211868286,
+      2.7027304913727725
+    ]
+  },
+  {
+    "id": "object:blowerPhysicalDynamic.001",
+    "label": "blower.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.6887644821722443,
+      1.0849890606948298,
+      1.1675709792129254
+    ]
+  },
+  {
+    "id": "object:cookiePhysicalFixed",
+    "label": "cookie · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      11.90650050514968,
+      4.5964056475047474,
+      6.504978241154959
+    ]
+  },
+  {
+    "id": "object:tablePhysicalDynamic",
+    "label": "table · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      2.4530800736127834,
+      1.020811676979065,
+      1.2307606088305292
+    ]
+  },
+  {
+    "id": "object:paperPhysicalDynamic",
+    "label": "paper · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      0.46498536840948645,
+      0.3262130320072174,
+      0.46498536840948645
+    ]
+  },
+  {
+    "id": "object:paperPhysicalDynamic.001",
+    "label": "paper.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      0.43790069228995776,
+      0.3262130320072174,
+      0.43790069228995776
+    ]
+  },
+  {
+    "id": "object:paperPhysicalDynamic.002",
+    "label": "paper.002 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      0.44125893856946163,
+      0.3262130320072174,
+      0.44125893856946163
+    ]
+  },
+  {
+    "id": "object:refCabinPhysicalDynamic",
+    "label": "Cabin · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      3.45884576427175,
+      4.083404779434204,
+      3.452628603566673
+    ]
+  },
+  {
+    "id": "object:stoolPhysicalDynamic",
+    "label": "stool · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.020630230022988,
+      0.7379504144191742,
+      1.020630230022988
+    ]
+  },
+  {
+    "id": "object:barPhysicalDynamic.001",
+    "label": "bar.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      5.063283085823059,
+      1.643992304801941,
+      1.949856162071228
+    ]
+  },
+  {
+    "id": "object:couchPhysicalDynamic",
+    "label": "couch · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.807617425918579,
+      2.058588206768036,
+      2.168098211288452
+    ]
+  },
+  {
+    "id": "object:refBallPhysicalDynamic",
+    "label": "Ball · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.945831537246704,
+      1.9450510144233704,
+      1.945050835609436
+    ]
+  },
+  {
+    "id": "object:refBumpersPhysicalKinematicPositionBased",
+    "label": "BumpersPhysicalKinematicPositionBased · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      28.825300812721252,
+      0.886954128742218,
+      6.865305095911026
+    ]
+  },
+  {
+    "id": "object:refJukeboxPhysicalDynamic",
+    "label": "Jukebox · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      3.1402407173789975,
+      3.5145926475524902,
+      2.4363887345066715
+    ]
+  },
+  {
+    "id": "object:refPinPhysicalDynamic",
+    "label": "Pin · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.0223300457000732,
+      2.9669227600097656,
+      1.022329866886139
+    ]
+  },
+  {
+    "id": "object:refScreenPhysicalKinematicPositionBased",
+    "label": "ScreenPhysicalKinematicPositionBased · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      5.414785385131836,
+      4.057005941867828,
+      1.221526876091957
+    ]
+  },
+  {
+    "id": "object:sauceKetchupPhysicalDynamic",
+    "label": "sauceKetchup · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      0.27256113290786743,
+      0.7002033144235611,
+      0.27256113290786743
+    ]
+  },
+  {
+    "id": "object:sauceKetchupPhysicalDynamic.001",
+    "label": "sauceKetchup.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      0.28994691032647424,
+      0.7002033144235611,
+      0.2899469103264778
+    ]
+  },
+  {
+    "id": "object:sauceKetchupPhysicalDynamic.002",
+    "label": "sauceKetchup.002 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      0.37957228373729635,
+      0.7002033144235611,
+      0.37957228373730345
+    ]
+  },
+  {
+    "id": "object:sauceMustardPhysicalDynamic",
+    "label": "sauceMustard · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      0.27256113290786743,
+      0.7002033144235611,
+      0.27256113290786743
+    ]
+  },
+  {
+    "id": "object:sauceMustardPhysicalDynamic.001",
+    "label": "sauceMustard.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      0.28994691032647424,
+      0.7002033144235611,
+      0.2899469103264778
+    ]
+  },
+  {
+    "id": "object:sauceMustardPhysicalDynamic.002",
+    "label": "sauceMustard.002 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      0.37957228373729635,
+      0.7002033144235611,
+      0.37957228373730345
+    ]
+  },
+  {
+    "id": "object:stoolPhysicalDynamic.001",
+    "label": "stool.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.2628534436225891,
+      1.566292405128479,
+      1.2628538608551025
+    ]
+  },
+  {
+    "id": "object:tablePhysicalDynamic.001",
+    "label": "table.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.960504412651062,
+      1.3969359248876572,
+      1.960504412651062
+    ]
+  },
+  {
+    "id": "object:tablePhysicalDynamic.002",
+    "label": "table.002 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.960504412651062,
+      1.3969359248876572,
+      1.960504412651062
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic",
+    "label": "Objects · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.236166000366211,
+      1.6655398607254028,
+      1.2997817993164062
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.001",
+    "label": "Objects.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.236166000366211,
+      1.6655398607254028,
+      1.2997817993164062
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.002",
+    "label": "Objects.002 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.236166000366211,
+      1.6655398607254028,
+      1.2997817993164062
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.003",
+    "label": "Objects.003 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.236166000366211,
+      1.6655398607254028,
+      1.2997817993164062
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.004",
+    "label": "Objects.004 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.236166000366211,
+      1.6655398607254028,
+      1.2997817993164062
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.005",
+    "label": "Objects.005 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.236166000366211,
+      1.6655398607254028,
+      1.2997817993164062
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.006",
+    "label": "Objects.006 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.236166000366211,
+      1.6655398607254028,
+      1.2997817993164062
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.007",
+    "label": "Objects.007 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.236166000366211,
+      1.6655398607254028,
+      1.2997817993164062
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.008",
+    "label": "Objects.008 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.208182454109192,
+      1.5076169967651367,
+      1.239253044128418
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.009",
+    "label": "Objects.009 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.208182454109192,
+      1.5076169967651367,
+      1.239253044128418
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.010",
+    "label": "Objects.010 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.208182454109192,
+      1.5076169967651367,
+      1.239253044128418
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.011",
+    "label": "Objects.011 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      2.1863856608053,
+      1.1822909310256335,
+      2.32934618537271
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.012",
+    "label": "Objects.012 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.7928429896265712,
+      1.1822909310256335,
+      2.1325466760302243
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.013",
+    "label": "Objects.013 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.2835627065687873,
+      0.8822548640366819,
+      1.2835627065687873
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.014",
+    "label": "Objects.014 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.0269813979000162,
+      1.0881242156028748,
+      1.0269468074005967
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.015",
+    "label": "Objects.015 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.0109477760632863,
+      1.0881242156028748,
+      1.0109830729263645
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.016",
+    "label": "Objects.016 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.046318593670808,
+      1.0881242156028748,
+      1.0462848920461747
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.017",
+    "label": "Objects.017 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.0449760381275368,
+      1.0881242156028748,
+      1.0449422734918459
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.018",
+    "label": "Objects.018 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.3118016623389046,
+      1.0881242156028748,
+      1.3118153676026978
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.019",
+    "label": "Objects.019 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.0449760381275368,
+      1.0881242156028748,
+      1.0449422734918485
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.020",
+    "label": "Objects.020 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.0748807259456186,
+      1.0881242156028748,
+      1.0748484139377616
+    ]
+  },
+  {
+    "id": "object:refObstaclesPhysicalKinematicPositionBased.001",
+    "label": "ObstaclesPhysicalKinematicPositionBased.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.1408768892288208,
+      2,
+      2
+    ]
+  },
+  {
+    "id": "object:refObstaclesPhysicalKinematicPositionBased.002",
+    "label": "ObstaclesPhysicalKinematicPositionBased.002 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.1408768892288208,
+      2,
+      2
+    ]
+  },
+  {
+    "id": "object:refObstaclesPhysicalKinematicPositionBased.003",
+    "label": "ObstaclesPhysicalKinematicPositionBased.003 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.1408768892288208,
+      2,
+      2
+    ]
+  },
+  {
+    "id": "object:refObstaclesPhysicalKinematicPositionBased.004",
+    "label": "ObstaclesPhysicalKinematicPositionBased.004 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.1408768892288208,
+      2,
+      2
+    ]
+  },
+  {
+    "id": "object:refObstaclesPhysicalKinematicPositionBased.005",
+    "label": "ObstaclesPhysicalKinematicPositionBased.005 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.1408768892288208,
+      2,
+      14.085042953491211
+    ]
+  },
+  {
+    "id": "object:refPodiumPhysicalFixed.008",
+    "label": "Podium.008 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      8.250998675473713,
+      4.534371376037598,
+      6.5400697223402435
+    ]
+  },
+  {
+    "id": "object:refRailsPhysicalFixed",
+    "label": "Rails · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      151.77382278442383,
+      20.000011626582562,
+      167.87615203857422
+    ]
+  },
+  {
+    "id": "object:lightGeneratorPhysicalDynamic.001",
+    "label": "lightGenerator.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      2.0458846871637633,
+      3.748676687479019,
+      2.199000340623016
+    ]
+  },
+  {
+    "id": "object:lightGeneratorPhysicalDynamic.003",
+    "label": "lightGenerator.003 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      2.368942208184066,
+      3.748676687479019,
+      2.229754048192449
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.021",
+    "label": "Objects.021 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.0449760381275368,
+      1.0881242156028748,
+      1.044942273491845
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.022",
+    "label": "Objects.022 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.3533504543466108,
+      1.0881242156028748,
+      1.3533549477532016
+    ]
+  },
+  {
+    "id": "object:refObjectsPhysicalDynamic.023",
+    "label": "Objects.023 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      1.0599747161025803,
+      1.1605702180452457,
+      1.0919671317952302
+    ]
+  },
+  {
+    "id": "object:cupPhysicalDynamic",
+    "label": "cup · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      0.44538140296936035,
+      0.5409283190965652,
+      0.44538140296936035
+    ]
+  },
+  {
+    "id": "object:cupPhysicalDynamic.001",
+    "label": "cup.001 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      0.44538140296936035,
+      0.5409283190965652,
+      0.44538140296936035
+    ]
+  },
+  {
+    "id": "object:cupPhysicalDynamic.002",
+    "label": "cup.002 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      0.5294603141972019,
+      0.6357411976150924,
+      0.5352800728830687
+    ]
+  },
+  {
+    "id": "object:refTvPhysicalDynamic",
+    "label": "Tv · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      2,
+      2,
+      1.9308833479881287
+    ]
+  },
+  {
+    "id": "object:stoolPhysicalDynamic.004",
+    "label": "stool.004 · World2",
+    "category": "World2 · objetos",
+    "feature": null,
+    "size": [
+      2.3409364930379795,
+      1.4934171892556232,
+      2.3901312871043956
+    ]
+  },
+  {
+    "id": "nature:treeBody",
+    "label": "treeBody · World2",
+    "category": "World2 · naturaleza",
+    "feature": null,
+    "size": [
+      3.9969954252994846,
+      8.042625427246094,
+      3.816695903144044
+    ]
+  },
+  {
+    "id": "nature:treeLeaves.001",
+    "label": "treeLeaves.001 · World2",
+    "category": "World2 · naturaleza",
+    "feature": null,
+    "size": [
+      3.9079965297458514,
+      3.2065188739736072,
+      3.934505872602031
+    ]
+  },
+  {
+    "id": "nature:treeBody.012",
+    "label": "treeBody.012 · World2",
+    "category": "World2 · naturaleza",
+    "feature": null,
+    "size": [
+      3.21001648686417,
+      7.028760523535311,
+      3.6211703794099037
+    ]
+  },
+  {
+    "id": "nature:treeLeaves.006",
+    "label": "treeLeaves.006 · World2",
+    "category": "World2 · naturaleza",
+    "feature": null,
+    "size": [
+      3.302948220719152,
+      2.815279275827365,
+      3.2446359015947124
+    ]
+  },
+  {
+    "id": "nature:treeBody.015",
+    "label": "treeBody.015 · World2",
+    "category": "World2 · naturaleza",
+    "feature": null,
+    "size": [
+      5.089851407928521,
+      5.225212376564741,
+      4.398610051542221
+    ]
+  },
+  {
+    "id": "nature:treeLeaves.013",
+    "label": "treeLeaves.013 · World2",
+    "category": "World2 · naturaleza",
+    "feature": null,
+    "size": [
+      3.319501100592994,
+      3.2739531140876466,
+      3.1997411233574695
+    ]
+  },
+  {
+    "id": "nature:Plane.003",
+    "label": "Plane.003 · World2",
+    "category": "World2 · naturaleza",
+    "feature": null,
+    "size": [
+      175.0190887451172,
+      0.3502849190049657,
+      176.86090087890625
+    ]
+  },
+  {
+    "id": "nature:flowers",
+    "label": "flowers · World2",
+    "category": "World2 · naturaleza",
+    "feature": null,
+    "size": [
+      3.142632246017456,
+      0.3646196006356561,
+      3.142632246017456
+    ]
+  },
+  {
+    "id": "nature:Icosphere.001",
+    "label": "Icosphere.001 · World2",
+    "category": "World2 · naturaleza",
+    "feature": null,
+    "size": [
+      2.7615342140197754,
+      3.087496757507324,
+      2.6263482570648193
+    ]
+  }
+]

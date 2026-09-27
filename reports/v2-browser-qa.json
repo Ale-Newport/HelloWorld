@@ -1,0 +1,36 @@
+{
+  "tested_utc": "2026-09-26T16:12:58.148740+00:00",
+  "url": "http://127.0.0.1:8844/preview/",
+  "method": "Manual interaction through Codex browser automation; real WebGL UI",
+  "checks": [
+    "Asset thumbnail placement and ground snap",
+    "Drag and drop placement with preview",
+    "Click selection and inspector",
+    "Object name and numeric transform editing",
+    "Duplicate, undo and redo",
+    "Save and reload preserving edits",
+    "Road width, control points and guardrails",
+    "Terrain sculpt, save and undo restoring original geometry",
+    "GLB model import from local asset",
+    "Edit to Drive and Escape restoring editor state",
+    "Camera cycle and Tab world map",
+    "GLB export to local disk and Blender round trip",
+    "Narrow viewport: full asset thumbnails, complete island framing and no distant asphalt depth artifacts"
+  ],
+  "final_state": {
+    "mode": "EDIT WORLD",
+    "saved": true,
+    "temporary_objects": 0,
+    "viewport_override_reset": true
+  },
+  "observed_performance": {
+    "desktop_viewport": [
+      1440,
+      900
+    ],
+    "editor_draw_calls": 3387,
+    "drive_draw_calls": 571,
+    "drive_fps_observed": 120,
+    "note": "Single local observation, not a cross-device benchmark."
+  }
+}

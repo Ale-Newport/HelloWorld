@@ -1,0 +1,7 @@
+{
+  "source": "exports/EditedWorld.glb",
+  "output": "world/EditedWorld.blend",
+  "objects": 2090,
+  "dynamic_bodies": 24,
+  "animation_actions": 1
+}

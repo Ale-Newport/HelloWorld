@@ -1,0 +1,15 @@
+{
+  "name": "alejandro-world-builder",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portable Blender world editor and local Three.js/Rapier driving preview",
+  "scripts": {
+    "preview": "python3 scripts/serve.py --open",
+    "test:physics": "node --loader ./tests/local-loader.mjs tests/v2-physics.mjs",
+    "test:assets": "python3 tests/check_assets.py",
+    "test:geometry": "node --loader ./tests/local-loader.mjs scripts/v2/audit_scene.mjs && python3 scripts/v2/road_geometry.py",
+    "test:world2": "node --loader ./tests/local-loader.mjs tests/v3-world2.mjs",
+    "test:handling": "node --loader ./tests/local-loader.mjs tests/v3-handling.mjs"
+  }
+}
