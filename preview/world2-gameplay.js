@@ -19,6 +19,7 @@ import {Explosions} from './portfolio/world2/interactions/Explosions.js';
 import {ExplosiveCrates} from './portfolio/world2/interactions/ExplosiveCrates.js';
 import {LocalPhysics} from './runtime/local-physics.js';
 import {Physics} from './runtime/physics.js';
+import {collectRuntimeEdits,applyRuntimeEdits,cloneAsset,tagAssetParts} from './asset-definitions.js';
 
 class PrefabEnvironment extends World2Environment {
  adopt(source){this.group.add(source);this.group.updateMatrixWorld(true);source.traverse(o=>{this.nodes.set(o.userData.w2Source??o.name,o);this.nodes.set(o.name,o);if(o.userData.w2Role==='collider')o.visible=false;else if(o.isMesh)this.meshes.push(o);});}
@@ -34,7 +35,10 @@ export class World2Instance {
   const entry=this.entry,drive=manager.driving,frame=new THREE.Group();this.frame=frame;
   asset.updateWorldMatrix(true,false);const matrix=asset.matrixWorld.clone().multiply(new THREE.Matrix4().makeTranslation(...entry.anchor.map(x=>-x)));
   
-  const environment=new PrefabEnvironment({...manager.catalog.manifest,areas:[]},this.bin);environment.adopt(manager.catalog.canonical(entry));this.environment=environment;
+  const edits=collectRuntimeEdits(asset),canonical=manager.catalog.canonical(entry),removed=asset.userData.assetRemovedParts??[];
+  applyRuntimeEdits(canonical,edits,entry.anchor,{sourceOnly:true});
+  const remove=[];canonical.traverse(n=>{if(removed.some(e=>e.source&&e.source===n.userData.w2Source))remove.push(n);if(n.userData.assetPartEdited&&n.userData.collision===false){n.userData.w2Role=n.userData.w2Role==='physical'?'visual':n.userData.w2Role;n.traverse(child=>{if(child.userData.w2Role==='collider')remove.push(child);});n.userData.w2Category='water';}});remove.forEach(n=>n.removeFromParent());
+  const environment=new PrefabEnvironment({...manager.catalog.manifest,areas:[]},this.bin);environment.adopt(canonical);this.environment=environment;
   const physics=new LocalPhysics(manager.physics,matrix,environment.nodes);this.physics=physics;
   const player=new Proxy(drive.player,{get(p,k){if(k==='position')return physics.local(p.position);if(k==='position2'){const v=physics.local(p.position);return new THREE.Vector2(v.x,v.z);}const v=p[k];return typeof v==='function'?v.bind(p):v;}});
   const vehicle=new Proxy(drive.vehicle,{get(v,k){if(k==='position')return physics.local(v.position);if(k==='chassis')return {...v.chassis,physical:physics.wrap(v.chassis.physical)};if(k==='moveTo')return (p,angle)=>{const direction=physics.vector({x:Math.cos(angle),y:0,z:-Math.sin(angle)});v.moveTo(physics.point(p),Math.atan2(-direction.z,direction.x));};return v[k];}});
@@ -48,7 +52,7 @@ export class World2Instance {
   const prompts=new Prompts(drive.ticker,drive.tweens,drive.inputs,this.bin,()=>player.position);this.prompts=prompts;frame.add(environment.group,prompts.group);
   const explosions=new Explosions(physics,drive.ticker,view,this.bin,physics.wrap(drive.vehicle.chassis.physical),(at,strength)=>game.audio.environment('explosion',Math.min(1,strength/8)));frame.add(explosions.group);
   const facade={prompts,achievements:manager.achievements,explosions,resetProps:()=>manager.reset()};game.interactions=facade;
-  const own=(name,Controller,...args)=>{const component=new Controller(game,refs,...args,this.bin);this.parts[name]=component;facade[name]=component;if(component.group)frame.add(component.group);return component;};
+  const own=(name,Controller,...args)=>{const component=new Controller(game,refs,...args,this.bin);this.parts[name]=component;facade[name]=component;if(component.group){component.group.name='runtime:'+name;let index=0;component.group.traverse(n=>{if(!n.name)n.name='runtime:'+name+':'+n.type+':'+index++;});frame.add(component.group);}return component;};
   if(feature==='Bowling'){
    const bowling=own('bowling',Bowling);const at=refs.position('refRestartInteractivePoint');
    if(at)bowling.attachPrompts(prompts.create({label:'Reset pins',position:at,align:'right',startHidden:true,onInteract:()=>bowling.reset()}),null);
@@ -62,7 +66,7 @@ export class World2Instance {
    const projects=own('projects',Projects);const at=refs.position('refInteractivePoint');if(at)projects.attachPrompt(prompts.create({label:'Projects',position:at,align:'right',onInteract:()=>projects.open()}));
   }
   if(feature==='Career')own('career',Career);
-  if(feature==='Title')own('title',Title);
+  if(feature==='Title'){const title=own('title',Title);title.group.userData.assetDisplayName='Alejandro Newport · letters';title.letters.forEach((letter,i)=>{letter.mesh.userData.assetDisplayName='Letter '+letter.char+' · '+String(i+1).padStart(2,'0');});}
   if(feature==='Social')own('social',Social,prompts);
   if(feature==='Achievements'){
    const a=own('achievements',Achievements);a.groups=manager.achievements.groups;
@@ -71,6 +75,15 @@ export class World2Instance {
   if(feature)own('places',Places,prompts);
   if(feature)new Blackboards(refs,drive.inputs,this.bin);
   const bonfire=refs.position('refBonfireInteractivePoint');if(bonfire)prompts.create({label:'Reset the island',position:bonfire,align:'right',onInteract:()=>manager.reset()});
+  tagAssetParts(frame);
+  const changed=applyRuntimeEdits(frame,edits,entry.anchor);const generatedRemoved=[];frame.traverse(n=>{if(removed.some(e=>e.key===n.userData.assetRuntimeKey))generatedRemoved.push(n);});
+  const bindings=[...environment.dynamic,...(this.parts.title?.letters??[]).map(l=>({node:l.mesh,physical:l.physical,home:l.home}))];if(this.parts.bowling?.ballNode)bindings.push({node:this.parts.bowling.ballNode,physical:this.parts.bowling.ball,home:{position:this.parts.bowling.ballHome}});
+  for(const {node,physical,home} of bindings){if(generatedRemoved.includes(node)){node.visible=false;physical.body.setEnabled(false);continue;}if(!changed.includes(node))continue;node.updateWorldMatrix(true,false);const p=node.getWorldPosition(new THREE.Vector3()),q=node.getWorldQuaternion(new THREE.Quaternion());physical.body.setTranslation(p,true);physical.body.setRotation(q,true);physical.body.setLinvel({x:0,y:0,z:0},true);const raw=physical.raw??physical,worldPosition=physics.point(p),worldRotation=physics.quaternion(q);raw.current.position.copy(worldPosition);raw.previous.position.copy(worldPosition);raw.current.quaternion.copy(worldRotation);raw.previous.quaternion.copy(worldRotation);raw.initialState.position=worldPosition.clone();raw.initialState.rotation=worldRotation.clone();if(home){home.position?.copy(p);home.quaternion?.copy(q);}if(this.parts.title?.letters.some(l=>l.mesh===node)&&node.geometry){node.geometry.computeBoundingBox();const half=node.geometry.boundingBox.getSize(new THREE.Vector3()).multiply(node.getWorldScale(new THREE.Vector3())).multiplyScalar(physics.scale*.5);for(const c of physical.colliders)c.setHalfExtents(half);}for(const collider of physical.colliders){if(node.userData.mass)collider.setMass(node.userData.mass/physical.colliders.length);if(node.userData.friction!==undefined)collider.setFriction(node.userData.friction);if(node.userData.restitution!==undefined)collider.setRestitution(node.userData.restitution);if(node.userData.collision===false)collider.setEnabled(false);}}
+  generatedRemoved.forEach(n=>{n.visible=false;n.userData.deleted=true;});
+  const visibility=changed.filter(n=>n.userData.assetVisibilityEdited).map(n=>[n,n.visible]);if(visibility.length||generatedRemoved.length){const maintain=()=>{for(const [n,visible] of visibility)n.visible=visible;for(const n of generatedRemoved)n.visible=false;};drive.ticker.events.on('tick',maintain,100);this.bin.add(()=>drive.ticker.events.off('tick',maintain));}
+  // User-created/duplicated children live alongside regenerated gameplay parts.
+  const newParts=[];asset.traverse(n=>{if(n.userData.assetNewPart&&!n.parent?.userData.assetNewPart)newParts.push(n);});
+  for(const original of newParts){const extra=cloneAsset(original,true),world=new THREE.Matrix4().makeTranslation(...entry.anchor).multiply(asset.matrixWorld.clone().invert()).multiply(original.matrixWorld);world.decompose(extra.position,extra.quaternion,extra.scale);frame.add(extra);if(extra.userData.collision){extra.updateWorldMatrix(true,true);const geometry=[];extra.traverse(n=>{if(n.isMesh)geometry.push(n.geometry.clone().applyMatrix4(n.matrixWorld));});const colliders=geometry.map(g=>({shape:'trimesh',parameters:[Float32Array.from(g.attributes.position.array),g.index?Uint32Array.from(g.index.array):Uint32Array.from({length:g.attributes.position.count},(_,i)=>i)]}));if(colliders.length)physics.add({type:'fixed',colliders,owner:extra.name,friction:extra.userData.friction??.7});geometry.forEach(g=>g.dispose());}this.bin.object3D(extra);}
   // Keep authored material edits when replacing the Edit preview with gameplay.
   const edited=new Map();asset.traverse(o=>{if(o.isMesh&&o.userData.materialEdited)edited.set(o.userData.w2Source??o.name,Array.isArray(o.material)?o.material:[o.material]);});
   frame.traverse(o=>{const saved=edited.get(o.userData.w2Source??o.name);if(!o.isMesh||!saved)return;const apply=(m,i)=>{const source=saved[i]??saved[0],out=m.clone();if(out.color&&source.color)out.color.copy(source.color);for(const k of ['roughness','metalness'])if(k in out&&k in source)out[k]=source[k];if(source.userData.editorTexture){out.map=source.map;out.needsUpdate=true;}this.bin.add(()=>out.dispose());return out;};o.material=Array.isArray(o.material)?o.material.map(apply):apply(o.material,0);});

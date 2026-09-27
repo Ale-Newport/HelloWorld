@@ -7,7 +7,7 @@ p=argparse.ArgumentParser();p.add_argument('--port',type=int,default=8844);p.add
 root=Path(__file__).resolve().parents[1]
 class Handler(SimpleHTTPRequestHandler):
  def do_POST(self):
-  if self.path not in ['/api/world','/api/export']:self.send_error(404);return
+  if self.path not in ['/api/world','/api/export','/api/assets']:self.send_error(404);return
   origin=self.headers.get('Origin','');host=self.headers.get('Host','')
   if origin and origin not in [f'http://{host}']:self.send_error(403);return
   if host not in [f'127.0.0.1:{a.port}',f'localhost:{a.port}']:self.send_error(403);return
@@ -21,9 +21,18 @@ class Handler(SimpleHTTPRequestHandler):
     if target.exists():shutil.copyfile(target,root/'backups/EditedWorld.previous.glb')
     temp.write_bytes(raw);os.replace(temp,target);self.send_response(200);self.end_headers();self.wfile.write(b'{"exported":true}');return
    data=json.loads(raw)
-   if data.get('schema')!=2 or not isinstance(data.get('states'),dict) or not isinstance(data.get('added'),list):raise ValueError('Invalid world document')
-   target=root/'exports/editor-world.json';temp=target.with_suffix('.tmp')
-   if target.exists():shutil.copyfile(target,root/'backups/editor-world.previous.json')
+   if self.path=='/api/assets':
+    if data.get('schema')!=1 or not isinstance(data.get('definitions'),list):raise ValueError('Invalid asset definitions')
+    ids=set()
+    for item in data['definitions']:
+     if not isinstance(item,dict) or not isinstance(item.get('id'),str) or item['id'] in ids or not isinstance(item.get('object',{}).get('object'),dict):raise ValueError('Invalid or duplicate asset definition')
+     ids.add(item['id'])
+    target=root/'exports/asset-definitions.json';previous=root/'backups/asset-definitions.previous.json'
+   else:
+    if data.get('schema')!=2 or not isinstance(data.get('states'),dict) or not isinstance(data.get('added'),list):raise ValueError('Invalid world document')
+    target=root/'exports/editor-world.json';previous=root/'backups/editor-world.previous.json'
+   temp=target.with_suffix('.tmp')
+   if target.exists():shutil.copyfile(target,previous)
    temp.write_text(json.dumps(data,separators=(',',':')));os.replace(temp,target)
    self.send_response(200);self.send_header('Content-Type','application/json');self.end_headers();self.wfile.write(b'{"saved":true}')
   except Exception as error:self.send_error(400,str(error))

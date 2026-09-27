@@ -1,0 +1,11 @@
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {WorldEditor} from '../preview/editor.js';
+import {RAPIER} from '../preview/runtime/physics.js';
+import {loadWorld2Catalog} from '../preview/world2-catalog.js';
+import {tree} from '../preview/assets/kit.js';
+import {waterFeature} from '../preview/assets/coast.js';
+const canvas=document.querySelector('#world'),renderer=new THREE.WebGLRenderer({canvas,antialias:true}),scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(40,1,.1,500),orbit=new OrbitControls(camera,canvas),root=new THREE.Group();root.userData.baseDocument='asset-studio-test-fixture';root.userData.seaLevel=-.35;
+scene.background=new THREE.Color('#458d9d');scene.add(root,new THREE.HemisphereLight(0xffffff,0x778a68,3));const sun=new THREE.DirectionalLight(0xffffff,3);sun.position.set(-10,20,10);scene.add(sun);const ground=new THREE.Mesh(new THREE.PlaneGeometry(150,150).rotateX(-Math.PI/2),new THREE.MeshStandardMaterial({color:0x81915e}));ground.userData={terrain:true,ground_surface:true};root.add(ground);const pine=tree('Pine');pine.name='Pine';root.add(pine);camera.position.set(18,16,24);orbit.target.set(0,3,0);
+const notice=text=>{const n=document.querySelector('#notice');n.textContent=text;n.classList.add('show');};await RAPIER.init();const catalog=await loadWorld2Catalog();const editor=new WorldEditor(scene,root,camera,renderer,orbit,notice,catalog);editor.addAssetTemplates([{id:'qa-pond',label:'Pond Small',category:'Water',node:waterFeature('Pond Small'),parameters:waterFeature('Pond Small').userData.parameters,rebuild:p=>waterFeature('Pond Small',p)}]);await editor.initializeAssets();document.querySelector('#category').value='All';editor.filterAssets();document.querySelector('#loading').remove();
+function resize(){const v=document.querySelector('#viewport');renderer.setSize(v.clientWidth,v.clientHeight,false);camera.aspect=v.clientWidth/v.clientHeight;camera.updateProjectionMatrix();}new ResizeObserver(resize).observe(document.querySelector('#viewport'));resize();let last=performance.now();function frame(now){requestAnimationFrame(frame);const dt=Math.min(.1,(now-last)/1000);last=now;if(editor.assetStudio.active){editor.renderAssetStudio(dt);return;}orbit.update();renderer.render(scene,camera);}requestAnimationFrame(frame);
