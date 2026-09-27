@@ -14,9 +14,15 @@ Se necesita Python 3 y un navegador con WebGL2. No hacen falta cuentas ni servic
 
 El backup completo anterior a esta iteración está en `backups/world_before_map_and_editor_upgrade_20260927/`, con el archivo Blender anterior. Se conservan además `backups/pre-world2-library.zip` y `backups/v1-expanded/`. El mundo Blender v2 no se sobrescribe: **Open Alejandro World.command** abre esa base; **Open Edited World.command** abre la exportación actual del editor web.
 
+## Correcciones sobre el mundo guardado
+
+Esta iteración conserva tus ediciones del puerto, carreteras, actividades y terreno. El circuito World2 ocupa una ampliación al suroeste a escala 1:1, conectada con South Coast Road. La vista general, Top View, mapa y límites de vuelo se adaptan al terreno creado. El loop se completa con W por ambos extremos; Shift es opcional. La fuente central tiene dos vasos de piedra, cascadas, mosaico y luces nocturnas. El modelo de estudios/experiencia y sus líneas comparten el mismo marco al editarlos y entrar en Drive.
+
+Copia exacta previa: `backups/user_world_before_four_fixes_20260927_103401/`. Pruebas de esta iteración: `npm run test:v5`. Evidencias: `reports/v5/`.
+
 ## El mapa elegido
 
-La plaza de Alejandro Newport ocupa el centro. Castle e Ice Lake están al noroeste; Bowling, Cookies y Lighthouse al oeste; el circuito compacto y la playa al suroeste; Ferris Wheel y Hot Air Balloon al norte/noreste; Projects al este del centro y Loop al extremo este; Achievements y Contact al sureste; Career y Harbor al sur. Canales y puentes conectan las zonas. Las carreteras rodean las plazas.
+La plaza de Alejandro Newport ocupa el centro. Castle e Ice Lake están al noroeste; Bowling, Cookies y Lighthouse al oeste; el circuito World2 a tamaño original en la ampliación suroeste y la playa al sur; Ferris Wheel y Hot Air Balloon al norte/noreste; Projects al este del centro y Loop al extremo este; Achievements y Contact al sureste; Career y Harbor al sur. Canales y puentes conectan las zonas. Las carreteras rodean las plazas.
 
 **Top View** utiliza una cámara ortográfica orientada al norte y encuadra la isla completa. La distribución se define en `preview/world-map.js`, las carreteras en `preview/roads/` y los assets modulares en `preview/assets/`. El terreno principal está a **0,15 m** y el mar a **−0,35 m**: medio metro de diferencia, con costa y playa inclinadas hacia el agua.
 
@@ -42,7 +48,7 @@ Las **179 entradas World2** siguen disponibles, incluidas 15 actividades complet
 
 Arrastra una actividad, muévela, gírala sobre Y y escálala uniformemente. Selecciónala antes de pulsar **Drive** para aparecer en su punto de llegada. Cada copia conserva sus cuerpos, referencias y reinicios. Acércate a un marcador y pulsa **E / Enter**. En Proyectos, A/D o flechas cambian de proyecto; Esc cierra el panel.
 
-Bolos conserva bola, diez pinos, bumpers, strike y reset. El circuito original conserva checkpoints, cuenta atrás y marcas. Las letras y la cabina mantienen su física. Las líneas cronológicas suben al acercarte. Social mantiene los contactos y ventilador. El hoyo abre también el suelo físico y lo restaura al moverlo o borrarlo. El circuito World2 original tiene su escala original y necesita más espacio que el circuito compacto del mapa. En el mapa v4, selecciona la curva Catalunya o su mobiliario antes de pulsar Drive para empezar en la salida del circuito compacto y activar allí la carrera con E.
+Bolos conserva bola, diez pinos, bumpers, strike y reset. El circuito original conserva checkpoints, cuenta atrás y marcas. Las letras y la cabina mantienen su física. Las líneas cronológicas suben al acercarte. Social mantiene los contactos y ventilador. El hoyo abre también el suelo físico y lo restaura al moverlo o borrarlo. El circuito World2 original tiene su escala original y necesita más espacio que el circuito compacto del mapa. En tu mundo guardado, selecciona Carreras · circuito World2 antes de pulsar Drive para aparecer en la llegada original y activar la carrera con E.
 
 Las modificaciones de las partes de un asset funcional se aplican a su representación de Drive conservando las referencias de sus controladores. La geometría y los metadatos se exportan; el comportamiento JavaScript se ejecuta dentro de HelloWorld.
 
@@ -106,7 +112,7 @@ El Corsair incluido en la raíz se utiliza como avión local. Tiene despegue asi
 
 **Save Asset** conserva definiciones en `exports/asset-definitions.json`. **Save World** guarda instancias, transformaciones, terreno y overrides en `exports/editor-world.json`. Se escriben de forma atómica y mantienen copia anterior en `backups/`. El siguiente arranque restaura ambos documentos. Las definiciones están separadas de las transformaciones de sus instancias. El historial Undo/Redo pertenece a la sesión.
 
-**Export GLB** guarda `exports/EditedWorld.glb` con jerarquía, materiales, transformaciones, animación disponible y metadatos. Los helpers del editor y overlays de depuración quedan fuera. **Open Edited World.command** abre ese mapa v4 y guarda `world/EditedWorld_v4.blend`, conservando la jerarquía visual, los materiales y las animaciones. Los colliders nativos son proxies ocultos independientes, por lo que no se fusionan ni destruyen las partes editables. El documento base `world/AlejandroWorld.blend` permanece como la versión anterior conservada. Los juegos y el cambio coche/avión requieren además los módulos web: para mover el producto completo, conserva toda la carpeta HelloWorld.
+**Export GLB** guarda `exports/EditedWorld.glb` con jerarquía, materiales, transformaciones, animación disponible y metadatos. Los helpers del editor y overlays de depuración quedan fuera. **Open Edited World.command** abre el mapa guardado y crea `world/EditedWorld_v5.blend`, conservando la jerarquía visual, los materiales y las animaciones. Los colliders nativos son proxies ocultos independientes, por lo que no se fusionan ni destruyen las partes editables. El documento base `world/AlejandroWorld.blend` permanece como la versión anterior conservada. Los juegos y el cambio coche/avión requieren además los módulos web: para mover el producto completo, conserva toda la carpeta HelloWorld.
 
 El importador web admite GLB y GLTF con recursos incorporados. FBX, OBJ o GLTF con archivos externos pueden importarse mediante el editor Blender.
 

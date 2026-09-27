@@ -30,7 +30,7 @@ function rebaseTrack(track,target,binding){
 /** Clips address actual instance nodes, so duplicates retain their own animation. */
 export function worldAnimationClips(root,sourceClips=[]){
  const clips=[];
- root.traverse(node=>{
+ root.traverseVisible(node=>{
   if(node.userData.sourceAnimations)for(const source of sourceClips){
    const tracks=[];for(const original of source.tracks){const binding=THREE.PropertyBinding.parseTrackName(original.name),target=sourceTarget(node,binding.nodeName);if(!target)continue;const t=original.clone();rebaseTrack(t,target,binding);t.name=target.uuid+bindingPath(binding);tracks.push(t);}if(tracks.length)clips.push(new THREE.AnimationClip(node.name+' · wheel',source.duration,tracks));
   }

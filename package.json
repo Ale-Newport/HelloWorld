@@ -24,6 +24,14 @@
     "test:v4:track": "node --loader ./tests/local-loader.mjs tests/v4-track.mjs",
     "test:v4:terrain": "node --loader ./tests/local-loader.mjs tests/v4-terrain-cuts.mjs",
     "test:v4:lifecycle": "node --loader ./tests/local-loader.mjs tests/v4-lifecycle.mjs",
-    "test:v4:lights": "node --loader ./tests/local-loader.mjs tests/v4-lights.mjs"
+    "test:v4:lights": "node --loader ./tests/local-loader.mjs tests/v4-lights.mjs",
+    "test:v5:fountain": "node --loader ./tests/local-loader.mjs tests/v5-fountain.mjs",
+    "test:v5:career": "node --loader ./tests/local-loader.mjs tests/v4-career.mjs",
+    "test:v5:loop": "node --loader ./tests/local-loader.mjs tests/v4-saved-loop.mjs",
+    "test:v5:circuit": "node --loader ./tests/local-loader.mjs tests/v5-circuit-fit.mjs",
+    "test:v5:preservation": "node --loader ./tests/local-loader.mjs tests/v5-preservation.mjs",
+    "test:v5": "npm run test:v5:fountain && npm run test:v5:career && npm run test:v5:loop && npm run test:v5:circuit && npm run test:v5:minimap && npm run test:v5:terrain && npm run test:v5:preservation",
+    "test:v5:minimap": "node --loader ./tests/local-loader.mjs tests/v5-minimap.mjs",
+    "test:v5:terrain": "node --loader ./tests/local-loader.mjs tests/v5-terrain-persistence.mjs"
   }
 }

@@ -10,7 +10,7 @@ import {Achievements} from './portfolio/world2/interactions/Achievements.js';
 import {Bowling} from './portfolio/world2/interactions/Bowling.js';
 import {Circuit} from './portfolio/world2/interactions/Circuit.js';
 import {Projects} from './portfolio/world2/interactions/Projects.js';
-import {Career} from './portfolio/world2/interactions/Career.js';
+import {FramedCareer,careerSourceBasis} from './career-frame.js';
 import {Title} from './portfolio/world2/interactions/Title.js';
 import {Social} from './portfolio/world2/interactions/Social.js';
 import {Places} from './portfolio/world2/interactions/Places.js';
@@ -65,7 +65,7 @@ export class World2Instance {
   if(feature==='Projects'){
    const projects=own('projects',Projects);const at=refs.position('refInteractivePoint');if(at)projects.attachPrompt(prompts.create({label:'Projects',position:at,align:'right',onInteract:()=>projects.open()}));
   }
-  if(feature==='Career')own('career',Career);
+  if(feature==='Career')own('career',FramedCareer,careerSourceBasis(manager.catalog)).syncSourceFrame(frame);
   if(feature==='Title'){const title=own('title',Title);title.group.userData.assetDisplayName='Alejandro Newport · letters';title.letters.forEach((letter,i)=>{letter.mesh.userData.assetDisplayName='Letter '+letter.char+' · '+String(i+1).padStart(2,'0');});}
   if(feature==='Social')own('social',Social,prompts);
   if(feature==='Achievements'){
@@ -76,7 +76,7 @@ export class World2Instance {
   if(feature)new Blackboards(refs,drive.inputs,this.bin);
   const bonfire=refs.position('refBonfireInteractivePoint');if(bonfire)prompts.create({label:'Reset the island',position:bonfire,align:'right',onInteract:()=>manager.reset()});
   tagAssetParts(frame);
-  const changed=applyRuntimeEdits(frame,edits,entry.anchor);const generatedRemoved=[];frame.traverse(n=>{if(removed.some(e=>e.key===n.userData.assetRuntimeKey))generatedRemoved.push(n);});
+  const changed=applyRuntimeEdits(frame,edits,entry.anchor);this.parts.career?.syncSourceFrame(frame);const generatedRemoved=[];frame.traverse(n=>{if(removed.some(e=>e.key===n.userData.assetRuntimeKey))generatedRemoved.push(n);});
   const bindings=[...environment.dynamic,...(this.parts.title?.letters??[]).map(l=>({node:l.mesh,physical:l.physical,home:l.home}))];if(this.parts.bowling?.ballNode)bindings.push({node:this.parts.bowling.ballNode,physical:this.parts.bowling.ball,home:{position:this.parts.bowling.ballHome}});
   for(const {node,physical,home} of bindings){if(generatedRemoved.includes(node)){node.visible=false;physical.body.setEnabled(false);continue;}if(!changed.includes(node))continue;node.updateWorldMatrix(true,false);const p=node.getWorldPosition(new THREE.Vector3()),q=node.getWorldQuaternion(new THREE.Quaternion());physical.body.setTranslation(p,true);physical.body.setRotation(q,true);physical.body.setLinvel({x:0,y:0,z:0},true);const raw=physical.raw??physical,worldPosition=physics.point(p),worldRotation=physics.quaternion(q);raw.current.position.copy(worldPosition);raw.previous.position.copy(worldPosition);raw.current.quaternion.copy(worldRotation);raw.previous.quaternion.copy(worldRotation);raw.initialState.position=worldPosition.clone();raw.initialState.rotation=worldRotation.clone();if(home){home.position?.copy(p);home.quaternion?.copy(q);}if(this.parts.title?.letters.some(l=>l.mesh===node)&&node.geometry){node.geometry.computeBoundingBox();const half=node.geometry.boundingBox.getSize(new THREE.Vector3()).multiply(node.getWorldScale(new THREE.Vector3())).multiplyScalar(physics.scale*.5);for(const c of physical.colliders)c.setHalfExtents(half);}for(const collider of physical.colliders){if(node.userData.mass)collider.setMass(node.userData.mass/physical.colliders.length);if(node.userData.friction!==undefined)collider.setFriction(node.userData.friction);if(node.userData.restitution!==undefined)collider.setRestitution(node.userData.restitution);if(node.userData.collision===false)collider.setEnabled(false);}}
   generatedRemoved.forEach(n=>{n.visible=false;n.userData.deleted=true;});
