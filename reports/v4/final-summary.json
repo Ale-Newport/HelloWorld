@@ -1,0 +1,92 @@
+{
+  "suites": [
+    {
+      "report": "asset-studio-tests.json",
+      "checks": 9,
+      "passed": 9,
+      "failed": 0
+    },
+    {
+      "report": "factory-tests.json",
+      "checks": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "report": "roads-tests.json",
+      "checks": 12,
+      "passed": 12,
+      "failed": 0
+    },
+    {
+      "report": "routes-tests.json",
+      "checks": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    {
+      "report": "validation-tests.json",
+      "checks": 7,
+      "passed": 7,
+      "failed": 0
+    },
+    {
+      "report": "vehicle-tests.json",
+      "checks": 11,
+      "passed": 11,
+      "failed": 0
+    },
+    {
+      "report": "world-physics-tests.json",
+      "checks": 10,
+      "passed": 10,
+      "failed": 0
+    },
+    {
+      "report": "water-animation-tests.json",
+      "checks": 4,
+      "passed": 4,
+      "failed": 0
+    },
+    {
+      "report": "track-tests.json",
+      "checks": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "report": "terrain-cuts-tests.json",
+      "checks": 5,
+      "passed": 5,
+      "failed": 0
+    },
+    {
+      "report": "lifecycle-tests.json",
+      "checks": 8,
+      "passed": 8,
+      "failed": 0
+    },
+    {
+      "report": "export-tests.json",
+      "checks": 3,
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "report": "light-budget-tests.json",
+      "checks": 4,
+      "passed": 4,
+      "failed": 0
+    }
+  ],
+  "checks": 92,
+  "passed": 92,
+  "failed": 0,
+  "blenderImport": true,
+  "portfolioUnchanged": true,
+  "browserValidation": {
+    "errors": 0,
+    "warnings": 0,
+    "objects": 7922
+  }
+}

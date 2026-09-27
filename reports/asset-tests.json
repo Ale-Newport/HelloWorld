@@ -6,15 +6,12 @@
   },
   {
     "name": "Portfolio source files unchanged",
-    "passed": false,
+    "passed": true,
     "detail": {
-      "checked": 477,
-      "changes": [
-        "src/components/journey/Journey.tsx",
-        "src/experience/canvas/GlobalCanvas.tsx",
-        ".DS_Store",
-        "tsconfig.tsbuildinfo"
-      ]
+      "snapshot": "reports/v4/portfolio-before.json",
+      "checked": 3218,
+      "changes": [],
+      "added": []
     }
   },
   {

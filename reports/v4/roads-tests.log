@@ -1,0 +1,12 @@
+PASS Straight road has exact width, flat caps, distance UV and upward normals {"area":280,"length":40,"uvMetresPerRepeat":4}
+PASS Editing a road point regenerates lane/edge marks, rails and asphalt together {"updatedSurface":true,"updatedMarkings":true,"rails":2}
+PASS Race curbs are coupled and pattern repeats by metres, preserved in portable texture {"gridUpdated":true,"curbUpdated":true,"stripeLength":2,"textureWidth":2}
+PASS Boolean surface matches independent GEOS union for tight turns, crossings and holes [{"name":"hairpin","expected":266.9508384982187,"actual":266.95083898895047,"sum":266.9508389889505,"symmetricDifference":0.000009557435697832429,"valid":true,"warnings":1},{"name":"crossing","expected":1044.4644207673425,"actual":1044.4644292575492,"sum":1044.4644292575492,"symmetricDifference":0.00007812304866264085,"valid":true,"warnings":2},{"name":"closed loop","expected":629.3561775782899,"actual":629.3561816583141,"sum":629.3561816583137,"symmetricDifference":0.00005565711747811741,"valid":true,"warnings":0}]
+PASS Junction network resolves coincident asphalt to one nonoverlapping surface {"expected":511.0000000000001,"actual":511,"sum":511,"symmetricDifference":0,"valid":true}
+PASS All junction presets generate coherent editable master curves {"T Junction":2,"Crossroad":2,"Roundabout":5,"Merge":2,"Split":2}
+PASS Conform to terrain and road collision share identical current geometry {"heightSamples":3,"colliders":1,"paintExcluded":true}
+PASS A bridge owns its deck surface and moving it restores the road and collider {"coveredArea":0,"restoredArea":140,"restoredCollider":true}
+PASS Transform, source serialization and rebuilt instance preserve shape alignment {"area":218.23723020900576,"children":1}
+PASS Auto smooth, obstacle/water warnings and separate debug geometry work {"warnings":["ROAD_SELF_INTERSECTION","ROAD_ATTRACTION_COLLISION","WATER_LEVEL_ISSUES"],"debugObjects":8}
+PASS Removing a road restores its neighbour and unchanged networks reuse geometry {"stableCache":true,"visibilityRebuild":true}
+PASS Legacy standalone road decorations retire without affecting other props {"roads":1,"retired":["Island Boulevard edge.001","Boulevard centre dash.002","Race kerb.004"]}

@@ -1,0 +1,77 @@
+
+> alejandro-world-builder@4.0.0 test:handling
+> node --loader ./tests/local-loader.mjs tests/v3-handling.mjs
+
+(node:72817) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./tests/local-loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+using deprecated parameters for the initialization function; pass a single object instead
+{
+  passed: true,
+  editedIslandRespawn: true,
+  method: 'Two independent Rapier worlds: original Portfolio Physics+PhysicsVehicle+Player versus HelloWorld adapter, identical World2 tuning and action sequence.',
+  frames: 345,
+  maxPositionError: 0,
+  maxRotationError: 5.960464477539063e-8,
+  bindings: {
+    Space: 'jump',
+    B: 'brake',
+    ControlLeft: 'brake',
+    Shift: 'boost',
+    E: 'interact'
+  },
+  changesOutsideSource: 'Ice braking surface hook; editable-road respawn and local loop assistance.'
+}
+
+> alejandro-world-builder@4.0.0 test:world2
+> node --loader ./tests/local-loader.mjs tests/v3-world2.mjs
+
+(node:72839) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./tests/local-loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+using deprecated parameters for the initialization function; pass a single object instead
+PASS All World2 areas and authored physical collections available {"entries":179,"physicalSourceObjects":146,"activities":15}
+PASS Rotated bowling: ten real pins, ball, kinematic bumpers and reset {"pins":10,"strike":true,"bumpers":true,"rotation":90}
+PASS Circuit: source gates, countdown, complete lap record and exit {"checkpoints":8,"state":"pending","completedLap":true,"records":1}
+PASS Projects: source content, cinematic, navigation and close {"first":"focus","next":"gym-app"}
+PASS Career: chronological source data and three rising lanes {"stops":9,"lanes":["year","education","work","projects"]}
+PASS Title: Alejandro Newport physical glyphs and knock-over reset {"letters":16}
+PASS Places and social modules preserve original references and prompts {"toilet":{"bodies":8,"prompts":[]},"achievements":{"bodies":6,"prompts":["Achievements"]},"behindTheScene":{"bodies":8,"prompts":["Behind the scenes"]},"social":{"bodies":10,"prompts":["Email","GitHub","LinkedIn","Curriculum Vitae","Give it a spin"]},"cookie":{"bodies":5,"prompts":["Take a cookie"]},"lab":{"bodies":20,"prompts":["Next experiment"]},"altar":{"bodies":4,"prompts":[]},"timeMachine":{"bodies":13,"prompts":["Time machine"]}}
+PASS New sea land stitches tile edges, is drivable and can be erased {"tiles":6,"watertight":true,"colliderHeight":1,"erasedHeight":-4}
+PASS Behind-the-scenes hole cuts the physical floor and follows move/delete {"cut":true,"collisionFollowsMove":true,"restoredAfterDelete":true}
+PASS Two bowling copies share the world but preserve independent bodies and resets {"pins":20,"independentReset":true}
+
+> alejandro-world-builder@4.0.0 test:physics
+> node --loader ./tests/local-loader.mjs tests/v2-physics.mjs
+
+(node:72866) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./tests/local-loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+using deprecated parameters for the initialization function; pass a single object instead
+PASS Portable compact world and synchronized wheel {"nodes":1404,"duration":30,"bodyCount":195,"dynamicProps":24}
+PASS Exact Portfolio scale, timestep and World2 handling {"mass":2.5,"COM":{"x":0,"y":-0.9000000357627869,"z":0},"width":1.7,"boulevardWidth":7.6}
+PASS Eight physical penguins stand at rest {"upright":8,"total":8}
+PASS Ice reduces braking through the same controller hook {"road":{"distance":0.7663122957131154,"speed":0.03089207414900772,"surfaces":["road"]},"ice":{"distance":8.290605092651306,"speed":4.881362776864276,"surfaces":["ice"]}}
+PASS Car physically pushes Learner penguin {"moved":2.770134286781427}
+PASS Car physically pushes Ice cone {"moved":4.495398068658781}
+PASS Complete boulevard drive around every district {"frames":1631,"maxError":0.9906379254844776,"air":0,"position":[7.574136257171631,1.1612244844436646,20.244184494018555]}
+PASS Complete independent race lap {"frames":1215,"maxError":0.9162229311517269,"air":0,"position":[-69.8692626953125,1.1613630056381226,69.21595764160156]}
+PASS Loop physically reaches the top and exits {"completed":1,"maxHeight":19.675567626953125,"contact":1}
+PASS Continuous district tour, loop branch and return to Central Plaza {"districts":["Central Plaza","Projects","Achievements","Ferris Wheel","Ice Rink","Bowling","Cookies","Race area","Loop","Central Plaza"],"frames":3258,"segmentErrors":{"tour":0.9906379254844776,"toBranch":4.432594718356489,"approach":2.8230323636475982,"exit":2.678023718451902,"home":1.5741054401548789},"maxWaypointDistance":4.432594718356489,"finish":[16.00718116760254,1.161332130432129,20.37367057800293],"loopCompletions":1}
+
+> alejandro-world-builder@4.0.0 test:assets
+> python3 tests/check_assets.py
+
+PASS Original blend and backup byte-identical 
+FAIL Portfolio source files unchanged {'checked': 477, 'changes': ['src/components/journey/Journey.tsx', 'src/experience/canvas/GlobalCanvas.tsx', '.DS_Store', 'tsconfig.tsbuildinfo']}
+PASS world/AlejandroWorld.blend exists 
+PASS exports/AlejandroWorld.glb exists 
+PASS editor/alejandro_world/__init__.py exists 
+PASS editor/AlejandroWorldBuilder.zip exists 
+PASS preview/vendor/three/build/three.module.js exists 
+PASS preview/vendor/three/examples/jsm/utils/SkeletonUtils.js exists 
+PASS preview/vendor/@dimforge/rapier3d-compat/rapier.es.js exists 
+PASS GLB container length 
+PASS Textures embedded in GLB 
+PASS No Portfolio dependency in GLB 
+PASS Preview code has no external source directory dependency 

@@ -1,0 +1,7 @@
+PASS Valid portable scene, safe spawn and intentional water/bridge placements pass {"errors":0,"warnings":0,"info":0}
+PASS Missing textures, absolute runtime paths, broken references and invalid mass are detected {"codes":["ABSOLUTE_PATHS","BROKEN_ASSET_REFERENCES","INVALID_ASSETS","INVALID_PHYSICS","INVALID_PHYSICS","MISSING_TEXTURES"]}
+PASS Floating and underground placement checks inspect roots, not elevated child roofs {"placementChecks":2,"codes":["FLOATING_OBJECTS","UNDERGROUND_OBJECTS"]}
+PASS Actual overlapping asphalt is detected, then the network union repairs it {"detectedBefore":true,"resolvedAfter":true}
+PASS Detached lane markings, race curbs and road/building conflicts are detected {"codes":["ROAD_BUILDING_COLLISION","LANE_MARKING_MISALIGNMENT","CURB_MISALIGNMENT"]}
+PASS Water level, abrupt beach route and unsupported car spawn are flagged {"codes":["WATER_LEVEL_ISSUES","BEACH_CLIFF_ISSUES","CAR_SPAWN_ISSUES"]}
+PASS Water debug contains separate sea, shallow, deep and driveable slope layers {"layers":["Sea level","Shallow water · driveable","Deep water","Gentle beach slopes","Steep shore slopes"]}

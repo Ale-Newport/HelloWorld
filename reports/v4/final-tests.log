@@ -1,0 +1,191 @@
+
+> alejandro-world-builder@4.0.0 test:v4
+> npm run test:v4:assets && npm run test:v4:factories && npm run test:v4:roads && npm run test:v4:routes && npm run test:v4:validation && npm run test:v4:vehicle && npm run test:v4:world && npm run test:v4:water && npm run test:v4:track && npm run test:v4:terrain && npm run test:v4:lifecycle && npm run test:v4:export
+
+
+> alejandro-world-builder@4.0.0 test:v4:assets
+> node --loader ./tests/local-loader.mjs tests/v4-assets.mjs
+
+(node:72563) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./tests/local-loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS Every definition has independent metadata and stable editable parts {"sharedGeometry":true,"stableParts":3}
+PASS Isolated child transform/material edit leaves source untouched until Save {"childHeight":6,"color":"#9fdce6","version":2}
+PASS Source propagation retains existing instance position, rotation and scale {"propagated":2,"transformsUnchanged":true}
+PASS Save As New and Edit Instance remain independent of the original {"variantId":"custom:pine-snow","sourcePreserved":true,"instancePreserved":true}
+PASS Hierarchy parent/unparent, rename, lock, hide, duplicate and delete survive persistence {"definitions":2,"hierarchyPreserved":true,"physicsPreset":"Medium Dynamic"}
+PASS Base-world Edit Instance hierarchy survives real world save/restore {"serializedOverrides":1,"removedChildStaysRemoved":true,"instanceX":8}
+using deprecated parameters for the initialization function; pass a single object instead
+PASS World2 original physical child edits change visible mesh and real collider {"bodyMovedMetres":3,"colliderMatches":true}
+PASS World2 generated name child edits persist in dynamics and reset home {"glyphs":16,"changedColor":"#e433cc","colliderScale":1.4,"resetKeepsEdit":true}
+PASS World2 original interaction modules still activate after source editing {"pins":10,"ball":true,"bumpers":true,"reset":true}
+
+> alejandro-world-builder@4.0.0 test:v4:factories
+> node --loader ./tests/local-loader.mjs tests/v4-factories.mjs
+
+(node:72590) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./tests/local-loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS All 118 curated definitions build with browser-sanitized source names, finite geometry and collider coverage {"definitions":118,"meshes":2796,"vertices":1132611,"reusedAboutPavilion":true}
+PASS Every lake/channel has upward surfaces, continuous shore normals and a reversible terrain-cut contour {"shapes":[{"name":"Pond Small","points":64},{"name":"Pond Medium","points":64},{"name":"Natural Lake","points":64},{"name":"Decorative Lake","points":64},{"name":"Frozen Lake","points":64},{"name":"Canal Straight","points":52},{"name":"Canal Curved","points":116},{"name":"Stream","points":140}],"curvedInnerBankVertices":47,"parameterRebuild":true}
+PASS Red suspension bridge has a road deck and animated parts are excluded from static collision {"redDeck":"asphalt","rotorExcluded":true,"staticFerrisMeshes":3,"disabledDaylightLights":3}
+using deprecated parameters for the initialization function; pass a single object instead
+PASS No Collision ancestors and explicitly edited bodies never leak into their parent collider {"parentMeshes":1,"independentBodies":2,"disabledSubtree":true}
+PASS Nested dynamic child retains transformed hierarchy during simulation and authored pose after stop {"parentRetained":true,"bodyWorldPosition":[8.226724624633789,8.991758346557619,-17.41158676147461],"authoringPoseRestored":true}
+PASS Frozen lake creates an independent physical ice surface with ice grip metadata {"separateBodies":3,"iceFriction":0.02500000037252903,"surface":"ice"}
+
+> alejandro-world-builder@4.0.0 test:v4:roads
+> node --loader ./tests/local-loader.mjs tests/v4-roads.mjs
+
+(node:72663) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./tests/local-loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS Straight road has exact width, flat caps, distance UV and upward normals {"area":280,"length":40,"uvMetresPerRepeat":4}
+PASS Editing a road point regenerates lane/edge marks, rails and asphalt together {"updatedSurface":true,"updatedMarkings":true,"rails":2}
+PASS Race curbs are coupled and pattern repeats by metres, preserved in portable texture {"gridUpdated":true,"curbUpdated":true,"stripeLength":2,"textureWidth":2}
+PASS Boolean surface matches independent GEOS union for tight turns, crossings and holes [{"name":"hairpin","expected":266.9508384982187,"actual":266.95083898895047,"sum":266.9508389889505,"symmetricDifference":0.000009557435697832429,"valid":true,"warnings":1},{"name":"crossing","expected":1044.4644207673425,"actual":1044.4644292575492,"sum":1044.4644292575492,"symmetricDifference":0.00007812304866264085,"valid":true,"warnings":2},{"name":"closed loop","expected":629.3561775782899,"actual":629.3561816583141,"sum":629.3561816583137,"symmetricDifference":0.00005565711747811741,"valid":true,"warnings":0}]
+PASS Junction network resolves coincident asphalt to one nonoverlapping surface {"expected":511.0000000000001,"actual":511,"sum":511,"symmetricDifference":0,"valid":true}
+PASS All junction presets generate coherent editable master curves {"T Junction":2,"Crossroad":2,"Roundabout":5,"Merge":2,"Split":2}
+using deprecated parameters for the initialization function; pass a single object instead
+PASS Conform to terrain and road collision share identical current geometry {"heightSamples":3,"colliders":1,"paintExcluded":true}
+PASS A bridge owns its deck surface and moving it restores the road and collider {"coveredArea":0,"restoredArea":140,"restoredCollider":true}
+PASS Transform, source serialization and rebuilt instance preserve shape alignment {"area":218.23723020900576,"children":1}
+PASS Auto smooth, obstacle/water warnings and separate debug geometry work {"warnings":["ROAD_SELF_INTERSECTION","ROAD_ATTRACTION_COLLISION","WATER_LEVEL_ISSUES"],"debugObjects":8}
+PASS Removing a road restores its neighbour and unchanged networks reuse geometry {"stableCache":true,"visibilityRebuild":true}
+PASS Legacy standalone road decorations retire without affecting other props {"roads":1,"retired":["Island Boulevard edge.001","Boulevard centre dash.002","Race kerb.004"]}
+
+> alejandro-world-builder@4.0.0 test:v4:routes
+> node --loader ./tests/local-loader.mjs tests/v4-routes.mjs
+
+(node:72781) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./tests/local-loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+using deprecated parameters for the initialization function; pass a single object instead
+(node:72781) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+PASS Every persistent map object has a unique stable instance path {"objects":8202}
+PASS All regular roads form one connected graph and the race course stays separate {"roads":9,"connected":9,"raceSeparate":true}
+PASS Loop road endpoints and tangents match the actual translated stunt {"start":[110,63.5,0.20499999999999996],"end":[110,72.5,0.20499999999999996],"inTangent":[0.9989385490469411,0,-0.04606273144301951],"outTangent":[0.9990941815905237,0,-0.04255368740733792]}
+PASS Actual loop completes from its connected approach with wheel contact and a clean exit {"completed":1,"maxHeight":19.119775772094727,"contact":1,"finish":[110.36185455322266,1.1389145851135254,-72.52034759521484]}
+PASS Marina spine physically reaches all three finger docks {"x":[11,27,43],"deckHeights":[0.2400054931640625,0.2400054931640625,0.2400054931640625]}
+PASS Actual Corsair is parked on the aviation apron with no duplicate vehicle collider {"sourceVertices":20057,"size":[9.470651766480728,2.311881371498108,10.622643614479003],"parkedBottom":0.2150000000000002,"padTop":0.21}
+PASS Native map roads have no default self intersections or attraction conflicts {"summary":{"errors":0,"warnings":0,"info":0},"issues":[]}
+
+> alejandro-world-builder@4.0.0 test:v4:validation
+> node --loader ./tests/local-loader.mjs tests/v4-validation.mjs
+
+(node:73125) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./tests/local-loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS Valid portable scene, safe spawn and intentional water/bridge placements pass {"errors":0,"warnings":0,"info":0}
+PASS Missing textures, absolute runtime paths, broken references and invalid mass are detected {"codes":["ABSOLUTE_PATHS","BROKEN_ASSET_REFERENCES","INVALID_ASSETS","INVALID_PHYSICS","INVALID_PHYSICS","MISSING_TEXTURES"]}
+PASS Floating and underground placement checks inspect roots, not elevated child roofs {"placementChecks":2,"codes":["FLOATING_OBJECTS","UNDERGROUND_OBJECTS"]}
+PASS Actual overlapping asphalt is detected, then the network union repairs it {"detectedBefore":true,"resolvedAfter":true}
+PASS Detached lane markings, race curbs and road/building conflicts are detected {"codes":["ROAD_BUILDING_COLLISION","LANE_MARKING_MISALIGNMENT","CURB_MISALIGNMENT"]}
+PASS Water level, abrupt beach route and unsupported car spawn are flagged {"codes":["WATER_LEVEL_ISSUES","BEACH_CLIFF_ISSUES","CAR_SPAWN_ISSUES"]}
+PASS Water debug contains separate sea, shallow, deep and driveable slope layers {"layers":["Sea level","Shallow water · driveable","Deep water","Gentle beach slopes","Steep shore slopes"]}
+
+> alejandro-world-builder@4.0.0 test:v4:vehicle
+> node --loader ./tests/local-loader.mjs tests/v4-vehicle.mjs
+
+(node:73154) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./tests/local-loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+using deprecated parameters for the initialization function; pass a single object instead
+PASS SPACE buffer: a single tap brakes, double tap transforms without brake, held key does not repeat {"doubleWindowMs":300,"singleBrake":true,"noPrematureDoubleBrake":true}
+PASS Creep diagnosis and parking: flat and 0.57° terrain stable, hill rolls, throttle releases immediately [{"degrees":0,"parking":false,"distance":0,"throttle":0},{"degrees":0.5729577951308232,"parking":false,"distance":0.32809674557340246,"throttle":0},{"degrees":0.5729577951308232,"parking":true,"distance":0,"throttle":0},{"degrees":6.875493541569878,"parking":true,"distance":3.9307107869924383,"throttle":0}]
+PASS Rotated parked headings have no amplified yaw jitter or drift [{"yaw":0.3,"yawTravel":0,"distance":0},{"yaw":0.8,"yawTravel":0.000035762786865234375,"distance":0},{"yaw":1.57,"yawTravel":0,"distance":0},{"yaw":2.1,"yawTravel":0.000035762786865234375,"distance":0},{"yaw":2.75,"yawTravel":0,"distance":0}]
+PASS Source physics retained: wheel positions, COM, chassis colliders and driving force {"distance":10.865351685835556,"mass":2.5,"COM":{"x":0,"y":-0.9000000357627869,"z":0},"wheels":4,"colliders":3}
+PASS Arcade flight circles an island footprint, auto-levels and respects soft ceiling {"width":260.0265235900879,"depth":260.0507054084446,"startAltitude":23.42767333984375,"maxClimbAltitude":84.99954986572266,"samples":82}
+PASS Plane to car keeps the airborne position and velocity, really falls and lands; 24 repeated transformations keep one body {"dropHeight":29.49858856201172,"landedHeight":0.3021490275859833,"repeatedTransitions":24,"rigidBodyHandle":5e-324,"bodyCount":2}
+PASS Physical beach: drive from sand into shallow water and return; deep drop eventually recovers {"maxWetness":0.5597476398243625,"returnPosition":[-3.088981866836548,1.2674908638000488,0],"deepDropRecoveries":2}
+PASS User airplane is embedded and has actual multi-material low-poly geometry {"meshes":9,"materials":7,"bytes":716916,"externalDependencies":0}
+PASS Flight collides with a major building and recovers without another rigid body {"hits":20,"final":[47.412628173828125,14.261486053466797,-63.08589553833008],"bodyCount":3}
+PASS Ice never enters parking and released steering eases to exact zero {"iceParking":false,"smoothSteeringReturn":true,"zeroThrottle":true}
+PASS Edited car definition retains part materials, suspension offsets, rotations and deletions in Drive {"sourceMaterialPreserved":true,"paintRestore":true,"customWheelOffset":0.35,"deletedWheelAbsent":true,"hiddenLightsStayHidden":true}
+
+> alejandro-world-builder@4.0.0 test:v4:world
+> node --loader ./tests/local-loader.mjs tests/v4-world.mjs
+
+(node:73185) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./tests/local-loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+using deprecated parameters for the initialization function; pass a single object instead
+(node:73185) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+PASS Real v4 map boots with actual curated geometry and all authored World2 controllers {"topLevelAssets":551,"bodyCount":651,"sourceActivities":["landing","projects","lab","achievements","career","social","bowling","cookie","behindTheScene","toilet","timeMachine"],"spawn":[41,1.385,1]}
+PROFILE {"fixed":{"averageMs":0.7515686891666459,"p95Ms":1.0098330000000715,"maxMs":2.004417000000103},"physics":{"averageMs":0.6787425783333447,"p95Ms":0.8879999999990105,"maxMs":1.5603749999991123},"dynamics":81,"awake":3} YAW 0
+PASS Default spawn is supported, unobstructed and stationary without input {"spawn":[41,1.385,1],"rest":[41,1.3012471199035645,1],"displacement":0.00014400482177734375,"contacts":4}
+PASS Main ground/sea and actual physical south beach have a continuous shallow slope {"sea":-0.35,"main":0.15,"samples":[[-59,0.20500564575195312,94],[-59,0.20500564575195312,95],[-59,0.20500564575195312,96],[-59,0.15000152587890625,97],[-59,0.15000152587890625,98],[-59,0.15000152587890625,99],[-59,0.15000152587890625,100],[-59,0.14429092407226562,101],[-59,0.14342880249023438,102],[-59,0.11431121826171875,103],[-59,0.09328079223632812,104],[-59,0.052371978759765625,105],[-59,0.01412200927734375,106],[-59,-0.02391815185546875,107],[-59,-0.064727783203125,108],[-59,-0.08524322509765625,109],[-59,-0.11395645141601562,110],[-59,-0.19680404663085938,111],[-59,-0.24607467651367188,112],[-59,-0.3492279052734375,113],[-59,-0.4523811340332031,114],[-59,-0.5555343627929688,115],[-59,-0.6586837768554688,116],[-59,-0.7618370056152344,117],[-59,-0.864990234375,118],[-59,-0.9681434631347656,119],[-59,-1.0712928771972656,120],[-59,-1.1744461059570312,121],[-59,-1.2775993347167969,122],[-59,-1.3807525634765625,123],[-59,-1.4839057922363281,124],[-59,-1.5870552062988281,125],[-59,-1.6902084350585938,126],[-59,-1.7933616638183594,127],[-59,-1.8969841003417969,128]]}
+PASS Actual beach drive: mainland to shallow sea and reverse to dry land {"end":[-59.072044372558594,1.2499136924743652,97.95186614990234],"maxWetness":0.4937284571283005,"minGround":-1.1945457458496094,"recoveries":0}
+PASS Frozen lake is level with the island and entered over land without a bridge {"centreHeight":0.12200164794921875,"highest":1.3014163970947266,"surfaces":["road","terrain","ice"],"contactSteps":171,"finish":[-31.08767318725586,1.2180778980255127,-88.06388854980469]}
+PASS Actual red suspension bridge is physically drivable across the canal {"distance":2.9515228914489415,"minHeight":1.3011095523834229,"maxHeight":1.301403522491455,"minContacts":4,"path":[[-67.9982681274414,1.301403522491455,-47.599998474121094],[-66.5611343383789,1.3011484146118164,-47.599998474121094],[-62.78443145751953,1.3011105060577393,-47.599998474121094],[-57.32609939575195,1.3011865615844727,-47.599998474121094],[-51.30569839477539,1.301212191581726,-47.599998474121094],[-45.0740852355957,1.301217794418335,-47.599998474121094],[-38.74357986450195,1.301220417022705,-47.599998474121094],[-32.364383697509766,1.3012211322784424,-47.599998474121094]]}
+PASS Actual timber bridge crosses the small canal with continuous support {"distance":2.972368972883736,"minHeight":1.3011091947555542,"maxHeight":1.301403522491455,"minContacts":4,"path":[[-62.998260498046875,1.301403522491455,-9],[-61.561283111572266,1.3011479377746582,-9],[-57.784706115722656,1.3011102676391602,-9],[-52.32637405395508,1.3011868000030518,-9],[-46.305973052978516,1.3012125492095947,-9],[-40.07435989379883,1.301218032836914,-9]]}
+PASS Pit lane is drivable from entrance to exit with the source vehicle controller {"frames":523,"maxError":0.33753694374278853,"minContacts":4,"end":[-27.94629669189453,1.3014041185379028,75.27455139160156]}
+PASS Continuous flight circumnavigates the actual island and returns over its mainland {"waypoints":8,"width":297.8998718261719,"depth":225.02373504638672,"samples":73,"returnPosition":[60.487281799316406,44.82073974609375,4.920690059661865],"bodyCount":651}
+PASS Actual island flight and repeated drops preserve source activities and the single vehicle body {"bodyCount":651,"transformations":14,"dropFrom":[20.034250259399414,29.703399658203125,50.31629180908203],"landedAt":[11.914326667785645,1.2732949256896973,69.39928436279297],"activities":11}
+
+> alejandro-world-builder@4.0.0 test:v4:water
+> node --loader ./tests/local-loader.mjs tests/v4-water.mjs
+
+(node:73405) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./tests/local-loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+using deprecated parameters for the initialization function; pass a single object instead
+(node:73405) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+PASS Ocean uses actual coast depths, continuous horizon skirt and exportable vertex colours {"vertices":49721,"triangles":98560,"width":2640,"colourRange":0.4370122700929642,"foamSegments":1000}
+PASS Actual water features query their authored world level; ice stays a solid surface [{"name":"Alejandro World · blueprint map","level":-0.35,"ice":false},{"name":"Frozen Lake 43","level":-0.35,"ice":true},{"name":"Pond Small 141","level":-0.030000000000000027,"ice":false},{"name":"Natural Lake 142","level":-0.010000000000000037,"ice":false},{"name":"Decorative Lake 143","level":0.06599999999999999,"ice":false}]
+PASS Moved, rotated and scaled lake keeps visual and water query height aligned {"level":1.6,"expected":1.6,"hiddenExcluded":true}
+PASS All generated animation bindings resolve to actual instance nodes and survive GLTF channel mapping {"sourceAnimations":1,"clips":33,"tracks":45,"animatedNodes":45}
+
+> alejandro-world-builder@4.0.0 test:v4:track
+> node --loader ./tests/local-loader.mjs tests/v4-track.mjs
+
+(node:73472) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./tests/local-loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+using deprecated parameters for the initialization function; pass a single object instead
+PASS Editable race furniture follows current curve and instance transforms without accumulating offsets {"checkpoints":12,"widthAfterScale":8.19,"curveEditsFollow":true,"sourceControllerUnchanged":true}
+PASS Native Catalunya proximity prompt starts the original three-beat countdown and timed checkpoint sequence {"gates":12,"lapTime":0.6666666666666666,"recordKey":"helloworld-v4-catalunya-laps-156uvfa","legacyRecordsUntouched":true,"firstRaceAchievement":true}
+PASS Lap records reload, respawn uses last gate, forced exit adds no record and record reset persists {"recordsReloaded":1,"checkpointRespawn":true,"forcedExitNoRecord":true,"clearSaved":true}
+PASS Gantry leaves the racing lane clear and repeated dispose restores authored materials with no callbacks or bodies leaked {"reentries":3,"pendingCallbacksRemoved":true,"authoredMaterialRestored":true,"bodyCount":3}
+PASS Renamed or removed editable screen parts keep the remaining native activity usable {"stableReferencesAfterRename":true,"removedBoardRespected":true,"widerGantryClearance":true}
+PASS Deleted track safely disables only the native race controller {"emptyTrackSafe":true}
+
+> alejandro-world-builder@4.0.0 test:v4:terrain
+> node --loader ./tests/local-loader.mjs tests/v4-terrain-cuts.mjs
+
+(node:73511) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./tests/local-loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+using deprecated parameters for the initialization function; pass a single object instead
+PASS Rotated concave canal removes its exact footprint and preserves all interpolated attributes {"expected":135.6709957643021,"actual":135.670994834486,"delta":9.2981608190712e-7}
+PASS Frozen lake replaces ground with the genuine low-friction ice collider {"iceHeight":0.125,"groundRemoved":true}
+PASS Moving, deleting and restoring lake contour rebuilds floor support without vertex accumulation {"originalCount":961,"cutCount":1955,"restored":true}
+PASS Serialized new land restores its original floor after moving a saved lake {"saveLoadMove":true,"originalAreaRestored":true}
+PASS Terrain brush version changes and independent scene roots retain correct cuts {"independentRoots":true,"brushPreserved":true}
+
+> alejandro-world-builder@4.0.0 test:v4:lifecycle
+> node --loader ./tests/local-loader.mjs tests/v4-lifecycle.mjs
+
+(node:73677) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./tests/local-loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS Actual main animation refresh preserves Edit transforms and stop restores authored pose {"editedX":25,"reentryEditedX":37,"stopRestoresAuthoredPose":true}
+PASS Renamed animated children retain independent authored motion offsets after definition save and reload {"renamedTargetFound":true,"persistedDefinition":true,"independentInstances":2,"rebasedTracks":6,"sourceKeysUnchanged":true}
+PASS Stable source identity wins over a renamed sibling and component/zero-scale tracks stay finite {"stableIdentityPriority":true,"componentPosition":10,"zeroScaleFinite":true}
+PASS Water parameter source propagation reindexes children and reversible terrain cuts follow save/reload/move {"reindexedChildren":4,"width":15,"oldHoleRestoredAfterReload":true,"removedIntersectionVertices":true}
+using deprecated parameters for the initialization function; pass a single object instead
+PASS Empty union-owned road geometry is skipped safely in physical world construction {"emptyStaticSkipped":true,"emptyDynamicSkipped":true,"validChildColliders":1}
+PASS GLB export includes daylight-hidden night lights, excludes user-hidden/helpers and restores visibility {"exportedNightLights":1,"userHiddenExcluded":true,"helperExcluded":true,"visibilityRestored":true}
+PASS Simulation save is blocked while explicit Asset Studio instance persistence remains permitted {"simulationWrites":0,"studioInstanceWrites":1}
+PASS All eleven World2 authoring previews retain every mesh, visibility and resource after runtime/batch/restore {"prefabs":11,"meshes":307,"visibleMeshes":221,"exactMeshAndVisibilityMatch":true,"geometryAndMaterialsUnchanged":true,"sceneRuntimeGroupsRemaining":0}
+(node:73677) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+
+> alejandro-world-builder@4.0.0 test:v4:export
+> node --loader ./tests/local-loader.mjs tests/v4-export.mjs
+
+(node:73713) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./tests/local-loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS Export contains the current v4 map with editable hierarchy and generated roads {"bytes":48169688,"nodes":7968,"meshes":604,"roads":11,"zones":18}
+PASS Exported buffers and textures are embedded without local-machine dependencies {"images":26,"materials":131,"externalResources":0}
+PASS Exported animation channels resolve to actual node indices {"animations":33,"channels":45,"animatedNodes":45}

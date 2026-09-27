@@ -1,0 +1,10 @@
+PASS All World2 areas and authored physical collections available {"entries":179,"physicalSourceObjects":146,"activities":15}
+PASS Rotated bowling: ten real pins, ball, kinematic bumpers and reset {"pins":10,"strike":true,"bumpers":true,"rotation":90}
+PASS Circuit: source gates, countdown, complete lap record and exit {"checkpoints":8,"state":"pending","completedLap":true,"records":1}
+PASS Projects: source content, cinematic, navigation and close {"first":"focus","next":"gym-app"}
+PASS Career: chronological source data and three rising lanes {"stops":9,"lanes":["year","education","work","projects"]}
+PASS Title: Alejandro Newport physical glyphs and knock-over reset {"letters":16}
+PASS Places and social modules preserve original references and prompts {"toilet":{"bodies":8,"prompts":[]},"achievements":{"bodies":6,"prompts":["Achievements"]},"behindTheScene":{"bodies":8,"prompts":["Behind the scenes"]},"social":{"bodies":10,"prompts":["Email","GitHub","LinkedIn","Curriculum Vitae","Give it a spin"]},"cookie":{"bodies":5,"prompts":["Take a cookie"]},"lab":{"bodies":20,"prompts":["Next experiment"]},"altar":{"bodies":4,"prompts":[]},"timeMachine":{"bodies":13,"prompts":["Time machine"]}}
+PASS New sea land stitches tile edges, is drivable and can be erased {"tiles":6,"watertight":true,"colliderHeight":1,"erasedHeight":-4}
+PASS Behind-the-scenes hole cuts the physical floor and follows move/delete {"cut":true,"collisionFollowsMove":true,"restoredAfterDelete":true}
+PASS Two bowling copies share the world but preserve independent bodies and resets {"pins":20,"independentReset":true}

@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-09-27T08:09:20.103Z",
+  "passed": true,
+  "issues": [],
+  "counts": {
+    "objects": 7934,
+    "meshes": 7041,
+    "geometries": 583,
+    "textures": 19,
+    "assetInstances": 508,
+    "roads": 11,
+    "placementChecks": 471,
+    "beachTriangles": 1142,
+    "roadPairs": 17
+  },
+  "checks": {
+    "textures": 19,
+    "paths": 13089,
+    "assets": 508,
+    "physics": 1677,
+    "roads": 11,
+    "placement": 471,
+    "water": 1,
+    "beach": 1142,
+    "spawn": 1
+  },
+  "summary": {
+    "errors": 0,
+    "warnings": 0,
+    "info": 0
+  },
+  "water": {
+    "seaLevel": -0.35,
+    "mainHeight": 0.15,
+    "driveableBeachSamples": 1142
+  }
+}

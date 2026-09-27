@@ -1,0 +1,8 @@
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info 20260722
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+PASS compressed v4 document reopened 8643
+Blender 4.5.13 LTS (hash daeeeca98fb0 built 2026-08-25 01:30:50)
+Read blend: "/Users/alejandro/Projects/HelloWorld/world/EditedWorld_v4.blend"
+
+Blender quit

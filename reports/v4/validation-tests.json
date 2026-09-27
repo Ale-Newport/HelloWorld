@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Valid portable scene, safe spawn and intentional water/bridge placements pass",
+    "passed": true,
+    "data": {
+      "errors": 0,
+      "warnings": 0,
+      "info": 0
+    }
+  },
+  {
+    "name": "Missing textures, absolute runtime paths, broken references and invalid mass are detected",
+    "passed": true,
+    "data": {
+      "codes": [
+        "ABSOLUTE_PATHS",
+        "BROKEN_ASSET_REFERENCES",
+        "INVALID_ASSETS",
+        "INVALID_PHYSICS",
+        "INVALID_PHYSICS",
+        "MISSING_TEXTURES"
+      ]
+    }
+  },
+  {
+    "name": "Floating and underground placement checks inspect roots, not elevated child roofs",
+    "passed": true,
+    "data": {
+      "placementChecks": 2,
+      "codes": [
+        "FLOATING_OBJECTS",
+        "UNDERGROUND_OBJECTS"
+      ]
+    }
+  },
+  {
+    "name": "Actual overlapping asphalt is detected, then the network union repairs it",
+    "passed": true,
+    "data": {
+      "detectedBefore": true,
+      "resolvedAfter": true
+    }
+  },
+  {
+    "name": "Detached lane markings, race curbs and road/building conflicts are detected",
+    "passed": true,
+    "data": {
+      "codes": [
+        "ROAD_BUILDING_COLLISION",
+        "LANE_MARKING_MISALIGNMENT",
+        "CURB_MISALIGNMENT"
+      ]
+    }
+  },
+  {
+    "name": "Water level, abrupt beach route and unsupported car spawn are flagged",
+    "passed": true,
+    "data": {
+      "codes": [
+        "WATER_LEVEL_ISSUES",
+        "BEACH_CLIFF_ISSUES",
+        "CAR_SPAWN_ISSUES"
+      ]
+    }
+  },
+  {
+    "name": "Water debug contains separate sea, shallow, deep and driveable slope layers",
+    "passed": true,
+    "data": {
+      "layers": [
+        "Sea level",
+        "Shallow water · driveable",
+        "Deep water",
+        "Gentle beach slopes",
+        "Steep shore slopes"
+      ]
+    }
+  }
+]

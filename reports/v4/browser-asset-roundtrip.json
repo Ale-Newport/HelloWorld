@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "definitions": [
+    {
+      "id": "v4:pine",
+      "version": 4,
+      "partY": 4.2,
+      "materialPreset": "Ice",
+      "thumbnail": true
+    },
+    {
+      "id": "custom:pine-coastal-qa",
+      "version": 2,
+      "partY": 4.2,
+      "materialPreset": "Ice",
+      "thumbnail": true
+    }
+  ],
+  "worldSaved": true,
+  "partTransformMaterialVerified": true,
+  "variantAndOriginalExist": true
+}

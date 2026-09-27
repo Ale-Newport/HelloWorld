@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Every definition has independent metadata and stable editable parts",
+    "passed": true,
+    "evidence": {
+      "sharedGeometry": true,
+      "stableParts": 3
+    }
+  },
+  {
+    "name": "Isolated child transform/material edit leaves source untouched until Save",
+    "passed": true,
+    "evidence": {
+      "childHeight": 6,
+      "color": "#9fdce6",
+      "version": 2
+    }
+  },
+  {
+    "name": "Source propagation retains existing instance position, rotation and scale",
+    "passed": true,
+    "evidence": {
+      "propagated": 2,
+      "transformsUnchanged": true
+    }
+  },
+  {
+    "name": "Save As New and Edit Instance remain independent of the original",
+    "passed": true,
+    "evidence": {
+      "variantId": "custom:pine-snow",
+      "sourcePreserved": true,
+      "instancePreserved": true
+    }
+  },
+  {
+    "name": "Hierarchy parent/unparent, rename, lock, hide, duplicate and delete survive persistence",
+    "passed": true,
+    "evidence": {
+      "definitions": 2,
+      "hierarchyPreserved": true,
+      "physicsPreset": "Medium Dynamic"
+    }
+  },
+  {
+    "name": "Base-world Edit Instance hierarchy survives real world save/restore",
+    "passed": true,
+    "evidence": {
+      "serializedOverrides": 1,
+      "removedChildStaysRemoved": true,
+      "instanceX": 8
+    }
+  },
+  {
+    "name": "World2 original physical child edits change visible mesh and real collider",
+    "passed": true,
+    "evidence": {
+      "bodyMovedMetres": 3,
+      "colliderMatches": true
+    }
+  },
+  {
+    "name": "World2 generated name child edits persist in dynamics and reset home",
+    "passed": true,
+    "evidence": {
+      "glyphs": 16,
+      "changedColor": "#e433cc",
+      "colliderScale": 1.4,
+      "resetKeepsEdit": true
+    }
+  },
+  {
+    "name": "World2 original interaction modules still activate after source editing",
+    "passed": true,
+    "evidence": {
+      "pins": 10,
+      "ball": true,
+      "bumpers": true,
+      "reset": true
+    }
+  }
+]

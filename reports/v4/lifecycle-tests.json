@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Actual main animation refresh preserves Edit transforms and stop restores authored pose",
+    "passed": true,
+    "evidence": {
+      "editedX": 25,
+      "reentryEditedX": 37,
+      "stopRestoresAuthoredPose": true
+    }
+  },
+  {
+    "name": "Renamed animated children retain independent authored motion offsets after definition save and reload",
+    "passed": true,
+    "evidence": {
+      "renamedTargetFound": true,
+      "persistedDefinition": true,
+      "independentInstances": 2,
+      "rebasedTracks": 6,
+      "sourceKeysUnchanged": true
+    }
+  },
+  {
+    "name": "Stable source identity wins over a renamed sibling and component/zero-scale tracks stay finite",
+    "passed": true,
+    "evidence": {
+      "stableIdentityPriority": true,
+      "componentPosition": 10,
+      "zeroScaleFinite": true
+    }
+  },
+  {
+    "name": "Water parameter source propagation reindexes children and reversible terrain cuts follow save/reload/move",
+    "passed": true,
+    "evidence": {
+      "reindexedChildren": 4,
+      "width": 15,
+      "oldHoleRestoredAfterReload": true,
+      "removedIntersectionVertices": true
+    }
+  },
+  {
+    "name": "Empty union-owned road geometry is skipped safely in physical world construction",
+    "passed": true,
+    "evidence": {
+      "emptyStaticSkipped": true,
+      "emptyDynamicSkipped": true,
+      "validChildColliders": 1
+    }
+  },
+  {
+    "name": "GLB export includes daylight-hidden night lights, excludes user-hidden/helpers and restores visibility",
+    "passed": true,
+    "evidence": {
+      "exportedNightLights": 1,
+      "userHiddenExcluded": true,
+      "helperExcluded": true,
+      "visibilityRestored": true
+    }
+  },
+  {
+    "name": "Simulation save is blocked while explicit Asset Studio instance persistence remains permitted",
+    "passed": true,
+    "evidence": {
+      "simulationWrites": 0,
+      "studioInstanceWrites": 1
+    }
+  },
+  {
+    "name": "All eleven World2 authoring previews retain every mesh, visibility and resource after runtime/batch/restore",
+    "passed": true,
+    "evidence": {
+      "prefabs": 11,
+      "meshes": 307,
+      "visibleMeshes": 221,
+      "exactMeshAndVisibilityMatch": true,
+      "geometryAndMaterialsUnchanged": true,
+      "sceneRuntimeGroupsRemaining": 0
+    }
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Export contains the current v4 map with editable hierarchy and generated roads",
+    "passed": true,
+    "data": {
+      "bytes": 48169688,
+      "nodes": 7968,
+      "meshes": 604,
+      "roads": 11,
+      "zones": 18
+    }
+  },
+  {
+    "name": "Exported buffers and textures are embedded without local-machine dependencies",
+    "passed": true,
+    "data": {
+      "images": 26,
+      "materials": 131,
+      "externalResources": 0
+    }
+  },
+  {
+    "name": "Exported animation channels resolve to actual node indices",
+    "passed": true,
+    "data": {
+      "animations": 33,
+      "channels": 45,
+      "animatedNodes": 45
+    }
+  }
+]

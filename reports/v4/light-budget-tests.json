@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "name": "257 authored lights use exactly nine stable render slots and zero local daylight lights",
+      "passed": true,
+      "evidence": {
+        "authoredLights": 257,
+        "nightSlots": 9,
+        "daySlots": 0,
+        "stablePool": true,
+        "sourceStateUnchanged": true
+      }
+    },
+    {
+      "name": "Nearby selection is throttled, weighted by explicit priority and respects authored hiding",
+      "passed": true,
+      "evidence": {
+        "refreshIntervalMs": 500,
+        "priorityHonored": true,
+        "hiddenLightAndAncestorExcluded": true
+      }
+    },
+    {
+      "name": "Animated beacon and edited lamp properties update each frame without rebuilding the pool",
+      "passed": true,
+      "evidence": {
+        "animatedPoseLive": true,
+        "editedIntensityLive": true,
+        "hiddenImmediately": true
+      }
+    },
+    {
+      "name": "Render failures restore every authored light layer and leave serialization unchanged",
+      "passed": true,
+      "evidence": {
+        "restoredAfterException": true,
+        "nondefaultLayerPreserved": true
+      }
+    }
+  ]
+}

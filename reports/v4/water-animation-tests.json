@@ -1,0 +1,63 @@
+[
+  {
+    "name": "Ocean uses actual coast depths, continuous horizon skirt and exportable vertex colours",
+    "passed": true,
+    "data": {
+      "vertices": 49721,
+      "triangles": 98560,
+      "width": 2640,
+      "colourRange": 0.4370122700929642,
+      "foamSegments": 1000
+    }
+  },
+  {
+    "name": "Actual water features query their authored world level; ice stays a solid surface",
+    "passed": true,
+    "data": [
+      {
+        "name": "Alejandro World · blueprint map",
+        "level": -0.35,
+        "ice": false
+      },
+      {
+        "name": "Frozen Lake 43",
+        "level": -0.35,
+        "ice": true
+      },
+      {
+        "name": "Pond Small 141",
+        "level": -0.030000000000000027,
+        "ice": false
+      },
+      {
+        "name": "Natural Lake 142",
+        "level": -0.010000000000000037,
+        "ice": false
+      },
+      {
+        "name": "Decorative Lake 143",
+        "level": 0.06599999999999999,
+        "ice": false
+      }
+    ]
+  },
+  {
+    "name": "Moved, rotated and scaled lake keeps visual and water query height aligned",
+    "passed": true,
+    "data": {
+      "level": 1.6,
+      "expected": 1.6,
+      "hiddenExcluded": true
+    }
+  },
+  {
+    "name": "All generated animation bindings resolve to actual instance nodes and survive GLTF channel mapping",
+    "passed": true,
+    "data": {
+      "sourceAnimations": 1,
+      "clips": 33,
+      "tracks": 45,
+      "animatedNodes": 45
+    }
+  }
+]

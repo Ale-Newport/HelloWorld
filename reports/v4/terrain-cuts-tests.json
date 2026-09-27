@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Rotated concave canal removes its exact footprint and preserves all interpolated attributes",
+    "passed": true,
+    "data": {
+      "expected": 135.6709957643021,
+      "actual": 135.670994834486,
+      "delta": 9.2981608190712e-7
+    }
+  },
+  {
+    "name": "Frozen lake replaces ground with the genuine low-friction ice collider",
+    "passed": true,
+    "data": {
+      "iceHeight": 0.125,
+      "groundRemoved": true
+    }
+  },
+  {
+    "name": "Moving, deleting and restoring lake contour rebuilds floor support without vertex accumulation",
+    "passed": true,
+    "data": {
+      "originalCount": 961,
+      "cutCount": 1955,
+      "restored": true
+    }
+  },
+  {
+    "name": "Serialized new land restores its original floor after moving a saved lake",
+    "passed": true,
+    "data": {
+      "saveLoadMove": true,
+      "originalAreaRestored": true
+    }
+  },
+  {
+    "name": "Terrain brush version changes and independent scene roots retain correct cuts",
+    "passed": true,
+    "data": {
+      "independentRoots": true,
+      "brushPreserved": true
+    }
+  }
+]

@@ -1,0 +1,155 @@
+[
+  {
+    "name": "Straight road has exact width, flat caps, distance UV and upward normals",
+    "passed": true,
+    "ms": 10.884459000000007,
+    "data": {
+      "area": 280,
+      "length": 40,
+      "uvMetresPerRepeat": 4
+    }
+  },
+  {
+    "name": "Editing a road point regenerates lane/edge marks, rails and asphalt together",
+    "passed": true,
+    "ms": 27.96262499999999,
+    "data": {
+      "updatedSurface": true,
+      "updatedMarkings": true,
+      "rails": 2
+    }
+  },
+  {
+    "name": "Race curbs are coupled and pattern repeats by metres, preserved in portable texture",
+    "passed": true,
+    "ms": 295.882333,
+    "data": {
+      "gridUpdated": true,
+      "curbUpdated": true,
+      "stripeLength": 2,
+      "textureWidth": 2
+    }
+  },
+  {
+    "name": "Boolean surface matches independent GEOS union for tight turns, crossings and holes",
+    "passed": true,
+    "ms": 1032.405833,
+    "data": [
+      {
+        "name": "hairpin",
+        "expected": 266.9508384982187,
+        "actual": 266.95083898895047,
+        "sum": 266.9508389889505,
+        "symmetricDifference": 0.000009557435697832429,
+        "valid": true,
+        "warnings": 1
+      },
+      {
+        "name": "crossing",
+        "expected": 1044.4644207673425,
+        "actual": 1044.4644292575492,
+        "sum": 1044.4644292575492,
+        "symmetricDifference": 0.00007812304866264085,
+        "valid": true,
+        "warnings": 2
+      },
+      {
+        "name": "closed loop",
+        "expected": 629.3561775782899,
+        "actual": 629.3561816583141,
+        "sum": 629.3561816583137,
+        "symmetricDifference": 0.00005565711747811741,
+        "valid": true,
+        "warnings": 0
+      }
+    ]
+  },
+  {
+    "name": "Junction network resolves coincident asphalt to one nonoverlapping surface",
+    "passed": true,
+    "ms": 83.94783300000017,
+    "data": {
+      "expected": 511.0000000000001,
+      "actual": 511,
+      "sum": 511,
+      "symmetricDifference": 0,
+      "valid": true
+    }
+  },
+  {
+    "name": "All junction presets generate coherent editable master curves",
+    "passed": true,
+    "ms": 116.28145899999981,
+    "data": {
+      "T Junction": 2,
+      "Crossroad": 2,
+      "Roundabout": 5,
+      "Merge": 2,
+      "Split": 2
+    }
+  },
+  {
+    "name": "Conform to terrain and road collision share identical current geometry",
+    "passed": true,
+    "ms": 57.01824999999985,
+    "data": {
+      "heightSamples": 3,
+      "colliders": 1,
+      "paintExcluded": true
+    }
+  },
+  {
+    "name": "A bridge owns its deck surface and moving it restores the road and collider",
+    "passed": true,
+    "ms": 6.846625000000131,
+    "data": {
+      "coveredArea": 0,
+      "restoredArea": 140,
+      "restoredCollider": true
+    }
+  },
+  {
+    "name": "Transform, source serialization and rebuilt instance preserve shape alignment",
+    "passed": true,
+    "ms": 29.937584000000015,
+    "data": {
+      "area": 218.23723020900576,
+      "children": 1
+    }
+  },
+  {
+    "name": "Auto smooth, obstacle/water warnings and separate debug geometry work",
+    "passed": true,
+    "ms": 60.92949999999996,
+    "data": {
+      "warnings": [
+        "ROAD_SELF_INTERSECTION",
+        "ROAD_ATTRACTION_COLLISION",
+        "WATER_LEVEL_ISSUES"
+      ],
+      "debugObjects": 8
+    }
+  },
+  {
+    "name": "Removing a road restores its neighbour and unchanged networks reuse geometry",
+    "passed": true,
+    "ms": 9.4626659999999,
+    "data": {
+      "stableCache": true,
+      "visibilityRebuild": true
+    }
+  },
+  {
+    "name": "Legacy standalone road decorations retire without affecting other props",
+    "passed": true,
+    "ms": 1.5788749999999254,
+    "data": {
+      "roads": 1,
+      "retired": [
+        "Island Boulevard edge.001",
+        "Boulevard centre dash.002",
+        "Race kerb.004"
+      ]
+    }
+  }
+]

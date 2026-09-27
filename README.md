@@ -1,110 +1,139 @@
-# Alejandro World · World Studio 03
+# Alejandro World · World Studio 04
 
-Una isla compacta y editable para Alejandro Newport. El proyecto funciona localmente, con sus modelos, texturas, Three.js y Rapier dentro de esta carpeta. Portfolio se utiliza solamente como fuente de lectura; la aplicación no depende de su carpeta.
+Editor local de una isla conducible y sobrevolable. Esta versión continúa el mundo anterior y utiliza **ALEJANDRO WORLD MAP** como plano de distribución. Los modelos, texturas, Three.js, Rapier y el avión están dentro de HelloWorld. Portfolio es una referencia de solo lectura; no se necesita su carpeta para ejecutar el proyecto.
 
-![Vista general](reports/v2-overview.png)
+## Abrir y conservar el estado anterior
 
-## Abrir
-
-- **Start Driving.command** abre World Studio en `http://127.0.0.1:8844/preview/`. Empieza en **EDIT WORLD**.
-- **Open Alejandro World.command** abre el mundo base en Blender y habilita el panel Alejandro World.
-- **Open Edited World.command** abre una exportación del editor web en Blender. Primero pulsa **EXPORT GLB** en World Studio.
-- **Run World Tests.command** ejecuta las comprobaciones de geometría, física, actividades World2 y paridad del coche.
-
-También puedes ejecutar `python3 scripts/serve.py --open`. Necesita Python 3; la vista web necesita un navegador con WebGL2. El editor nativo se ha comprobado con Blender 4.5.13. No requiere cuentas ni conexión a servicios externos.
-
-## Biblioteca World2 · versión 3
-
-La categoría inicial **World2 · actividades** contiene 15 conjuntos completos: Bolos, circuito original World2, Proyectos, Baño, Achievements, Behind the scenes, Social, cronología de estudios/experiencia/proyectos, nombre Alejandro Newport en 3D, Cookies, Laboratorio, Altar, Máquina del tiempo, Controles y Hoguera. Las categorías World2 de conjuntos, objetos y naturaleza completan **179 entradas nuevas**.
-
-Arrastra el conjunto al suelo o a la tierra que hayas creado. Muévelo, gíralo sobre Y y escálalo uniformemente. Selecciónalo antes de pulsar **DRIVE** para empezar en su punto de llegada original, trasladado a la nueva posición. Cada copia tiene sus propios cuerpos físicos, marcadores y reinicios. Los logros se comparten durante la partida. Acércate a los rombos de interacción y pulsa **E / Enter**. En Proyectos, A/D o flechas cambian de proyecto; Esc cierra el panel.
-
-Bolos conserva diez pinos, bola, bumpers, strike y reset; el circuito conserva checkpoints, cuenta atrás y marcas; la cabina y las letras pueden caer; las líneas cronológicas suben al acercarte; Social mantiene los contactos y ventilador; el hoyo abre el terreno también en la física y lo restaura si lo mueves o borras. El circuito World2 conserva su tamaño original: crea suficiente tierra para colocarlo. El circuito compacto del mapa base sigue disponible.
-
-**SAVE WORLD** conserva estos conjuntos y la tierra nueva. **EXPORT GLB** exporta geometría y materiales a Blender; las interacciones JavaScript se ejecutan en Drive dentro de World Studio. Para trasladar el proyecto con sus juegos, conserva toda la carpeta HelloWorld.
-
-Validación: `npm run test:world2` (10 pruebas), `npm run test:handling` (paridad del coche) y `npm run test:physics` (10 recorridos y superficies). Informes en `reports/v3/`. La biblioteca, el terreno, el guardado/recarga y Drive/Simulate se comprobaron además en el navegador. Backup previo: `backups/pre-world2-library.zip`.
-
-El contacto CV de Portfolio apunta a `/assets/alejandro-newport-cv.pdf`, pero ese PDF no existe en el proyecto de origen. Los enlaces originales se conservan; para habilitar esa descarga, coloca el archivo en `HelloWorld/assets/alejandro-newport-cv.pdf`.
-
-## El mundo
-
-Una única superficie costera de aproximadamente 224 × 188 m sustituye la composición anterior de extensiones separadas. Un bulevar orgánico recorre Projects, Achievements, la feria, el hielo, Bowling, Cookies y el acceso al circuito. La plaza central tiene fuente, palmeras, bancos y el rótulo Alejandro Newport; About se integra detrás. Career y Contact tienen edificios propios. El parque conserva una pequeña laguna y puente peatonal.
-
-El circuito es una instalación independiente y simplificada, inspirada en Catalunya. Usa asfalto más oscuro y pianos rojos y crema. La noria conserva el modelo importado y sus doce cabinas, con un ciclo de treinta segundos. El loop es un ramal conectado al bulevar, sobre la misma isla.
-
-Las carreteras se generan mediante polígonos y se recortan en sus cruces: no hay dos capas de asfalto superpuestas. Las huellas de los edificios principales se comprueban contra la calzada más un margen de 1,2 m. Los adornos pequeños tienen colisión desactivada; los elementos sólidos y objetos físicos mantienen sus colliders.
-
-## Editar
-
-Arrastra para orbitar, rueda para zoom y botón derecho para desplazar la cámara. Clic selecciona; Shift + clic añade a la selección. El contorno y el gizmo muestran la selección. Los edificios nuevos compuestos se agrupan para que puedan moverse y duplicarse completos.
-
-- **G / W** mover; **R / E** rotar; **S** escalar; **F** enfocar.
-- **⌘/Ctrl D** duplicar; **Suprimir** eliminar.
-- **⌘/Ctrl Z** deshacer; **⌘/Ctrl Shift Z** rehacer.
-- Biblioteca con miniaturas de geometría real, búsqueda y categorías. Arrastra un asset al suelo o pulsa su miniatura para colocarlo cerca del centro de la vista.
-- Transformaciones numéricas, ground snap, alineación a superficie, cuadrícula de 1 m y giro de 15°.
-- Color, roughness, metallic y textura local; modo físico, masa, fricción, restitución y colisión.
-- Selecciona una tierra creada y pulsa **DRIVE** para aparecer sobre ella, aunque no tenga carretera.
-- Selecciona una carretera para arrastrar sus puntos, añadir o eliminar puntos, extenderla, cambiar su ancho o añadir barreras.
-- **⛰ → Create land** permite pintar tierra directamente sobre el mar. Ajusta Radius y Land height; **Erase land** elimina tierra creada. Raise, Lower, Smooth, Flatten y Paint modelan o pintan cualquier terreno. Esc termina el pincel.
-- **SIMULATE** prueba física y animación sin conducir. Reset restaura los objetos físicos.
-
-El navegador importa GLB y GLTF con recursos incorporados. Para FBX, OBJ o GLTF con archivos auxiliares, utiliza las herramientas de importación del panel Blender.
-
-## Guardado y Blender
-
-**SAVE WORLD** guarda `exports/editor-world.json`: transformaciones, geometría editada, materiales, física y modelos añadidos. La siguiente apertura lo restaura automáticamente. El guardado es atómico; la copia anterior queda en `backups/editor-world.previous.json`. Autosave es opcional y guarda cada treinta segundos mientras editas.
-
-**EXPORT GLB** guarda además `exports/EditedWorld.glb`, con los recursos incorporados. **Open Edited World.command** lo convierte en `world/EditedWorld.blend`, con luces, cámara y física nativa. El mundo base `world/AlejandroWorld.blend` se conserva. Este paso explícito permite revisar los cambios del navegador antes de continuar en Blender.
-
-El historial de deshacer se conserva durante la sesión; no se serializa al cerrar el navegador. Los cambios sí se guardan. Los guardados están vinculados a la geometría base: si ejecutas una reconstrucción completa, conserva primero tu GLB editado y tu JSON.
-
-## Conducir
-
-Pulsa **DRIVE**. **Esc** vuelve a la cámara y selección de edición. La física se reinicia al salir para mantener las posiciones de autoría.
-
-| Tecla | Acción |
-|---|---|
-| W / S | Acelerar / frenar antes de dar marcha atrás |
-| A / D | Dirección original de World2 |
-| Espacio | Saltar, como en World2 |
-| B / Ctrl | Frenar |
-| Shift | Boost de Portfolio World2 |
-| R | Reaparecer en la carretera más cercana y orientado con ella |
-| C | Restaurar la cámara original de Portfolio |
-| E / Enter | Interactuar; abrir proyecto cuando su panel está activo |
-| H · 1–4 | Claxon · suspensiones hidráulicas |
-| M · K | Mapa · logros |
-| Tab | Mapa con zonas y posición del coche |
-
-Se utilizan **Physics, PhysicsVehicle, Player, Inputs y View** del World2 actual, además del vehículo visual y sus materiales. Se mantienen las suspensiones, ruedas, fuerzas, frenada/reversa, masa, centro de masa, boost y cámara originales. Se eliminó la capa anterior de suavizado y drift. La comparación en dos mundos Rapier independientes reproduce 345 pasos de aceleración, dirección, boost, frenada, salto, marcha atrás e hidráulicos: diferencia máxima de posición **0 m**. Hielo, asistencia local del loop y reaparecer sobre carreteras editadas siguen siendo extensiones de HelloWorld.
-
-El hielo reduce tanto el agarre como el frenado. Hay ocho pingüinos y conos físicos. El loop usa adherencia y orientación asistidas solamente dentro de su cinta; entra desde la izquierda con Shift. Una caída al agua recupera la última posición segura tras una pausa breve.
-
-## Archivos y comprobaciones
-
-- `world/AlejandroWorld.blend`: mundo nativo base, materiales e imágenes empaquetados, cámara **WORLD OVERVIEW**.
-- `exports/AlejandroWorld.glb`: mundo web base con imágenes, animación y metadatos de física.
-- `exports/layout.json`, `navigation.json`, `road-surfaces.json`: trazado y geometría de cruces.
-- `preview/`: editor y conducción, con dependencias locales.
-- `editor/alejandro_world/`: panel Blender, importación, colocación, curvas, materiales, física, validación y exportación.
-- `assets/source-code/portfolio/`: copias de procedencia del código portado; no se cargan archivos del proyecto Portfolio durante la ejecución.
-- `reports/v2-*.json`: resultados actuales; `reports/v2-overview.png`: render de la composición.
-- `backups/v1-expanded/`: snapshot completo previo al rediseño, con manifiesto SHA-256.
-- `folio-2025.blend` y `backups/hello_world_original.blend`: fuente original, intacta.
-
-Las pruebas de conducción usan Rapier y las mallas exportadas reales, con un conductor automático que aplica acelerador, dirección y freno. Comprueban el bulevar, el circuito, el loop, hielo, impactos y el recorrido continuo completo. Las pruebas nativas comprueban empaquetado, física y cabinas verticales de la noria. `tests/check_assets.py` comprueba además la instantánea histórica de 477 archivos de Portfolio. Esa auditoría histórica detecta ahora cuatro diferencias fuera del código World2 portado (Journey, GlobalCanvas, .DS_Store y tsconfig.tsbuildinfo); no se han revertido ni modificado esos archivos. Los 44 archivos fuente usados en esta entrega coinciden con sus copias y hashes (`reports/v3/source-verification.json`).
-
-Para reconstruir la versión 2 desde su snapshot local:
+**Start Driving.command** abre `http://127.0.0.1:8844/preview/` en **EDIT WORLD**. También puedes ejecutar:
 
 ```sh
-python3 scripts/v2/layout.py
-python3 scripts/v2/road_geometry.py --plan-only
-/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup --python scripts/v2/build.py
-/Applications/Blender.app/Contents/MacOS/Blender --background world/AlejandroWorld.blend --python scripts/v2/finalize.py
+python3 scripts/serve.py --open
 ```
 
-Shapely está incluido en `scripts/vendor` para la generación y validación geométrica en este Mac; no participa en el editor ni en la conducción. El script de migración `scripts/v2/port.mjs` documenta la copia inicial desde Portfolio; no es necesario para ejecutar ni editar el proyecto.
+Se necesita Python 3 y un navegador con WebGL2. No hacen falta cuentas ni servicios externos.
 
-Procedencia y licencias: [ASSET_SOURCES.md](ASSET_SOURCES.md).
+El backup completo anterior a esta iteración está en `backups/world_before_map_and_editor_upgrade_20260927/`, con el archivo Blender anterior. Se conservan además `backups/pre-world2-library.zip` y `backups/v1-expanded/`. El mundo Blender v2 no se sobrescribe: **Open Alejandro World.command** abre esa base; **Open Edited World.command** abre la exportación actual del editor web.
+
+## El mapa elegido
+
+La plaza de Alejandro Newport ocupa el centro. Castle e Ice Lake están al noroeste; Bowling, Cookies y Lighthouse al oeste; el circuito compacto y la playa al suroeste; Ferris Wheel y Hot Air Balloon al norte/noreste; Projects al este del centro y Loop al extremo este; Achievements y Contact al sureste; Career y Harbor al sur. Canales y puentes conectan las zonas. Las carreteras rodean las plazas.
+
+**Top View** utiliza una cámara ortográfica orientada al norte y encuadra la isla completa. La distribución se define en `preview/world-map.js`, las carreteras en `preview/roads/` y los assets modulares en `preview/assets/`. El terreno principal está a **0,15 m** y el mar a **−0,35 m**: medio metro de diferencia, con costa y playa inclinadas hacia el agua.
+
+## Asset Library y Asset Studio
+
+Cada tarjeta ofrece **Add** y **Edit**. Puedes buscar por nombre, filtrar por categoría o arrastrar el asset al mundo. **Edit** abre una escena temporal aislada, con fondo neutro, iluminación, cuadrícula, órbita y gizmo. El mundo principal queda suspendido durante esta edición.
+
+1. Selecciona una parte en **Asset Hierarchy** o en el visor.
+2. Ajusta transformación, material y textura, física, colisión, visibilidad, luces, animación o metadatos.
+3. **Save Asset** guarda la definición y actualiza su miniatura. Las instancias vinculadas reciben los cambios sin perder su posición, rotación o escala.
+4. **Save As New** crea una definición independiente y conserva la original.
+5. **Add To World** guarda y coloca una instancia. **Back To World** vuelve al mapa; los cambios sin guardar se descartan. **Reset** recupera la última definición guardada.
+
+La jerarquía permite renombrar, ocultar, bloquear, duplicar, borrar, cambiar **Parent** y **Unparent**. Las partes nuevas o modificadas permanecen separadas y editables. En el mundo, **Edit Instance** modifica solamente esa copia; **Edit Source Asset** abre su definición compartida.
+
+Las categorías incluyen Water, Bridges, Harbor, Beach, Landmarks, City / Street, Nature, Park, Fairground, Racing, Technology, Buildings, Roads y Vehicles. Los lagos exponen parámetros de tamaño, profundidad visual, orilla, agua, vegetación, rocas y hielo; **Rebuild shape** aplica los parámetros. Los puentes, faro, castillo, puerto y globo se componen de piezas identificables, reutilizables y editables.
+
+Los presets de física incluyen Static Decoration, Heavy Static, Light Dynamic, Medium Dynamic, Vehicle Prop, Water Object y No Collision. Los presets de material incluyen Grass, Wood, Stone, Metal, Plastic, Glass, Asphalt, Sand, Ice y Water.
+
+## Actividades de Portfolio World2
+
+Las **179 entradas World2** siguen disponibles, incluidas 15 actividades completas: bolos, circuito original, proyectos, baño, achievements, behind the scenes, social, carrera/estudios, letras 3D, cookies, laboratorio, altar, máquina del tiempo, controles y hoguera.
+
+Arrastra una actividad, muévela, gírala sobre Y y escálala uniformemente. Selecciónala antes de pulsar **Drive** para aparecer en su punto de llegada. Cada copia conserva sus cuerpos, referencias y reinicios. Acércate a un marcador y pulsa **E / Enter**. En Proyectos, A/D o flechas cambian de proyecto; Esc cierra el panel.
+
+Bolos conserva bola, diez pinos, bumpers, strike y reset. El circuito original conserva checkpoints, cuenta atrás y marcas. Las letras y la cabina mantienen su física. Las líneas cronológicas suben al acercarte. Social mantiene los contactos y ventilador. El hoyo abre también el suelo físico y lo restaura al moverlo o borrarlo. El circuito World2 original tiene su escala original y necesita más espacio que el circuito compacto del mapa. En el mapa v4, selecciona la curva Catalunya o su mobiliario antes de pulsar Drive para empezar en la salida del circuito compacto y activar allí la carrera con E.
+
+Las modificaciones de las partes de un asset funcional se aplican a su representación de Drive conservando las referencias de sus controladores. La geometría y los metadatos se exportan; el comportamiento JavaScript se ejecuta dentro de HelloWorld.
+
+El enlace CV original apunta a `assets/alejandro-newport-cv.pdf`; ese PDF no estaba en Portfolio. Para habilitar la descarga, coloca allí el archivo correspondiente.
+
+## Editar mundo, curvas y terreno
+
+Arrastra para orbitar, rueda para zoom y botón derecho para desplazar. Clic selecciona; Shift + clic amplía la selección.
+
+| Acción | Atajo |
+|---|---|
+| Mover, rotar, escalar | G, R, S |
+| Enfocar | F |
+| Duplicar | ⌘/Ctrl D |
+| Deshacer / rehacer | ⌘/Ctrl Z / ⌘/Ctrl Shift Z |
+| Borrar | Suprimir |
+
+El inspector ofrece transformaciones numéricas, ground snap, alineación a superficie, cuadrícula, giro por pasos, materiales y física. **Simulate** ejecuta física y animación sin activar el vehículo.
+
+Una carretera tiene una sola curva maestra. Asfalto, marcas, bordillos, barreras y colisión se regeneran juntos cuando mueves sus puntos, cambias anchura o transformas la carretera. Las franjas rojo/blanco y las UV siguen la distancia recorrida. El sistema une o recorta las superficies antes de triangularlas, evitando capas de asfalto superpuestas en curvas cerradas y cruces.
+
+Selecciona una carretera para editar puntos, añadir o borrar puntos, extenderla, cambiar anchura o barreras. **Conform to terrain** adapta su altura al suelo. **Auto Smooth** suaviza los puntos; los giros peligrosos siguen señalados hasta corregirse. La biblioteca incluye T Junction, Crossroad, Roundabout, Merge y Split. El loop vertical conserva su geometría y asistencia específicas.
+
+**Road Debug** muestra eje, límites, separación, puntos, colisión y problemas. **Validate World** comprueba recursos, referencias, geometría vial, invasiones de edificios/atracciones, objetos flotantes o enterrados, agua, playa, física y spawn. Son diagnósticos para revisar los cambios del usuario; un aviso conserva información sobre el objeto afectado.
+
+**⛰ → Create land** pinta tierra directamente sobre el mar. Ajusta radio y altura; **Erase land** baja la tierra creada. Raise, Lower, Smooth, Flatten y Paint permiten esculpir o pintar. Esc termina el pincel. Selecciona tierra creada y pulsa Drive para aparecer sobre ella. **Water Debug** diferencia nivel del mar, zonas someras, profundas y pendientes accesibles.
+
+## Coche, agua y avión
+
+**Drive** inicia la simulación; **Esc** cierra primero una actividad abierta y después vuelve a Edit World. Al salir se restauran las posiciones de autoría.
+
+| Control | Coche |
+|---|---|
+| W / S, flechas arriba / abajo | Acelerar / frenar y marcha atrás |
+| A / D, flechas izquierda / derecha | Dirección |
+| SPACE una vez / mantener | Freno de mano |
+| SPACE SPACE, dentro de 300 ms | Transformarse en avión |
+| B | Freno |
+| Shift | Boost de World2 |
+| R | Recuperar posición segura |
+| C | Restablecer cámara |
+| E / Enter | Interactuar |
+| H · 1–4 | Claxon · hidráulicos |
+| M / Tab · K | Mapa · logros |
+
+**SPACE ya no es salto en la versión 4.** La primera pulsación espera brevemente para distinguir el freno de la transformación; el doble toque no aplica antes un frenazo. **Vehicle Color** cambia la pintura del coche. Las ruedas, masa, centro de masa y fuerzas proceden de World2. El nuevo estado de aparcamiento elimina la pequeña deriva sobre suelo casi plano y se libera con input; pendientes fuertes e hielo mantienen su comportamiento.
+
+La playa tiene una transición continua a agua somera: se puede entrar, notar mayor resistencia y volver a tierra. El agua profunda requiere una inmersión sostenida antes de recuperar una posición segura. La estela da feedback de inmersión. El hielo está integrado al nivel de la isla y reduce agarre/frenado.
+
+| Control | Avión |
+|---|---|
+| W / S | Aumentar / reducir velocidad |
+| A / D | Girar |
+| Q / E o flechas abajo / arriba | Subir / bajar el morro |
+| Arrastrar dentro del visor | Asistencia opcional de giro y cabeceo |
+| SPACE SPACE | Volver a coche en esa posición |
+
+El Corsair incluido en la raíz se utiliza como avión local. Tiene despegue asistido, velocidad mínima, nivelación automática, cabeceo limitado, cámara de seguimiento y techo gradual a 85 m. Al volver a coche, aparece en la posición del avión y **cae de verdad**, conservando movimiento horizontal. Se limita la velocidad vertical extrema; una caída al mar sigue las reglas del agua. Se comparte un único cuerpo físico, un controlador activo y una cámara.
+
+## Guardar y exportar
+
+**Save Asset** conserva definiciones en `exports/asset-definitions.json`. **Save World** guarda instancias, transformaciones, terreno y overrides en `exports/editor-world.json`. Se escriben de forma atómica y mantienen copia anterior en `backups/`. El siguiente arranque restaura ambos documentos. Las definiciones están separadas de las transformaciones de sus instancias. El historial Undo/Redo pertenece a la sesión.
+
+**Export GLB** guarda `exports/EditedWorld.glb` con jerarquía, materiales, transformaciones, animación disponible y metadatos. Los helpers del editor y overlays de depuración quedan fuera. **Open Edited World.command** abre ese mapa v4 y guarda `world/EditedWorld_v4.blend`, conservando la jerarquía visual, los materiales y las animaciones. Los colliders nativos son proxies ocultos independientes, por lo que no se fusionan ni destruyen las partes editables. El documento base `world/AlejandroWorld.blend` permanece como la versión anterior conservada. Los juegos y el cambio coche/avión requieren además los módulos web: para mover el producto completo, conserva toda la carpeta HelloWorld.
+
+El importador web admite GLB y GLTF con recursos incorporados. FBX, OBJ o GLTF con archivos externos pueden importarse mediante el editor Blender.
+
+## Comprobar la iteración
+
+Las pruebas usan Three.js y Rapier reales. Los tests de texto en Node sustituyen únicamente la pintura de canvas; el aspecto visual se comprueba aparte en el navegador.
+
+```sh
+node --loader ./tests/local-loader.mjs tests/v4-assets.mjs
+node --loader ./tests/local-loader.mjs tests/v4-factories.mjs
+node --loader ./tests/local-loader.mjs tests/v4-roads.mjs
+node --loader ./tests/local-loader.mjs tests/v4-routes.mjs
+node --loader ./tests/local-loader.mjs tests/v4-validation.mjs
+node --loader ./tests/local-loader.mjs tests/v4-vehicle.mjs
+node --loader ./tests/local-loader.mjs tests/v4-world.mjs
+node --loader ./tests/local-loader.mjs tests/v4-water.mjs
+node --loader ./tests/local-loader.mjs tests/v4-track.mjs
+node --loader ./tests/local-loader.mjs tests/v4-terrain-cuts.mjs
+node --loader ./tests/local-loader.mjs tests/v4-lifecycle.mjs
+node --loader ./tests/local-loader.mjs tests/v4-lights.mjs
+node --loader ./tests/local-loader.mjs tests/v4-export.mjs
+node --loader ./tests/local-loader.mjs tests/v3-world2.mjs
+node --loader ./tests/local-loader.mjs tests/v3-handling.mjs
+```
+
+`npm run test:v4` ejecuta las suites v4. La suite de exportación requiere haber pulsado **Export GLB** en el mapa actual. **Run World Tests.command** añade regresiones de las versiones anteriores y la importación nativa con Blender, guardando el documento v4 independiente.
+
+El test v4 del mundo construye el mapa entregado y sus colliders, incluidos los controladores World2; recorre playa, hielo y puentes, vuela alrededor de la isla y comprueba spawn y transformaciones. Los resultados de aceptación y las comprobaciones visuales están en [reports/v4/INTEGRATION.md](reports/v4/INTEGRATION.md). [reports/v4/VEHICLES.md](reports/v4/VEHICLES.md) documenta el diagnóstico de deriva y las pruebas de conducción/vuelo. Los informes v2/v3 conservan evidencia histórica de las versiones previas, no sustituyen las pruebas del mapa v4.
+
+La prueba v3 de paridad conserva los bindings de referencia originales (incluido Space=salto) para comparar la física base. La interfaz v4 utiliza los controles de esta guía. Procedencia y licencias: [ASSET_SOURCES.md](ASSET_SOURCES.md).
