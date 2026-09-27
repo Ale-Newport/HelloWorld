@@ -244,7 +244,7 @@ export class PhysicsVehicle {
         p.cooldown=Math.max(0,p.cooldown-dt);
         const body=this.chassis.physical.body, angular=body.angvel();
         const stable=this.wheels.inContactCount===4&&this.wheels.items.every(w=>w.contactNormal?.y>Math.cos(3*Math.PI/180)&&w.groundCollider?.userData?.surface_type!=='ice'&&w.groundCollider?.parent()?.isFixed());
-        const intent=Math.abs(this.input.accelerating)>0||this.input.boosting>0||this.input.suspensions.some(x=>x!=='low');
+        const intent=Math.abs(this.input.accelerating)>0||Math.abs(this.input.steering)>0||this.input.boosting>0||this.input.suspensions.some(x=>x!=='low');
         const eligible=!intent&&stable&&this.xzSpeed<.12&&Math.hypot(angular.x,angular.y,angular.z)<.06&&this.upward.y>.995&&p.cooldown===0;
         p.settled=eligible?p.settled+dt:0;p.active=p.settled>.6;
         if(!p.active)return;
@@ -252,8 +252,16 @@ export class PhysicsVehicle {
         // Maximum static friction per step, μ*N*dt; a bump above this limit
         // cannot be swallowed by parking. No translation or rotation snap.
         const needed=Math.hypot(velocity.x,velocity.z)*mass,capacity=.45*mass*9.81*dt;
-        if(needed>capacity){this.releaseParking();return;}
+        // The same raycast side friction can amplify tiny floating-point yaw
+        // errors at a rotated resting heading: alternating wheel impulses
+        // grow into a visible 2-degree tremor. Static tyre friction also has
+        // a bounded yaw moment. Apply I*Δω, preserving pitch/roll suspension;
+        // never replace the body's rotation or angular velocity globally.
+        const inertia=body.effectiveAngularInertia();
+        const yawImpulse={x:-inertia.m12*angular.y,y:-inertia.m22*angular.y,z:-inertia.m32*angular.y};
+        if(needed>capacity||Math.hypot(yawImpulse.x,yawImpulse.y,yawImpulse.z)>capacity*this.wheels.settings.offset.x){this.releaseParking();return;}
         body.applyImpulse({x:-velocity.x*mass,y:0,z:-velocity.z*mass},true);
+        body.applyTorqueImpulse(yawImpulse,true);
     }
     releaseParking(){this.parking.active=false;this.parking.settled=0;this.parking.cooldown=.45;}
     /* ========================================================

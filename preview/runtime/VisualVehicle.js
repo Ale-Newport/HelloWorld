@@ -70,6 +70,7 @@ export class VisualVehicle {
         this.physics = physics;
         this.ticker = ticker;
         this.materials = materials;
+        this.resourceBin = bin;
         this.castShadows = castShadows;
         this.build(bin);
         const update = () => this.update();
@@ -95,13 +96,16 @@ export class VisualVehicle {
        ======================================================== */
     build(bin) {
         this.group.add(this.chassis);
-        const shell = this.materials.tinted(palette.paper2, 0.55, 0.08);
+        const shell = this.materials.tinted('#e86738', 0.3, 0.24);
+        shell.name='Vehicle Color';
         const graphite = this.materials.get('graphite');
         const ink = this.materials.get('ink');
         const accent = this.materials.get('accent');
         const glass = this.materials.get('glass');
         const add = (geometry, material, position, parent = this.chassis) => {
             const mesh = new THREE.Mesh(geometry, material);
+            mesh.name=`Detail ${this.chassis.children.length+1}`;
+            mesh.userData={collision:false,editable:true};
             mesh.position.set(...position);
             mesh.castShadow = this.castShadows;
             mesh.receiveShadow = false;
@@ -111,9 +115,10 @@ export class VisualVehicle {
         };
         /* ---- body ------------------------------------------- */
         this.defaultShellMaterial = shell;
+        this.group.name='Player Car';this.chassis.name='Chassis';this.chassis.userData.vehiclePart='chassis';
         // Matches the main collider (half-extents 1.3 × 0.4 × 0.85)
         // with the chamfer pulled in, so what you see is what hits.
-        this.shellMeshes.push(add(chamferedBox(2.56, 0.74, 1.66, 0.14), shell, [0, -0.1, 0]));
+        const body=add(chamferedBox(2.56, 0.74, 1.66, 0.14), shell, [0, -0.1, 0]);body.name='Painted body';body.userData.vehiclePaint=true;this.shellMeshes.push(body);
         // A lower sill in graphite: visually separates body from wheels
         // and hides the gap when the suspension is fully compressed.
         add(chamferedBox(2.44, 0.2, 1.72, 0.06), graphite, [0, -0.42, 0]);
@@ -122,9 +127,23 @@ export class VisualVehicle {
         this.shellMeshes.push(add(chamferedBox(0.26, 0.16, 1.5, 0.05), shell, [-1.2, 0.16, 0]));
         /* ---- greenhouse ------------------------------------- */
         // Matches the cabin collider (0.5 × 0.15 × 0.65 at y 0.4).
-        add(chamferedBox(0.98, 0.28, 1.28, 0.09), graphite, [-0.06, 0.42, 0]);
+        add(chamferedBox(0.98, 0.28, 1.28, 0.09), graphite, [-0.06, 0.42, 0]).name='Window frame';
         const windscreen = add(chamferedBox(1.0, 0.2, 1.3, 0.04), glass, [-0.06, 0.44, 0]);
+        windscreen.name='Windows';
         windscreen.castShadow = false;
+        const roof=add(chamferedBox(.85,.055,1.2,.025),shell,[-.06,.57,0]);roof.name='Painted roof';roof.userData.vehiclePaint=true;this.shellMeshes.push(roof);
+        // Separate editable trim, mirrors, door details and wheel arch lips.
+        const chrome=this.materials.tinted('#b7c9ce',.22,.75);
+        for(const side of [-1,1]){
+            const mirror=add(chamferedBox(.23,.12,.18,.045),shell,[.4,.31,side*.93]);mirror.name=`Mirror ${side>0?'right':'left'}`;mirror.userData.vehiclePaint=true;this.shellMeshes.push(mirror);
+            add(chamferedBox(.2,.035,.045,.012),chrome,[-.32,.15,side*.842]).name=`Door handle ${side}`;
+            add(chamferedBox(.82,.024,.028,.008),graphite,[-.04,-.21,side*.844]).name=`Door seam ${side}`;
+            for(const x of [-.9,.9]){const arch=new THREE.TorusGeometry(.44,.047,5,18,Math.PI);add(arch,graphite,[x,-.64,side*.857]).name=`Wheel arch ${x} ${side}`;}
+        }
+        for(const x of [-1.31,1.31])add(chamferedBox(.15,.17,1.55,.055),chrome,[x,-.23,0]).name=`Bumper ${x>0?'front':'rear'}`;
+        add(chamferedBox(.05,.22,.56,.045),graphite,[1.325,-.03,0]).name='Front grille';
+        for(let i=-2;i<=2;i++)add(new THREE.BoxGeometry(.018,.015,.46),chrome,[1.354,-.03+i*.033,0]).name=`Grille slat ${i+3}`;
+        for(const side of [-1,1]){const lamp=new THREE.CylinderGeometry(.105,.105,.035,16);lamp.rotateZ(Math.PI/2);add(lamp,this.materials.get('emissiveWhite'),[1.363,.04,side*.55]).name=`Headlamp ${side}`;}
         /* ---- the vermilion stripe --------------------------- */
         // One accent line down the spine. The site uses exactly one
         // signal colour; the car does the same.
@@ -144,17 +163,23 @@ export class VisualVehicle {
         /* ---- lights ----------------------------------------- */
         const headlightGeometry = new THREE.BoxGeometry(0.06, 0.13, 1.16);
         this.headlights = new THREE.Mesh(headlightGeometry, this.materials.get('emissiveWhite'));
+        this.headlights.name='Headlight beam';
+        this.headlights.userData.vehiclePart='headlights';
         this.headlights.position.set(1.29, 0.02, 0);
         this.chassis.add(this.headlights);
         bin.add(() => headlightGeometry.dispose());
         const brakeGeometry = new THREE.BoxGeometry(0.06, 0.12, 1.2);
         this.brakeLights = new THREE.Mesh(brakeGeometry, this.materials.get('emissiveAccent'));
+        this.brakeLights.name='Brake lights';
+        this.brakeLights.userData.vehiclePart='brakeLights';
         this.brakeLights.position.set(-1.31, 0.06, 0);
         this.brakeLights.visible = false;
         this.chassis.add(this.brakeLights);
         bin.add(() => brakeGeometry.dispose());
         const reverseGeometry = new THREE.BoxGeometry(0.05, 0.09, 0.5);
         this.reverseLights = new THREE.Mesh(reverseGeometry, this.materials.get('emissiveWhite'));
+        this.reverseLights.name='Reverse lights';
+        this.reverseLights.userData.vehiclePart='reverseLights';
         this.reverseLights.position.set(-1.31, -0.1, 0);
         this.reverseLights.visible = false;
         this.chassis.add(this.reverseLights);
@@ -165,6 +190,8 @@ export class VisualVehicle {
         for (let i = 0; i < 3; i++) {
             const geometry = new THREE.BoxGeometry(0.16, 0.06, 0.26);
             const cell = new THREE.Mesh(geometry, this.materials.get('emissiveAccent'));
+            cell.name=`Boost cell ${i+1}`;
+            cell.userData.vehiclePart=`boost-${i}`;
             cell.position.set(-0.86, 0.2, (i - 1) * 0.34);
             this.chassis.add(cell);
             this.boostCells.push(cell);
@@ -181,11 +208,15 @@ export class VisualVehicle {
             toneMapped: false,
         })));
         this.boostGlow.position.set(-1.4, -0.06, 0);
+        this.boostGlow.name='Boost glow';
+        this.boostGlow.userData.vehiclePart='boostGlow';
         this.boostGlow.rotation.y = Math.PI * 0.5;
         this.chassis.add(this.boostGlow);
         bin.add(() => glowGeometry.dispose());
         for (const z of [-0.55, 0.55]) {
             const anchor = new THREE.Object3D();
+            anchor.name=`Trail anchor ${z}`;
+            anchor.userData.vehiclePart=`trail-${z}`;
             anchor.position.set(-1.28, 0.1, z);
             this.chassis.add(anchor);
             this.trailAnchors.push(anchor);
@@ -220,14 +251,20 @@ export class VisualVehicle {
         for (let i = 0; i < 4; i++) {
             const base = this.vehicle.wheels.items[i].basePosition;
             const container = new THREE.Group();
+            container.name=`Wheel ${i+1}`;
+            container.userData.vehiclePart=`wheel-${i}`;
             container.position.set(base.x, base.y - WHEEL_RADIUS, base.z);
             this.chassis.add(container);
             const spinner = new THREE.Group();
+            spinner.name=`Wheel spinner ${i+1}`;
+            spinner.userData.vehiclePart=`spinner-${i}`;
             container.add(spinner);
             const tyre = new THREE.Mesh(tyreGeometry, ink);
+            tyre.name=`Tyre ${i+1}`;
             tyre.castShadow = this.castShadows;
             spinner.add(tyre);
             const hub = new THREE.Mesh(hubGeometry, this.materials.tinted(palette.paper, 0.6, 0.1));
+            hub.name=`Alloy rim ${i+1}`;
             spinner.add(hub);
             // Two crossed spokes: enough to read the spin, cheap to draw.
             for (const angle of [0, Math.PI / 2]) {
@@ -236,6 +273,8 @@ export class VisualVehicle {
                 spinner.add(spoke);
             }
             const strutMesh = new THREE.Mesh(strut, this.materials.get('metal'));
+            strutMesh.name=`Suspension strut ${i+1}`;
+            strutMesh.userData.vehiclePart=`strut-${i}`;
             strutMesh.castShadow = false;
             container.add(strutMesh);
             this.wheels.push({
@@ -246,6 +285,7 @@ export class VisualVehicle {
                 spin: 0,
             });
         }
+        for(const mesh of this.shellMeshes)mesh.userData.vehiclePaint=true;
     }
     /* ========================================================
        UPDATE
@@ -262,44 +302,48 @@ export class VisualVehicle {
         const steerTarget = this.player.steering * vehicle.steeringAmplitude;
         this.steeringVisual = damp(this.steeringVisual, steerTarget, 32, dt);
         /* ---- wheels ----------------------------------------- */
-        const braking = this.inputs.isActive('brake');
+        const braking = this.player.braking > .5 || this.inputs.isActive('brake');
         const throttling = this.inputs.isActive('forward') || this.inputs.isActive('backward');
         const wheelsTurn = !braking || throttling;
         for (let i = 0; i < 4; i++) {
             const visual = this.wheels[i];
             const physical = vehicle.wheels.items[i];
             // Front wheels steer; rear wheels do not.
-            if (i < 2)
-                visual.container.rotation.y = this.steeringVisual;
+            if (i < 2) {
+                if(visual.authoredRotation)visual.container.quaternion.copy(visual.authoredRotation).premultiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0),this.steeringVisual));
+                else visual.container.rotation.y = this.steeringVisual;
+            }
             // The hub sits at the far end of the suspension travel. The
             // clamp keeps it from rising into the body, which is also what
             // keeps the strut scale positive.
-            const hubY = Math.min(visual.basePosition.y - physical.suspensionLength, -0.5);
+            const hubY = Math.min(visual.basePosition.y - physical.suspensionLength, -0.5)+(visual.authoredYOffset??0);
             visual.container.position.y = damp(visual.container.position.y, hubY, 50, dt);
-            visual.strut.scale.y = Math.max(0.001, Math.abs(visual.container.position.y) - 0.5);
+            visual.strut.scale.y = (visual.authoredStrutScale??1)*Math.max(0.001, Math.abs(visual.container.position.y-(visual.authoredYOffset??0)) - 0.5);
             if (wheelsTurn) {
                 visual.spin += (vehicle.forwardSpeed / WHEEL_RADIUS) * scaled;
-                visual.spinner.rotation.z = visual.spin;
+                if(visual.authoredSpinnerRotation)visual.spinner.quaternion.copy(visual.authoredSpinnerRotation).multiply(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,0,1),visual.spin));
+                else visual.spinner.rotation.z = visual.spin;
             }
         }
         /* ---- lights ----------------------------------------- */
         const reversing = this.player.accelerating < -0.05;
-        this.brakeLights.visible = this.player.braking > 0.5 || (braking && vehicle.speed > 0.4);
-        this.reverseLights.visible = reversing;
+        this.brakeLights.visible = !this.authoredHidden?.has(this.brakeLights)&&(this.player.braking > 0.5 || (braking && vehicle.speed > 0.4));
+        this.reverseLights.visible = !this.authoredHidden?.has(this.reverseLights)&&reversing;
         // Headlights come on at night; DayCycle writes `nightFactor`.
-        this.headlights.visible = this.nightFactor > 0.25;
+        this.headlights.visible = !this.authoredHidden?.has(this.headlights)&&this.nightFactor > 0.25;
         /* ---- boost ------------------------------------------ */
         const boosting = this.player.boosting > 0.5 && this.player.accelerating > 0;
         const raw = clamp(this.boostRaw + (boosting ? 1 : -1) * scaled * 1.2, 0, 1);
         this.boostRaw = raw;
         // Sharpened so the visual arrives instantly and decays slowly.
         this.boostMix = 1 - Math.pow(1 - raw, 7);
-        this.boostCells[0].position.y = remapClamp(this.boostMix, 0, 0.6, 0.2, 0);
-        this.boostCells[2].position.y = remapClamp(this.boostMix, 0.2, 0.8, 0.2, 0);
-        this.boostCells[1].position.y = remapClamp(this.boostMix, 0.4, 1, 0.2, 0);
+        this.boostCells[0].position.y = (this.authoredBoostY?.[0]??.2)-.2+remapClamp(this.boostMix, 0, 0.6, 0.2, 0);
+        this.boostCells[2].position.y = (this.authoredBoostY?.[2]??.2)-.2+remapClamp(this.boostMix, 0.2, 0.8, 0.2, 0);
+        this.boostCells[1].position.y = (this.authoredBoostY?.[1]??.2)-.2+remapClamp(this.boostMix, 0.4, 1, 0.2, 0);
         const glowMaterial = this.boostGlow.material;
         glowMaterial.opacity = this.boostMix * 0.55;
-        this.boostGlow.scale.setScalar(0.75 + this.boostMix * 0.7);
+        if(this.authoredGlowScale)this.boostGlow.scale.copy(this.authoredGlowScale).multiplyScalar(.75+this.boostMix*.7);
+        else this.boostGlow.scale.setScalar(0.75 + this.boostMix * 0.7);
         this.trailActive = vehicle.goingForward && boosting && vehicle.speed > 4;
         for (let i = 0; i < this.trailAnchors.length; i++) {
             this.trailAnchors[i].getWorldPosition(this.trailEmitters[i]);
@@ -345,7 +389,23 @@ export class VisualVehicle {
                 ? this.materials.tinted(palette.ink2, 0.5, 0.2)
                 : this.defaultShellMaterial;
         for (const mesh of this.shellMeshes)
-            mesh.material = material;
+            mesh.material = shell==='konami'||shell==='graphite'?material:(this.authoredPaint?.get(mesh)??material);
+    }
+    setColor(color){if(!/^#[0-9a-f]{6}$/i.test(color))return;const material=this.materials.tinted(color,.3,.24);material.name='Vehicle Color';this.defaultShellMaterial=material;this.authoredPaint=new Map();for(const mesh of this.shellMeshes){mesh.material=material;this.authoredPaint.set(mesh,material);}}
+    /** Replace the visual definition without altering the physical chassis. */
+    applyTemplate(template){
+        let source;template.traverse(n=>{if(n.userData.vehiclePart==='chassis'&&!source)source=n;});source??=template.getObjectByName('Chassis')??template;
+        const cloneMaterial=m=>{const copy=m.clone();this.resourceBin.add(()=>copy.dispose());for(const [key,value] of Object.entries(copy))if(value?.isTexture){const texture=value.clone();copy[key]=texture;this.resourceBin.add(()=>texture.dispose());}return copy;};
+        this.chassis.clear();this.authoredBody=new THREE.Group();this.authoredBody.name=source.name;this.authoredBody.position.copy(source.position).sub(new THREE.Vector3().fromArray(source.userData.vehicleTemplateRestPosition??(source!==template?[0,1.1,0]:[0,0,0])));this.authoredBody.quaternion.copy(source.quaternion);this.authoredBody.scale.copy(source.scale);this.authoredBody.visible=source.visible;this.chassis.add(this.authoredBody);
+        for(const child of source.children){const copy=child.clone(true);copy.traverse(n=>{if(n.isMesh){const geometry=n.geometry.clone();n.geometry=geometry;this.resourceBin.add(()=>geometry.dispose());n.material=Array.isArray(n.material)?n.material.map(cloneMaterial):cloneMaterial(n.material);}});this.authoredBody.add(copy);}
+        const find=(name,part)=>{let found;this.chassis.traverse(n=>{if(n.userData.vehiclePart===part&&!found)found=n;});return found??this.chassis.getObjectByName(name)??new THREE.Object3D();};
+        this.shellMeshes=[];this.chassis.traverse(n=>{if(n.isMesh&&n.userData.vehiclePaint)this.shellMeshes.push(n);});
+        this.authoredPaint=new Map(this.shellMeshes.map(n=>[n,n.material]));this.authoredHidden=new Set();this.chassis.traverse(n=>{if(n.userData.assetVisibilityEdited&&!n.visible)this.authoredHidden.add(n);});
+        this.headlights=find('Headlight beam','headlights');this.brakeLights=find('Brake lights','brakeLights');this.reverseLights=find('Reverse lights','reverseLights');
+        this.boostCells=[1,2,3].map(i=>find(`Boost cell ${i}`,`boost-${i-1}`));this.boostGlow=find('Boost glow','boostGlow');if(!this.boostGlow.material){this.boostGlow.material=new THREE.MeshBasicMaterial({visible:false});const material=this.boostGlow.material;this.resourceBin.add(()=>material.dispose());}
+        this.authoredBoostY=this.boostCells.map(n=>n.position.y);this.authoredGlowScale=this.boostGlow.scale.clone();
+        for(let i=0;i<4;i++){const visual=this.wheels[i];visual.container=find(`Wheel ${i+1}`,`wheel-${i}`);visual.spinner=find(`Wheel spinner ${i+1}`,`spinner-${i}`);visual.strut=find(`Suspension strut ${i+1}`,`strut-${i}`);visual.authoredYOffset=visual.container.position.y+.7;visual.authoredRotation=visual.container.quaternion.clone();visual.authoredSpinnerRotation=visual.spinner.quaternion.clone();visual.authoredStrutScale=visual.strut.scale.y;}
+        this.trailAnchors=[-.55,.55].map(z=>find(`Trail anchor ${z}`,`trail-${z}`));
     }
     /** Set by the Game once the View exists. */
     camera = new THREE.PerspectiveCamera();
