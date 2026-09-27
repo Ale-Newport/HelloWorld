@@ -9,7 +9,15 @@ export function signedArea(p){let a=0;for(let i=0;i<p.length;i++){const q=p[(i+1
 export function cleanPolygon(p){const a=[];for(const v of p)if(!a.length||Math.hypot(v[0]-a.at(-1)[0],v[1]-a.at(-1)[1])>EPS)a.push(v);if(a.length>2&&Math.hypot(a[0][0]-a.at(-1)[0],a[0][1]-a.at(-1)[1])<EPS)a.pop();if(signedArea(a)<0)a.reverse();return a;}
 export function rectangle(a,b,width){const dx=b[0]-a[0],dz=b[1]-a[1],l=Math.hypot(dx,dz);if(l<EPS)return[];const nx=-dz/l*width*.5,nz=dx/l*width*.5;return cleanPolygon([[a[0]+nx,a[1]+nz],[a[0]-nx,a[1]-nz],[b[0]-nx,b[1]-nz],[b[0]+nx,b[1]+nz]]);}
 export function disc(c,r,steps=12){return Array.from({length:steps},(_,i)=>[c[0]+Math.cos(i/steps*Math.PI*2)*r,c[1]+Math.sin(i/steps*Math.PI*2)*r]);}
-export function bufferPolyline(points,width,{closed=false,roundCaps=false,joinSteps=12}={}){const out=[],r=width*.5;for(let i=1;i<points.length;i++){const p=rectangle(points[i-1],points[i],width);if(p.length)out.push(p);}for(let i=roundCaps?0:1;i<points.length-(roundCaps?0:1);i++)out.push(disc(points[i],r,joinSteps));if(closed)out.push(disc(points[0],r,joinSteps));return out;}
+export function bufferPolyline(points,width,{closed=false,roundCaps=false,joinSteps=24}={}){
+ const out=[],r=width*.5;for(let i=1;i<points.length;i++){const p=rectangle(points[i-1],points[i],width);if(p.length)out.push(p);}
+ const end=closed?points.length-1:points.length;
+ for(let i=closed?0:1;i<(closed?end:end-1);i++){
+  const a=points[(i-1+end)%end],b=points[i],c=points[(i+1)%end],before=Math.atan2(b[1]-a[1],b[0]-a[0]),after=Math.atan2(c[1]-b[1],c[0]-b[0]);let turn=after-before;while(turn>Math.PI)turn-=Math.PI*2;while(turn<-Math.PI)turn+=Math.PI*2;if(Math.abs(turn)<1e-7)continue;
+  const start=before+(turn>0?-Math.PI/2:Math.PI/2),steps=Math.max(1,Math.ceil(Math.abs(turn)/(Math.PI*2/joinSteps))),poly=[b];for(let k=0;k<=steps;k++){const angle=start+turn*k/steps;poly.push([b[0]+Math.cos(angle)*r,b[1]+Math.sin(angle)*r]);}out.push(cleanPolygon(poly));
+ }
+ if(roundCaps&&!closed){out.push(disc(points[0],r,joinSteps),disc(points.at(-1),r,joinSteps));}return out;
+}
 export function pointInPolygon(p,poly){let inside=false;for(let i=0,j=poly.length-1;i<poly.length;j=i++){const a=poly[i],b=poly[j];if((a[1]>p[1])!==(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;}
 const zAt=(e,x)=>e.a[1]+(x-e.a[0])*e.dz/e.dx;
 export function planarBoolean(sets,predicate=counts=>counts[0]>0){

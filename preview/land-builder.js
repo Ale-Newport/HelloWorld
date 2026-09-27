@@ -1,7 +1,8 @@
 import * as THREE from 'three';
-const TILE=16,STEP=2,COUNT=TILE/STEP,SEA=-1.2,BOTTOM=-4;
+const TILE=16,STEP=2,COUNT=TILE/STEP,BOTTOM=-4;
 /** Matching world-space vertices keep adjacent brush tiles watertight. */
 export function paintLand(editor,point,radius,height,erase=false){
+ const SEA=editor.root.userData.seaLevel??-1.2;
  const tiles=new Map();editor.root.traverse(o=>{if(o.userData.landTile&&editor.isVisible(o))tiles.set(o.userData.landTile,o);});
  const base=[];editor.root.traverse(o=>{if(o.isMesh&&o.userData.terrain&&!o.userData.landTile&&editor.isVisible(o))base.push(o);});
  editor.landBaseCache??=new Map();const baseHeight=(x,z)=>{const key=x+','+z;if(!editor.landBaseCache.has(key)){const hit=new THREE.Raycaster(new THREE.Vector3(x,200,z),new THREE.Vector3(0,-1,0)).intersectObjects(base,false)[0];editor.landBaseCache.set(key,hit?.point.y??-Infinity);}return editor.landBaseCache.get(key);};
