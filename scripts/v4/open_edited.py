@@ -18,22 +18,22 @@ def collision_parts(owner):
     visit(owner)
     return found
 
-def import_world(source=None, output=None):
+def import_world(source=None, output=None, *, version=4, configure_scene=None, report_path=None):
     source = Path(source or ROOT / 'exports/EditedWorld.glb')
-    output = Path(output or ROOT / 'world/EditedWorld_v4.blend')
+    output = Path(output or ROOT / f'world/EditedWorld_v{version}.blend')
     if not source.exists(): raise RuntimeError('Use Export GLB in World Studio first: exports/EditedWorld.glb is missing.')
     # Verify the input before clearing Blender's current document.
     raw = source.read_bytes(); size = int.from_bytes(raw[12:16], 'little'); document = json.loads(raw[20:20+size])
-    if not any(n.get('extras', {}).get('worldVersion') == 4 for n in document.get('nodes', [])):
+    if not any(n.get('extras', {}).get('worldVersion') in range(4, version + 1) for n in document.get('nodes', [])):
         raise RuntimeError('Export the new v4 map in World Studio first. The existing GLB is an earlier map.')
     bpy.ops.wm.read_factory_settings(use_empty=True)
     import alejandro_world
     if not hasattr(bpy.types.Scene, 'aw'): alejandro_world.register()
     bpy.ops.import_scene.gltf(filepath=str(source))
-    scene = bpy.context.scene; scene.name = 'Alejandro World · v4'; scene.render.fps = 24; scene.frame_end = 721
+    scene = bpy.context.scene; scene.name = f'Alejandro World · v{version}'; scene.render.fps = 24; scene.frame_end = 721
     visual = list(scene.objects)
     parents = {o.name: o.parent.name if o.parent else None for o in visual}
-    physical_collection = bpy.data.collections.new('PHYSICS · v4 hidden proxies'); scene.collection.children.link(physical_collection)
+    physical_collection = bpy.data.collections.new(f'PHYSICS · v{version} hidden proxies'); scene.collection.children.link(physical_collection)
     owners = []
     for obj in visual:
         if not obj.get('collision') or disabled(obj): continue
@@ -75,25 +75,29 @@ def import_world(source=None, output=None):
                 constraint = owner.constraints.new('COPY_TRANSFORMS'); constraint.name = 'Follow native physical proxy'; constraint.target = proxy
                 constraint.owner_space = 'WORLD'; constraint.target_space = 'WORLD'
             proxy.hide_set(True)
-        print('V4_COLLIDERS', len(proxies), 'created in one batch; visual hierarchy preserved', flush=True)
+        print(f'V{version}_COLLIDERS', len(proxies), 'created in one batch; visual hierarchy preserved', flush=True)
     assert parents == {o.name: o.parent.name if o.parent else None for o in visual}, 'Visual hierarchy changed during collider creation'
     for image in bpy.data.images:
         if image.source == 'FILE' and image.users and not image.packed_file:
             image.pack()
-    scene['world_builder_version'] = '4.0.0'; scene['web_runtime_source'] = 'HelloWorld/preview'; scene['web_gameplay_note'] = 'World2 games and vehicle transformation execute in the web runtime; native Bullet proxies preserve editable visual hierarchy.'
+    scene['world_builder_version'] = f'{version}.0.0'; scene['web_runtime_source'] = 'HelloWorld/preview'; scene['web_gameplay_note'] = 'World2 games and vehicle transformation execute in the web runtime; native Bullet proxies preserve editable visual hierarchy.'
     scene.world = bpy.data.worlds.new('Island daylight'); scene.world.use_nodes = True; scene.world.node_tree.nodes['Background'].inputs['Color'].default_value = (.32,.58,.68,1); scene.world.node_tree.nodes['Background'].inputs['Strength'].default_value = .7
     light = bpy.data.lights.new('Sun', 'SUN'); light.energy = 2.6; obj = bpy.data.objects.new('Sun', light); scene.collection.objects.link(obj); obj.rotation_euler = (.4,-.45,-.6)
-    data = bpy.data.cameras.new('WORLD OVERVIEW v4'); camera = bpy.data.objects.new('WORLD OVERVIEW v4', data); scene.collection.objects.link(camera)
+    data = bpy.data.cameras.new(f'WORLD OVERVIEW v{version}'); camera = bpy.data.objects.new(f'WORLD OVERVIEW v{version}', data); scene.collection.objects.link(camera)
     camera.location = (0,-220,290); camera.rotation_euler = (Vector((0,0,0))-camera.location).to_track_quat('-Z','Y').to_euler(); data.type = 'ORTHO'; data.ortho_scale = 335; scene.camera = camera
     scene.render.engine = 'CYCLES'; scene.cycles.samples = 24; scene.render.resolution_x = 1600; scene.render.resolution_y = 1200; scene.frame_set(1)
+    extra_report = configure_scene(scene, visual) if configure_scene else {}
     for screen in bpy.data.screens:
         for area in screen.areas:
             if area.type == 'VIEW_3D':
-                area.spaces.active.region_3d.view_rotation = camera.rotation_euler.to_quaternion(); area.spaces.active.region_3d.view_distance = 300; area.spaces.active.show_region_ui = True
+                area.spaces.active.region_3d.view_rotation = camera.rotation_euler.to_quaternion(); area.spaces.active.region_3d.view_distance = camera.get('authoring_view_distance', 300); area.spaces.active.show_region_ui = True
+                if 'authoring_target' in camera: area.spaces.active.region_3d.view_location = Vector(camera['authoring_target'])
     bpy.ops.object.select_all(action='DESELECT')
     output.parent.mkdir(parents=True, exist_ok=True); bpy.ops.wm.save_as_mainfile(filepath=str(output), compress=True)
     report = {'source':str(source.relative_to(ROOT)), 'output':str(output.relative_to(ROOT)), 'visual_objects':len(visual), 'visual_parent_links_preserved':True, 'physics_proxies':len(proxies), 'dynamic_proxies':sum(p.rigid_body.type == 'ACTIVE' for p in proxies), 'animation_actions':len(bpy.data.actions), 'packed_images':sum(bool(i.packed_file) for i in bpy.data.images), 'compressed':True, 'native_bytes':output.stat().st_size}
-    (ROOT/'reports/v4/native-roundtrip.json').write_text(json.dumps(report, indent=2)); print('V4_NATIVE_ROUNDTRIP',json.dumps(report),flush=True)
+    report.update(extra_report or {})
+    report_path = Path(report_path or ROOT / f'reports/v{version}/native-roundtrip.json'); report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text(json.dumps(report, indent=2)); print(f'V{version}_NATIVE_ROUNDTRIP',json.dumps(report),flush=True)
     return report
 
 if __name__ == '__main__': import_world()

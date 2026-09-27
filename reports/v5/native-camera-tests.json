@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "name": "Authoring bounds exclude infinite sea and underwater skirt while including southwest land",
+      "passed": true,
+      "evidence": {
+        "bounds": [
+          [
+            -332.0,
+            -280.0,
+            0.15000000596046448
+          ],
+          [
+            145.0,
+            125.0,
+            0.15000000596046448
+          ]
+        ],
+        "excluded": [
+          "ocean",
+          "proxy",
+          "deleted",
+          "underwater skirt"
+        ]
+      }
+    },
+    {
+      "name": "Landscape native overview includes every authored vertex with margin",
+      "passed": true,
+      "evidence": {
+        "resolution": [
+          1600,
+          1200
+        ],
+        "ortho_scale": 524.6999496459962,
+        "all_vertices_inside": true
+      }
+    },
+    {
+      "name": "Portrait aerial overview uses the actual aspect ratio",
+      "passed": true,
+      "evidence": {
+        "resolution": [
+          800,
+          1200
+        ],
+        "ortho_scale": 524.6999496459962,
+        "all_vertices_inside": true
+      }
+    },
+    {
+      "name": "Moved and rotated terrain recomputes the camera centre and scale",
+      "passed": true,
+      "evidence": {
+        "resolution": [
+          1600,
+          1200
+        ],
+        "ortho_scale": 669.7451614379884,
+        "all_vertices_inside": true,
+        "camera_target": [
+          -159.4296112060547,
+          -107.68842315673828,
+          0.1500091552734375
+        ]
+      }
+    },
+    {
+      "name": "Historical v4 importer keeps unchanged default configuration",
+      "passed": true,
+      "evidence": {
+        "v4_default_version": 4,
+        "v4_camera_hook_disabled": true,
+        "v4_report_default_preserved": true
+      }
+    }
+  ]
+}

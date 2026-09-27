@@ -1,0 +1,38 @@
+{
+  "sourceCommit": "a297f7c",
+  "savedAt": "2026-09-27T10:01:02.748Z",
+  "checks": {
+    "fountain": 4,
+    "career": 4,
+    "loop": 12,
+    "circuit": 7,
+    "minimap": 5,
+    "terrainPersistence": 2,
+    "preservation": 8,
+    "glbExport": 3,
+    "nativeCamera": 5
+  },
+  "portfolioFilesUnchanged": 3218,
+  "files": {
+    "exports/editor-world.json": {
+      "bytes": 14199197,
+      "sha256": "2ebbd04ce02f9eb0fa58b2416440e862ec53104f820daea6015c86b7fcb0f04b"
+    },
+    "exports/asset-definitions.json": {
+      "bytes": 91223,
+      "sha256": "b26dc34d86c463635d87551631b17d42afe3f143eee4841526672fe30baf1b52"
+    },
+    "exports/EditedWorld.glb": {
+      "bytes": 44286072,
+      "sha256": "07c30acc76dbc348e8bd08b74188693f75b5fc6262f13b994b570896c5606038"
+    },
+    "world/EditedWorld_v5.blend": {
+      "bytes": 30003315,
+      "sha256": "5ac092369eb1e59446f1c0bed3679781205f56186bb4a6c0cf4a0d4e229646ca"
+    },
+    "reports/v5/world-aerial.png": {
+      "bytes": 2325076,
+      "sha256": "367061319375a7036067d7266af9ea6d953b43290e04fd3e1e02f571934732f1"
+    }
+  }
+}

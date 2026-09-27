@@ -1,0 +1,184 @@
+{
+  "backup": "backups/user_world_before_four_fixes_20260927_103401/exports/editor-world.json",
+  "current": "exports/editor-world.json",
+  "results": [
+    {
+      "name": "Integrated save retains every pre-existing live ID and every user-added hierarchy",
+      "passed": true,
+      "data": {
+        "beforeStates": 8666,
+        "afterStates": 8407,
+        "preservedIds": 8347,
+        "userAddedNodes": 183,
+        "alreadyAbsentOrphans": 303,
+        "removedStates": 303,
+        "beforeSHA256": "93d0ba4342557a75e096c31f47bb86cae29e3a02c01e13e5c35b9104b083debf",
+        "afterSHA256": "2ebbd04ce02f9eb0fa58b2416440e862ec53104f820daea6015c86b7fcb0f04b"
+      }
+    },
+    {
+      "name": "User names, visibility, deletions and transforms are retained outside the exact circuit change",
+      "passed": true,
+      "data": {
+        "checkedFields": 41733,
+        "checkedDeletionFlags": 8347,
+        "circuitBefore": {
+          "p": [
+            -54.153944893531964,
+            0.15000000596046448,
+            50.10171447662019
+          ],
+          "q": [
+            0,
+            0.7041049124053872,
+            0,
+            0.7100959599424588
+          ],
+          "s": [
+            0.4663189249626102,
+            0.4663189249626102,
+            0.4663189249626102
+          ]
+        },
+        "circuitAfter": {
+          "p": [
+            -194,
+            0.15,
+            173
+          ],
+          "q": [
+            0,
+            0.7041049124053872,
+            0,
+            0.7100959599424588
+          ],
+          "s": [
+            1,
+            1,
+            1
+          ]
+        },
+        "terrainPoseUnchanged": true
+      }
+    },
+    {
+      "name": "Authored road controls, material edits and physics choices survive save/reload",
+      "passed": true,
+      "data": {
+        "roadDefinitions": 11,
+        "materialOverrides": 0,
+        "protectedSettings": 11210
+      }
+    },
+    {
+      "name": "All user-edited geometry is unchanged outside the requested main-terrain extension",
+      "passed": true,
+      "data": {
+        "objects": [
+          {
+            "id": "user:a210c68f-11c3-4e36-932f-5135d9d1a789",
+            "name": "Tierra -1:7",
+            "vertices": 81,
+            "sha256": "e6b546b5bfa5556a4a1bc3e2ce09e6743593bea6b903e5313f8ad57903045c2f"
+          },
+          {
+            "id": "user:1523417f-1868-4d90-be69-afa2382adcff",
+            "name": "Tierra 0:7",
+            "vertices": 81,
+            "sha256": "6284ac353572756cace6ec0841e50c3676b969fdd329b4495da34343ea78318e"
+          },
+          {
+            "id": "user:668526e5-2757-48ff-ae3b-c4669a0951fe",
+            "name": "Tierra -1:8",
+            "vertices": 81,
+            "sha256": "5a0d7387fe2846e94d67de48662e66520a1d85a93a6f0c739a91fba36acfb884"
+          },
+          {
+            "id": "user:59217f25-7ab0-4fb1-bde4-49d9ef1026da",
+            "name": "Tierra 0:8",
+            "vertices": 81,
+            "sha256": "6c9f8deffc682018cba54814a8dc554a14f653bc3ec850c78d268f2361d49107"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Main terrain changes only by raising the specified southwest shore; original grid and colours survive elsewhere",
+      "passed": true,
+      "data": {
+        "originalVertices": 21509,
+        "raisedSouthwestVertices": 1020,
+        "unchangedOriginalVertices": 20489,
+        "unchangedDerivedVertices": 4164
+      }
+    },
+    {
+      "name": "Existing added meshes keep their full geometry, material resources and descendant transforms",
+      "passed": true,
+      "data": {
+        "addedRoots": [
+          {
+            "id": "user:3c9aed52-39b1-4a24-971b-2cef1903014f",
+            "descendants": 179,
+            "geometryResources": 65,
+            "resourceSHA256": "401de626921d665fb1dad53421fc73633c3f3c61e604aace60c0baeb966d58ed"
+          },
+          {
+            "id": "user:a210c68f-11c3-4e36-932f-5135d9d1a789",
+            "descendants": 1,
+            "geometryResources": 1,
+            "resourceSHA256": "49badebd06a9a8fec2c01236806d540f12449dc13df53a1de4865c21e044bd25"
+          },
+          {
+            "id": "user:1523417f-1868-4d90-be69-afa2382adcff",
+            "descendants": 1,
+            "geometryResources": 1,
+            "resourceSHA256": "37344dd4fe35f34c80319efca9623005b3c161f195bd73de204bbee409af661c"
+          },
+          {
+            "id": "user:668526e5-2757-48ff-ae3b-c4669a0951fe",
+            "descendants": 1,
+            "geometryResources": 1,
+            "resourceSHA256": "877f42c9155cf71e3eab916eae31f1468ee7fe139062f486cb389e71951a9cac"
+          },
+          {
+            "id": "user:59217f25-7ab0-4fb1-bde4-49d9ef1026da",
+            "descendants": 1,
+            "geometryResources": 1,
+            "resourceSHA256": "6292b56d82a3e92f90342ec2450c32456d165da8827a661698a6da8640062e75"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Both customized dock and pier v3 definitions remain byte-identical to backup",
+      "passed": true,
+      "data": {
+        "definitions": [
+          {
+            "id": "v4:marina-dock",
+            "version": 3,
+            "bytes": 65035,
+            "sha256": "4a97053876c1457ff37c754855cd4d86ad0bdeb94d296eaef3da740e946142a0"
+          },
+          {
+            "id": "v4:pier",
+            "version": 3,
+            "bytes": 26113,
+            "sha256": "fe22443d9914c5c09431a2484839ff5f5f92cc46450e81932da8964ab1e04f4f"
+          }
+        ],
+        "completeFileByteEqual": true
+      }
+    },
+    {
+      "name": "Fountain replacement is confined to its original root and contains the complete new design",
+      "passed": true,
+      "data": {
+        "rootPosePreserved": true,
+        "replacedOldPieces": 16,
+        "newPieces": 57
+      }
+    }
+  ]
+}

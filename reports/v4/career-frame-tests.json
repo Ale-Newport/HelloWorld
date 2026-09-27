@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "name": "Actual saved Career placement and every child transform remain unchanged on load and Drive entry",
+      "passed": true,
+      "evidence": {
+        "savedPosition": [
+          26.843566079018608,
+          0.17500000596046447,
+          37.98072058583661
+        ],
+        "savedScale": [
+          1.05,
+          1.05,
+          1.05
+        ],
+        "stripsAlignedOnFirstFrame": 3,
+        "childTransformsPreserved": 96
+      }
+    },
+    {
+      "name": "Moving rotating and scaling the internal model carries all generated Career parts together",
+      "passed": true,
+      "evidence": {
+        "generatedChildren": 30,
+        "maximumMatrixError": 1.4210854715202004e-14,
+        "nonuniformScale": true,
+        "repeatSyncNoDrift": true
+      }
+    },
+    {
+      "name": "Edited source definition save reload and propagation preserve instance placement and Drive alignment",
+      "passed": true,
+      "evidence": {
+        "definitionVersion": 2,
+        "placementPreserved": true,
+        "firstTickActivatesEducation": true,
+        "stoneLaneError": 3.552713678800501e-15,
+        "stripsAligned": 3
+      }
+    },
+    {
+      "name": "Edited instance JSON save reload and stop/apply keep model and luminous lines in the same frame",
+      "passed": true,
+      "evidence": {
+        "instanceOverride": true,
+        "serializationPreserved": true,
+        "stopRestoresEveryTransform": true,
+        "frames": 30
+      }
+    }
+  ]
+}

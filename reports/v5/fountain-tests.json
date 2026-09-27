@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Fountain upgrade preserves every unrelated saved state, custom asset and root transform",
+    "passed": true,
+    "evidence": {
+      "unrelatedStates": 8649,
+      "rootPosePreserved": true,
+      "idempotent": true
+    }
+  },
+  {
+    "name": "Saved world restores the new hollow basins without old child transforms overwriting them",
+    "passed": true,
+    "evidence": {
+      "size": [
+        10.26,
+        4.7647072076797485,
+        10.259999999999998
+      ],
+      "parts": 57
+    }
+  },
+  {
+    "name": "Water animation stays inside the basin and never adds invisible collision",
+    "passed": true,
+    "evidence": {
+      "waterClips": 25,
+      "solidMeshes": 7,
+      "nightLights": 4
+    }
+  },
+  {
+    "name": "Hidden objects cannot create animation channels referencing nodes omitted from GLB",
+    "passed": true,
+    "evidence": {
+      "hiddenAssetExcluded": true,
+      "hiddenChildExcluded": true
+    }
+  }
+]

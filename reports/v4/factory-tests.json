@@ -4,8 +4,8 @@
     "passed": true,
     "evidence": {
       "definitions": 118,
-      "meshes": 2796,
-      "vertices": 1132611,
+      "meshes": 2833,
+      "vertices": 1147349,
       "reusedAboutPavilion": true
     }
   },
@@ -58,7 +58,7 @@
       "redDeck": "asphalt",
       "rotorExcluded": true,
       "staticFerrisMeshes": 3,
-      "disabledDaylightLights": 3
+      "disabledDaylightLights": 7
     }
   },
   {

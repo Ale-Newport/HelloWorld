@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-27T08:09:20.103Z",
+  "generatedAt": "2026-09-27T09:44:14.571Z",
   "passed": true,
   "issues": [],
   "counts": {
-    "objects": 7934,
-    "meshes": 7041,
-    "geometries": 583,
+    "objects": 7971,
+    "meshes": 7078,
+    "geometries": 592,
     "textures": 19,
     "assetInstances": 508,
     "roads": 11,
@@ -16,9 +16,9 @@
   },
   "checks": {
     "textures": 19,
-    "paths": 13089,
+    "paths": 13170,
     "assets": 508,
-    "physics": 1677,
+    "physics": 1681,
     "roads": 11,
     "placement": 471,
     "water": 1,

@@ -1,0 +1,257 @@
+[
+  {
+    "name": "User save restores the actual visible loop and its independent colliders",
+    "passed": true,
+    "data": {
+      "savedAt": "2026-09-27T09:25:29.171Z",
+      "position": [
+        135,
+        0.08500000234194172,
+        -204.5
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "bodyCount": 673,
+      "sourceActivities": 12,
+      "first": [
+        110,
+        63.5,
+        0.20499999999999996
+      ],
+      "last": [
+        110,
+        72.5,
+        0.20499999999999996
+      ]
+    }
+  },
+  {
+    "name": "Saved loop west\u2192east throttle=0.25, boost=0 completes under natural input",
+    "passed": true,
+    "data": {
+      "entrySpeed": 3.5495052972234293,
+      "maxY": 19.10386085510254,
+      "contactRatio": 1,
+      "impacts": 0,
+      "teleports": 0,
+      "respawns": 0,
+      "maxStep": 0.59947558844627,
+      "exit": [
+        114.62837982177734,
+        1.2298367023468018,
+        -72.54179382324219
+      ],
+      "exitSurfaces": [
+        "road",
+        "road",
+        "road",
+        "road"
+      ]
+    }
+  },
+  {
+    "name": "Saved loop west\u2192east throttle=0.55, boost=0 completes under natural input",
+    "passed": true,
+    "data": {
+      "entrySpeed": 5.38880252479448,
+      "maxY": 19.103931427001953,
+      "contactRatio": 1,
+      "impacts": 0,
+      "teleports": 0,
+      "respawns": 0,
+      "maxStep": 0.6035269466962039,
+      "exit": [
+        114.31250762939453,
+        1.2095623016357422,
+        -72.5751953125
+      ],
+      "exitSurfaces": [
+        "road",
+        "road",
+        "road",
+        "road"
+      ]
+    }
+  },
+  {
+    "name": "Saved loop west\u2192east throttle=1, boost=0 completes under natural input",
+    "passed": true,
+    "data": {
+      "entrySpeed": 6.486522196876454,
+      "maxY": 19.10238265991211,
+      "contactRatio": 1,
+      "impacts": 0,
+      "teleports": 0,
+      "respawns": 0,
+      "maxStep": 0.6067233290015301,
+      "exit": [
+        114.40975189208984,
+        1.207202672958374,
+        -72.57197570800781
+      ],
+      "exitSurfaces": [
+        "road",
+        "road",
+        "road",
+        "road"
+      ]
+    }
+  },
+  {
+    "name": "Saved loop west\u2192east throttle=1, boost=1 completes under natural input",
+    "passed": true,
+    "data": {
+      "entrySpeed": 9.52424721577974,
+      "maxY": 19.111766815185547,
+      "contactRatio": 1,
+      "impacts": 0,
+      "teleports": 0,
+      "respawns": 0,
+      "maxStep": 0.7279602897580112,
+      "exit": [
+        115.66957092285156,
+        1.1946388483047485,
+        -72.59291076660156
+      ],
+      "exitSurfaces": [
+        "road",
+        "road",
+        "road",
+        "road"
+      ]
+    }
+  },
+  {
+    "name": "Saved loop east\u2192west throttle=0.25, boost=0 completes under natural input",
+    "passed": true,
+    "data": {
+      "entrySpeed": 3.549505297230636,
+      "maxY": 19.103805541992188,
+      "contactRatio": 1,
+      "impacts": 0,
+      "teleports": 0,
+      "respawns": 0,
+      "maxStep": 0.599414361684503,
+      "exit": [
+        105.37362670898438,
+        1.2299567461013794,
+        -63.45842742919922
+      ],
+      "exitSurfaces": [
+        "road",
+        "road",
+        "road",
+        "road"
+      ]
+    }
+  },
+  {
+    "name": "Saved loop east\u2192west throttle=0.55, boost=0 completes under natural input",
+    "passed": true,
+    "data": {
+      "entrySpeed": 5.388803360682389,
+      "maxY": 19.104082107543945,
+      "contactRatio": 1,
+      "impacts": 0,
+      "teleports": 0,
+      "respawns": 0,
+      "maxStep": 0.6037456103819664,
+      "exit": [
+        105.67853546142578,
+        1.2091152667999268,
+        -63.42658233642578
+      ],
+      "exitSurfaces": [
+        "road",
+        "road",
+        "road",
+        "road"
+      ]
+    }
+  },
+  {
+    "name": "Saved loop east\u2192west throttle=1, boost=0 completes under natural input",
+    "passed": true,
+    "data": {
+      "entrySpeed": 6.485606670649868,
+      "maxY": 19.101945877075195,
+      "contactRatio": 1,
+      "impacts": 0,
+      "teleports": 0,
+      "respawns": 0,
+      "maxStep": 0.6058969159157229,
+      "exit": [
+        105.60214233398438,
+        1.2078293561935425,
+        -63.430580139160156
+      ],
+      "exitSurfaces": [
+        "road",
+        "road",
+        "road",
+        "road"
+      ]
+    }
+  },
+  {
+    "name": "Saved loop east\u2192west throttle=1, boost=1 completes under natural input",
+    "passed": true,
+    "data": {
+      "entrySpeed": 9.52424721577974,
+      "maxY": 19.111696243286133,
+      "contactRatio": 1,
+      "impacts": 0,
+      "teleports": 0,
+      "respawns": 0,
+      "maxStep": 0.7280091687773103,
+      "exit": [
+        104.33087158203125,
+        1.1947627067565918,
+        -63.407310485839844
+      ],
+      "exitSurfaces": [
+        "road",
+        "road",
+        "road",
+        "road"
+      ]
+    }
+  },
+  {
+    "name": "Loop braking releases adhesion immediately and uses the original wheel brake",
+    "passed": true,
+    "data": {
+      "position": [
+        107.60041046142578,
+        1.2906653881072998,
+        -63.49566650390625
+      ],
+      "braking": 1
+    }
+  },
+  {
+    "name": "A genuine obstruction remains solid and cannot be bypassed by loop assistance",
+    "passed": true,
+    "data": {
+      "touched": true,
+      "released": true,
+      "highestIndex": 42,
+      "blockedAt": [
+        117.80171203613281,
+        5.74517822265625,
+        -64.09566497802734
+      ]
+    }
+  },
+  {
+    "name": "Transformed ribbon frame retains the authored driving side in both directions",
+    "passed": true,
+    "data": {
+      "transformedSamples": 5,
+      "bothDirections": true
+    }
+  }
+]

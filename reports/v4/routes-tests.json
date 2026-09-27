@@ -3,7 +3,7 @@
     "name": "Every persistent map object has a unique stable instance path",
     "passed": true,
     "data": {
-      "objects": 8202
+      "objects": 8243
     }
   },
   {
@@ -46,12 +46,12 @@
     "passed": true,
     "data": {
       "completed": 1,
-      "maxHeight": 19.119775772094727,
+      "maxHeight": 19.11868667602539,
       "contact": 1,
       "finish": [
-        110.36185455322266,
-        1.1389145851135254,
-        -72.52034759521484
+        110.52228546142578,
+        1.1344194412231445,
+        -72.51768493652344
       ]
     }
   },
