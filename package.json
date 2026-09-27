@@ -1,9 +1,9 @@
 {
   "name": "alejandro-world-builder",
-  "version": "4.0.0",
+  "version": "6.0.0",
   "private": true,
   "type": "module",
-  "description": "Local world and asset editor with World2 driving, island authoring and arcade flight",
+  "description": "Local MAP and 3D world editor with reusable Experiences, terrain composition and World2 driving",
   "scripts": {
     "preview": "python3 scripts/serve.py --open",
     "test:physics": "node --loader ./tests/local-loader.mjs tests/v2-physics.mjs",
@@ -32,6 +32,7 @@
     "test:v5:preservation": "node --loader ./tests/local-loader.mjs tests/v5-preservation.mjs",
     "test:v5": "npm run test:v5:fountain && npm run test:v5:career && npm run test:v5:loop && npm run test:v5:circuit && npm run test:v5:minimap && npm run test:v5:terrain && npm run test:v5:preservation",
     "test:v5:minimap": "node --loader ./tests/local-loader.mjs tests/v5-minimap.mjs",
-    "test:v5:terrain": "node --loader ./tests/local-loader.mjs tests/v5-terrain-persistence.mjs"
+    "test:v5:terrain": "node --loader ./tests/local-loader.mjs tests/v5-terrain-persistence.mjs",
+    "test:v6": "node scripts/v6/run-tests.mjs"
   }
 }

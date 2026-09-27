@@ -1,0 +1,112 @@
+{
+  "checkedAt": "2026-09-27T11:36:12.533322+00:00",
+  "files": {
+    "exports/editor-world.json": {
+      "bytes": 16924319,
+      "sha256": "d12da681857d4b669e39aa3bc9b26a426792509499df920bb76d9814529db452"
+    },
+    "exports/asset-definitions.json": {
+      "bytes": 749975,
+      "sha256": "aa5b13e94a872093bfcadb3f8dcaf5a654bd7d7b8c12f026916db4ef3e8b1a42"
+    },
+    "exports/EditedWorld.glb": {
+      "bytes": 45473208,
+      "sha256": "316f171315193a02de64e48ed6b520496909c90517192169c36b15913a886b12"
+    },
+    "world/EditedWorld_v6.blend": {
+      "bytes": 30855518,
+      "sha256": "97c76d18fd2328544efd547e1d1b7ff70de56ac8376b5c82e249c26144a1db0a"
+    }
+  },
+  "world": {
+    "savedAt": "2026-09-27T11:32:41.827Z",
+    "schema": 2,
+    "editorVersion": 6,
+    "states": 8424,
+    "experiences": 16,
+    "templates": 11,
+    "legacyOrCustomizedAddedRoots": 9,
+    "instanceRefs": 0
+  },
+  "glb": {
+    "nodes": 7604,
+    "images": 33,
+    "allImagesEmbedded": true,
+    "experienceGroups": 16,
+    "slabsFloors": [
+      "Central pedestrian plaza",
+      "Projects limestone court",
+      "Achievement trophy court",
+      "Career court",
+      "Fairground plaza",
+      "Harbor building slabs apron",
+      "Courtyard paving"
+    ]
+  },
+  "mapTests": {
+    "passed": 79,
+    "total": 79,
+    "reports": [
+      {
+        "report": "reports/v6/editor-history-tests.json",
+        "passed": 6,
+        "total": 6
+      },
+      {
+        "report": "reports/v6/experience-tests.json",
+        "passed": 15,
+        "total": 15
+      },
+      {
+        "report": "reports/v6/map-controls-tests.json",
+        "passed": 8,
+        "total": 8
+      },
+      {
+        "report": "reports/v6/map-model-tests.json",
+        "passed": 11,
+        "total": 11
+      },
+      {
+        "report": "reports/v6/map-surfaces-tests.json",
+        "passed": 11,
+        "total": 11
+      },
+      {
+        "report": "reports/v6/map-terrain-tests.json",
+        "passed": 15,
+        "total": 15
+      },
+      {
+        "report": "reports/v6/road-dependencies-tests.json",
+        "passed": 2,
+        "total": 2
+      },
+      {
+        "report": "reports/v6/terrain-query-tests.json",
+        "passed": 4,
+        "total": 4
+      },
+      {
+        "report": "reports/v6/world-instances-tests.json",
+        "passed": 6,
+        "total": 6
+      },
+      {
+        "report": "reports/v6/missing-state-audit.json",
+        "passed": 1,
+        "total": 1
+      }
+    ]
+  },
+  "sourcePreservation": {
+    "originalIds": 8407,
+    "missingOriginalIds": [],
+    "portfolioContentUnchanged": true
+  },
+  "world2Regressions": {
+    "passed": 27,
+    "total": 27,
+    "report": "reports/v6/world2-regression-status.json"
+  }
+}

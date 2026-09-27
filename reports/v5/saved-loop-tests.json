@@ -3,18 +3,18 @@
     "name": "User save restores the actual visible loop and its independent colliders",
     "passed": true,
     "data": {
-      "savedAt": "2026-09-27T09:25:29.171Z",
+      "savedAt": "2026-09-27T11:30:23.552Z",
       "position": [
-        135,
-        0.08500000234194172,
-        -204.5
+        25,
+        -0.06499999765805828,
+        -136.5
       ],
       "scale": [
         1,
         1,
         1
       ],
-      "bodyCount": 673,
+      "bodyCount": 664,
       "sourceActivities": 12,
       "first": [
         110,

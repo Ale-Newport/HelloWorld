@@ -1,0 +1,18 @@
+[
+  {
+    "name": "A new road in a ring road’s empty centre preserves the outer asphalt, markings and curbs",
+    "passed": true,
+    "data": {
+      "outerGeometryReused": true,
+      "createNetworkMs": 3.91274999999996
+    }
+  },
+  {
+    "name": "Moving into and out of the actual footprint rebuilds junctions exactly like forced regeneration",
+    "passed": true,
+    "data": {
+      "enterAndExitRebuild": true,
+      "asphaltMarkingsCurbsMatchFullBuild": true
+    }
+  }
+]

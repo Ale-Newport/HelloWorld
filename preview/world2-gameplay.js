@@ -103,7 +103,7 @@ export class World2Gameplay {
  constructor(catalog,scene,root,physics,driving,ui={}){
   Object.assign(this,{catalog,scene,root,physics,driving,ui});this.status={area:'island',achievementsOpen:false};this.bin=new Bin();
   const game={...driving,status:this.status,publishGameplay(){}};this.achievements=new Achievements(game,emptyReferences,this.bin);scene.add(this.achievements.group);
-  this.instances=[];const assets=[];root.traverse(o=>{if(o.userData.world2Asset&&o.visible&&!o.userData.deleted)assets.push(o);});
+  this.instances=[];const assets=[];root.traverse(o=>{if(!o.userData.world2Asset)return;for(let parent=o;parent;parent=parent.parent)if(!parent.visible||parent.userData.deleted)return;assets.push(o);});
   for(const asset of assets)this.instances.push(new World2Instance(this,asset));
   const on=(action,fn)=>{const listener=a=>{if(a.active)fn();};driving.inputs.events.on(action,listener);this.bin.add(()=>driving.inputs.events.off(action,listener));};
   on('interact',()=>this.interact());on('boardPrevious',()=>this.active()?.parts.projects?.step(-1));on('boardNext',()=>this.active()?.parts.projects?.step(1));

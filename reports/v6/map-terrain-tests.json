@@ -1,0 +1,138 @@
+[
+  {
+    "name": "Connected Add performs a disjoint polygon union at the main terrain height",
+    "passed": true,
+    "data": {
+      "area": 464,
+      "sum": 464,
+      "components": 1,
+      "valid": true
+    }
+  },
+  {
+    "name": "Erase cuts the authored main island exactly and a canal splits it into two components",
+    "passed": true,
+    "data": {
+      "area": 360,
+      "sum": 360,
+      "components": 2,
+      "valid": true
+    }
+  },
+  {
+    "name": "Overlapping brush pieces erase as one Boolean operation and undo restores source hashes",
+    "passed": true,
+    "data": {
+      "pieces": 5,
+      "areaRemoved": 60.628132789484596,
+      "sourceHashRestored": true
+    }
+  },
+  {
+    "name": "Paint splits geometry without changing authored heights outside or inside its polygon",
+    "passed": true,
+    "data": {
+      "heightSamples": 4,
+      "worldUV": true,
+      "area": 400
+    }
+  },
+  {
+    "name": "Beach regeneration slopes into water while leaving distant authored geometry unchanged",
+    "passed": true,
+    "data": {
+      "shore": -0.3945000058412518,
+      "interior": 0.15020000591874094,
+      "farHeightUnchanged": true,
+      "shapeArea": 311.917871340616
+    }
+  },
+  {
+    "name": "Save/ObjectLoader/rebuild preserves polygon holes, union and real Rapier coverage",
+    "passed": true,
+    "data": {
+      "area": 473,
+      "sum": 473,
+      "components": 1,
+      "valid": true,
+      "physicsHole": true,
+      "physicsNewLand": true
+    }
+  },
+  {
+    "name": "Map Boolean replay and movable prefab lake cuts do not restore erased ground",
+    "passed": true,
+    "data": {
+      "mapHoleRetained": true,
+      "oldLakeFloorRestored": true,
+      "newLakeCut": true
+    }
+  },
+  {
+    "name": "Invalid ghost polygons never mutate world state",
+    "passed": true,
+    "data": {
+      "rejected": "Terrain polygon has no usable area",
+      "unchanged": true
+    }
+  },
+  {
+    "name": "Prefab clipping keeps painted material groups attached to their exact triangles",
+    "passed": true,
+    "data": {
+      "paintBoundariesPreserved": true,
+      "cutMoves": 2
+    }
+  },
+  {
+    "name": "Erasing all authored terrain disables physical support and Undo restores it",
+    "passed": true,
+    "data": {
+      "allRemoved": true,
+      "colliderRestored": true
+    }
+  },
+  {
+    "name": "Undo of the very first Map operation restores geometry when root metadata is absent",
+    "passed": true,
+    "data": {
+      "sourceHashRestored": true
+    }
+  },
+  {
+    "name": "A 3D brush bake preserves authored new-land heights and painted materials after reload",
+    "passed": true,
+    "data": {
+      "bakedRegistered": true,
+      "height": 0.8,
+      "paintGroups": 22
+    }
+  },
+  {
+    "name": "Derived shoreline identifies an erased hole and original foam returns on Undo",
+    "passed": true,
+    "data": {
+      "coastLength": 96,
+      "holes": 1,
+      "cacheStable": true,
+      "originalFoamRestored": true
+    }
+  },
+  {
+    "name": "Sloped shore debug uses actual triangle intersections with the sea plane",
+    "passed": true,
+    "data": {
+      "seaIntersectionX": -3.5,
+      "coastLength": 20,
+      "closed": true
+    }
+  },
+  {
+    "name": "Shoreline cache follows moved prefab holes and excludes overlaps between authored tiles",
+    "passed": true,
+    "data": {
+      "unionPerimeter": 100,
+      "movedHoleRefreshesCache": true
+    }
+  }
+]

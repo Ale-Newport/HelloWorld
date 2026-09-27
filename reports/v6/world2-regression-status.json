@@ -1,0 +1,22 @@
+[
+  {
+    "suite": "test:v5:fountain",
+    "exitCode": 0,
+    "seconds": 16.69
+  },
+  {
+    "suite": "test:v5:career",
+    "exitCode": 0,
+    "seconds": 16.69
+  },
+  {
+    "suite": "test:v5:loop",
+    "exitCode": 0,
+    "seconds": 18.59
+  },
+  {
+    "suite": "test:v5:circuit",
+    "exitCode": 0,
+    "seconds": 36.16
+  }
+]

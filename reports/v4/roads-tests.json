@@ -2,7 +2,7 @@
   {
     "name": "Straight road has exact width, flat caps, distance UV and upward normals",
     "passed": true,
-    "ms": 10.884459000000007,
+    "ms": 12.201624999999993,
     "data": {
       "area": 280,
       "length": 40,
@@ -12,7 +12,7 @@
   {
     "name": "Editing a road point regenerates lane/edge marks, rails and asphalt together",
     "passed": true,
-    "ms": 27.96262499999999,
+    "ms": 31.307374999999993,
     "data": {
       "updatedSurface": true,
       "updatedMarkings": true,
@@ -22,7 +22,7 @@
   {
     "name": "Race curbs are coupled and pattern repeats by metres, preserved in portable texture",
     "passed": true,
-    "ms": 295.882333,
+    "ms": 304.461583,
     "data": {
       "gridUpdated": true,
       "curbUpdated": true,
@@ -33,7 +33,7 @@
   {
     "name": "Boolean surface matches independent GEOS union for tight turns, crossings and holes",
     "passed": true,
-    "ms": 1032.405833,
+    "ms": 1030.275958,
     "data": [
       {
         "name": "hairpin",
@@ -67,7 +67,7 @@
   {
     "name": "Junction network resolves coincident asphalt to one nonoverlapping surface",
     "passed": true,
-    "ms": 83.94783300000017,
+    "ms": 87.0434580000001,
     "data": {
       "expected": 511.0000000000001,
       "actual": 511,
@@ -79,7 +79,7 @@
   {
     "name": "All junction presets generate coherent editable master curves",
     "passed": true,
-    "ms": 116.28145899999981,
+    "ms": 153.2244589999998,
     "data": {
       "T Junction": 2,
       "Crossroad": 2,
@@ -91,7 +91,7 @@
   {
     "name": "Conform to terrain and road collision share identical current geometry",
     "passed": true,
-    "ms": 57.01824999999985,
+    "ms": 58.4792080000002,
     "data": {
       "heightSamples": 3,
       "colliders": 1,
@@ -101,7 +101,7 @@
   {
     "name": "A bridge owns its deck surface and moving it restores the road and collider",
     "passed": true,
-    "ms": 6.846625000000131,
+    "ms": 7.111041999999998,
     "data": {
       "coveredArea": 0,
       "restoredArea": 140,
@@ -111,7 +111,7 @@
   {
     "name": "Transform, source serialization and rebuilt instance preserve shape alignment",
     "passed": true,
-    "ms": 29.937584000000015,
+    "ms": 29.345790999999963,
     "data": {
       "area": 218.23723020900576,
       "children": 1
@@ -120,7 +120,7 @@
   {
     "name": "Auto smooth, obstacle/water warnings and separate debug geometry work",
     "passed": true,
-    "ms": 60.92949999999996,
+    "ms": 60.76479199999994,
     "data": {
       "warnings": [
         "ROAD_SELF_INTERSECTION",
@@ -133,7 +133,7 @@
   {
     "name": "Removing a road restores its neighbour and unchanged networks reuse geometry",
     "passed": true,
-    "ms": 9.4626659999999,
+    "ms": 9.226625000000013,
     "data": {
       "stableCache": true,
       "visibilityRebuild": true
@@ -142,7 +142,7 @@
   {
     "name": "Legacy standalone road decorations retire without affecting other props",
     "passed": true,
-    "ms": 1.5788749999999254,
+    "ms": 1.4821670000001177,
     "data": {
       "roads": 1,
       "retired": [

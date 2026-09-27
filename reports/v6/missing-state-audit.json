@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "backup": "backups/world_before_map_editor_20260927/exports/editor-world.json",
+  "savedAt": "2026-09-27T11:30:23.552Z",
+  "backupStates": 8407,
+  "currentStates": 8424,
+  "registry": 8424,
+  "missingBackupIds": [],
+  "currentDeletedTombstones": [],
+  "cause": "The Node fixture omitted finishOcean and used unsanitized base GLB names. Unlike browser GLTFLoader, its raw names created an extra pit group, shifting numeric IDs after that group.",
+  "fix": "tests/helpers/world-v4.mjs now sanitizes base names using THREE.PropertyBinding.sanitizeNodeName and runs finishOcean before indexing, matching preview/main.js.",
+  "verified": [
+    {
+      "id": "v4:map:199",
+      "name": "Aircraft parking apron",
+      "type": "Mesh",
+      "position": [
+        128,
+        0.18,
+        100
+      ],
+      "dimensions": [
+        14,
+        0.06,
+        12
+      ],
+      "physical": true
+    },
+    {
+      "id": "v4:world/550",
+      "name": "Shoreline foam",
+      "type": "LineSegments",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "lineVertices": 2000,
+      "derivedWater": true
+    }
+  ],
+  "conclusion": "Neither object was lost from the application or save. All 8,407 pre-v6 state IDs exist; only subsequently deleted QA objects are intentionally absent."
+}

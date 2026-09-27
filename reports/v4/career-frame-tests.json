@@ -6,9 +6,9 @@
       "passed": true,
       "evidence": {
         "savedPosition": [
-          26.843566079018608,
-          0.17500000596046447,
-          37.98072058583661
+          0.8435660790186077,
+          0.025000005960464478,
+          -0.019279414163392516
         ],
         "savedScale": [
           1.05,
@@ -24,7 +24,7 @@
       "passed": true,
       "evidence": {
         "generatedChildren": 30,
-        "maximumMatrixError": 1.4210854715202004e-14,
+        "maximumMatrixError": 8.881784197001252e-15,
         "nonuniformScale": true,
         "repeatSyncNoDrift": true
       }
@@ -36,7 +36,7 @@
         "definitionVersion": 2,
         "placementPreserved": true,
         "firstTickActivatesEducation": true,
-        "stoneLaneError": 3.552713678800501e-15,
+        "stoneLaneError": 0,
         "stripsAligned": 3
       }
     },

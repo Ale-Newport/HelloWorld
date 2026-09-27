@@ -1,0 +1,2393 @@
+Continúa trabajando sobre el proyecto `HelloWorld`.
+
+Quiero añadir un NUEVO MÉTODO DE EDICIÓN al World Editor actual.
+
+IMPORTANTE:
+
+NO reemplaces el editor 3D existente.
+
+Quiero tener DOS formas de editar el mundo:
+
+[ 2D MAP EDITOR ]    [ 3D WORLD EDITOR ]    [ DRIVE ]
+
+El nuevo modo debe ser un editor TOP-DOWN 2D extremadamente sencillo para reorganizar rápidamente todo el mundo.
+
+Debe sentirse más parecido a:
+
+- un editor de mapas;
+- un city builder;
+- un editor de parques;
+- un editor de niveles 2D;
+- la vista de construcción de un juego;
+
+que a Blender.
+
+La idea es poder reorganizar el mundo desde arriba sin preocuparme constantemente de cámara, altura, perspectiva o navegación 3D.
+
+======================================================================
+1. NUEVO MODO: 2D MAP EDITOR
+======================================================================
+
+Añade un nuevo modo principal:
+
+`MAP EDITOR`
+
+La navegación principal debe quedar aproximadamente:
+
+[ MAP ]
+[ 3D EDIT ]
+[ DRIVE ]
+
+o:
+
+[ 2D MAP EDITOR ]
+[ 3D WORLD EDITOR ]
+[ DRIVE ]
+
+MAP EDITOR debe mostrar el mundo:
+
+- completamente desde arriba;
+- cámara ortográfica;
+- north-up;
+- sin perspectiva;
+- prácticamente como un mapa.
+
+Quiero que se vea claramente:
+
+- terreno;
+- carreteras;
+- circuito;
+- edificios;
+- zonas;
+- agua;
+- caminos;
+- plazas;
+- assets;
+- landmarks.
+
+======================================================================
+2. OBJETIVO PRINCIPAL
+======================================================================
+
+Este editor debe permitir reorganizar el mundo MUCHO más rápido que el editor 3D.
+
+Quiero poder:
+
+- seleccionar;
+- mover;
+- rotar;
+- duplicar;
+- eliminar;
+
+assets individuales.
+
+Pero especialmente quiero poder mover:
+
+**EXPERIENCES / GROUPS**
+
+es decir:
+
+CONJUNTOS ENTEROS DE OBJETOS.
+
+Ejemplo:
+
+ICE RINK EXPERIENCE
+
+debe incluir:
+
+- frozen lake;
+- penguins;
+- cones;
+- snow;
+- pines;
+- rocks;
+- benches;
+- lights;
+- signs;
+- decoration.
+
+Selecciono:
+
+`Ice Rink`
+
+y puedo mover TODO el conjunto a otra parte del mapa.
+
+======================================================================
+3. CONCEPTO DE EXPERIENCE
+======================================================================
+
+Introduce una nueva entidad lógica:
+
+`WorldExperience`
+
+Una experiencia NO es necesariamente un único asset.
+
+Es un grupo organizado de assets.
+
+Ejemplo:
+
+Harbor Experience
+├── Main Pier
+├── Secondary Pier
+├── Marina Docks
+├── Boats
+├── Harbor Building
+├── Lights
+├── Crates
+├── Buoys
+├── Benches
+├── Rope Props
+└── Decoration
+
+Otro ejemplo:
+
+Ice Rink Experience
+├── Frozen Lake
+├── Snow Edge
+├── Penguins
+├── Cones
+├── Pine Trees
+├── Rocks
+├── Benches
+├── Lamps
+└── Sign
+
+Otro:
+
+Ferris Wheel Experience
+├── Ferris Wheel
+├── Ticket Booth
+├── Benches
+├── Lights
+├── Small Fair Props
+├── Trees
+└── Plaza Ground
+
+Otro:
+
+Projects Experience
+├── Main Building
+├── Screens
+├── Cameras
+├── Robots
+├── Laptops
+├── Props
+├── Paths
+├── Trees
+└── Decoration
+
+======================================================================
+4. EXPERIENCES YA EXISTENTES
+======================================================================
+
+Convierte las zonas actuales del mundo en Experiences cuando tenga sentido.
+
+Como mínimo:
+
+Central Plaza
+About Me
+Projects
+Achievements
+Career
+Contact
+Bowling
+Cookies
+F1 Circuit
+Ice Rink
+Ferris Wheel
+Loop Area
+Harbor / Port
+Beach
+Lighthouse
+Castle
+
+No hace falta que absolutamente todo sea Experience.
+
+Los elementos pequeños pueden seguir siendo assets independientes.
+
+======================================================================
+5. EXPERIENCE ROOT
+======================================================================
+
+Cada Experience debe tener un ROOT lógico.
+
+Por ejemplo:
+
+Experience_IceRink
+
+y sus hijos mantienen sus offsets relativos.
+
+Cuando mueva el Experience Root:
+
+TODO se mueve junto.
+
+Pero:
+
+también quiero poder desplegar el grupo y editar objetos individuales.
+
+======================================================================
+6. UI 2D DEL MAP EDITOR
+======================================================================
+
+Diseña una UI mucho más sencilla que el editor 3D.
+
+Ejemplo:
+
+------------------------------------------------
+
+TOP BAR
+
+Map
+3D
+Drive
+
+Undo
+Redo
+Save
+
+Grid
+Snap
+Layers
+
+------------------------------------------------
+
+LEFT SIDEBAR
+
+Experiences
+Assets
+Roads
+Terrain
+Paths
+Water
+
+------------------------------------------------
+
+CENTER
+
+2D TOP VIEW
+
+------------------------------------------------
+
+RIGHT SIDEBAR
+
+Selection
+Transform
+Properties
+Layer
+
+------------------------------------------------
+
+======================================================================
+7. EXPERIENCES PANEL
+======================================================================
+
+Panel:
+
+EXPERIENCES
+
+Mostrar cards o lista:
+
+Central Plaza
+Projects
+Achievements
+Ice Rink
+Ferris Wheel
+Harbor
+F1 Circuit
+Castle
+Beach
+Bowling
+Cookies
+etc.
+
+Cada Experience:
+
+- icon;
+- name;
+- visibility;
+- lock;
+- duplicate;
+- delete.
+
+======================================================================
+8. DRAG & DROP DE EXPERIENCES
+======================================================================
+
+Quiero poder arrastrar:
+
+Ice Rink
+
+desde Experiences Library al mundo.
+
+Debe aparecer como conjunto completo.
+
+Placement:
+
+mouse position
++
+Snap To Terrain
++
+valid placement preview.
+
+Click:
+
+coloca.
+
+======================================================================
+9. MOVER EXPERIENCE YA COLOCADA
+======================================================================
+
+Click sobre cualquier elemento.
+
+Si pertenece a un Experience:
+
+mostrar:
+
+SELECT
+
+[ Object ]
+[ Experience ]
+
+Si selecciono:
+
+Experience
+
+todo el grupo queda resaltado.
+
+Entonces puedo:
+
+- mover;
+- rotar;
+- duplicar;
+- eliminar.
+
+======================================================================
+10. BOUNDING BOX DE EXPERIENCE
+======================================================================
+
+En 2D:
+
+mostrar un bounding box claro alrededor del grupo.
+
+Con handles:
+
+ROTATE
+SCALE OPTIONAL
+MOVE
+
+No necesito escala libre necesariamente si puede romper proporciones.
+
+Por defecto:
+
+MOVE + ROTATE.
+
+======================================================================
+11. EDIT EXPERIENCE
+======================================================================
+
+Doble click:
+
+ENTER EXPERIENCE.
+
+Ahora:
+
+el resto del mundo se atenúa.
+
+Puedo seleccionar elementos internos.
+
+Ejemplo:
+
+Harbor
+    ↓ double click
+edit:
+Pier
+Boat
+Crate
+Lamp
+etc.
+
+Botón:
+
+← Back To World
+
+======================================================================
+12. CREAR EXPERIENCE NUEVA
+======================================================================
+
+Quiero poder seleccionar varios objetos:
+
+Shift + click
+
+o box selection.
+
+Después:
+
+CREATE EXPERIENCE
+
+Name:
+
+`Beach Club`
+
+Todos los objetos seleccionados pasan a formar un grupo.
+
+======================================================================
+13. UNGROUP
+======================================================================
+
+También:
+
+Ungroup Experience
+
+sin borrar los elementos.
+
+======================================================================
+14. EXPERIENCE LIBRARY
+======================================================================
+
+Una Experience guardada debe poder convertirse en plantilla reutilizable.
+
+Ejemplo:
+
+Harbor_01
+
+Save As Experience Template.
+
+Después puedo colocar otro puerto en otro mapa.
+
+======================================================================
+15. EXPERIENCES Y ASSETS NO SON LO MISMO
+======================================================================
+
+Arquitectura:
+
+ASSET
+=
+unidad reutilizable individual.
+
+EXPERIENCE
+=
+composición de múltiples assets.
+
+WORLD INSTANCE
+=
+objeto concreto colocado.
+
+Mantén esta diferencia clara en código.
+
+======================================================================
+16. 2D ASSET LIBRARY
+======================================================================
+
+En MAP EDITOR también debe estar disponible Asset Library.
+
+Categorías:
+
+Nature
+Buildings
+Props
+Water
+Road
+Beach
+Harbor
+Bridges
+Landmarks
+Technology
+Fairground
+Race
+etc.
+
+Arrastro:
+
+Tree
+
+al mapa.
+
+Se coloca automáticamente sobre terrain.
+
+======================================================================
+17. 2D ICONS / THUMBNAILS
+======================================================================
+
+Assets pequeños pueden representarse mediante:
+
+- thumbnail;
+- simplified top view;
+- icon.
+
+No necesito render 3D completo perfecto constantemente.
+
+Pero al hacer zoom suficiente:
+
+mostrar objeto correctamente.
+
+======================================================================
+18. ZOOM
+======================================================================
+
+Mouse wheel:
+
+zoom.
+
+Debe ser suave.
+
+Quiero poder pasar de:
+
+WHOLE WORLD
+
+a:
+
+individual props.
+
+======================================================================
+19. PAN
+======================================================================
+
+Middle mouse
+o
+Space + Drag
+
+para mover el mapa.
+
+======================================================================
+20. MULTI-SELECTION
+======================================================================
+
+Shift click.
+
+También:
+
+drag rectangle.
+
+Debe permitir seleccionar:
+
+10 árboles
+
+y moverlos juntos.
+
+======================================================================
+21. GRID
+======================================================================
+
+Toggle:
+
+GRID
+
+Con tamaño configurable:
+
+0.25m
+0.5m
+1m
+2m
+5m
+
+Pero por defecto puede estar oculto.
+
+======================================================================
+22. SNAP
+======================================================================
+
+Opciones:
+
+Snap To Grid
+Snap To Objects
+Snap To Roads
+Snap To Terrain
+Snap Rotation
+
+Rotation:
+
+5°
+15°
+45°
+90°
+
+======================================================================
+23. LAYERS
+======================================================================
+
+Muy importante para mapas grandes.
+
+Layers:
+
+Terrain
+Water
+Roads
+Race Track
+Paths
+Experiences
+Buildings
+Nature
+Props
+Vehicles
+Debug
+
+Cada layer:
+
+visible / hidden
+locked / unlocked.
+
+======================================================================
+24. TERRAIN EDITOR 2D
+======================================================================
+
+Quiero poder CONSTRUIR terreno desde MAP EDITOR.
+
+Selecciono:
+
+TERRAIN TOOL.
+
+Puedo dibujar:
+
+polygon.
+
+Click:
+
+point 1
+point 2
+point 3
+...
+
+double click:
+
+close polygon.
+
+El sistema genera terreno.
+
+======================================================================
+25. ALTURA DEL TERRAIN
+======================================================================
+
+MUY IMPORTANTE:
+
+todo nuevo terrain debe generarse automáticamente a la MISMA ALTURA BASE que el terrain principal actual.
+
+No quiero ajustar Z manualmente.
+
+Detecta:
+
+`WORLD_TERRAIN_HEIGHT`
+
+o equivalente.
+
+Todos los polígonos nuevos:
+
+Z = terrain base height.
+
+======================================================================
+26. TERRAIN CONTINUITY
+======================================================================
+
+Si creo terreno pegado al existente:
+
+debe unirse visualmente.
+
+NO:
+
+z-fighting
+cracks
+different elevation.
+
+Debe sentirse como:
+
+una única isla.
+
+======================================================================
+27. EXPAND TERRAIN
+======================================================================
+
+Herramienta:
+
+ADD TERRAIN
+
+Permite dibujar terreno nuevo conectado a la costa.
+
+Ejemplo:
+
+isla actual
+
+████████
+
+quiero ampliar:
+
+████████████
+
+sin modificar manualmente meshes.
+
+======================================================================
+28. ELIMINAR TERRAIN
+======================================================================
+
+MUY IMPORTANTE.
+
+También quiero:
+
+ERASE TERRAIN.
+
+No solamente terrenos nuevos.
+
+QUIERO PODER BORRAR PARTE DEL TERRAIN EXISTENTE.
+
+INCLUSO:
+
+LA ISLA PRINCIPAL.
+
+======================================================================
+29. ERASE TERRAIN TOOL
+======================================================================
+
+Herramienta:
+
+ERASE TERRAIN
+
+Modos:
+
+Brush
+Polygon
+Rectangle
+
+Brush:
+
+borra terreno pintando.
+
+Polygon:
+
+dibujo un polígono
+→ elimina esa zona.
+
+Rectangle:
+
+drag
+→ elimina terreno.
+
+======================================================================
+30. NO PROTEGER MAIN ISLAND
+======================================================================
+
+Actualmente puede haber una arquitectura donde:
+
+main island
+=
+special terrain
+
+NO quiero que sea intocable.
+
+Toda la isla debe ser editable.
+
+La isla principal debe poder:
+
+- expandirse;
+- cortarse;
+- dividirse;
+- reducirse;
+- crear canales;
+- crear bahías.
+
+======================================================================
+31. CORTAR CANALES
+======================================================================
+
+Ejemplo:
+
+ERASE TERRAIN
+
+dibujo:
+
+|      |
+|      |
+|      |
+
+Resultado:
+
+creo un canal de agua.
+
+El agua existente debe aparecer debajo automáticamente.
+
+======================================================================
+32. NUEVA COSTA
+======================================================================
+
+Cuando borre terrain:
+
+la nueva frontera pasa a ser coastline.
+
+Idealmente generar automáticamente:
+
+- sand border;
+- shore;
+- terrain edge;
+
+siguiendo el sistema visual existente.
+
+======================================================================
+33. TERRAIN MATERIALS
+======================================================================
+
+En MAP EDITOR:
+
+PAINT TERRAIN
+
+Materiales:
+
+Grass
+Sand
+Dirt
+Rock
+Snow
+Slabs
+etc.
+
+======================================================================
+34. SLABS DE PORTFOLIO /WORLD2
+======================================================================
+
+MUY IMPORTANTE.
+
+Inspecciona el proyecto READ-ONLY:
+
+`Portfolio`
+
+Busca específicamente:
+
+`/world2`
+
+y localiza:
+
+LA TEXTURA / MATERIAL DE SLABS
+
+que se utiliza en el suelo.
+
+Quiero reutilizar exactamente ese estilo para:
+
+- caminos;
+- plazas;
+- zonas peatonales;
+- pequeños patios;
+- alrededor de edificios.
+
+======================================================================
+35. PORTFOLIO ES READ-ONLY
+======================================================================
+
+Puedes inspeccionar:
+
+Portfolio/world2
+
+y copiar:
+
+- texture;
+- normal map;
+- material settings;
+- UV scale;
+- shader parameters.
+
+PERO:
+
+NO MODIFIQUES NADA EN Portfolio.
+
+Copia los recursos a:
+
+HelloWorld/assets/
+o
+HelloWorld/textures/
+
+y utiliza la copia.
+
+======================================================================
+36. SLABS MATERIAL
+======================================================================
+
+Crea material reutilizable:
+
+`Ground_Slabs`
+
+o equivalente.
+
+Debe mantener:
+
+- scale visual de `/world2`;
+- tiling;
+- texture density;
+- roughness;
+- color;
+- normal behavior.
+
+======================================================================
+37. PATH TOOL
+======================================================================
+
+Añade:
+
+PATH TOOL.
+
+Quiero dibujar caminos en 2D.
+
+Click:
+start.
+
+Click:
+control point.
+
+Click:
+control point.
+
+Enter:
+finish.
+
+======================================================================
+38. PATH MATERIALS
+======================================================================
+
+Opciones:
+
+Slabs
+Stone
+Dirt
+Wood
+Sand
+Concrete
+
+DEFAULT para plazas/caminos:
+
+SLABS de `/world2`.
+
+======================================================================
+39. PATH WIDTH
+======================================================================
+
+Slider:
+
+Path Width
+
+ejemplo:
+
+1m
+2m
+3m
+4m
+5m.
+
+======================================================================
+40. PATH FOLLOW CURVE
+======================================================================
+
+Debe ser procedural.
+
+Path master curve.
+
+Mover point:
+
+path se actualiza.
+
+Igual que sistema road.
+
+======================================================================
+41. PLAZA TOOL
+======================================================================
+
+Añade:
+
+PLAZA TOOL.
+
+Permite dibujar un polígono.
+
+Ejemplo:
+
+click
+click
+click
+click
+
+close.
+
+Material:
+
+Slabs.
+
+Genera una plaza.
+
+======================================================================
+42. PLAZA NO DEBE SER TERRAIN
+======================================================================
+
+Separar:
+
+terrain base
+vs
+surface.
+
+Terrain:
+
+grass island.
+
+Plaza:
+
+surface ligeramente encima.
+
+Así puedo eliminar plaza sin cortar isla.
+
+======================================================================
+43. ROAD TOOL EN 2D
+======================================================================
+
+Quiero poder construir carreteras desde arriba.
+
+Selecciono:
+
+ROAD TOOL.
+
+Click:
+
+point.
+
+Click:
+
+point.
+
+etc.
+
+El sistema genera:
+
+Road Surface
+Center Line
+Edge Lines
+Collision
+
+usando sistema procedural existente.
+
+======================================================================
+44. ROAD HEIGHT
+======================================================================
+
+Nueva carretera debe aparecer automáticamente:
+
+ligeramente por encima de terrain.
+
+Ejemplo conceptual:
+
+terrain Z
++
+roadSurfaceOffset.
+
+No ajustar manualmente.
+
+======================================================================
+45. EDIT ROAD
+======================================================================
+
+Selecciono carretera.
+
+Mostrar spline/control points.
+
+Puedo arrastrarlos en 2D.
+
+Todo debe seguir actualizándose:
+
+asphalt
+lines
+curbs si aplica
+collider.
+
+======================================================================
+46. ROAD TYPE
+======================================================================
+
+Tool:
+
+Road Type
+
+Normal
+Race Track
+Service Road
+Pedestrian Path
+
+Cada uno usa preset diferente.
+
+======================================================================
+47. RACE TRACK EN 2D
+======================================================================
+
+También puedo editar TrackCurve.
+
+Pero:
+
+NO mezclarlo con normal road.
+
+Track:
+
+red/white curbs.
+
+Normal:
+
+white markings.
+
+======================================================================
+48. BRIDGE PLACEMENT
+======================================================================
+
+Cuando carretera cruza canal:
+
+NO generes automáticamente road sobre agua sin avisar.
+
+Detecta:
+
+ROAD crosses WATER.
+
+Mostrar:
+
+Bridge required.
+
+Opciones:
+
+Add Bridge
+Ignore
+Cancel.
+
+======================================================================
+49. AUTO BRIDGE
+======================================================================
+
+Si selecciono:
+
+Add Bridge
+
+mostrar assets compatibles:
+
+Wooden Bridge
+Modern Bridge
+Suspension Bridge
+etc.
+
+======================================================================
+50. EXPERIENCE TERRAIN FOOTPRINT
+======================================================================
+
+Una Experience puede opcionalmente incluir terrain/surface.
+
+Ejemplo:
+
+Ice Rink
+
+puede incluir:
+
+Frozen Lake Surface
+Snow Surround
+Paths
+Trees
+Props.
+
+Mover Experience:
+
+mueve todos esos elementos.
+
+PERO:
+
+no debe llevarse accidentalmente una porción enorme de main terrain.
+
+======================================================================
+51. EXPERIENCE LOCAL SURFACES
+======================================================================
+
+Para Experiences:
+
+preferir:
+
+local surface meshes
+
+sobre:
+
+main terrain modifications
+
+cuando sea posible.
+
+Ejemplo:
+
+Projects Plaza:
+
+slab polygon.
+
+Ferris Plaza:
+
+slab/cobble polygon.
+
+======================================================================
+52. EXPERIENCE PREVIEW
+======================================================================
+
+Cuando arrastro una Experience:
+
+mostrar preview:
+
+semi-transparent.
+
+También:
+
+bounding footprint.
+
+GREEN:
+valid.
+
+RED:
+overlap.
+
+======================================================================
+53. OVERLAP VALIDATION
+======================================================================
+
+Antes de colocar:
+
+Experience vs Road
+Experience vs Track
+Experience vs Water
+Experience vs Experience
+
+Detectar problemas.
+
+No impedir siempre.
+
+Pero avisar.
+
+======================================================================
+54. CLEARANCE
+======================================================================
+
+Cada Experience puede tener:
+
+recommendedClearance.
+
+Ejemplo:
+
+Ferris Wheel:
+
+large clearance.
+
+Tree:
+
+small.
+
+Esto ayuda a evitar solapamientos.
+
+======================================================================
+55. MOVE EXPERIENCE + CONNECTED PATHS
+======================================================================
+
+Cuando mueva una Experience:
+
+NO quiero que se rompan automáticamente todas las carreteras del mapa.
+
+Pero sí puedes detectar:
+
+existing connectors.
+
+Por ejemplo:
+
+Harbor moved.
+
+Mostrar:
+
+Reconnect Paths?
+
+Yes / No.
+
+======================================================================
+56. AUTO RECONNECT
+======================================================================
+
+Opcional:
+
+recalcular pequeño tramo de camino desde:
+
+Experience Entrance
+
+a:
+
+nearest road/path.
+
+No cambies toda la red.
+
+======================================================================
+57. EXPERIENCE ENTRANCE POINTS
+======================================================================
+
+Define metadata:
+
+entrancePoints.
+
+Ejemplo:
+
+Harbor:
+
+main entrance.
+
+Castle:
+
+front gate.
+
+Bowling:
+
+parking entrance.
+
+Esto permite conectar paths.
+
+======================================================================
+58. EXPERIENCE ORIENTATION
+======================================================================
+
+En 2D:
+
+Rotation handle.
+
+Además:
+
+Rotate 90°
+Flip X
+Flip Y
+
+cuando tenga sentido.
+
+======================================================================
+59. EXPERIENCE LABELS
+======================================================================
+
+En MAP VIEW:
+
+mostrar nombre.
+
+Ejemplo:
+
+ICE RINK
+
+HARBOR
+
+PROJECTS
+
+F1 CIRCUIT
+
+Se puede ocultar con:
+
+Labels toggle.
+
+======================================================================
+60. MAP EDITOR VISUAL SIMPLICITY
+======================================================================
+
+No quiero el mapa saturado.
+
+Utiliza:
+
+clean outlines;
+subtle bounding boxes;
+icons;
+simple handles.
+
+NO mostrar:
+
+todas las propiedades físicas
+
+constantemente.
+
+Solo si abro propiedades.
+
+======================================================================
+61. RIGHT PANEL
+======================================================================
+
+Cuando selecciono Experience:
+
+Name
+
+Position X/Y
+
+Rotation
+
+Layer
+
+Lock
+
+Actions:
+
+Edit Experience
+Duplicate
+Delete
+Save Template
+
+======================================================================
+62. OBJECT PANEL
+======================================================================
+
+Cuando selecciono object:
+
+Position
+Rotation
+Scale
+
+Source Asset
+
+Experience
+
+Layer
+
+Actions.
+
+======================================================================
+63. TERRAIN PANEL
+======================================================================
+
+Terrain:
+
+Add
+Erase
+Paint
+
+Material
+
+Brush Size
+
+Snap.
+
+======================================================================
+64. ROAD PANEL
+======================================================================
+
+Road:
+
+Add Road
+Edit Points
+Width
+Material
+Type
+Delete
+
+======================================================================
+65. PATH PANEL
+======================================================================
+
+Path:
+
+Add
+Edit
+Width
+Material
+
+Default:
+
+Slabs.
+
+======================================================================
+66. MAP EDITOR → 3D
+======================================================================
+
+Muy importante.
+
+Cambiar:
+
+MAP → 3D
+
+NO genera una segunda escena.
+
+Ambos editores trabajan sobre:
+
+EL MISMO WORLD STATE.
+
+Cambio en 2D:
+
+se refleja en 3D inmediatamente.
+
+Cambio en 3D:
+
+se refleja en 2D.
+
+======================================================================
+67. MAP EDITOR → DRIVE
+======================================================================
+
+Puedo colocar algo.
+
+Pulso:
+
+DRIVE.
+
+Pruebo.
+
+Pulso:
+
+EDIT.
+
+Vuelvo.
+
+Sin reload completo.
+
+======================================================================
+68. UNDO / REDO
+======================================================================
+
+TODAS las acciones:
+
+Move Experience
+Delete Terrain
+Add Terrain
+Add Road
+Move Object
+Delete Object
+
+deben soportar:
+
+Undo
+Redo.
+
+Especialmente:
+
+ERASE TERRAIN.
+
+======================================================================
+69. TERRAIN HISTORY
+======================================================================
+
+Antes de operaciones grandes:
+
+guardar snapshot procedural.
+
+No quiero borrar media isla y que CTRL+Z no funcione.
+
+======================================================================
+70. TERRAIN SYSTEM ARCHITECTURE
+======================================================================
+
+Si actualmente el terrain es:
+
+un único mesh manual enorme
+
+y hace imposible:
+
+Add / Erase
+
+refactoriza a sistema editable.
+
+Puede ser:
+
+polygon representation
++
+generated mesh.
+
+No quiero editar vértices manualmente.
+
+======================================================================
+71. WORLD OUTLINE
+======================================================================
+
+Considera mantener:
+
+WorldTerrainShape
+
+como conjunto de polígonos.
+
+Ejemplo:
+
+outer boundary
+
+minus
+
+holes/channels.
+
+Después genera mesh.
+
+Esto facilita:
+
+Add Terrain
+Erase Terrain.
+
+======================================================================
+72. POLYGON BOOLEAN
+======================================================================
+
+Usa operaciones robustas:
+
+union
+difference
+
+para terrain.
+
+ADD:
+
+terrain = union(terrain, newPolygon)
+
+ERASE:
+
+terrain = difference(terrain, erasePolygon)
+
+No intentes hacerlo moviendo vertices a mano.
+
+======================================================================
+73. MULTIPLE ISLANDS
+======================================================================
+
+El sistema debe permitir:
+
+1 main island
++
+small islands.
+
+Si ERASE divide terrain:
+
+no debe romper.
+
+Simplemente:
+
+multiple polygons/components.
+
+======================================================================
+74. BEACH GENERATION
+======================================================================
+
+Cuando cambie coastline:
+
+actualiza beach.
+
+No hace falta perfección automática.
+
+Pero:
+
+genera base razonable.
+
+Permite:
+
+Beach Width.
+
+======================================================================
+75. COASTLINE DEBUG
+======================================================================
+
+Toggle:
+
+Terrain Debug.
+
+Mostrar:
+
+outer boundary
+holes
+shoreline
+water
+terrain height.
+
+======================================================================
+76. GROUND HEIGHT
+======================================================================
+
+Todo MAP EDITOR trabaja principalmente en XY.
+
+Z se deriva automáticamente.
+
+Reglas:
+
+Terrain:
+baseTerrainZ
+
+Road:
+terrainZ + roadOffset
+
+Path:
+terrainZ + pathOffset
+
+Plaza:
+terrainZ + plazaOffset
+
+Assets:
+raycast ground
+
+No quiero editar Z normalmente en MAP EDITOR.
+
+======================================================================
+77. HEIGHT EXCEPTIONS
+======================================================================
+
+Elementos especiales:
+
+Bridge
+Loop
+Ferris Wheel
+Building
+
+mantienen su propia geometría.
+
+Pero placement root:
+
+snap to ground.
+
+======================================================================
+78. 2D ROTATION
+======================================================================
+
+Rotation en MAP:
+
+solo eje vertical / Yaw.
+
+No necesito pitch/roll en este modo.
+
+Eso queda para 3D Editor.
+
+======================================================================
+79. DUPLICATE EXPERIENCE
+======================================================================
+
+CMD/CTRL+D:
+
+duplica Experience completo.
+
+Manteniendo referencias a mismos assets.
+
+No duplicar meshes innecesariamente.
+
+======================================================================
+80. COPY / PASTE
+======================================================================
+
+CMD/CTRL+C
+CMD/CTRL+V.
+
+Debe funcionar para:
+
+object
+multi-selection
+Experience.
+
+======================================================================
+81. LOCK
+======================================================================
+
+Puedo bloquear:
+
+terrain
+road
+Experience
+object.
+
+Evita moverlo accidentalmente.
+
+======================================================================
+82. WORLD LAYOUT WORKFLOW
+======================================================================
+
+Quiero poder hacer exactamente esto:
+
+Open MAP EDITOR.
+
+Delete a large portion of current island.
+
+Expand terrain on west side.
+
+Move F1 Circuit into new space.
+
+Move Harbor south.
+
+Move Ice Rink north.
+
+Draw a new road.
+
+Draw a slabs pedestrian path.
+
+Add a plaza.
+
+Move Projects Experience.
+
+Add trees.
+
+Press Drive.
+
+Todo sin entrar en Blender-like 3D.
+
+======================================================================
+83. F1 CIRCUIT COMO EXPERIENCE
+======================================================================
+
+El circuito debe poder seleccionarse como:
+
+F1 Circuit Experience.
+
+Debe incluir:
+
+TrackCurve
+Curbs
+Pit Lane
+Pit Buildings
+Grandstands
+Barriers
+Race Props
+Timing
+Decoration
+
+PERO:
+
+TrackCurve sigue siendo editable internamente.
+
+======================================================================
+84. NO ESCALAR TRACK ACCIDENTALMENTE
+======================================================================
+
+En Experience mode:
+
+por defecto:
+
+move
+rotate.
+
+No permitir free scale del F1 Circuit sin confirmación.
+
+Para evitar deformar layout.
+
+======================================================================
+85. HARBOR COMO EXPERIENCE
+======================================================================
+
+Harbor:
+
+movible como unidad.
+
+Pero entro a Edit Experience y puedo mover:
+
+boat
+pier
+crate
+etc.
+
+======================================================================
+86. ICE RINK COMO EXPERIENCE
+======================================================================
+
+Ice Rink:
+
+movible como unidad.
+
+Internamente:
+
+lake
+penguins
+cones
+trees
+rocks.
+
+======================================================================
+87. BEACH COMO EXPERIENCE PARCIAL
+======================================================================
+
+Beach puede tener:
+
+Beach Props Experience
+
+separado del terrain/sand.
+
+Así:
+
+Beach terrain
+
+y:
+
+Umbrellas
+Sunbeds
+Surfboards
+
+pueden moverse juntos.
+
+======================================================================
+88. EXPERIENCE TEMPLATES
+======================================================================
+
+Crea templates iniciales:
+
+Ice Rink Complete
+Harbor Complete
+Ferris Plaza
+Projects District
+Achievements Plaza
+Bowling
+Cookies
+Castle
+Lighthouse Area
+Beach Setup
+F1 Circuit Complete
+
+======================================================================
+89. SLABS EXPERIENCES
+======================================================================
+
+Muchos Experiences deberían incluir:
+
+slabs surfaces.
+
+Especialmente:
+
+Central Plaza
+Projects
+Achievements
+Career
+Ferris Wheel
+Castle Courtyard
+Harbor Building Area.
+
+======================================================================
+90. SLABS UV
+======================================================================
+
+MUY IMPORTANTE:
+
+al cambiar tamaño del path/plaza:
+
+NO estirar la textura.
+
+Usar world-space tiling
+o
+distance-based UV.
+
+Debe mantener tamaño de slab aproximadamente constante.
+
+======================================================================
+91. ASSET / EXPERIENCE SEARCH
+======================================================================
+
+Search:
+
+"harbor"
+"tree"
+"bridge"
+"ice"
+
+Filtra resultados.
+
+======================================================================
+92. FAVORITES
+======================================================================
+
+Añade estrella:
+
+Favorite.
+
+Assets frecuentes arriba.
+
+======================================================================
+93. RECENT
+======================================================================
+
+Recent Assets / Experiences.
+
+Para placement rápido.
+
+======================================================================
+94. MAP PERFORMANCE
+======================================================================
+
+La vista 2D debe sentirse instantánea.
+
+Si renderizar GLBs completos hace que vaya lento:
+
+usa:
+
+simplified proxies / top thumbnails.
+
+Pero:
+
+mantén posiciones exactas.
+
+======================================================================
+95. NO SIMPLIFICAR WORLD STATE
+======================================================================
+
+Proxy visual:
+
+solo display.
+
+World sigue usando assets reales.
+
+======================================================================
+96. SAVE
+======================================================================
+
+MAP EDITOR comparte el mismo Save World.
+
+No quiero formato de mapa separado que pueda desincronizarse.
+
+======================================================================
+97. BACKUP
+======================================================================
+
+Antes de implementar:
+
+crea backup del estado actual.
+
+No rompas editor 3D funcional.
+
+======================================================================
+98. PORTFOLIO /WORLD2 AUDIT
+======================================================================
+
+Antes de implementar Slabs:
+
+inspecciona exactamente `/world2`.
+
+Localiza:
+
+- slab texture;
+- UV scale;
+- material;
+- any normal/roughness textures;
+- world scale.
+
+Copia lo necesario a HelloWorld.
+
+Documenta source.
+
+======================================================================
+99. NO REFERENCIAS RUNTIME A PORTFOLIO
+======================================================================
+
+Cuando termines:
+
+HelloWorld debe funcionar si Portfolio desaparece.
+
+======================================================================
+100. IMPLEMENTATION ORDER
+======================================================================
+
+Hazlo en este orden:
+
+PHASE 1
+Audit current World Editor architecture.
+
+PHASE 2
+Backup.
+
+PHASE 3
+Audit Portfolio/world2 slabs READ-ONLY.
+
+PHASE 4
+Create MAP EDITOR mode.
+
+PHASE 5
+Implement orthographic top view.
+
+PHASE 6
+Implement layers / pan / zoom / selection.
+
+PHASE 7
+Implement Experience abstraction.
+
+PHASE 8
+Convert current major areas into Experiences.
+
+PHASE 9
+Implement Experience selection / move / rotate.
+
+PHASE 10
+Implement Edit Experience mode.
+
+PHASE 11
+Implement Experience templates.
+
+PHASE 12
+Implement 2D Asset Browser.
+
+PHASE 13
+Refactor terrain to editable polygon representation if necessary.
+
+PHASE 14
+Implement Add Terrain.
+
+PHASE 15
+Implement Erase Terrain.
+
+PHASE 16
+Implement coastline regeneration.
+
+PHASE 17
+Implement Road drawing/editing in 2D.
+
+PHASE 18
+Implement Path drawing.
+
+PHASE 19
+Copy and integrate slabs material from Portfolio/world2.
+
+PHASE 20
+Implement Plaza Tool using slabs.
+
+PHASE 21
+Implement validation / overlap previews.
+
+PHASE 22
+Undo / redo.
+
+PHASE 23
+Test world synchronisation 2D ↔ 3D ↔ Drive.
+
+PHASE 24
+Documentation.
+
+======================================================================
+101. TESTS OBLIGATORIOS
+======================================================================
+
+TEST 1
+
+Open MAP EDITOR.
+
+Pan.
+
+Zoom.
+
+No errors.
+
+--------------------------------------------------
+
+TEST 2
+
+Select Ice Rink Experience.
+
+Move it.
+
+Switch 3D.
+
+Everything moved correctly.
+
+--------------------------------------------------
+
+TEST 3
+
+Enter Ice Rink.
+
+Move one penguin.
+
+Exit Experience.
+
+Only that penguin changed.
+
+--------------------------------------------------
+
+TEST 4
+
+Move Harbor as Experience.
+
+All docks/boats/props maintain relative positions.
+
+--------------------------------------------------
+
+TEST 5
+
+Select 10 trees.
+
+Move together.
+
+--------------------------------------------------
+
+TEST 6
+
+Create new terrain polygon attached to main island.
+
+No seam.
+
+Same height.
+
+--------------------------------------------------
+
+TEST 7
+
+Erase section of MAIN ISLAND.
+
+Water becomes visible.
+
+No corruption.
+
+--------------------------------------------------
+
+TEST 8
+
+Cut a canal through main island.
+
+Terrain remains valid.
+
+--------------------------------------------------
+
+TEST 9
+
+CTRL+Z.
+
+Canal disappears.
+
+--------------------------------------------------
+
+TEST 10
+
+Add normal road in 2D.
+
+Everything generated correctly.
+
+--------------------------------------------------
+
+TEST 11
+
+Move road control point.
+
+Road markings follow.
+
+--------------------------------------------------
+
+TEST 12
+
+Add slabs path.
+
+Texture has same visual scale as Portfolio/world2.
+
+--------------------------------------------------
+
+TEST 13
+
+Create slabs plaza polygon.
+
+Resize/edit shape.
+
+Texture does NOT stretch.
+
+--------------------------------------------------
+
+TEST 14
+
+Move F1 Circuit Experience.
+
+Track shape is preserved.
+
+--------------------------------------------------
+
+TEST 15
+
+Switch Drive Mode.
+
+Drive world.
+
+No mode-sync errors.
+
+======================================================================
+102. CRITERIOS DE ACEPTACIÓN
+======================================================================
+
+No consideres esta fase terminada hasta que:
+
+MAP EDITOR
+[ ] top-down orthographic editor exists
+[ ] pan works
+[ ] zoom works
+[ ] object selection works
+[ ] multi-selection works
+[ ] layers work
+[ ] lock works
+
+EXPERIENCES
+[ ] experiences exist as real logical groups
+[ ] major current zones converted
+[ ] entire experience can move
+[ ] entire experience can rotate
+[ ] experience can be duplicated
+[ ] experience can be deleted
+[ ] internal objects can still be edited
+[ ] templates can be saved/placed
+
+TERRAIN
+[ ] terrain can be added
+[ ] new terrain uses same height
+[ ] main island can be edited
+[ ] main island can be partially erased
+[ ] canals can be cut
+[ ] terrain can split into multiple islands
+[ ] undo works
+[ ] coastline updates
+
+ROADS
+[ ] roads can be created from 2D
+[ ] roads use correct terrain height
+[ ] control points editable
+[ ] markings remain procedural
+
+PATHS
+[ ] paths can be created
+[ ] slabs material available
+[ ] plazas can be created
+[ ] slabs texture doesn't stretch
+
+PORTFOLIO
+[ ] slabs copied from Portfolio/world2
+[ ] Portfolio remains completely untouched
+[ ] HelloWorld is self-contained
+
+WORKFLOW
+[ ] 2D and 3D edit same world
+[ ] 3D and Drive see changes immediately
+[ ] no world-state duplication
+[ ] Save World persists everything.
+
+======================================================================
+103. FILOSOFÍA FINAL
+======================================================================
+
+MAP EDITOR no debe intentar ser Blender.
+
+Su propósito es:
+
+FAST WORLD COMPOSITION.
+
+Debe ser el lugar donde hago:
+
+- layout;
+- terrain;
+- coast;
+- roads;
+- paths;
+- plazas;
+- placement;
+- rearranging entire Experiences.
+
+3D EDITOR se utiliza para:
+
+- precise transforms;
+- height;
+- rotations;
+- materials;
+- physics;
+- detailed editing.
+
+DRIVE se utiliza para:
+
+- testing;
+- exploration.
+
+El flujo ideal debe ser:
+
+MAP
+→ reorganizo el mundo rápidamente
+
+3D
+→ perfecciono detalles
+
+DRIVE
+→ pruebo
+
+MAP
+→ corrijo composición
+
+DRIVE
+→ vuelvo a probar.
+
+Quiero que los tres modos sean tres vistas diferentes sobre EL MISMO MUNDO.
+
+No tres implementaciones independientes.
+
+Empieza ahora.
+
+No te limites a escribir un plan.
+
+INSPECT.
+BACKUP.
+IMPLEMENT.
+CONVERT EXPERIENCES.
+BUILD MAP EDITOR.
+REFRACTOR TERRAIN IF NECESSARY.
+COPY SLABS FROM PORTFOLIO/WORLD2.
+TEST.
+ITERATE.
+VALIDATE.
+
+No marques esta fase como finalizada hasta completar los tests obligatorios.

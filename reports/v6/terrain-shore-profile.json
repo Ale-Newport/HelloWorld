@@ -1,0 +1,11 @@
+{
+  "source": "actual saved-world fixture",
+  "operation": "erase40x4m, beachWidth2m",
+  "operationAndShoreMs": 508.43845800000054,
+  "topologyJoinToleranceMeters": 0.0002,
+  "triangles": 67732,
+  "boundarySegments": 2554,
+  "outer": 4,
+  "holes": 1,
+  "open": 0
+}

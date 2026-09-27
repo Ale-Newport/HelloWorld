@@ -1,10 +1,16 @@
-# Alejandro World · World Studio 04
+# Alejandro World · World Studio 06
 
 Editor local de una isla conducible y sobrevolable. Esta versión continúa el mundo anterior y utiliza **ALEJANDRO WORLD MAP** como plano de distribución. Los modelos, texturas, Three.js, Rapier y el avión están dentro de HelloWorld. Portfolio es una referencia de solo lectura; no se necesita su carpeta para ejecutar el proyecto.
 
+## Nuevo editor MAP
+
+**MAP**, **3D EDIT** y **DRIVE** trabajan sobre el mismo mundo. MAP permite mover zonas completas, entrar en sus piezas, colocar Experiences, editar curvas y dibujar caminos o plazas. Terrain añade y recorta tierra de la isla principal, con canales, costa, playa y deshacer. Slabs conserva el material y la escala de textura de Portfolio/world2.
+
+Las 16 zonas existentes mantienen su distribución y cuentan con 11 plantillas reutilizables. Instrucciones: [MAP_EDITOR.md](docs/MAP_EDITOR.md). Pruebas y evidencias: [MAP_ACCEPTANCE.md](docs/MAP_ACCEPTANCE.md), `npm run test:v6` y `reports/v6/`. La copia exacta anterior a MAP está en `backups/world_before_map_editor_20260927/`.
+
 ## Abrir y conservar el estado anterior
 
-**Start Driving.command** abre `http://127.0.0.1:8844/preview/` en **EDIT WORLD**. También puedes ejecutar:
+**Start Driving.command** abre `http://127.0.0.1:8844/preview/` en **3D EDIT**. También puedes ejecutar:
 
 ```sh
 python3 scripts/serve.py --open

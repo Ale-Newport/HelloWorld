@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import * as THREE from 'three';
 import {worldFixture} from './world-v4.mjs';
+import {restoreWorldInstances} from '../../preview/world-instances.js';
+import {ExperienceManager} from '../../preview/experiences.js';
 import {WorldEditor} from '../../preview/editor.js';
 import {AssetDefinitions,tagAssetParts} from '../../preview/asset-definitions.js';
 import {authoringPreview} from '../../preview/world2-gameplay.js';
@@ -26,8 +28,8 @@ export async function savedWorldFixture({documentPath='exports/editor-world.json
  root.traverse(n=>{if(n.userData.world2Asset&&!n.userData.assetDefinitionId){const id='world2:'+n.userData.world2Asset;if(editor.assetDefinitions.get(id)){n.userData.assetDefinitionId=id;n.userData.assetDefinitionVersion=1;tagAssetParts(n);}}});
  const loader=new SavedObjectLoader();if(assetDefinitionsPath&&fs.existsSync(assetDefinitionsPath)){const saved=JSON.parse(fs.readFileSync(assetDefinitionsPath,'utf8'));for(const {object,...metadata} of saved.definitions){const node=loader.parse(object);tagAssetParts(node);editor.assetDefinitions.definitions.set(metadata.id,{...metadata,node});editor.assetDefinitions.modified.add(metadata.id);}}
  editor.refreshDefinitionInstances();
- for(const json of doc.added){const o=loader.parse(json);root.add(o);index(o);}
+ await restoreWorldInstances(editor,doc,{parseObject:json=>loader.parse(json)});
  for(const saved of doc.instanceOverrides??[]){const instance=editor.registry.get(saved.id);if(!instance)continue;const restored=loader.parse(saved.object),definition=editor.assetDefinitions.get(restored.userData.assetDefinitionId)??{id:restored.userData.assetDefinitionId,version:restored.userData.assetDefinitionVersion??1};editor.replaceAssetInstance(instance,{...definition,node:restored});instance.userData.assetInstanceOverride=true;}
- editor.apply(doc.states);editor.refreshDefinitionInstances();root.updateMatrixWorld(true);
+ editor.experiences=new ExperienceManager(editor);editor.experiences.restore(doc.experiences);editor.apply(doc.states);editor.refreshDefinitionInstances();root.updateMatrixWorld(true);
  return {...fixture,root,editor,doc,definitions:editor.assetDefinitions,registry:editor.registry,missingStateIds:Object.keys(doc.states).filter(id=>!editor.registry.has(id))};
 }

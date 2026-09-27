@@ -1,0 +1,278 @@
+{
+  "save": "2026-09-27T10:01:02.748Z",
+  "results": [
+    {
+      "name": "The actual saved layout becomes sixteen real groups without changing any existing pose, ID or resource",
+      "passed": true,
+      "evidence": {
+        "groups": 16,
+        "originalNodes": 8428,
+        "preservedIds": 8428,
+        "globalTerrain": 7,
+        "globalRoads": 10,
+        "templates": 11,
+        "membership": [
+          {
+            "name": "Central Plaza",
+            "members": 49
+          },
+          {
+            "name": "About Me",
+            "members": 7
+          },
+          {
+            "name": "Projects",
+            "members": 25
+          },
+          {
+            "name": "Achievements",
+            "members": 21
+          },
+          {
+            "name": "Career",
+            "members": 19
+          },
+          {
+            "name": "Contact",
+            "members": 18
+          },
+          {
+            "name": "Bowling",
+            "members": 24
+          },
+          {
+            "name": "Cookies",
+            "members": 3
+          },
+          {
+            "name": "F1 Circuit",
+            "members": 1
+          },
+          {
+            "name": "Ice Rink",
+            "members": 47
+          },
+          {
+            "name": "Ferris Wheel",
+            "members": 31
+          },
+          {
+            "name": "Loop Area",
+            "members": 16
+          },
+          {
+            "name": "Harbor / Port",
+            "members": 37
+          },
+          {
+            "name": "Beach",
+            "members": 34
+          },
+          {
+            "name": "Lighthouse",
+            "members": 10
+          },
+          {
+            "name": "Castle",
+            "members": 9
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ice Rink moves and rotates all eight penguins, seven cones, lake and decoration as one Experience",
+      "passed": true,
+      "evidence": {
+        "penguins": 8,
+        "cones": 7,
+        "movingNodes": 477,
+        "translation": [
+          23,
+          0,
+          -17
+        ],
+        "yaw": 0.73
+      }
+    },
+    {
+      "name": "Internal penguin editing moves only that asset and preserves every sibling",
+      "passed": true,
+      "evidence": {
+        "independentAsset": "Plastic Penguin 44",
+        "untouchedSiblingNodes": 469
+      }
+    },
+    {
+      "name": "The user-edited harbor retains all current piers, docks, boats and exact relative poses",
+      "passed": true,
+      "evidence": {
+        "members": 37,
+        "counts": {
+          "pier": 1,
+          "dock": 3,
+          "sailboat": 4,
+          "yacht": 2
+        },
+        "customPierVersion": 3,
+        "relativePosesPreserved": true
+      }
+    },
+    {
+      "name": "The existing southwest World2 F1 layout and gameplay spawn transform rigidly without changing track geometry",
+      "passed": true,
+      "evidence": {
+        "originalCircuitId": "user:3c9aed52-39b1-4a24-971b-2cef1903014f",
+        "nodes": 179,
+        "gameplaySpawnFollows": true,
+        "geometryUnchanged": true
+      }
+    },
+    {
+      "name": "Experience duplication shares geometry/materials while assigning fresh unique IDs",
+      "passed": true,
+      "evidence": {
+        "nodes": 477,
+        "sharedMeshResources": 401,
+        "uniqueIds": 477,
+        "sourceUnchanged": true
+      }
+    },
+    {
+      "name": "Template persistence keeps reference-only records and restores reusable groups with current authored member poses",
+      "passed": true,
+      "evidence": {
+        "templates": 11,
+        "documentBytes": 1067672,
+        "reusableMembers": 47,
+        "meshJSONCopies": 0,
+        "restoredWithoutPrototypeCache": true
+      }
+    },
+    {
+      "name": "Experience document restores shells and parent links around the same original scene objects",
+      "passed": true,
+      "evidence": {
+        "sameMemberObjects": 398,
+        "restoredGroups": 16,
+        "meshCopies": 0
+      }
+    },
+    {
+      "name": "Create, ungroup, Undo and Redo restore parent links before local transforms, including missing shells",
+      "passed": true,
+      "evidence": {
+        "undoCreate": true,
+        "redoCreate": true,
+        "undoUngroup": true,
+        "redoUngroup": true,
+        "missingShellRebuilt": true,
+        "missingParentFallsBackToRoot": true
+      }
+    },
+    {
+      "name": "Locked and hidden Experiences retain child identity and enforce ancestor locking",
+      "passed": true,
+      "evidence": {
+        "ancestorLock": true,
+        "visibilityPreservesChildren": true,
+        "stableChildId": true
+      }
+    },
+    {
+      "name": "Preview ghosts never mutate scene or registry; templates retain geometry after instance and source edits across reload",
+      "passed": true,
+      "evidence": {
+        "ghostMutations": 0,
+        "instanceChangesIsolated": true,
+        "archivedVersions": 1,
+        "portableDefinitionWidth": 2,
+        "instanceOverrideWidth": 19
+      }
+    },
+    {
+      "name": "Saving a template participates in the same editor Undo/Redo states",
+      "passed": true,
+      "evidence": {
+        "undoTemplateSave": true,
+        "redoTemplateSave": true
+      }
+    },
+    {
+      "name": "Earlier v6 saves with templates only in document.experiences retain the reusable library",
+      "passed": true,
+      "evidence": {
+        "legacyFieldAbsent": true,
+        "documentTemplatesPreserved": true,
+        "rootMetadataMigrated": true
+      }
+    },
+    {
+      "name": "Seven local Experience floors use slabs without altering terrain, roads or authored floor topology",
+      "passed": true,
+      "evidence": {
+        "changed": [
+          {
+            "id": "v4:map:13",
+            "name": "Central pedestrian plaza",
+            "added": false
+          },
+          {
+            "id": "v4:map:37",
+            "name": "Projects limestone court",
+            "added": false
+          },
+          {
+            "id": "v4:map:49",
+            "name": "Achievement trophy court",
+            "added": false
+          },
+          {
+            "id": "v4:map:54",
+            "name": "Career court",
+            "added": false
+          },
+          {
+            "id": "v4:map:91",
+            "name": "Fairground plaza",
+            "added": false
+          },
+          {
+            "id": "v4:v4:northwatch-castle:68/1",
+            "name": "Courtyard paving",
+            "added": false
+          },
+          {
+            "id": "user:8fd13a85-86a4-4927-b647-7897e99031db",
+            "name": "Harbor building slabs apron",
+            "added": true
+          }
+        ],
+        "groups": [
+          "Central Plaza",
+          "Projects",
+          "Achievements",
+          "Career",
+          "Ferris Wheel",
+          "Castle",
+          "Harbor / Port"
+        ],
+        "unchangedTerrain": 7,
+        "unchangedRoads": 12,
+        "harborApronArea": 15.971999999999753,
+        "worldSpaceUVAfterMove": true,
+        "idempotent": true
+      }
+    },
+    {
+      "name": "Hidden and deleted Experience prefabs stay absent in Drive; visible grouped gameplay restores authored state",
+      "passed": true,
+      "evidence": {
+        "hiddenCircuitAbsent": true,
+        "deletedBowlingAbsent": true,
+        "careerGameplayCreated": true,
+        "groupedPoseRestored": true,
+        "runtimeGroupsRemaining": 0
+      }
+    }
+  ]
+}

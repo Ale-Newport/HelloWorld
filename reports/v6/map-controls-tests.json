@@ -1,0 +1,78 @@
+[
+  {
+    "name": "Numeric X and North use world coordinates and grid snap through a rotated parent",
+    "passed": true,
+    "data": {
+      "worldPosition": [
+        12.000000000000002,
+        3,
+        -18
+      ],
+      "otherCoordinatePreserved": true
+    }
+  },
+  {
+    "name": "Numeric rotation snaps the absolute world angle rather than the child local angle",
+    "passed": true,
+    "data": {
+      "snappedDegrees": 30,
+      "freeDegrees": 37,
+      "parentDegrees": 45
+    }
+  },
+  {
+    "name": "Moving and rotating an Experience preserve member offsets and do not ground-snap the group",
+    "passed": true,
+    "data": {
+      "groupPosition": [
+        0,
+        0,
+        18
+      ],
+      "memberOffsetsUnchanged": true,
+      "terrainSnaps": 0
+    }
+  },
+  {
+    "name": "The source F1 circuit and descendants reject 3D scaling while unrelated child props remain editable",
+    "passed": true,
+    "data": {
+      "sourceAndChildProtected": true,
+      "multiSelectionProtected": true,
+      "unrelatedPropsEditable": true
+    }
+  },
+  {
+    "name": "Already selected objects cannot mutate after their layer or ancestor becomes locked",
+    "passed": true,
+    "data": {
+      "lockedMutations": 0,
+      "unlockedMutations": 1
+    }
+  },
+  {
+    "name": "Path, road, terrain and bridge settings survive control reconstruction and persist in world metadata",
+    "passed": true,
+    "data": {
+      "retainedControls": 8,
+      "persistedRoadWidth": 10
+    }
+  },
+  {
+    "name": "Invalid or empty tool numbers restore the prior value and finite values respect input limits",
+    "passed": true,
+    "data": {
+      "invalidInputsRejected": 2,
+      "min": 1,
+      "max": 5
+    }
+  },
+  {
+    "name": "Hidden library selections are rejected and nonfinite numeric transforms cannot alter the scene",
+    "passed": true,
+    "data": {
+      "invalidTransformsRejected": 3,
+      "hiddenSelectionsRejected": 2
+    }
+  }
+]

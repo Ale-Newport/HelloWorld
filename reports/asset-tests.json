@@ -9,9 +9,14 @@
     "passed": true,
     "detail": {
       "snapshot": "reports/v4/portfolio-before.json",
-      "checked": 3218,
+      "checked": 3207,
       "changes": [],
-      "added": []
+      "added": [],
+      "finder_metadata_differences": [
+        ".DS_Store",
+        "assets/.DS_Store",
+        "assets/world2-source/.DS_Store"
+      ]
     }
   },
   {

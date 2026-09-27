@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Spatial terrain heights match independent Raycaster samples on authored transformed triangles",
+    "passed": true,
+    "data": {
+      "meshes": 1,
+      "triangles": 200,
+      "bins": 38,
+      "buildMs": 0.694665999999998,
+      "queries": 500,
+      "triangleTests": 3841,
+      "oracleSamples": 500
+    }
+  },
+  {
+    "name": "Camera layers and locks are independent; deletion, buffers and parent transforms invalidate automatically",
+    "passed": true,
+    "data": {
+      "layersAndLocksIgnored": true,
+      "deletionAndTransformsRefresh": true
+    }
+  },
+  {
+    "name": "Terrain booleans and moving lake cuts invalidate query support without stale holes",
+    "passed": true,
+    "data": {
+      "erasedPhysicalHole": true,
+      "newLandQueryable": true,
+      "movedLakeRestoresOldSupport": true
+    }
+  },
+  {
+    "name": "Topmost support, height filters and explicit invalidation preserve query semantics",
+    "passed": true,
+    "data": {
+      "topmost": true,
+      "heightFilters": true,
+      "explicitInvalidation": true
+    }
+  }
+]

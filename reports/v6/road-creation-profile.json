@@ -1,0 +1,49 @@
+{
+  "document": "exports/editor-world.json",
+  "memoryBefore": {
+    "heapMB": 102.53870391845703,
+    "arrayBuffersMB": 69.81363582611084,
+    "rssMB": 520.3125
+  },
+  "oldRaycaster200QueriesMs": 876.5510839999988,
+  "indexBuildMs": 35.668375000001106,
+  "cached200QueriesMs": 1.2881669999987935,
+  "cached10000QueriesMs": 4.641374999999243,
+  "indexStats": {
+    "meshes": 7,
+    "triangles": 68860,
+    "bins": 8599,
+    "buildMs": 35.38470800000141,
+    "queries": 10200,
+    "triangleTests": 183600
+  },
+  "waterCrossings30mMs": 0.4839579999970738,
+  "captureBeforeMs": 14.691541000000143,
+  "createConformed30mRoadMs": 3.0364169999993464,
+  "networkWithNewRoadMs": 3703.019791999999,
+  "editorEndChangeMs": 112.3916250000002,
+  "unchangedNetworkMs": 7.236832999999024,
+  "roadCreationAndEndChangeMs": 3833.623332999996,
+  "memoryAfterCreate": {
+    "heapMB": 147.15643310546875,
+    "arrayBuffersMB": 69.63137340545654,
+    "rssMB": 598.578125
+  },
+  "historyCommandBytes": 13132429,
+  "roadPointEditAndEndChangeMs": 3876.624083999999,
+  "memoryAfterEdit": {
+    "heapMB": 167.6732406616211,
+    "arrayBuffersMB": 69.93558025360107,
+    "rssMB": 693.78125
+  },
+  "undoRoadPointMs": 3782.743458000001,
+  "undoRoadCreationMs": 3786.9041660000003,
+  "redoRoadCreationMs": 3805.826374999997,
+  "redoRoadPointMs": 3972.911500000002,
+  "memoryAfterUndoRedo": {
+    "heapMB": 156.70787048339844,
+    "arrayBuffersMB": 72.09409999847412,
+    "rssMB": 806.125
+  },
+  "historyCommands": 2
+}

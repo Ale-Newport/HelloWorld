@@ -14,17 +14,23 @@ if source:
  # snapshots remain historical evidence and may predate unrelated user edits.
  snapshot=ROOT/'reports/v4/portfolio-before.json'
  if not snapshot.is_file():snapshot=ROOT/'reports/portfolio-before.json'
- before=json.loads(snapshot.read_text());changed=[]
+ before=json.loads(snapshot.read_text());changed=[];finder_metadata=[];checked=0
  for rel,state in before.items():
   p=source/rel
+  # Finder updates its view caches independently of authored source. Keep the
+  # historical differences visible without treating them as project edits.
+  if p.name=='.DS_Store':
+   if not p.is_file() or sha(p)!=state['sha256'] or p.stat().st_mtime_ns!=state['mtime_ns'] or p.stat().st_mode!=state['mode']:finder_metadata.append(rel)
+   continue
+  checked+=1
   if not p.is_file():changed.append(rel+' (missing)');continue
   st=p.stat()
   if sha(p)!=state['sha256'] or st.st_mtime_ns!=state['mtime_ns'] or st.st_mode!=state['mode']:changed.append(rel)
  added=[]
  if snapshot.parent.name=='v4':
   current={str(p.relative_to(source)) for p in source.rglob('*') if p.is_file() and not any(part in {'.git','node_modules','.next'} for part in p.relative_to(source).parts)}
-  added=sorted(current-set(before))
- check('Portfolio source files unchanged',not changed and not added,{'snapshot':str(snapshot.relative_to(ROOT)),'checked':len(before),'changes':changed,'added':added})
+  added=sorted(p for p in current-set(before) if Path(p).name!='.DS_Store')
+ check('Portfolio source files unchanged',not changed and not added,{'snapshot':str(snapshot.relative_to(ROOT)),'checked':checked,'changes':changed,'added':added,'finder_metadata_differences':finder_metadata})
 else:check('Portfolio independent runtime',True,'Portfolio is absent; all world resources remain local')
 for path in ['world/AlejandroWorld.blend','exports/AlejandroWorld.glb','editor/alejandro_world/__init__.py','editor/AlejandroWorldBuilder.zip','preview/vendor/three/build/three.module.js','preview/vendor/three/examples/jsm/utils/SkeletonUtils.js','preview/vendor/@dimforge/rapier3d-compat/rapier.es.js']:
  check(path+' exists',(ROOT/path).is_file())
