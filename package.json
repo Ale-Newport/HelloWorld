@@ -1,15 +1,29 @@
 {
   "name": "alejandro-world-builder",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "private": true,
   "type": "module",
-  "description": "Portable Blender world editor and local Three.js/Rapier driving preview",
+  "description": "Local world and asset editor with World2 driving, island authoring and arcade flight",
   "scripts": {
     "preview": "python3 scripts/serve.py --open",
     "test:physics": "node --loader ./tests/local-loader.mjs tests/v2-physics.mjs",
     "test:assets": "python3 tests/check_assets.py",
     "test:geometry": "node --loader ./tests/local-loader.mjs scripts/v2/audit_scene.mjs && python3 scripts/v2/road_geometry.py",
     "test:world2": "node --loader ./tests/local-loader.mjs tests/v3-world2.mjs",
-    "test:handling": "node --loader ./tests/local-loader.mjs tests/v3-handling.mjs"
+    "test:handling": "node --loader ./tests/local-loader.mjs tests/v3-handling.mjs",
+    "test:v4:assets": "node --loader ./tests/local-loader.mjs tests/v4-assets.mjs",
+    "test:v4:factories": "node --loader ./tests/local-loader.mjs tests/v4-factories.mjs",
+    "test:v4:roads": "node --loader ./tests/local-loader.mjs tests/v4-roads.mjs",
+    "test:v4:routes": "node --loader ./tests/local-loader.mjs tests/v4-routes.mjs",
+    "test:v4:validation": "node --loader ./tests/local-loader.mjs tests/v4-validation.mjs",
+    "test:v4:vehicle": "node --loader ./tests/local-loader.mjs tests/v4-vehicle.mjs",
+    "test:v4:world": "node --loader ./tests/local-loader.mjs tests/v4-world.mjs",
+    "test:v4:water": "node --loader ./tests/local-loader.mjs tests/v4-water.mjs",
+    "test:v4:export": "node --loader ./tests/local-loader.mjs tests/v4-export.mjs",
+    "test:v4": "npm run test:v4:assets && npm run test:v4:factories && npm run test:v4:roads && npm run test:v4:routes && npm run test:v4:validation && npm run test:v4:vehicle && npm run test:v4:world && npm run test:v4:water && npm run test:v4:track && npm run test:v4:terrain && npm run test:v4:lifecycle && npm run test:v4:lights && npm run test:v4:export",
+    "test:v4:track": "node --loader ./tests/local-loader.mjs tests/v4-track.mjs",
+    "test:v4:terrain": "node --loader ./tests/local-loader.mjs tests/v4-terrain-cuts.mjs",
+    "test:v4:lifecycle": "node --loader ./tests/local-loader.mjs tests/v4-lifecycle.mjs",
+    "test:v4:lights": "node --loader ./tests/local-loader.mjs tests/v4-lights.mjs"
   }
 }
