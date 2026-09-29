@@ -41,6 +41,7 @@
     "world:restore": "python3 scripts/release/world-save.py restore",
     "world:pack": "python3 scripts/release/world-save.py pack",
     "publish:player": "node scripts/release/publish.mjs",
-    "test:release": "node tests/release.mjs"
+    "test:release": "node tests/release.mjs",
+    "test": "npm run test:brush && npm run test:v8 && npm run test:handling && npm run test:v9:projects && npm run publish:player && npm run test:release"
   }
 }

@@ -13,4 +13,4 @@ for(let i=0;i<Number(process.argv[3]??4);i++){
  const result=applyTerrainOperation(root,op,{materialFactory:surfaceMaterial,uvFor:surfaceUV,deferShoreline:true});const terrainMs=performance.now()-start;start=performance.now();editor.endChange({terrainOnly:true,affectedBounds:result.affectedBounds});const endMs=performance.now()-start;assert.equal(result.replayedOperations,1);assert(result.triangles<220000,"Repeated strokes must not explode geometry");
  samples.push({kind:op.kind,captureMs,terrainMs,endMs,totalMs:captureMs+terrainMs+endMs,triangles:result.triangles,replayedOperations:result.replayedOperations});console.log(samples.at(-1));
 }
-fs.writeFileSync('reports/v8/'+(process.argv[2]??'timings')+'.json',JSON.stringify(samples,null,2));
+fs.mkdirSync('reports/v8',{recursive:true});fs.writeFileSync('reports/v8/'+(process.argv[2]??'timings')+'.json',JSON.stringify(samples,null,2));
