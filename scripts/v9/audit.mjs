@@ -1,0 +1,11 @@
+import fs from 'node:fs';import * as T from 'three';
+import {savedWorldFixture} from '../../tests/helpers/saved-world.mjs';
+import {bounds2D,isVisible} from '../../preview/map-model.js';
+import {terrainDebugData} from '../../preview/map-terrain-shore.js';
+import {collectRoads,roadGeometryData} from '../../preview/roads/road-system.js';
+const {root,editor,registry}=await savedWorldFixture({documentPath:'backups/archipelago_before_landscape_20260928/editor-world.json',assetDefinitionsPath:'backups/archipelago_before_landscape_20260928/asset-definitions.json'});
+const bb=o=>{const b=bounds2D(o);return {min:b.min.toArray(),max:b.max.toArray()};};
+const groups=editor.experiences.list().filter(isVisible).map(g=>({id:g.userData.aw_id,name:g.name,p:g.position.toArray(),bounds:bb(g),entrances:g.userData.experienceEntrances??g.userData.entrances,data:g.userData}));
+const roads=collectRoads(root).map(r=>({id:r.userData.aw_id,name:r.name,bounds:bb(r),samples:roadGeometryData(r).samples.map(s=>s.p.toArray()),width:r.userData.road_width}));
+const loose=root.children.filter(n=>isVisible(n)&&!n.userData.worldExperience&&!n.userData.terrain&&!n.userData.sea&&!n.userData.proceduralDerived).map(n=>({id:n.userData.aw_id,name:n.name,p:n.position.toArray(),bounds:bb(n),data:n.userData}));
+const terrain=terrainDebugData(root);fs.writeFileSync('reports/v9/saved-layout.json',JSON.stringify({groups,roads,loose,terrain},null,2));console.log('groups',groups.map(g=>[g.name,g.bounds]));console.log('roads',roads.length,'loose',loose.length,'terrain',terrain.counts);

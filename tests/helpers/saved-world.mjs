@@ -1,4 +1,6 @@
 import fs from 'node:fs';
+import {gunzipSync} from 'node:zlib';
+export function readSavedDocument(path){return JSON.parse(fs.existsSync(path)?fs.readFileSync(path):gunzipSync(fs.readFileSync(path+'.gz')));}
 import * as THREE from 'three';
 import {worldFixture} from './world-v4.mjs';
 import {restoreWorldInstances} from '../../preview/world-instances.js';
@@ -17,8 +19,8 @@ export class SavedObjectLoader extends THREE.ObjectLoader {
 
 /** Reconstruct the user's save with the same apply/replacement methods used by
  * WorldEditor. Does not write the save or asset definitions. */
-export async function savedWorldFixture({documentPath='exports/editor-world.json',document:provided,assetDefinitionsPath='exports/asset-definitions.json'}={}){
- const fixture=await worldFixture(),{root,catalog}=fixture,doc=provided??JSON.parse(fs.readFileSync(documentPath,'utf8'));
+export async function savedWorldFixture({documentPath='exports/worlds/archipelago/editor-world.json',document:provided,assetDefinitionsPath='exports/worlds/archipelago/asset-definitions.json'}={}){
+ const fixture=await worldFixture(),{root,catalog}=fixture,doc=provided??readSavedDocument(documentPath);
  if(doc.schema!==2||doc.base!==root.userData.baseDocument)throw Error('Save does not match the generated base document');
  const furniture=createTrackFurniture(root),editor=Object.create(WorldEditor.prototype);Object.assign(editor,{root,catalog,registry:new Map(),baseline:new Map(),assetDefinitions:new AssetDefinitions(),selected:[],history:[],future:[],select(){},updateHistory(){},roadDiagnostics(){}});
  const index=(o,path='scene')=>{if(o.userData.proceduralDerived)return;o.userData.aw_id??=path;editor.registry.set(o.userData.aw_id,o);editor.baseline.set(o.userData.aw_id,{geometry:o.geometry,material:o.material});o.children.forEach((child,i)=>index(child,o.userData.aw_id+'/'+i));};index(root);

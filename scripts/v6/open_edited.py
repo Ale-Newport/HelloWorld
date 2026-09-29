@@ -11,8 +11,8 @@ spec.loader.exec_module(native)
 
 def import_world(source=None, output=None):
     return native._legacy.import_world(
-        source or ROOT / 'exports/EditedWorld.glb',
-        output or ROOT / 'world/EditedWorld_v6.blend',
+        source or ROOT / 'exports/worlds/archipelago/EditedWorld.glb',
+        output or ROOT / 'world/Archipelago.blend',
         version=6, configure_scene=native.frame_authored_world,
         report_path=ROOT / 'reports/v6/native-roundtrip.json')
 

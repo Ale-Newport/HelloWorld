@@ -10,6 +10,7 @@ import {Achievements} from './portfolio/world2/interactions/Achievements.js';
 import {Bowling} from './portfolio/world2/interactions/Bowling.js';
 import {Circuit} from './portfolio/world2/interactions/Circuit.js';
 import {Projects} from './portfolio/world2/interactions/Projects.js';
+import {paintProjectsPreview} from './projects-preview.js';
 import {FramedCareer,careerSourceBasis} from './career-frame.js';
 import {Title} from './portfolio/world2/interactions/Title.js';
 import {Social} from './portfolio/world2/interactions/Social.js';
@@ -126,6 +127,7 @@ export function authoringPreview(catalog,entry){
  const driving={ticker,tweens:new Tweens(ticker,bin),inputs,player,view,audio:quietAudio,vehicle:{position:player.position,chassis:{physical:empty},speedKmh:0,wheels:{inContactCount:4},moveTo(){}}};
  const manager={catalog,physics,scene,driving,status:{area:'preview'},ui:{},reset(){},achievements:null};manager.achievements=new Achievements({...driving,publishGameplay(){}},emptyReferences,bin);
  const asset=new THREE.Group();asset.userData.world2Asset=entry.id;const instance=new World2Instance(manager,asset);
+ paintProjectsPreview(instance.parts.projects);
  const frame=instance.frame;frame.removeFromParent();ticker.events.clear();physics.destroy();return frame;
 }
 
