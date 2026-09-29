@@ -1,0 +1,26 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {gunzipSync} from 'node:zlib';
+import {createHash} from 'node:crypto';
+import {WORLD_SLOTS,worldFiles,loadWorldDocument} from '../preview/world-storage.js';
+const target=path.resolve(process.argv[2]??'dist/archipelago');
+const manifest=JSON.parse(fs.readFileSync(path.join(target,'release.json')));
+const digest=b=>createHash('sha256').update(b).digest('hex');
+assert.deepEqual(Object.keys(WORLD_SLOTS),['archipelago']);
+assert.deepEqual(fs.readdirSync('exports/worlds'),['archipelago']);
+for(const [file,hash] of Object.entries(manifest.files))assert.equal(digest(fs.readFileSync(path.join(target,file))),hash,file);
+// Production must reuse every runtime module byte-for-byte, including physics, activities and terrain.
+for(const file of Object.keys(manifest.files).filter(f=>f.startsWith('preview/')&&f.endsWith('.js')))assert.equal(digest(fs.readFileSync(file)),manifest.files[file],file);
+const compressed=fs.readFileSync('exports/worlds/archipelago/editor-world.json.gz');
+assert.equal(digest(compressed),manifest.worldSHA256);
+const decoded=gunzipSync(compressed);if(fs.existsSync('exports/worlds/archipelago/editor-world.json'))assert(decoded.equals(fs.readFileSync('exports/worlds/archipelago/editor-world.json')),'Packing changed the authored world');
+const originalFetch=globalThis.fetch;
+globalThis.fetch=async url=>{assert.equal(url,worldFiles().world);return new Response(compressed);};
+const doc=await loadWorldDocument();globalThis.fetch=originalFetch;
+assert.equal(doc.states['v4:world'].data.worldVariant.id,'archipelago');
+assert(doc.states['district:projects:lab']);assert(doc.states['district:projects:plaza']);
+assert(doc.states['landscape:v9:0002']);
+assert.match(fs.readFileSync(path.join(target,'preview/index.html'),'utf8'),/data-player="true"/);
+assert(!fs.existsSync(path.join(target,'preview/worlds.html')));
+console.log(`PASS published Archipelago: ${Object.keys(manifest.files).length} verified files, identical runtime and lossless world (${Object.keys(doc.states).length} states)`);
