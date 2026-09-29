@@ -11,3 +11,26 @@ node_modules/
 
 # Local recovery snapshots are retained outside version history.
 backups/
+
+reports/v7/*.log
+reports/v7/*.stderr
+
+reports/v8/*.log
+
+# Local agents, configuration, secrets and build output
+[Cc][Ll][Aa][Uu][Dd][Ee].[Mm][Dd]
+.claude/
+.codex/
+.env*
+!.env.example
+dist/
+*.log
+*.stderr
+*.blend[0-9]
+# Python dependencies are installed locally, not vendored for one Mac.
+scripts/vendor/
+# Git keeps the lossless compressed save; JSON and GLB are working exports.
+exports/worlds/*/editor-world.json
+exports/worlds/*/EditedWorld.glb
+# Generated profiling dumps and visual evidence
+reports/

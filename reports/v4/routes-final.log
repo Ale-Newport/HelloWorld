@@ -1,7 +1,0 @@
-PASS Every persistent map object has a unique stable instance path {"objects":8202}
-PASS All regular roads form one connected graph and the race course stays separate {"roads":9,"connected":9,"raceSeparate":true}
-PASS Loop road endpoints and tangents match the actual translated stunt {"start":[110,63.5,0.20499999999999996],"end":[110,72.5,0.20499999999999996],"inTangent":[0.9989385490469411,0,-0.04606273144301951],"outTangent":[0.9990941815905237,0,-0.04255368740733792]}
-PASS Actual loop completes from its connected approach with wheel contact and a clean exit {"completed":1,"maxHeight":19.119775772094727,"contact":1,"finish":[110.36185455322266,1.1389145851135254,-72.52034759521484]}
-PASS Marina spine physically reaches all three finger docks {"x":[11,27,43],"deckHeights":[0.2400054931640625,0.2400054931640625,0.2400054931640625]}
-PASS Actual Corsair is parked on the aviation apron with no duplicate vehicle collider {"sourceVertices":20057,"size":[9.470651766480728,2.311881371498108,10.622643614479003],"parkedBottom":0.2150000000000002,"padTop":0.21}
-PASS Native map roads have no default self intersections or attraction conflicts {"summary":{"errors":0,"warnings":0,"info":0},"issues":[]}
