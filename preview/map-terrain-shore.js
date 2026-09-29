@@ -127,7 +127,7 @@ export function createTerrainDebug(root){
 /** Original decoration returns on Undo. Derived coastline is reconstructed from
  * mapTerrain sources/operations; no contour cache is put in the saved document. */
 export function updateTerrainShoreline(root){
- const state=root.userData.mapTerrain,active=!!(state&&(state.operations.length||state.shorelineDerived));
+ const state=root.userData.mapTerrain,active=!!(state&&(state.operations.length||state.shorelineDerived))||root.children.some(o=>o.userData.coastalProfile&&o.visible&&!o.userData.deleted);
  for(const o of root.children.filter(o=>o.name==='Shoreline foam'&&!o.userData.mapTerrainShoreline)){
   if(active){o.userData.mapTerrainFoamVisibility??=o.visible;o.visible=false;}
   else if(o.userData.mapTerrainFoamVisibility!==undefined){o.visible=o.userData.mapTerrainFoamVisibility;delete o.userData.mapTerrainFoamVisibility;}

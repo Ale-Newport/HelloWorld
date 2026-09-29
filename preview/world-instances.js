@@ -3,6 +3,14 @@ import * as THREE from 'three';
 const copy=value=>JSON.parse(JSON.stringify(value));
 const sameArray=(a,b)=>a===b||!!a&&!!b&&a.length===b.length&&a.every((v,i)=>v===b[i]);
 const materials=node=>node.material?(Array.isArray(node.material)?node.material:[node.material]):[];
+/** Road meshes are regenerated from their curve on restore. Keep authored
+ * children/materials, but omit redundant triangulation and generated furniture. */
+export function portableObjectJSON(root){
+ const json=root.toJSON();if(!root.userData.road_points||root.userData.geometryEdited)return json;
+ json.object.children=(json.object.children??[]).filter(n=>!n.userData?.proceduralDerived);const geometryId=json.object.geometry,used=new Set();
+ const walk=n=>{if(n.geometry)used.add(n.geometry);n.children?.forEach(walk);};walk(json.object);
+ json.geometries=(json.geometries??[]).filter(g=>used.has(g.uuid)).map(g=>g.uuid===geometryId?{uuid:g.uuid,type:'BufferGeometry',data:{attributes:{position:{itemSize:3,type:'Float32Array',array:[],normalized:false}},index:{type:'Uint16Array',array:[]}}}:g);return json;
+}
 function sameAnimations(a=[],b=[]){return a.length===b.length&&a.every((clip,i)=>{const other=b[i];return clip.name===other.name&&clip.duration===other.duration&&clip.blendMode===other.blendMode&&clip.tracks.length===other.tracks.length&&clip.tracks.every((track,j)=>{const next=other.tracks[j];return track.name===next.name&&track.ValueTypeName===next.ValueTypeName&&track.getInterpolation()===next.getInterpolation()&&sameArray(track.times,next.times)&&sameArray(track.values,next.values);});});}
 function sameObjectContent(node,source){
  if(node.type!==source.type||node.geometry!==source.geometry||!sameArray(materials(node),materials(source))||node.children.length!==source.children.length)return false;
@@ -34,7 +42,7 @@ export function serializeWorldInstances(editor,roots){
   root.updateWorldMatrix(true,true);
   const id=root.userData.assetDefinitionId,definition=id&&editor.assetDefinitions?.get(id);
   const parts=definition&&root.userData.assetDefinitionVersion===definition.version&&!root.userData.assetInstanceOverride?reusableParts(root,definition):null;
-  if(!parts||!root.userData.aw_id||parts.some(({node})=>!node.userData.proceduralDerived&&!node.userData.aw_id)){added.push(root.toJSON());continue;}
+  if(!parts||!root.userData.aw_id||parts.some(({node})=>!node.userData.proceduralDerived&&!node.userData.aw_id)){added.push(portableObjectJSON(root));continue;}
   instanceRefs.push({schema:1,definitionId:id,version:definition.version,rootId:root.userData.aw_id,parentId:root.parent?.userData.aw_id??null,parts:parts.map(({node,path})=>({path,id:node.userData.aw_id??null,uuid:node.uuid,state:stateOf(node)}))});
  }
  return {instanceRefs,added};

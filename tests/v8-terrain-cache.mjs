@@ -1,0 +1,23 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import * as T from 'three';
+import {applyTerrainOperation,rebuildFromState} from '../preview/map-terrain.js';
+import {brushShape} from '../preview/map-brush.js';
+import {WorldEditor} from '../preview/editor.js';
+import {ExperienceManager} from '../preview/experiences.js';
+import {createPath} from '../preview/map-surfaces.js';
+const root=new T.Group(),land=new T.Mesh(new T.PlaneGeometry(80,80,32,32).rotateX(-Math.PI/2),new T.MeshStandardMaterial({side:T.DoubleSide}));land.position.y=.15;land.userData={aw_id:'land',terrain:true,collision:true};root.userData.aw_id='world';root.add(land);
+const e=Object.create(WorldEditor.prototype);Object.assign(e,{root,registry:new Map(),baseline:new Map(),history:[],future:[],selected:[],fillTransform(){},updateOutlines(){},notify(){},updateHistory(){},select(n){this.selected=n;}});e.experiences=new ExperienceManager(e);e.experiences.register(root);
+const far=createPath({points:[[-35,.15,-35],[-25,.15,-35]],width:2}),near=createPath({points:[[25,.15,1],[36,.15,1]],width:2});root.add(e.register(far),e.register(near));const farGeometry=far.geometry,nearGeometry=near.geometry;
+const ops=Array.from({length:6},(_,i)=>({kind:i%2?'erase':'add',polygons:brushShape([[30+i,0],[40+i,5],[45+i,12]],4),beachWidth:1}));
+for(const op of ops){const result=e.mutate(()=>applyTerrainOperation(root,op,{deferShoreline:true}),{terrainOnly:true});assert.equal(result.replayedOperations,1);}
+assert.equal(e.history.length,6);assert.equal(far.geometry,farGeometry,'Unrelated path must not rebuild');assert.notEqual(near.geometry,nearGeometry,"Intersecting path must follow new ground");
+const snapshots=e.history.flatMap(cmd=>[cmd.before.world.data.mapTerrain?.sources,cmd.after.world.data.mapTerrain?.sources]).filter(Boolean);assert(snapshots.every(s=>s===snapshots[0]),'History must share immutable terrain sources');
+const meshes=r=>{const out=[];r.traverseVisible(n=>{if(n.isMesh&&n.userData.terrain&&!n.userData.deleted)out.push(n);});return out;};
+const hash=r=>JSON.stringify(meshes(r).map(n=>[n.userData.aw_id,Array.from(n.geometry.attributes.position.array),Array.from(n.geometry.index.array)]));
+const final=hash(root);e.undo();assert.notEqual(hash(root),final);e.redo();assert.equal(hash(root),final);
+const loaded=new T.ObjectLoader().parse(root.toJSON());rebuildFromState(loaded);assert.equal(hash(loaded),final,'Incremental and full replay must produce identical terrain');
+const h=r=>{r.updateMatrixWorld(true);return new T.Raycaster(new T.Vector3(44,50,6),new T.Vector3(0,-1,0)).intersectObjects(meshes(r),false).map(p=>p.point.y);};assert.deepEqual(h(loaded),h(root));
+const sourceHash=JSON.stringify(root.userData.mapTerrain.sources);root.userData.mapTerrain.operations[0].material='Sand';const changed=rebuildFromState(root);assert.equal(changed.replayedOperations,6,'Editing an old operation invalidates cached prefix');assert.equal(JSON.stringify(root.userData.mapTerrain.sources),sourceHash);
+root.userData.mapTerrain.baseHeight=.25;assert.equal(rebuildFromState(root).replayedOperations,6);
+const report={passed:true,strokes:6,incrementalEqualsFullReplay:true,undoRedo:true,serializedReload:true,immutableSourceShared:true,unrelatedPathRetained:true,operationEditInvalidatesCache:true};fs.writeFileSync('reports/v8/cache-tests.json',JSON.stringify(report,null,2));console.log('PASS',report);
